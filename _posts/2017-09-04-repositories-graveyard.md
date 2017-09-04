@@ -62,6 +62,6 @@ It runs as a Lambda function and costs basicaly nothing.
 - My profile now shows only things I'm actually working on - or worked on
 recentely - or that I intend to work on again;
 - I don't need to worry about new issues and pulls on my abandoned repos;
-- Less cluter == Happier Carlos :)
+- Less clutter == Happier Carlos :)
 
 
