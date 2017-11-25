@@ -8,6 +8,13 @@ Some talks I gave over the years, just in case you want to see the slides.
 
 ## 2017
 
+#### 1º Joinville SRE Meetup
+
+I spoke about how we migrate our monitoring infrastructure to Prometheus &
+Friends, what we got out of it and how it is working for us right now.
+
+<script async class="speakerdeck-embed" data-id="9446e109d6864391b5db444c70669da9" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
 #### 1º Changelog Meetup
 
 I showed how to build and release binaries in Go, including cross-compiling,
