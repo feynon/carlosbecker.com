@@ -34,7 +34,6 @@ paginate: 5
 
 # Custom vars
 show_related_posts: true
-animated: true
 
 
 # please change ALL items bellow if you are forking my repo!
