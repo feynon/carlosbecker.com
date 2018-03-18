@@ -2,7 +2,8 @@
 title: Talks
 permalink: /talks
 menu: nav
-date: 2017-12-16T00:00:00Z
+featureimage: /public/images/talks_header.jpg
+disableComments: true
 ---
 
 Some talks I gave over the years, just in case you want to see the slides.
