@@ -1,0 +1,64 @@
+baseurl = ""
+languageCode = "en-us"
+title = "Carlos Alexandro Becker"
+theme = "hugo-type-theme"
+# Enable comments by entering your Disqus shortname
+disqusShortname = "caarlos0blog"
+# Add your tracking code to enable Google Analytics
+googleAnalytics = "UA-50435491-1"
+# Posts per page
+paginate = 5
+# Comment the themesDir option if you use this theme in production
+# themesDir = "../.."
+
+pygmentsCodeFences = true
+pygmentsStyle = "dracula"
+pygmentsUseClassic = true
+
+[permalinks]
+  post = "/posts/:slug"
+
+[params]
+	author = "Carlos Alexandro Becker"
+	description = "Thoughts, rants and discoveries on software development and related stuff."
+	# The keywords will be added as a meta tag. Delimit them with a comma.
+	keywords = "software development, software, golang, devops, go, sre, site reliability engineering"
+	# Either show custom avatar on the top
+	# left by adding the filename in below
+	# avatar = "img/avatar.png"
+	# or use Gravatar by adding your email address to generate a unique avatar
+	gravatar = "caarlos0@gmail.com"
+
+	# headerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Remove all header text in **config.toml** to disable this feature."
+	# To add a header background to the main site, save your image under static/img/.
+	# If now image path is provided, a orange background will be shown instead.
+	headerImage = ""
+	copyright = "Released under the MIT license<br>Powered by [Hugo](//gohugo.io/) with the [Type Theme](//github.com/digitalcraftsman/hugo-type-theme)"
+
+  customCSS = "/public/css/carlos.css"
+
+	[params.social]
+		# Insert your accout name and the icon will be shown in the right menu
+		rss = false
+		homepage = false
+		email = "contact@carlosbecker.com"
+		behance = ""
+		bitbucket  =""
+		dribbble = ""
+		facebook = ""
+		flickr = ""
+		github = "caarlos0"
+		googleplus = ""
+		instagram = ""
+		linkedin = ""
+		pinterest = ""
+		reddit = ""
+		soundcloud = ""
+		stackexchange = ""
+		steam = ""
+		tumblr = ""
+		twitter = "caarlos0"
+		wordpress = ""
+		youtube = ""
+		gitlab = ""
+		trello = ""

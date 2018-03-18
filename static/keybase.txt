@@ -1,0 +1,77 @@
+==================================================================
+https://keybase.io/becker
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://carlosbecker.com
+  * I am becker (https://keybase.io/becker) on keybase.
+  * I have a public key with fingerprint C4AE F954 837E 8203 58B9  90C4 E61E 2F7D C14A B940
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.8.18"
+        },
+        "key": {
+            "eldest_kid": "01015967b1cdcd58eb442b89ef2ff6a0dd13eebf020346cda27be8c3ee5239c334a30a",
+            "fingerprint": "c4aef954837e820358b990c4e61e2f7dc14ab940",
+            "host": "keybase.io",
+            "key_id": "e61e2f7dc14ab940",
+            "kid": "01015967b1cdcd58eb442b89ef2ff6a0dd13eebf020346cda27be8c3ee5239c334a30a",
+            "uid": "23635671b14ff3f69e01d9f32f74ae19",
+            "username": "becker"
+        },
+        "service": {
+            "hostname": "carlosbecker.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1441064412,
+    "expire_in": 157680000,
+    "prev": "21526e72ec23d383d2a980d100af8022a2eba6a8fab603fd5385e68a2f2e3957",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGtUmtQVGUYZlfaAZIgnIlIRThQJmy7577nLJAYZgo2wAQVTbqdy3fgtOs5y+7h
+HiGmEaIBghTYDxwKCUctoSm6KV0HcJoFSWioILUVDWm4yGAGdA7Rj2b62ffjm2/e
+93ne93ne96sJXOWj13nDzaXdyV2Jur7rrE/m1V9/LIFYmS+CrCUQ5xCBpGgvidkD
+ICtkB0Us4wYmUY6QZB6YXnRHrGCMUD5wuUVZUlGwiTIhFFRq1PAaGzh44FZsdpHX
+sgiMEDRpYRGO53iCAiyOoyxFAwEVBJKBeR7BAGAFGIUxnOR4BrWwgOLUGIFiNIdh
+OIPBjNpQEKVs4HK6RE0ixOEMEGgCpzALoFQqQbE0DXM4IBGAChaeQ3CGpXFYJebI
+buVfZqBlpbZlef+B/5915y2XQzESI0gLwiK4IGACSQMY4WkBU3urThBaA7qBa2Xw
+LODswKWNVI3lixzQxqr5WMlzjMshu/9GmTh5j8p2umRF5mSHms1RFKdVIytFTg1d
+AFjbSh0bK0q8OsjlBTaubBBRoZwiapURHEdgUr1QIwQKnaIL2EQNQVhIClaP1gfk
+a34QAiWBBQUcivEYhfEoQ1Mwj8AwI1AwijIoYBmSoQSGJWFM4AmMIgBJMaiAAowm
+LJBmLVeSIatF1clkqyXdYrbEKHkuAJVW6tf5+uj0Poa79NoX9QnwD/7n3x4IDVqM
+vRCF1z7kHW65eDDtfbnk26jzHfzknflTp9/YNcX2bD8ktXZMJR6LGd3X2fBhyEjG
+5EAXCDNvT25PnaOD3r2Ssy/4UvXC0aH4uZS9n4ODBQOLoIv6LWlxrkiZ+7r/SqrP
+qLEtrLAqZZWVNRjKLj2ShTv7amIboIn0MWu0Z/1AZ+CM77a24YiYrCYP3BykPzzb
+vsS39XbuCER0ukczP6pure/5Mn1tM3nmZm2NVNXi7ot13Bo19/mNbmn1Tt7X+EOx
+3RNp+iL93NOR+xPOFU4YH5/y23jizGuJq99ZjL9n1m+o2DxoydpVv67ihYTyzkF9
+JuGZ0CX0xCd4fwq5crowdjilI3opJC6e+BhuHInsr98/HLXBXNa/4M8dyivNLftm
+MnRNUkzGZaXvuek86c+Io8WXB8PGL7y6sdimu9U8nzw1dMRtWKC6y/s/uDa2uql7
+05rxZ3tnN9uXoOfDuc1nn4LP7ixvyawLjUu1c7knFhyNh9cb0MoHq7YUPDGdcLs9
+8OaxuO9Kx83jGVe33W6aXuuqmB55M/T3yvdSQey9SRs+he9+Jis8IPpUydAf3+94
+6WTaA85h2nXNfVIJD63r3n39lQmDLj73yMvz3reNY1u7Z3aCnz1pwd7jdaOb/Pfe
+f+eX9pmK19968gZe/fDYcSnP07sUcHGw4asbtZnK1k/OPzbt24J8lrb7Lw==
+=mK5b
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/becker
+
+==================================================================
