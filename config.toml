@@ -1,4 +1,4 @@
-baseurl = "https://carlosbecker.com/"
+baseurl = "/"
 languageCode = "en-us"
 title = "Carlos Alexandro Becker"
 theme = "hugo-type-theme"
