@@ -20,7 +20,9 @@ run:
 
 build:
 	rm -rf public
-	hugo --baseURL=""
+	echo "relativeurls = true" > ./tmp/config.toml
+	cat config.toml >> ./tmp/config.toml
+	hugo --config ./tmp/config.toml
 
 lint:
 	htmltest ./public
