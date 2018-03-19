@@ -20,7 +20,7 @@ run:
 
 build:
 	rm -rf public
-	hugo
+	hugo --baseURL=""
 
 lint:
 	htmltest ./public
