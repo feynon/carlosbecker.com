@@ -12,7 +12,7 @@ As we are already using [Docker](http://docker.io/) to run our builds (on
 [Shippable](http://shippable.com)), we decided to try it out to run Selenium
 tests too.
 
-It was no surprise that Selenium guys already made a ready-to-go set of Docker
+It was no surprise that Selenium folks already made a ready-to-go set of Docker
 images. There is an image for the Selenium Grid itself, and the browser images -
 Chrome and Firefox, also with debug versions - which allow you to access them
 using VNC to _"see what's happening there"_. You can check them out in their
@@ -99,7 +99,7 @@ give or take).
 
 ## Try it out
 
-In order to make it easier for you guys to put all this to work (save you
+In order to make it easier for you folks to put all this to work (save you
 a bunch of copy-and-paste combos), I created a simple set of shell scripts that
 can easily put a selenium grid up and running.
 

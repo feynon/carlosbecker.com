@@ -67,7 +67,7 @@ It should provide you a output like this:
     <3 @mdo and @fat\n
 
 
-Hell yeah dudes! It's much more easy than I think!
+Hell yeah folks! It's much more easy than I think!
 So now, we have to upgrade Jekyll! Let's go?
 
 

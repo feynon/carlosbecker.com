@@ -10,7 +10,7 @@ title: Dump a PostgreSQL table as insert statements
 > this is a really quick tip.
 
 This week I'm working closely to the "front-end guy". Not that I don't know
-how to front end, but he is helping me.
+how to front end, but he was helping me.
 
 We are developing an internal tool, that, for this first version, will use
 only a few tables of one of our databases.

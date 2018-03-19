@@ -29,4 +29,4 @@ The charts look like this one:
 
 [GoReleaser](https://github.com/goreleaser) stargazers over time.
 
-Hope you guys enjoy it!
+Hope you folks enjoy it!

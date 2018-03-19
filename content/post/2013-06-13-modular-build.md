@@ -14,10 +14,10 @@ I realized that most of this scripts are project specific. In my case, at my
 daily job, I created a `scripts` folder inside project root folder, and start
 coding a bunch of scripts inside it.
 
-I end up with a lot of replicated code. Stupid things like exporting `MAVEN_OPTS`
-and a lot of params to `mvn` executable. I could just put that in my
-[dotfiles][dotfiles], but I it doesn't make sense, since other projects
-will have other setup.
+I end up with a lot of replicated code. Foolish things like exporting
+`MAVEN_OPTS` and a lot of params to `mvn` executable. I could just put that
+in my [dotfiles][dotfiles], but I it doesn't make sense, since other
+projects will have other setup.
 
 Another problem, is that lots of times I wanted to run a lot of scripts in one
 line, for example:
