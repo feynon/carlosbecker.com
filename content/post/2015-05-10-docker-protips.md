@@ -4,7 +4,7 @@ slug: docker-protips
 title: Docker Protips™
 ---
 
-Like my old post [on git]({% post_url 2013-02-08-git-protips %}),
+Like my old post [on git]({{< ref "post/2013-02-08-git-protips.md" >}}),
 this is somewhat a collection of useful Docker commands/tricks/whatever.
 
 Feel free to leave yours in the comments!

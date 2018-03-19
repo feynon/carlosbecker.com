@@ -4,7 +4,7 @@ slug: injectmocks
 title: Using Mockito's InjectMocks
 ---
 
-> FYI: Like the [previous post]({% post_url 2015-02-19-dump-postgres-table-inserts %}),
+> FYI: Like the [previous post]({{< ref "post/2015-02-19-dump-postgres-table-inserts.md" >}}),
 > this is a really quick tip.
 
 Let's imagine we have two classes, and one depends on another:

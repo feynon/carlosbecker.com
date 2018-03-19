@@ -6,7 +6,7 @@ slug: dump-postgres-table-inserts
 title: Dump a PostgreSQL table as insert statements
 ---
 
-> FYI: Like the [previous post]({% post_url 2015-02-17-find-non-ascii-chars %}),
+> FYI: Like the [previous post]({{< ref "post/2015-02-17-find-non-ascii-chars.md" >}}),
 > this is a really quick tip.
 
 This week I'm working closely to the "front-end guy". Not that I don't know

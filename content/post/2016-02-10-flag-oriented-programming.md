@@ -113,7 +113,7 @@ I dare you to guess what happens next...
 
 At this point, the code is already a mess. Maybe the developers will attempt
 to apply some clean code and put the contents of each `if` statement in
-separated functions... but, is this [good design][good-design], at all?
+separated functions... but, is this [good design]({{< ref "2015-12-27-good-code.md" >}}), at all?
 
 Of course not. This is imperative, flag-oriented programming.
 
@@ -248,5 +248,4 @@ please, comment above, let's discuss how to write better code.
 And, just to be clear, there could be N other implementations, decorators are
 **not** a silver bullet. Use them wisely.
 
-[good-design]: {% post_url 2015-12-27-good-code %}
 [irrational]: http://amzn.to/1SH7rJV

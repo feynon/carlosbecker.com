@@ -149,7 +149,7 @@ scared of it because of the lack of knowledge. I can only suggest you to
 start testing it in development machines, CI environments and so forth. It is
 safe and you will surely learn a lot (and love almost every second of it).
 You can also read my
-[previous post about how Docker works]({% post_url 2015-05-12-docker-basics %}).
+[previous post about how Docker works]({{< ref "post/2015-05-12-docker-basics.md" >}}).
 
 The best part: need more speed? Just change the instance type and let
 docker-compose scale it up!

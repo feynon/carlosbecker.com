@@ -7,7 +7,7 @@ title: Javascript Variable Hoisting
 > This is article is the second of a serie of `n` articles, where `n` could
 > be any given number between `1` and `2` (inclusive).
 
-The first article of this serie was about [Contexts]({% post_url 2013-08-12-js-context %}).
+The first article of this serie was about [Contexts]({{< ref "post/2013-08-12-js-context.md" >}}).
 The article itself received much more attention than I thought it will, which leads me
 to proceed and create the next very basic JavaScript articles.
 

@@ -5,7 +5,7 @@ title: Theming GWT-Bootstrap
 ---
 
 First of all, if you haven't done it yet, read
-[Getting started with GWT-Bootstrap]({% post_url 2012-06-26-getting-started-with-gwt-bootstrap %}).
+[Getting started with GWT-Bootstrap]({{< ref "post/2012-06-26-getting-started-with-gwt-bootstrap.md" >}}).
 
 ## Create the GWT-Project
 
