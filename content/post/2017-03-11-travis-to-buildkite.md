@@ -2,6 +2,8 @@
 date: 2017-03-11T00:00:00Z
 slug: travis-to-buildkite
 title: From Travis Enterprise to BuildKite in 50 repositories
+tags:
+- ci
 ---
 
 At [ContaAzul][], we use the CI infrastructure **a lot**. We open

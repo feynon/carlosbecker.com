@@ -2,6 +2,9 @@
 date: 2017-04-28T00:00:00Z
 slug: k8s-sandbox-costs
 title: 70% cheaper Kubernetes cluster on AWS
+tags:
+- kubernetes
+- aws
 ---
 
 We are running Kubernetes on both sandbox and production for some months now.

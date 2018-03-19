@@ -2,6 +2,10 @@
 date: 2017-01-02T00:00:00Z
 slug: goreleaser
 title: Fast and easy Go binaries delivery
+tags:
+- golang
+- goreleaser
+- package
 ---
 
 I have some apps written in Go, which I deliver as binaries for each
