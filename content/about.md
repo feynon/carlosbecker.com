@@ -10,7 +10,7 @@ featureimage: public/images/header.jpg
 Carlos is a software developer based in Joinville, Brazil. He currently works
 as site reliability engineer for [ContaAzul](http://contaazul.com).
 
-When not working, he's [blogging](http://carlosbecker.com),
+When not working, he's [blogging](https://carlosbecker.com),
 hacking on [open source](https://github.com/caarlos0),
 [reading books](https://goodreads.com/caarlos0),
 lifting weights and learning new things.
