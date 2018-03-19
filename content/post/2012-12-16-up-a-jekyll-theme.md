@@ -2,6 +2,8 @@
 date: 2012-12-16T00:00:00Z
 slug: up-a-jekyll-theme
 title: 'UP: A Jekyll theme'
+tags:
+- jekyll
 ---
 
 After a while using [Jekyll Bootstrap][jekyll_bootstrap], I just realized that it was

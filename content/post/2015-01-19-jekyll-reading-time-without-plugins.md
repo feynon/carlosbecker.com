@@ -2,6 +2,8 @@
 date: 2015-01-19T00:00:00Z
 slug: jekyll-reading-time-without-plugins
 title: 'Jekyll: Reading time without plugins'
+tags:
+- jekyll
 ---
 
 Estimated reading time of a post is a feature that became popular, I believe,

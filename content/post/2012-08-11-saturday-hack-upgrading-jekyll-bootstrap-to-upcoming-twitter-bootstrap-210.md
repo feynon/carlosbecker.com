@@ -4,6 +4,9 @@ aliases:
 - /posts/upgrading-jekyll-bootstrap/
 slug: saturday-hack-upgrading-jekyll-bootstrap-to-upcoming-twitter-bootstrap-210
 title: Upgrading Jekyll Bootstrap
+tags:
+- jekyll
+- bootstrap
 ---
 
 As you may know, this blog uses [Jekyll Bootstrap](http://jekyllbootstrap.com) as engine. Yeah, Jekyll Bootstrap uses Twitter-Bootstrap, but, it uses the version 2.0.x (mine is 2.0.4, don't remember if I update or if it hsa like this since the begin of times), and the version 2.1.0 is comming!

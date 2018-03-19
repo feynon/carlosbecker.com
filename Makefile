@@ -36,3 +36,9 @@ avatar:
 		\( -clone 0 -resize 48x48 \) \
 		\( -clone 0 -resize 64x64 \) \
 		-delete 0 -alpha off -colors 256 static/favicon.ico
+
+new:
+	hugo new "post/$$(date +%Y-%m-%d)-$(filter-out $@,$(MAKECMDGOALS)).md"
+
+%:
+	@:
