@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "https://carlosbecker.com/"
 languageCode = "en-us"
 title = "Carlos Alexandro Becker"
 theme = "hugo-type-theme"
@@ -13,7 +13,6 @@ paginate = 5
 
 pygmentsCodeFences = true
 pygmentsStyle = "dracula"
-pygmentsUseClassic = true
 
 [permalinks]
   post = "/posts/:slug"
