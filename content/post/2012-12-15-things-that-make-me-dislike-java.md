@@ -188,5 +188,5 @@ a weird syntax, using [Google Guava Libraries][guava]. I've
 
 
 [rdoc_nil]: http://ruby-doc.org/core-1.9.3/Object.html#method-i-nil-3F
-[guava_post]: http://caarlos0.github.com/posts/rocking-out-with-google-guava
+[guava_post]: {{< ref "post/2012-08-08-rocking-out-with-google-guava.md" >}}
 [guava]: http://code.google.com/p/guava-libraries/

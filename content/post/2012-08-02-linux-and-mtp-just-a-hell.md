@@ -40,8 +40,7 @@ Then, if you have some luck, you can connect you device via some media player
 least some music to your device.
 
 Also, you can transfer files via bluetooth (hell slow) or via wireless
-(using something like
-[airdroid](https://play.google.com/store/apps/details?id=com.sand.airdroid)).
+(using something like Airdroid).
 
 I'll try to mantain this post updated with new info, if you have something to
 share, please leave a comment.

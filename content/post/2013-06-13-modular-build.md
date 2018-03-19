@@ -67,14 +67,13 @@ $ curl -s http://git.io/63HVSg | bash
 After that, `make newtask` and start building your own scripts. Automate
 everything, put computers to work to you, not the opposite.
 
-You can find more info in the [project repo][modular-build-repo] and also in
+You can find more info in the [project repo][modular-build] and also in
 the [project site][modular-build].
 
 Also, you can give contributions and opinions, here, or in project issues.
 
 Happy hacking!
 
-[modular-build]: http://carlosbecker.com/modular-build/
-[modular-build-repo]: https://github.com/caarlos0/modular-build
+[modular-build]: https://github.com/caarlos0/modular-build
 [lucas]: https://github.com/merencia
 [dotfiles]: https://github.com/caarlos0/dotfiles

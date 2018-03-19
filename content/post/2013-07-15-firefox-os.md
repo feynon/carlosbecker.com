@@ -4,8 +4,6 @@ slug: firefox-os
 title: I just got a Firefox OS powered phone
 ---
 
-![Keon](https://igcdn-photos-g-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/e15/11262604_796197593809214_411875016_n.jpg "The Geeksphone Keon phone I got from Mozilla")
-
 So, Mozilla just gave me the [Geeksphone Keon][keon] with Firefox OS Developer
 Preview, and I decided to drop here some lines about it.
 
