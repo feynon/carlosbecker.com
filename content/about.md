@@ -1,6 +1,5 @@
 ---
 title: "About"
-date: 1990-04-16T00:00:00Z
 permalink: /about
 menu: nav
 disableComments: true
