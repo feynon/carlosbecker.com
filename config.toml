@@ -25,9 +25,9 @@ pygmentsUseClassic = true
 	keywords = "software development, software, golang, devops, go, sre, site reliability engineering"
 	# Either show custom avatar on the top
 	# left by adding the filename in below
-	# avatar = "img/avatar.png"
+	avatar = "public/avatar.jpg"
 	# or use Gravatar by adding your email address to generate a unique avatar
-	gravatar = "caarlos0@gmail.com"
+	gravatar = ""
 
 	# headerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Remove all header text in **config.toml** to disable this feature."
 	# To add a header background to the main site, save your image under static/img/.

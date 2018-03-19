@@ -1,7 +1,0 @@
-#!/bin/bash
-set -eo pipefail
-bundle exec jekyll build
-bundle exec htmlproofer \
-  --http-status-ignore "301,403,0" \
-  --url-ignore "/www.archlinux.org/" \
-  ./_site
