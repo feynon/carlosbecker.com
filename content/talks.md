@@ -2,7 +2,7 @@
 title: Talks
 permalink: /talks
 menu: nav
-featureimage: /public/images/talks_header.jpg
+featureimage: public/images/talks_header.jpg
 disableComments: true
 ---
 

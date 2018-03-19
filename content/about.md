@@ -4,7 +4,7 @@ date: 1990-04-16T00:00:00Z
 permalink: /about
 menu: nav
 disableComments: true
-featureimage: /public/images/header.jpg
+featureimage: public/images/header.jpg
 ---
 
 Carlos is a software developer based in Joinville, Brazil. He currently works
