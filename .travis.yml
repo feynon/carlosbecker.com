@@ -1,9 +1,7 @@
-language: ruby
-rvm:
-  - 2.3.1
-script: travis_retry ./bin/cibuild
-env:
-  global:
-    - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-notifications:
-  email: false
+language: go
+install:
+- curl -sL https://raw.githubusercontent.com/goreleaser/godownloader/master/samples/godownloader-hugo.sh | bash
+- wget https://github.com/wjdp/htmltest/releases/download/v0.8.0/htmltest-linux
+script:
+- hugo
+- ./htmltest-linux ./public
