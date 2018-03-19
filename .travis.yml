@@ -3,6 +3,8 @@ install:
 - curl -sL https://raw.githubusercontent.com/goreleaser/godownloader/master/samples/godownloader-hugo.sh | bash
 - wget -O ./bin/htmltest https://github.com/wjdp/htmltest/releases/download/v0.8.0/htmltest-linux
 - chmod +x ./bin/htmltest
+env:
+- PATH="./bin:$PATH"
 script:
 - hugo
 - htmltest ./public
