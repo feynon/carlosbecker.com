@@ -19,7 +19,8 @@ run:
 	hugo server -w
 
 build:
-	rm -rf public
+	rm -rf ./public
+	mkdir -p ./tmp
 	echo "relativeurls = true" > ./tmp/config.toml
 	cat config.toml >> ./tmp/config.toml
 	hugo --config ./tmp/config.toml
