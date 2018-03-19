@@ -167,7 +167,14 @@ search. I don't want to do that right now, so, I'll be happy with what I got.
 
 Oh, I also graphed all these things (with 100 executions in a fresh shell):
 
-<iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/150esx1EvZSqSH6JbRiPjK5pPHYUMsD7yiwSvDCzoS0U/pubchart?oid=1235244557&amp;format=interactive" data-proofer-ignore></iframe>
+<iframe
+  width="600"
+  height="371"
+  seamless
+  frameborder="0"
+  scrolling="no"
+  data-proofer-ignore
+  src="https://docs.google.com/spreadsheets/d/150esx1EvZSqSH6JbRiPjK5pPHYUMsD7yiwSvDCzoS0U/pubchart?oid=1235244557&amp;format=interactive"></iframe>
 
 For reference,
 [here](https://docs.google.com/spreadsheets/d/150esx1EvZSqSH6JbRiPjK5pPHYUMsD7yiwSvDCzoS0U)

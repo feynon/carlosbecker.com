@@ -6,3 +6,8 @@ install:
 script:
 - hugo
 - htmltest ./public
+cache:
+  directories:
+  - tmp/.htmltest
+notifications:
+  email: false
