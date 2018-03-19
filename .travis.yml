@@ -1,8 +1,8 @@
 language: go
 install:
 - curl -sL https://raw.githubusercontent.com/goreleaser/godownloader/master/samples/godownloader-hugo.sh | bash
-- wget -O /usr/local/bin/htmltest https://github.com/wjdp/htmltest/releases/download/v0.8.0/htmltest-linux
-- chmod +x /usr/local/bin/htmltest
+- wget -O ./bin/htmltest https://github.com/wjdp/htmltest/releases/download/v0.8.0/htmltest-linux
+- chmod +x ./bin/htmltest
 script:
 - hugo
 - htmltest ./public
