@@ -1,6 +1,4 @@
 ---
-ad: ad1
-TODO: this fucking ad
 date: 2015-02-19T00:00:00Z
 slug: dump-postgres-table-inserts
 title: Dump a PostgreSQL table as insert statements
@@ -53,3 +51,9 @@ $ psql \
 That's it. A quick and useful tip that I have used many times and will probably
 use many more.
 
+---
+
+**ad**: Work from anywhere with a
+[Cloud hosted desktop](https://www.clouddesktoponline.com) and stay connected
+to your team with	[hosted SharePoint](https://www.cloudappsportal.com) services.
+Take a risk free trial today.
