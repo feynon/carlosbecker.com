@@ -2,10 +2,3 @@ div.highlight > pre {
   padding: 10px;
   font-size: 0.8em;
 }
-
-iframe.video,
-iframe.ted,
-img {
-  margin: 20px 0;
-  border-radius: 5px;
-}
