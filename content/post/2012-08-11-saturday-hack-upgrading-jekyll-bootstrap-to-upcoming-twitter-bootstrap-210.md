@@ -9,8 +9,7 @@ title: Upgrading Jekyll Bootstrap
 As you may know, this blog uses [Jekyll Bootstrap](http://jekyllbootstrap.com) as engine. Yeah, Jekyll Bootstrap uses Twitter-Bootstrap, but, it uses the version 2.0.x (mine is 2.0.4, don't remember if I update or if it hsa like this since the begin of times), and the version 2.1.0 is comming!
 Like you can see in the @[twbootstrap](https://twitter.com/twbootstrap) twitter profile, 2.1.0 will be released a few days!
 
-<blockquote class="twitter-tweet tw-align-center" lang="pt"><p>Just a quick heads up, Bootstrap 2.1 will be released in roughly three weeks. More details to come!</p>&mdash; Twitter Bootstrap (@twbootstrap) <a href="https://twitter.com/twbootstrap/status/230470118562484224" data-datetime="2012-08-01T01:08:52+00:00">agosto 1, 2012</a></blockquote>
-
+{{< tweet 230470118562484224 >}}
 
 HELL YEAH, finally a new version!
 

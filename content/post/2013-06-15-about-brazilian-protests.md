@@ -38,8 +38,7 @@ channel, which basically do what they want, manipulating people so they
 just sit and watch some stupid TV show, while the politicians "walk and shit"
 where, how and how much they want.
 
-<iframe width="560" height="315" class="video" frameborder="0" allowfullscreen
-src="http://www.youtube.com/embed/KSYR9RN7LyI"></iframe>
+{{< youtube KSYR9RN7LyI >}}
 
 > This video is an answer to [another video][othervideo], by a Rede Globo
 > Commentator, which said a lot of shit (like that we are not worth 20 cents) to
@@ -53,9 +52,7 @@ Public education, health and security are almost the same as nothing. In few
 words, we pay taxes to have them, but we end up paying to have them, and we
 have to pay embedded taxes to get this too.
 
-<iframe class="video" width="560" height="315"
-src="http://www.youtube.com/embed/AIBYEXLGdSg" frameborder="0"
-allowfullscreen></iframe>
+{{< youtube AIBYEXLGdSg >}}
 
 We got tired of this crap. There are people starving, and they spent **R$ 1.2
 BILLION** in a fucking football stadium in a city that doesn't even have
@@ -89,8 +86,7 @@ Let's change Brazil! Thank you all for any help and support!
 
 ### REFUSE/RESIST
 
-<iframe width="560" height="315" class="video" frameborder="0" allowfullscreen
-src="http://www.youtube.com/embed/zn8ndJOIEsI"></iframe>
+{{< youtube zn8ndJOIEsI >}}
 
 -------
 
