@@ -98,6 +98,6 @@ Now, check your `**jekyll home**/_includes/themes/twitter/default.html` for the 
 Now, you should be able to run a `jekyll --server`, in my case it works just fine, but, my layout was modified a lot... don't sure if it works in a default jekyll.
 So, test it, and tell me what you got :)
 
-I also do a lot of other hacks, using `docs.css` file as example, tweak footer, [about](/about) page and other things...
+I also do a lot of other hacks, using `docs.css` file as example, tweak footer, [about](/about/) page and other things...
 
 Cheers!

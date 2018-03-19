@@ -25,6 +25,3 @@ He's married to the [beautiful girl](http://twitter.com/carinemeyer) in the
 photo and lives with her and their Chinchila,
 [Zakk](http://www.youtube.com/watch?v=YtWlIPGpxTc),
 in [Joinville - SC, Brazil](http://goo.gl/maps/9tvI4).
-
-Wanna talk about something, hire me or are looking for a consultant?
-[**Send me an email!**](/contact)
