@@ -37,7 +37,6 @@ pygmentsStyle = "dracula"
 	# headerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Remove all header text in **config.toml** to disable this feature."
 	# headerImage = ""
 	copyright = "Released under the MIT license<br>Powered by [Hugo](//gohugo.io/) with the [Type Theme](//github.com/digitalcraftsman/hugo-type-theme)"
-	customCSS = "/public/css/carlos.css"
 
 	[params.social]
 		rss = false
