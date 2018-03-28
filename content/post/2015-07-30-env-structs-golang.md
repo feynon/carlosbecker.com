@@ -2,6 +2,8 @@
 date: 2015-07-30T00:00:00Z
 slug: env-structs-golang
 title: Parse environment variables to structs in Go
+tags:
+- golang
 ---
 
 In Go, it's dead simple to get the value from an environment variable:

@@ -2,6 +2,8 @@
 date: 2015-06-19T00:00:00Z
 slug: cross-compile-go
 title: Cross-compiling Go
+tags:
+- golang
 ---
 
 `go build` generates a binary for the platform you run it in. So, if I

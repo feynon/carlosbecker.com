@@ -2,6 +2,9 @@
 date: 2015-05-15T00:00:00Z
 slug: selenium-grid-docker-compose
 title: Running a Selenium Grid with docker-compose
+tags:
+- java
+- docker
 ---
 
 At [ContaAzul](http://contaazul.com), we had 31 Windows machines powering our

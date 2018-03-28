@@ -2,6 +2,8 @@
 date: 2017-03-04T00:00:00Z
 slug: distributed-locks-redis
 title: Distributed Locking with Redis
+tags:
+- java
 ---
 
 At [ContaAzul][], we have several old pieces of code that are still running

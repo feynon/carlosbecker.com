@@ -2,6 +2,9 @@
 date: 2015-07-09T00:00:00Z
 slug: small-go-apps-containers
 title: Small Go Apps Containers
+tags:
+- golang
+- docker
 ---
 
 Or: how to ship your app in a <20Mb container.

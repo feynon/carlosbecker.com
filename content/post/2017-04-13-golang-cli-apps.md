@@ -2,6 +2,9 @@
 date: 2017-04-13T00:00:00Z
 slug: golang-cli-apps
 title: Writing cli applications with Golang
+tags:
+- golang
+- cli
 ---
 
 Last few months I've been using Go to write quite a lot of tools. In this post

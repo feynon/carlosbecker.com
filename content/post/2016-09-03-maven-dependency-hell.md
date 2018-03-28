@@ -2,6 +2,8 @@
 date: 2016-09-03T00:00:00Z
 slug: maven-dependency-hell
 title: Dealing with Maven dependency hell
+tags:
+- java
 ---
 
 Every now and then an active java-based project enters in a

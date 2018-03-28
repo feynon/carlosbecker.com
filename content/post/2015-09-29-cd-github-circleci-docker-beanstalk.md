@@ -2,6 +2,9 @@
 date: 2015-09-29T00:00:00Z
 slug: cd-github-circleci-docker-beanstalk
 title: Continuous Delivery with GitHub, CircleCI, Docker and AWS Elastic Beanstalk
+tags:
+- ci
+- aws
 ---
 
 This is just a quick overview of how I did it in [antibody's homepage][1].

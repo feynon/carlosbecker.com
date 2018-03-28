@@ -2,6 +2,8 @@
 date: 2015-07-05T00:00:00Z
 slug: avoid-static-imports
 title: Avoid static imports
+tags:
+- java
 ---
 
 There are a lot of Java API's and Frameworks which rely in `static` methods and

@@ -2,6 +2,8 @@
 date: 2017-03-20T00:00:00Z
 slug: production-code-coverage-jacoco
 title: Measuring production code coverage with JaCoCo
+tags:
+- java
 ---
 
 Microservices is the new fancy way of doing applications. Yet, most
