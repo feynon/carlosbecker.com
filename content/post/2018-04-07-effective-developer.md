@@ -212,3 +212,7 @@ someone.
 
 If you have your own tips (I know you do) and feel like sharing them,
 please, leave a comment - it will be greatly appreciated.
+
+I also want to leave a very special thanks to
+[Tiago Matias](https://github.com/tmatias) for the review
+and for the unintentional inspiration to write this.
