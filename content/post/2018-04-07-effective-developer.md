@@ -16,12 +16,12 @@ effective/faster, and I never have anything solid to say.
 
 Overall, I'm just another engineer. I'm not smart and I for sure don't know
 everything that is to know about any topic. I'm for sure not the most
-effective engineer out there. But, I think we can all teach something
+effective engineer out there either. But, I think we can all teach something
 to others, so this is my take on the subject.
 
 ---
 
-I tried to broke it down to a few topics on things I **try** to do:
+I tried to break it down to a few topics on things I **try** to do:
 
 - study with focus;
 - try to really understand the problem;
