@@ -7,11 +7,11 @@ export PATH := ./bin:$(PATH)
 setup:
 	mkdir -p bin
 ifeq ($(OS), Darwin)
-	brew install hugo
-	wget -O ./bin/htmltest https://github.com/wjdp/htmltest/releases/download/v0.8.0/htmltest-osx
+	brew install hugo || brew upgrade hugo
+	wget -O ./bin/htmltest https://github.com/wjdp/htmltest/releases/download/v0.8.1/htmltest-osx
 else
 	curl -sL https://raw.githubusercontent.com/goreleaser/godownloader/master/samples/godownloader-hugo.sh | sh
-	wget -O ./bin/htmltest https://github.com/wjdp/htmltest/releases/download/v0.8.0/htmltest-linux
+	wget -O ./bin/htmltest https://github.com/wjdp/htmltest/releases/download/v0.8.1/htmltest-linux
 endif
 	chmod +x ./bin/*
 
