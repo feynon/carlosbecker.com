@@ -83,7 +83,7 @@ approved, and I just installed it in my phone:
 
 Surely, it has a lot that still need to be done. Lots of places are just
 unusable due to the large amount of information, things that I don't figure out
-how to fix, yet, but it is usable in its basics. You can [see the app here][app].
+how to fix, yet, but it is usable in its basics.
 
 In the end, I believe that Firefox OS has much more chances to win that Ubuntu
 Touch, but I'm not sure if it could beat Android or iOS... I believe that they
@@ -93,4 +93,3 @@ specific language/framework to build an app, just vanilla HTML, JS and CSS.
 
 
 [keon]: http://www.geeksphone.com/
-[app]: https://marketplace.firefox.com/app/wealcash/
