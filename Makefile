@@ -21,6 +21,7 @@ run:
 ci:
 	rm -rf ./public || true
 	hugo server -d ./public >/dev/null &
+	sleep 2
 	htmltest ./public
 	pkill hugo
 
