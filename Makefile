@@ -19,7 +19,7 @@ run:
 	hugo server -w
 
 ci:
-	rm -rf ./public
+	rm -rf ./public || true
 	hugo server -d ./public >/dev/null &
 	htmltest ./public
 	pkill hugo
