@@ -18,17 +18,11 @@ endif
 run:
 	hugo server -w
 
-build:
+ci:
 	rm -rf ./public
-	mkdir -p ./tmp
-	echo "relativeurls = true" > ./tmp/config.toml
-	cat config.toml >> ./tmp/config.toml
-	hugo --config ./tmp/config.toml
-
-lint:
+	hugo server -d ./public >/dev/null &
 	htmltest ./public
-
-ci: build lint
+	pkill hugo
 
 avatar:
 	wget -O static/avatar.jpg https://avatars0.githubusercontent.com/u/245435
