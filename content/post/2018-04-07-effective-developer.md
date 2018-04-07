@@ -46,10 +46,10 @@ Study until you can explain how the thing works - not only how to use it.
 Explain it to someone interested.
 
 The idea is simple: how can you be effective at using something you don't
-understand? Sure it is easy to use a framework that give you everything,
+understand? Sure it is easy to use a framework that gives you everything,
 but what will you do when the framework fails and you don't know why?
 
-Copy some crappy hack from StackOverflow, I suppose.
+Probably copy some crappy hack from StackOverflow.
 
 Don't get me wrong, I learnt a lot on StackOverflow, but you need to want
 to learn, not only to fix your current problem.
@@ -115,7 +115,7 @@ I spend most of my time on my terminal, so it makes sense to know how to use
 it.
 
 It is amazing the amount of work you can avoid by knowing some shell script
-and piping things. If you read my blog and attend to details, you'll see
+and piping things. If you read my blog and attent to details, you'll see
 that sometimes I post my shell whichcraft here, for example,
 [when I migrated a lot of repositories from one CI to another]({{< ref "post/2017-03-11-travis-to-buildkite.md" >}}).
 
@@ -165,7 +165,7 @@ As James Gleick once said:
 
 I have been doing some things to guard myself against this bullshit river:
 
-- filters crap emails (also gmail's mute feature is awesome);
+- filter crap emails (also gmail's mute feature is awesome);
 - [#QuitFacebook](https://twitter.com/hashtag/QuitFacebook);
 - try to keep my [#InboxZero](https://twitter.com/hashtag/inboxZero) - most
 of the time by ignoring most of the emails;
