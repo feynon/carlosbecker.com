@@ -56,6 +56,8 @@ to learn, not only to fix your current problem.
 
 It's also OK to use frameworks, if you understand how they work.
 
+The point is, choose something to learn, and go deep.
+
 ## Try to really understand the problem
 
 It's kind of common to have a situation in which a problem occurs, and someone
