@@ -21,7 +21,7 @@ to others, so this is my take on the subject.
 
 ---
 
-I tried to break it down to a few topics on things I **try** to do:
+I tried to break it down into a few topics on things I **try** to do:
 
 - study with focus;
 - try to really understand the problem;
@@ -35,7 +35,7 @@ Hope this helps some of you and that you like it.
 
 ---
 
-## Study with focus
+## Study with a focus
 
 Choose one thing to learn and learn it well.
 
@@ -51,10 +51,10 @@ but what will you do when the framework fails and you don't know why?
 
 Probably copy some crappy hack from StackOverflow.
 
-Don't get me wrong, I learnt a lot on StackOverflow, but you need to want
+Don't get me wrong, I learned a lot on StackOverflow, but you need to want
 to learn, not only to fix your current problem.
 
-It's also OK to use frameworks, if you understand how they work.
+It's also OK to use frameworks if you understand how they work.
 
 The point is, choose something to learn, and go deep.
 
@@ -67,7 +67,7 @@ problem.
 **Ask why.**
 
 Why does this script fix that problem? What is the cause of the problem?
-How does this thing fixes that?
+How does this thing fix that?
 
 Sometimes its just some bad config or misuse and you can fix the problem
 on its roots. If it is not the case, you'll learn something new, which
@@ -85,7 +85,7 @@ My take on this is:
 - if the problem is big, document your finding on a GitHub issue or a Jira
 ticket or whatever you use, bring it up when you can.
 
-Other than that, it's all excuses - and we all do that, because it is
+Other than that, it's all excuses - and we all do that because it is
 **so easy** to say "I'll fix it later" and forgetting about it.
 
 To hack myself, I usually think something like:
@@ -106,7 +106,7 @@ Just like a rubber duck.
 
 The problem sometimes looks bigger than it really is.
 
-If it is really big (which can happen), I now have an issue for it - and
+If it is really big (which can happen), I now have a GitHub issue for it - and
 I don't like to leave issues open.
 
 ## Improve my dev environment
@@ -117,9 +117,9 @@ I spend most of my time on my terminal, so it makes sense to know how to use
 it.
 
 It is amazing the amount of work you can avoid by knowing some shell script
-and piping things. If you read my blog and attent to details, you'll see
-that sometimes I post my shell whichcraft here, for example,
-[when I migrated a lot of repositories from one CI to another]({{< ref "post/2017-03-11-travis-to-buildkite.md" >}}).
+and piping things. If you read my blog and attend to details, you'll see
+that sometimes I post my shell witchcraft here, for example,
+[when I migrated a lot of repositories from one CI to another]({{< ref "post/2017-03-11-Travis-to-buildkite.md" >}}).
 
 I also have a lot of automation in place. Common tasks should be fast to
 execute or execute themselves.
@@ -127,9 +127,9 @@ execute or execute themselves.
 My [dotfiles repository](https://github.com/caarlos0/dotfiles) has a lot of
 things in the way I like: aliases, helpers, plugins and etc.
 
-I also occasionaly write new tools for problems I need. For example:
+I also occasionally write new tools for problems I need. For example:
 
-- [clone-org][]: to clone all repos in of given github org/user
+- [clone-org][]: to clone all repositories in of given GitHub org/user
 - [antibody][]: a faster zsh plugin manager
 - [goreleaser][]: automates release processes
 
@@ -144,7 +144,7 @@ Summing up:
 - make them faster
 - write new tools if there is none
 
-I would also advocate to learn to shell script, but, whatever works best for
+I would also advocate learning to shell script, but, whatever works best for
 you, learn it and then improve it. **Make the machine work for you**, not
 the other way around.
 
@@ -167,7 +167,7 @@ As James Gleick once said:
 
 I have been doing some things to guard myself against this bullshit river:
 
-- filter crap emails (also gmail's mute feature is awesome);
+- filter crap emails (also Gmail's mute feature is awesome);
 - [#QuitFacebook](https://twitter.com/hashtag/QuitFacebook);
 - try to keep my [#InboxZero](https://twitter.com/hashtag/inboxZero) - most
 of the time by ignoring most of the emails;
@@ -185,7 +185,7 @@ Not perfect, but it has been helping me so far.
 Keep things simple.
 
 You probably don't need spreadsheets, todo lists and a lot of things to fill
-with tasks you probably won't do anyway.
+with tasks that you probably won't do anyway.
 
 Have one source of truth for each "kind" of thing.
 
@@ -205,7 +205,7 @@ Like any other thing in the word, it takes practice - and practice takes
 time.
 
 So, don't be too hasty. Practice every day, read other people's code, maybe
-join some OpenSource project... eventually you will get there.
+join some OpenSource project... eventually, you will get there.
 
 ---
 
