@@ -10,20 +10,20 @@ When [first announced GoReleaser]({{< ref "post/2017-01-02-goreleaser.md" >}})
 roughly 1 year ago, on January 2017, I never thought it would be somewhat
 famous.
 
-I was just solving a problem I had, like I always do.
+I was just solving a problem I had like I always do.
 
 It turns out more people had the same problem, and the feedback has been
 awesome!
 
 I'm also happy to announce that my not-very-scientific script recorded that
-**1000 public github repositories** are using GoReleaser!
+**1000 public GitHub repositories** are using GoReleaser!
 
-![reposistories using goreleaser over time](https://raw.githubusercontent.com/caarlos0/goreleaser-users/master/repos.png)
+![reposistories using GoReleaser over time](https://raw.githubusercontent.com/caarlos0/goreleaser-users/master/repos.png)
 
 That is remarkable!
 
 There are also some big and famous repositories using GoReleaser. Here are
-the top 5 by number of stars:
+the top 5 by the number of stars:
 
 ![top 5 repositories using goreleaser](https://raw.githubusercontent.com/caarlos0/goreleaser-users/master/stars.png)
 
@@ -50,11 +50,11 @@ We started supporting `deb` and `rpm` packaging through [fpm], but, after
 some time (and a few issues) I decided to create [nfpm].
 
 It is a very basic packaging tool much like [fpm], but it's written in Go
-and dependends on fewer external dependencies (only `rpmbuild` at the moment).
+and depending on fewer external dependencies (only `rpmbuild` at the moment).
 
 ### Rewritten the core
 
-The core was poorly written in the first versions. It worked, but was hard
+The core was poorly written in the first versions. It worked but was hard
 to change and to add new things and kinds of artifacts.
 
 It was rewritten and is more flexible now. This allows us and
@@ -62,8 +62,8 @@ external contributors to add new kinds of artifacts easier.
 
 ### Multiple language support
 
-GoRelease was created with Go in mind, but we recently changed its build
-pipe to teoritically support more languages.
+GoReleaser was created with Go in mind, but we recently changed its build
+pipe to theoretically support more languages.
 
 The first one in the pipe will probably be
 [Rust](https://github.com/goreleaser/goreleaser/pull/520).
@@ -74,7 +74,7 @@ The first one in the pipe will probably be
 and donated it to the GoReleaser org.
 
 It is like a reverse GoReleaser: it creates shell scripts to download and
-install softwares from its releases.
+install software from its releases.
 
 It integrates with the `.goreleaser.yaml` file in the repository and generate
 the script based on that, or guess some defaults for projects that don't
@@ -98,17 +98,17 @@ Oh, I'm working on having t-shirts and stickers, if anyone is interested!
 
 ### OpenCollective
 
-I'm not a big believer of these things, but wanted to try it out anyway.
+I'm not a big believer in these things but wanted to try it out anyway.
 
 If you use GoReleaser and it saved you some time and/or you liked it,
 you can now donate a few bucks in
 [GoReleaser's OpenCollective page](https://opencollective.com/goreleaser).
 
-It is not a big thing, but helps keeping the maintainers motivated.
+It is not a big thing but helps to keep the maintainers motivated.
 
 ### Contributors
 
-We had pull requests from almot 50 different contributors so far!
+We had pull requests from almost 50 different contributors so far!
 
 - [goreleaser/goreleaser contributors](https://github.com/goreleaser/goreleaser/graphs/contributors)
 - [goreleaser/godownloader contributors](https://github.com/goreleaser/godownloader/graphs/contributors)
