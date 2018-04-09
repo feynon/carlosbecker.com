@@ -19,7 +19,8 @@ run:
 	hugo server -w
 
 ci:
-	vale .
+	# TODO: eventually check htmls as well
+	vale --glob='**/*.md' .
 	rm -rf ./public || true
 	hugo server -d ./public >/dev/null &
 	sleep 2
