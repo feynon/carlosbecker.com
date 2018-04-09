@@ -165,7 +165,7 @@ down, so, the best place to schedule a pod may change over time, generating
 idle nodes over times.
 
 Kubernetes contrib has this really good piece of software called
-[cluster-autoscaler]. The tool's documentation itself is very complete, and
+[cluster-autoscaler]. The tool's documentation itself is very good, and
 there is a [guide on how to run it on AWS][cluster-autoscaler-aws].
 
 The only problem we found is that it is usual for the Kubernetes scheduler to

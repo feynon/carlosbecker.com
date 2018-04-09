@@ -7,7 +7,7 @@ tags:
 ---
 
 There are a lot of Java API's and Frameworks which rely in `static` methods and
-the sort. Arguably, this is a bad OOP practice, but lets not enter in this
+the sort. Arguably, this is a bad OOP practice, but lets not enter this
 particular subject just yet.
 
 For example, it is pretty common to write unit tests like this:

@@ -8,17 +8,18 @@ setup:
 	mkdir -p bin
 ifeq ($(OS), Darwin)
 	brew install hugo || brew upgrade hugo
-	wget -O ./bin/htmltest https://github.com/wjdp/htmltest/releases/download/v0.8.1/htmltest-osx
 else
 	curl -sL https://raw.githubusercontent.com/goreleaser/godownloader/master/samples/godownloader-hugo.sh | sh
-	wget -O ./bin/htmltest https://github.com/wjdp/htmltest/releases/download/v0.8.1/htmltest-linux
 endif
+	curl -sL https://gist.githubusercontent.com/caarlos0/c22438abf59eb4d6ceb284bd659a6cd4/raw/vale.sh | bash
+	curl -sL https://htmltest.wjdp.uk | bash
 	chmod +x ./bin/*
 
 run:
 	hugo server -w
 
 ci:
+	vale .
 	rm -rf ./public || true
 	hugo server -d ./public >/dev/null &
 	sleep 2

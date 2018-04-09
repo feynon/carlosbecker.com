@@ -9,7 +9,7 @@ Preview, and I decided to drop here some lines about it.
 
 First of all, as the name says, it's a Developer Preview. So, a lot of things
 are buggy, others just doesn't exist yet and others of them I don't even know
-if it's relative to hardware or software. I will not enter in much details,
+if it's relative to hardware or software. I will not detail much,
 it is basically what other people already said in the geeksphone's forum.
 
 ### The phone

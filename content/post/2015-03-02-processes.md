@@ -177,7 +177,7 @@ people who uses them.
 
 That said, I would like to recommend you something: as a team member, doesn't
 matter in which role, think twice before adding that new "simple
-process" to your already existing set of processes. Do a root cause analysis
+process" to your existing set of processes. Do a root cause analysis
 of the problem, find the real issue and act on that. Maybe you can also
 do that in the already created processes and find if there is something
 that can be removed. Do a "clean code" in your processes. Sometimes the

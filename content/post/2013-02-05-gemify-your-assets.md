@@ -13,7 +13,7 @@ can help you with it. So, let's do it!
 
 ## 1. Create the project skeleton
 
-Bundler makes it simple to create the files and folders necessary for for
+Bundler makes it simple to create the files and folders necessary for
 building a Gem:
 
 ```console

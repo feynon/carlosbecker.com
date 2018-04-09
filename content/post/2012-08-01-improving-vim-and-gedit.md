@@ -63,7 +63,7 @@ $ git clone git://github.com/caarlos0/vimfiles.git ~/.vim
 $ vim ~/.vimrc
 ```
 
-With the the following content:
+With the following content:
 
 ```bash
 source ~/.vim/vimrc
