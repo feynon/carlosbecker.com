@@ -96,6 +96,10 @@ It is **awesome**. You can check out other GoReleaser art in the
 
 Oh, I'm working on having t-shirts and stickers, if anyone is interested!
 
+**edit**:
+
+{{< tweet 983696191564152832 >}}
+
 ### OpenCollective
 
 I'm not a big believer in these things but wanted to try it out anyway.
