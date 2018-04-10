@@ -30,5 +30,12 @@ He organizes both Joinville [Go](https://www.meetup.com/Joinville-Go-Meetup/)
 and [SRE](https://www.meetup.com/Joinville-SRE-Meetup/) Meetups and
 occasionally speaks on conferences and local meetups in general.
 
-Wanna hire me? Need consulting? Don't be afraid to
-[**email me**](mailto:contact@carlosbecker.com).
+He also used to play football, when his knee was still working (#96), but
+those days are long gone.
+
+{{< instagram 6-FQVOPXuu hidecaption >}}
+
+---
+
+Want to hire him? Need consulting? Want to chat about something? Shoot him an
+[email](mailto:contact@carlosbecker.com).
