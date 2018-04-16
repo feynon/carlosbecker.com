@@ -9,9 +9,9 @@ setup:
 ifeq ($(OS), Darwin)
 	brew install hugo || brew upgrade hugo
 else
-	curl -sL https://raw.githubusercontent.com/goreleaser/godownloader/master/samples/godownloader-hugo.sh | sh
+	curl -sL https://install.goreleaser.com/github.com/gohugoio/hugo.sh | bash
 endif
-	curl -sL https://gist.githubusercontent.com/caarlos0/c22438abf59eb4d6ceb284bd659a6cd4/raw/vale.sh | bash
+	curl -sL https://install.goreleaser.com/github.com/ValeLint/vale.sh | bash
 	curl -sL https://htmltest.wjdp.uk | bash
 	chmod +x ./bin/*
 
