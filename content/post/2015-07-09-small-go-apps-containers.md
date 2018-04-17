@@ -5,6 +5,7 @@ title: Small Go Apps Containers
 tags:
 - golang
 - docker
+- contaazul
 ---
 
 Or: how to ship your app in a <20Mb container.

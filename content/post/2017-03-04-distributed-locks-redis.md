@@ -4,6 +4,7 @@ slug: distributed-locks-redis
 title: Distributed Locking with Redis
 tags:
 - java
+- contaazul
 ---
 
 At [ContaAzul][], we have several old pieces of code that are still running

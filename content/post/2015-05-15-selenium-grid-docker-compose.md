@@ -5,6 +5,7 @@ title: Running a Selenium Grid with docker-compose
 tags:
 - java
 - docker
+- contaazul
 ---
 
 At [ContaAzul](http://contaazul.com), we had 31 Windows machines powering our

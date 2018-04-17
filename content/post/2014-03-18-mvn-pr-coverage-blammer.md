@@ -4,6 +4,8 @@ aliases:
 - /posts/mvn-pr-coverage/
 slug: mvn-pr-coverage-blammer
 title: PullRequest Coverage Blammer Maven Plugin
+tags:
+- contaazul
 ---
 
 At the [company I work][ca] Pull Requests are part of our culture.
