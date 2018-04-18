@@ -10,6 +10,8 @@ tags:
 At [ContaAzul][], we have several old pieces of code that are still running
 in production. We are committed to gradually re-implement them in better ways.
 
+<!--more-->
+
 One of those parts was our distributed locking mechanism and me and
 [@t-bonatti](https://github.com/t-bonatti) were up for the job.
 

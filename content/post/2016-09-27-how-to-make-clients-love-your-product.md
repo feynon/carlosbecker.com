@@ -10,6 +10,8 @@ I have seen **a lot** of posts like this subject, but almost all of them were
 about stuff you should do and almost none of them reflected how I
 truly feel, how I want a product to be so I can "love" it.
 
+<!--more-->
+
 If I would make a list, it would look more or less like this:
 
 ### 1. No bullshit

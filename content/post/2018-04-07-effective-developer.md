@@ -8,6 +8,8 @@ tags:
 Over the years I read several articles on how to be effective, and how
 the 10x engineer thing is or is not a lie and all that.
 
+<!--more-->
+
 I think this "being effective" varies a lot from one to another, so it is
 probably really hard to be 100% accurate with anything.
 

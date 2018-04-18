@@ -11,6 +11,8 @@ I've lost a considerable amount of time trying to bind those things together,
 so I decided to write this quick post about it, so others could also benefit
 from it.
 
+<!--more-->
+
 The tips are:
 
 - Don't install Glide using `go get`. Use `apt`;

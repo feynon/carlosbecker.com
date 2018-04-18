@@ -10,6 +10,8 @@ When [first announced GoReleaser]({{< ref "post/2017-01-02-goreleaser.md" >}})
 roughly 1 year ago, on January 2017, I never thought it would be somewhat
 famous.
 
+<!--more-->
+
 I was just solving a problem I had like I always do.
 
 It turns out more people had the same problem, and the feedback has been

@@ -12,6 +12,8 @@ several pull requests in several projects every day, and we block the merge
 until the build pass. We consider our `master` branches are sacred, and
 we can't afford too much waiting to change them.
 
+<!--more-->
+
 ## Travis Enterprise
 
 For the past year, we have been using [Travis Enterprise](https://enterprise.travis-ci.com/).

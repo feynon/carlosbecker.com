@@ -7,6 +7,8 @@ title: Flag-oriented Programming
 `booleans`, right? What a wonderful piece of technology! They help us solve so
 many problems...
 
+<!--more-->
+
 > I just need this method to behave slightly different when
 > some condition is `true`.
 

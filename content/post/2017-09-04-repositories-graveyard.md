@@ -8,6 +8,8 @@ This past weekend I decided I need to clean up my GitHub profile. In this post
 I'll write about why I cleaned everything up and also how I did, as well as
 some initial results.
 
+<!--more-->
+
 ## Why
 
 I've been using GitHub for years now, and I tend to create a lot of

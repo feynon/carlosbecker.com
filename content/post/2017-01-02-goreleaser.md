@@ -12,6 +12,8 @@ I have some apps written in Go, which I deliver as binaries for each
 platform using GitHub releases. Until now, I was doing it with a very
 simple [shell script](https://github.com/goreleaser/goreleaser.github.io).
 
+<!--more-->
+
 But, I also wanted to dist these new releases in a homebrew tap. Adding that
 in the script would be kind of trivial, but I didn't like the way I was using
 it all (arguments, hacks, etc).

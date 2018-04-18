@@ -8,6 +8,9 @@ tags:
 ---
 
 I always wanted to know how stargazers of my repos increased over time.
+
+<!--more-->
+
 I didn't found a good way of doing that, so I wrote an app for that™.
 
 The app stack is simple:

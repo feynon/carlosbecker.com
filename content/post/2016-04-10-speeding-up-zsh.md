@@ -8,6 +8,8 @@ tags:
 
 This is the story on how I speed up my terminal load time.
 
+<!--more-->
+
 Some time ago I shared my
 [dotfiles to the world]({{< ref "post/2012-11-23-dotfiles-are-meant-to-be-forked.md" >}}).
 

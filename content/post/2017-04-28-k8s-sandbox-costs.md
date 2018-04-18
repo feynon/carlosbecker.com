@@ -11,6 +11,8 @@ We are running Kubernetes on both sandbox and production for some months now.
 Our production cluster is still small, with few services running on it, but,
 most of our sandbox environment is running on a Kubernetes cluster on AWS.
 
+<!--more-->
+
 We created the clusters with [Kops][] (which is great by the way), but we soon
 realized that the sandbox cluster was too expensive for our needs.
 

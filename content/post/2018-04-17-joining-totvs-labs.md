@@ -9,6 +9,8 @@ tags:
 Everything in life eventually comes to an end, including life itself. This is
 not that kind of post, though.
 
+<!--more-->
+
 After 4 years and a lot of work, I'm leaving [ContaAzul].
 
 I have met and work with awesome people there, and I can say with 100%

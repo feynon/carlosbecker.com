@@ -11,6 +11,8 @@ Every now and then an active java-based project enters in a
 dependencies without checking what comes in transitively nor if that
 dependency is declared somewhere else already.
 
+<!--more-->
+
 It also seems to happen more with really big projects, which only make
 everything event worse when it comes to the time that a fix is needed.
 

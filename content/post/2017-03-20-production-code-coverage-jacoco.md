@@ -13,6 +13,8 @@ software of this size, it’s usual to have lines of code which are never
 executed in production. Production code coverage reports can help
 us find those lines.
 
+<!--more-->
+
 The strategy described here can be used in virtually any Java software,
 but what led me to do this was the difficulty to find code that was
 not being used in a monolith.

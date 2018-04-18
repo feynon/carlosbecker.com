@@ -8,6 +8,9 @@ tags:
 
 I've been using Jekyll on my blog since 2012. It is great!
 But, lately, its slow build times started to bother me.
+
+<!--more-->
+
 I consider moving to [Hugo], but that seemed like a lot
 of work, and I didn't know what the real problem was.
 In this post I'll show how I improved my Jekyll blog build time in about

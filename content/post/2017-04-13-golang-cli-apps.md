@@ -11,6 +11,8 @@ Last few months I've been using Go to write quite a lot of tools. In this post
 I intent to show not why I chose Go over others, but how I architect
 those tools, what libraries I use and what kind of automation I have in place.
 
+<!--more-->
+
 ## Libraries
 
 I'm sure some folks will preffer others, but, right now I'm using:
