@@ -28,7 +28,7 @@ It's time to face the new challenges ahead!
 Starting next week (Apr 23th), I'll be joining [TOTVS Labs][labs]!
 I’ll work remotely as a devops engineer.
 
-I'm excited to see what
+I'm excited to see what we will accomplish together!
 
 See you all around!
 
