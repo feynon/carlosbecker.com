@@ -8,16 +8,26 @@ disableComments: true
 
 Some talks I gave over the years, just in case you want to see the slides.
 
+## 2018
+
+### 2º Joinville Go Meetup
+
+It was the Go 1.10 Release party - my talk was about what changed in
+Go 1.10.
+
+{{< speakerdeck 44038e2880354ede8e1148deb974f247 >}}
+
+
 ## 2017
 
-#### 1º Joinville SRE Meetup
+### 1º Joinville SRE Meetup
 
 I spoke about how we migrate our monitoring infrastructure to Prometheus &
 Friends, what we got out of it and how it is working for us right now.
 
 {{< speakerdeck 9446e109d6864391b5db444c70669da9 >}}
 
-#### 1º Changelog Meetup
+### 1º Changelog Meetup
 
 I showed how to build and release binaries in Go, including cross-compiling,
 Docker images, linux packages and homebrew, featuring GoReleaser on the end.
@@ -26,7 +36,7 @@ Docker images, linux packages and homebrew, featuring GoReleaser on the end.
 
 ## 2015
 
-#### 2º #connect(dev)
+### 2º #connect(dev)
 
 I gave a little intro on Docker and talked about when to use it or not.
 
@@ -34,7 +44,7 @@ I gave a little intro on Docker and talked about when to use it or not.
 
 ## 2014
 
-#### 2º Joinville Software Meetup
+### 2º Joinville Software Meetup
 
 I encouraged people to start using git, showing some of its features.
 
