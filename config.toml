@@ -28,6 +28,16 @@ pygmentsStyle = "dracula"
 [permalinks]
 	post = "/posts/:slug"
 
+[privacy]
+  [privacy.googleAnalytics]
+    anonymizeIP = true
+    respectDoNotTrack = true
+    useSessionStorage = true
+  [privacy.twitter]
+    enableDNT = true
+  [privacy.youtube]
+    privacyEnhanced = true
+
 [params]
 	author = "Carlos Alexandro Becker"
 	description = "Thoughts, rants and discoveries on software development and related stuff."
