@@ -29,10 +29,9 @@ $ cat /sys/module/i915/parameters/modeset
 
 Before continue, be sure that the following packages are installed:
 
-	xf86-video-fbdev
-	xf86-video-intel
-	xf86-video-vesa
-
+    xf86-video-fbdev
+    xf86-video-intel
+    xf86-video-vesa
 
 You can install it in a archlinux box with
 
@@ -46,24 +45,24 @@ You will need to change several files. Starting with
 `/etc/modprobe.d/modprobe.conf`. Add (or create the file, if it doesn't exist)
 the following:
 
-	options i915 modeset=1
+    options i915 modeset=1
 
 Also, edit `/etc/mkinitcpio.conf`.
 
-* Edit the `MODULES` line, like in `MODULES="intel_agp i915"`
-* Uncoment the line `FILES="/etc/modprobe.d/modprobe.conf"` and comment the
-`FILES=""` if it exists.
+- Edit the `MODULES` line, like in `MODULES="intel_agp i915"`
+- Uncoment the line `FILES="/etc/modprobe.d/modprobe.conf"` and comment the
+  `FILES=""` if it exists.
 
 Create the `/etc/X11/xorg.conf.d/20-intel.conf` file with the following content:
 
-	Section "Device"
-		Identifier "card0"
-		Driver "intel"
-		VendorName  "Intel Corporation"
-		BoardName   "Intel Corporation N10 Family Integrated Graphics Controller"
-		BusID       "PCI:0:2:0"
-		Option      "SwapbuffersWait"    "false"
-	EndSection
+    Section "Device"
+    	Identifier "card0"
+    	Driver "intel"
+    	VendorName  "Intel Corporation"
+    	BoardName   "Intel Corporation N10 Family Integrated Graphics Controller"
+    	BusID       "PCI:0:2:0"
+    	Option      "SwapbuffersWait"    "false"
+    EndSection
 
 ## Regenerate initframs
 

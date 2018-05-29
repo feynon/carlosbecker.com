@@ -43,25 +43,25 @@ We can also encapsulate variables with something like this:
 ```javascript
 var global = 100;
 
-var testFn = function () {
+var testFn = function() {
   // new context here
   var local = 2;
 
-  var getLocal = function () {
+  var getLocal = function() {
     // new context here
     return local;
   };
 
-  var setLocal = function (l) {
+  var setLocal = function(l) {
     // new context here
     local = l;
-    return 'called setLocal';
+    return "called setLocal";
   };
 
-  var inc = function () {
+  var inc = function() {
     // new context here
     local += global;
-    return 'called inc';
+    return "called inc";
   };
 
   // we return an object with the functions/objects we want to expose.
@@ -69,8 +69,8 @@ var testFn = function () {
     getLocal: getLocal,
     setLocal: setLocal,
     inc: inc
-  }
-}
+  };
+};
 
 var test = testFn();
 console.log(test.local); // undefined
@@ -79,7 +79,6 @@ console.log(test.setLocal(10)); // called setLocal
 console.log(test.getLocal()); // 10
 console.log(test.inc()); // called inc
 console.log(test.getLocal()); // 110
-
 ```
 
 ## Just like I said before...
@@ -114,7 +113,7 @@ console.log(obj1.a.b.c.d); // Window
 console.log(obj2.a.b.c.d()); // Object {d: function}
 ```
 
-----
+---
 
 Yep, that's it. If you want to learn more about Javascript, I strongly
 recommend you to read the "[JavaScript: The Good Parts][book]" book,

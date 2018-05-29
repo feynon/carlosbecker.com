@@ -7,8 +7,8 @@ title: Flamewars
 Or:
 
 > How I went from a annoying linuxfag to just a random guy who uses unix-based
-systems and drops a few jokes about how Windows sucks instead of try to
-convince each and everyone to use a real operating system.
+> systems and drops a few jokes about how Windows sucks instead of try to
+> convince each and everyone to use a real operating system.
 
 When I first discovered Linux, I was amused. I thought _"this is great!
 Why there is so few people using it?. I can change anything! I can compile
@@ -28,7 +28,7 @@ know it).
 It's quite simple:
 
 - You are taught since you're a child how to click the "Start" menu and do
-things;
+  things;
 - You'll go study somewhere (school, college, whatever) and work somewhere;
 - You'll need to use a computer;
 - You don't know anything else but Windows (alongside 90% of people);

@@ -26,16 +26,17 @@ One of the principles of Unobtrusive JS is the _"separation of functionality
 And in our JS file:
 
 ```js
-$(function(){
-  $(document).on('click', '.someaction', function(){
-    SomeObj.someAction($(this).data('id'))
-  })
-}(jQuery));
+$(
+  (function() {
+    $(document).on("click", ".someaction", function() {
+      SomeObj.someAction($(this).data("id"));
+    });
+  })(jQuery)
+);
 ```
 
 Notice that with this, you don't even need to expose the `someAction` method from
 `SomeObj`, you can do these bindings in the object declaration.
-
 
 #### An example with charts (and morris.js)
 
@@ -75,17 +76,19 @@ Use data attributes!
 > dashboard.js
 
 ```js
-$(function(){
-  var id = "my-chart-placeholder"
-  var chart = $("#"+id)
-  // verify if the placeholder exists
-  if(chart.lenght > 0) {
-    Morris.Donut({
-      element: id,
-      data: chart.data('chart')
-    })
-  }
-}(jQuery))
+$(
+  (function() {
+    var id = "my-chart-placeholder";
+    var chart = $("#" + id);
+    // verify if the placeholder exists
+    if (chart.lenght > 0) {
+      Morris.Donut({
+        element: id,
+        data: chart.data("chart")
+      });
+    }
+  })(jQuery)
+);
 ```
 
 Much better, huh? We now have our presentation and behavior more separated.

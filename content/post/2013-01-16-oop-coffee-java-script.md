@@ -23,8 +23,8 @@ in JS) are functions. So, basically, you open a function scope, and start code:
 ```js
 function Test() {
   Test.prototype.t = function() {
-    alert('test');
-  }
+    alert("test");
+  };
 }
 
 var o = new Test();
@@ -47,12 +47,10 @@ o = new Test()
 o.t()
 ```
 
-
 > [side by side js and coffee][first]
 
 So, we just learn that prototyped methods can be accessed with an object
 instance. Let's go to the next level.
-
 
 ## Constructors
 
@@ -61,7 +59,6 @@ with the name of the class and no return:
 
 ```js
 var Test = (function() {
-
   function Test(p) {
     this.p = p;
   }
@@ -71,7 +68,6 @@ var Test = (function() {
   };
 
   return Test;
-
 })();
 
 var o = new Test("this!");
@@ -96,7 +92,6 @@ o.t()
 
 > [side by side js and coffee][second]
 
-
 That's pretty cool, but, what if we want a default value to the parameters at
 the constructor? If you code Ruby, just do it in the same way:
 
@@ -116,10 +111,7 @@ oo.t()
 
 > [side by side js and coffee][third]
 
-
-
 ## Scopes
-
 
 Like every OOP language, you have scopes to play with. Most of languages has
 `private`, `protected` and `public`, but, JS has only `public` and `private`
@@ -169,7 +161,6 @@ don't, like I just said above.
 
 **That's it.**
 
-
 ## Inheritance
 
 Yeah, JS also has inheritance support, even if it much like a hack.
@@ -206,8 +197,6 @@ any question, suggestion, correction, completions (etc etc etc), please, use
 the comment box below and left your feedback.
 
 I really hope it help you guys into the wild world of JS-OOP.
-
-
 
 [coffeescript]: http://coffeescript.org/
 [first]: http://coffeescript.org/#try:class%20Test%0A%20%20t%3A%20-%3E%0A%20%20%20%20alert%20'test'%0A%0Ao%20%3D%20new%20Test()%0Ao.t()

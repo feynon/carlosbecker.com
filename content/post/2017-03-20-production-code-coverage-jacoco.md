@@ -33,7 +33,7 @@ In an attempt to remove useless Java code, I had the idea of running
 the [JaCoCo][] agent in production server for a while to generate
 the coverage reports.
 
-[@Marcos]: https://github.com/marcos
+[@marcos]: https://github.com/marcos
 [slides]: https://pt.slideshare.net/marcoswp3x/tdc-2015-java-from-old-school-to-moder-art
 
 ## Wait, JaCoCo what?
@@ -158,13 +158,13 @@ The reasoning behind this decision was:
   - Merging reports;
   - Dealing with code that is always changing;
   - Ant failures due to class name conflicts (which may happen on big
-multi-module projects).
+    multi-module projects).
 
 I'm also aware that running it this way have its own setbacks:
 
 - I (or someone else) have to manually generate and share the reports;
 - Some code may be used only in some days or periods of the day (seasonality),
-which may induce to humans removing code that is used.
+  which may induce to humans removing code that is used.
 
 Anyway, with all this code in place it's kind of easy to run it for a while
 in a server and generate the reports later.
@@ -181,5 +181,5 @@ reports and remove even more code.
 
 How about you? What are your strategies to find useless code to delete?
 
-[ContaAzul]: http://contaazul.com
-[JaCoCo]: https://github.com/jacoco/jacoco
+[contaazul]: http://contaazul.com
+[jacoco]: https://github.com/jacoco/jacoco

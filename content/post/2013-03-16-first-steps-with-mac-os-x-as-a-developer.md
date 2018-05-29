@@ -20,7 +20,7 @@ full of them. Go to the wild-web and find the best for you.
 I will focus in terminal tools and other things. Also, I have a jocke about that:
 
 > A man who calls himself as a developer says: "I'm a developer, I don't want
-to write commands, I just want to use some UI to do what I want to".
+> to write commands, I just want to use some UI to do what I want to".
 
 Yep, this is a joke. _(before it was sad)_
 
@@ -46,11 +46,11 @@ $ brew install grc coreutils spark z ack git
 ```
 
 - grc is tool to colorize things. You can easily use it by sourcing
-`$(brew --prefix)/etc/grc.bashrc`;
+  `$(brew --prefix)/etc/grc.bashrc`;
 - coreutils is kinda obvious;
 - spark lets you echo bar charts in your terminal.. might be useful time to time;
 - z shows you the most folders you access most and let's you easily access
-any of them;
+  any of them;
 - ack is kinda `grep -ril` but faster;
 - git doesn't need any explanation;
 
@@ -69,7 +69,6 @@ Then you can install some useful stuff with it:
 ```console
 $ brew cask install caffeine dropbox iterm2 sequel-pro virtualbox vagrant the-unarchiver vlc google-chrome skype transmission dash cloudapp postgres divvy rdio github disk-inventory-x
 ```
-
 
 Let's made a list:
 
@@ -159,7 +158,6 @@ $ hub clone caarlos0/up
 
 Much less typing, IMHO =)
 
-
 ## Install RMagick gem without pain
 
 So, in some projects I use the `rmagick` gem, and it got me some headache to
@@ -191,12 +189,11 @@ As suggested in comments and by some friends:
 - Install [iTerm2][12], a cool Terminal.app replacement;
 - Install [Alfred][13], a produtivity tool.
 
-****
+---
 
 Have your own tips? Share with the other fellows in comment box bellow.
 
 Cheers!
-
 
 [1]: https://developer.apple.com/devcenter/mac/index.action
 [2]: http://mxcl.github.com/homebrew/

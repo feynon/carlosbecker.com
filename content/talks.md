@@ -17,7 +17,6 @@ Go 1.10.
 
 {{< speakerdeck 44038e2880354ede8e1148deb974f247 >}}
 
-
 ## 2017
 
 ### 1º Joinville SRE Meetup

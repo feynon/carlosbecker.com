@@ -85,7 +85,7 @@ My take on this is:
 
 - if the problem is small, fix it;
 - if the problem is big, document your finding on a GitHub issue or a Jira
-ticket or whatever you use, bring it up when you can.
+  ticket or whatever you use, bring it up when you can.
 
 Other than that, it's all excuses - and we all do that because it is
 **so easy** to say "I'll fix it later" and forgetting about it.
@@ -172,7 +172,7 @@ I have been doing some things to guard myself against this bullshit river:
 - filter crap emails (also Gmail's mute feature is awesome);
 - [#QuitFacebook](https://twitter.com/hashtag/QuitFacebook);
 - try to keep my [#InboxZero](https://twitter.com/hashtag/inboxZero) - most
-of the time by ignoring most of the emails;
+  of the time by ignoring most of the emails;
 - mute all notifications (both on OS and smartphone) while working;
 - disable notifications from social media apps;
 - mute slack channels (or just close it sometimes);
@@ -199,7 +199,7 @@ I use:
 Again, not perfect, but it's way better than 10 apps and 321 lists if you
 ask me.
 
-[Fantastical]: https://flexibits.com/fantastical
+[fantastical]: https://flexibits.com/fantastical
 
 ## Practice
 

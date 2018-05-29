@@ -44,6 +44,7 @@ In Java world, it's pretty common to use Mockito for such cases. A common
 approach would be something like this:
 
 ### OneTest.java:
+
 ```java
 public final class OneTest {
     @Mock

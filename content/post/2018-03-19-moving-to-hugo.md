@@ -39,10 +39,10 @@ look at the `Makefile` in the root of the repo if you wish.
 Probably enable the performance stuff on Netlify and hopefully write more
 often again!
 
-[Jekyll]: https://jekyllrb.com/
-[Hugo]: https://gohugo.io/
+[jekyll]: https://jekyllrb.com/
+[hugo]: https://gohugo.io/
 [htmlproof]: https://github.com/gjtorikian/html-proofer
 [hugo-type-theme]: https://github.com/caarlos0/hugo-type-theme
-[Netlify]: https://netlify.com
+[netlify]: https://netlify.com
 [lestsencrypt]: https://letsencrypt.org/
 [htmltest]: https://github.com/wjdp/htmltest

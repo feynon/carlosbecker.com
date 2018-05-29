@@ -16,7 +16,6 @@ things difficult. There is a price to be paid for solve the world first problems
 
 So, I'll share with you guys my solutions to the problems proposed by the book.
 
-
 ## Day 1
 
 #### Problem 1
@@ -56,11 +55,10 @@ count_until(Max) ->
 
 Nothing new here. At all.
 
-
 #### Problem 3
 
 > Write a function that uses matching to selectively print "success" or
-"error: message" given input in the form `{error, Message}` or `success`.
+> "error: message" given input in the form `{error, Message}` or `success`.
 
 What a easy problem. Take the solution:
 
@@ -74,8 +72,7 @@ print_msg({error, Message}) ->
 
 #### Problem 1
 
-> Consider a list of keyword-value tuples, such as `[{erlang, "a functional
-> language"}, {ruby, "an OO language"}]`. Write a function that accepts the list
+> Consider a list of keyword-value tuples, such as `[{erlang, "a functional language"}, {ruby, "an OO language"}]`. Write a function that accepts the list
 > and a keyword and returns the associated value for keyword.
 
 Solution with a simple list comprehension:
@@ -107,7 +104,6 @@ I was pretty lazy, it looks big, I don't want to do it.
 Well, day 3 was pretty big. We will now work with multi concurrency.
 
 ![That escalated quickly](/public/images/boy-that-escalated-quickly.gif "That escalated quickly]")
-
 
 #### Problem 1
 
@@ -165,7 +161,6 @@ end.
 ```
 
 FYI: The original [translate_service](https://github.com/caarlos0/erlang-playground/blob/master/day3_examples/translate_service.erl) implementation.
-
 
 #### Problem 2
 
@@ -226,6 +221,5 @@ starting to learn erlang now, It's pretty normal made mistakes. The thing is:
 **LEARN WITH THEM**.
 
 Hope you enjoy Erlang.
-
 
 [book]: http://amzn.to/17vnhdb

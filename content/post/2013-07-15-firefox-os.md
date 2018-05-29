@@ -29,7 +29,7 @@ The hardware, as you may have seen, is not that good:
 > 4 GB (ROM) and 512 MB (RAM).
 
 > MicroSD, Wifi N, Bluetooth 2.1 EDR, Radio FM, Light & Prox. Sensor, G-Sensor,
-GPS, MicroUSB.
+> GPS, MicroUSB.
 
 > Battery 1580 mAh.
 
@@ -90,6 +90,5 @@ Touch, but I'm not sure if it could beat Android or iOS... I believe that they
 probably don't even want to. While most of platforms try to "lock" you in their
 ecosystem, Firefox OS is just open, and doesn't not demand you to learn an
 specific language/framework to build an app, just vanilla HTML, JS and CSS.
-
 
 [keon]: http://www.geeksphone.com/

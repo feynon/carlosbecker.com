@@ -49,7 +49,6 @@ This will fix browsing, apt and most of the things (everything that reads
 `http_proxy` environment variable). You may also want to `chmod 0600` the
 config file to avoid others access.
 
-
 # Email
 
 For email setup, you will probably need to call the network admin/support
@@ -57,15 +56,14 @@ to ask the addresses and ports, then, setup it in Thunderbird (my preferred
 email client). After that, the setup will be easy.
 
 The only trick I could give you here is about new message composing: Outlook
-create replies putting the *new content* above the previous emails, while
+create replies putting the _new content_ above the previous emails, while
 Thunderbird put it bellow.
 
 To change it, go to your account settings, and change the "Automatically quote
-the original message when replaying Then," to *"start my reply above the
-quote"* in the "Compositing & Addressing" tab:
+the original message when replaying Then," to _"start my reply above the
+quote"_ in the "Compositing & Addressing" tab:
 
 ![thunderbird](http://f.cl.ly/items/3a1s1W3b02111z3j4723/Screenshot%20from%202013-06-03%2014%3A10%3A22.png)
-
 
 # Lync / Communicator
 
@@ -76,7 +74,7 @@ now offline) tutorial, skipping the installation (use apt).
 
 I don't have luck with that, so I still with web version.
 
-_____________
+---
 
 The rest work seamlessly without any tweaks. If you have any thought, please
 share it in comment box above.

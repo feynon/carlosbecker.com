@@ -58,15 +58,14 @@ file. You can follow
 [getting started tutorial](/code/2012/06/26/getting-started-with-gwt-bootstrap/)
 to do that in the right way.
 
-
 ## Get a custom Bootstrap Theme
 
 You can get a custom `bootstrap.min.css` file in several ways:
 
-* Making your own CSS changing the `.less` files and re-generating the files
-* [Customizing your download](http://getbootstrap.com/customize)
-(Basically the option above in a easy way)
-* [Downloading it somewhere](https://www.google.com.br/search?q=twitter+bootstrap+themes)
+- Making your own CSS changing the `.less` files and re-generating the files
+- [Customizing your download](http://getbootstrap.com/customize)
+  (Basically the option above in a easy way)
+- [Downloading it somewhere](https://www.google.com.br/search?q=twitter+bootstrap+themes)
 
 For this example, I'll use [this theme](http://bootswatch.com/slate/).
 Download the `bootstrap.min.css` from the site.
@@ -78,12 +77,12 @@ for you. You can clean it up.
 
 You can remove:
 
-* All classes inside `shared` folder;
-* All classes inside `server` folder;
-* All the content in the `EntryPoint` class (`Example`, in our case);
-* The servlet declarations from `web.xml` file;
-* Test related classes and files;
-* Messages files in `resources/client` folder.
+- All classes inside `shared` folder;
+- All classes inside `server` folder;
+- All the content in the `EntryPoint` class (`Example`, in our case);
+- The servlet declarations from `web.xml` file;
+- Test related classes and files;
+- Messages files in `resources/client` folder.
 
 At this point we will have a structure like this:
 
@@ -181,7 +180,7 @@ could be really awesome. So, let's go.
 
 We will have to create a `resources` folder under the same folder of our
 `*.gwt.xml` file. Just to you understand better, the folders `client`,
-`shared`, `server` and `resources` **must be**  in the same hierarchical
+`shared`, `server` and `resources` **must be** in the same hierarchical
 level, just like this:
 
 ```console
@@ -291,16 +290,15 @@ That's it :)
 Sometimes GWT caches everything, and seems like it doesn't work. In this cases,
 do the following:
 
-* `mvn clean`;
-* Delete the `webapp/Example` folder (in our case, `Example` is the Module name);
+- `mvn clean`;
+- Delete the `webapp/Example` folder (in our case, `Example` is the Module name);
 
 If it still dont working, do this:
 
-* Comment the `<source path='resources'/>` tag in your `*.gwt.xml`;
-* Run the app, you will got a exception;
-* Uncomment the line again, and run you app again.
+- Comment the `<source path='resources'/>` tag in your `*.gwt.xml`;
+- Run the app, you will got a exception;
+- Uncomment the line again, and run you app again.
 
 For me, this process always works.
-
 
 #### [Download the code](http://github.com/gwtbootstrap/custom-theme-example)

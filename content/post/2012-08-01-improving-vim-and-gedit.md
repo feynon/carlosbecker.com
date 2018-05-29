@@ -36,14 +36,13 @@ cd gmate
 ```
 
 Then close and open your Gedit, go to settings, and take a look at themes and
-plugins. About themes, I **strongly** recommend *Molokai*. For me, this is
+plugins. About themes, I **strongly** recommend _Molokai_. For me, this is
 the best theme ever.
-
 
 ## Vim powered by a gorgeus vimfiles setup
 
-This '*vimfiles*' project is nothing more than a lot of plugins and some
-hacks in *vimrc* file, plus some themes, like Monokai (I already said thats
+This '_vimfiles_' project is nothing more than a lot of plugins and some
+hacks in _vimrc_ file, plus some themes, like Monokai (I already said thats
 the best theme ever!).
 
 The installation is a little more complex than GMate, but, is not like build a
@@ -57,7 +56,7 @@ Just follow these steps:
 $ git clone git://github.com/caarlos0/vimfiles.git ~/.vim
 ```
 
-####  Edit/Create your main `vimrc` file
+#### Edit/Create your main `vimrc` file
 
 ```console
 $ vim ~/.vimrc

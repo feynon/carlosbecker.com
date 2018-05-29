@@ -11,13 +11,13 @@ Or "what the hell is this Docker thing?"
 According to their [website](https://www.docker.com/),
 
 > Docker is an open platform for developers and sysadmins to build, ship,
-and run distributed applications. Consisting of Docker Engine, a portable,
-lightweight runtime and packaging tool, and Docker Hub, a cloud service for
-sharing applications and automating workflows, Docker enables apps to be
-quickly assembled from components and eliminates the friction between
-development, QA, and production environments. As a result, IT can ship
-faster and run the same app, unchanged, on laptops, data center VMs, and
-any cloud.
+> and run distributed applications. Consisting of Docker Engine, a portable,
+> lightweight runtime and packaging tool, and Docker Hub, a cloud service for
+> sharing applications and automating workflows, Docker enables apps to be
+> quickly assembled from components and eliminates the friction between
+> development, QA, and production environments. As a result, IT can ship
+> faster and run the same app, unchanged, on laptops, data center VMs, and
+> any cloud.
 
 The main idea is that, instead of shipping wars, ears, tars, debs or whatever
 package system you might think of, you ship a standardized container, which
@@ -27,12 +27,12 @@ The terminology is based on real containers. A container, if you look at
 [Wikipedia](http://en.wikipedia.org/wiki/Intermodal_container), is:
 
 > An intermodal container (also known as a container, freight container, ISO
-container, shipping container, hi-cube container, box, sea container,
-container van) is a standardized reusable steel box. Intermodal containers
-are used to store and move materials and products efficiently and securely
-in the global containerized intermodal freight transport system. "Intermodal"
-indicates that the container can be used across various modes of transport,
-(from ship to rail to truck) without unloading and reloading its contents.
+> container, shipping container, hi-cube container, box, sea container,
+> container van) is a standardized reusable steel box. Intermodal containers
+> are used to store and move materials and products efficiently and securely
+> in the global containerized intermodal freight transport system. "Intermodal"
+> indicates that the container can be used across various modes of transport,
+> (from ship to rail to truck) without unloading and reloading its contents.
 
 So, the idea is that, you can "ship" a container to production, which can be
 the same container you used before to test the app on your own machine, maybe

@@ -12,11 +12,11 @@ I will start this by quoting the [bashstyle][bashstyle]'s readme:
 > Here's three quick reasons why:
 >
 > - It's everywhere. Like JavaScript for the web, Bash is already there ready
-> for systems programming.
+>   for systems programming.
 > - It's neutral. Unlike Ruby, Python, JavaScript, or PHP, Bash offends equally
-> across all communities. ;)
+>   across all communities. ;)
 > - It's made to be glue. Write complex parts in C or Go (or whatever!), and
-> glue them together with Bash.
+>   glue them together with Bash.
 
 My concern about that is the quality of the code itself. Like JavaScript,
 most people will just Google and do what they want in the first way that they

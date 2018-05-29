@@ -15,7 +15,7 @@ I will describe the steps above.
 
 - This site is [OpenSource][blog].
 - I'm using Jekyll alongside with less, bower, grunt and of course,
-node and npm.
+  node and npm.
 - You can take a look at [these commits][commits] to see what I did.
 
 With that said, let's do the thing.
@@ -74,18 +74,20 @@ found is kinda weird, but it works:
 ```js
 var reloadImages = function() {
   var styles, style, url, _i, _len, _el;
-  styles = Array.prototype.slice.call(document.body.querySelectorAll('[style]'));
+  styles = Array.prototype.slice.call(
+    document.body.querySelectorAll("[style]")
+  );
   for (_i = 0, _len = styles.length; _i < _len; _i++) {
-    _el = styles[_i]
-    style = _el.getAttribute('style');
-    if (!(style.indexOf('url(') > -1)) {
+    _el = styles[_i];
+    style = _el.getAttribute("style");
+    if (!(style.indexOf("url(") > -1)) {
       continue;
     }
     url = style.match(/url\((.*)\)/)[1];
-    _el.style.backgroundImage = 'url(' + url + ')';
+    _el.style.backgroundImage = "url(" + url + ")";
   }
-}
-$(document).on('page:change', function() {
+};
+$(document).on("page:change", function() {
   reloadImages();
 });
 ```
@@ -120,7 +122,7 @@ And add something at the page change event:
 
 ```js
 var twttr;
-$(document).on('page:change', function() {
+$(document).on("page:change", function() {
   if (twttr) {
     twttr.widgets.load();
   }
@@ -165,7 +167,7 @@ reach the bottom of the page:
 But it causes me some trouble with Turbolinks. To fix that, I simply did:
 
 ```js
-$(document).on('page:fetch', function() {
+$(document).on("page:fetch", function() {
   window.onscroll = void 0;
 });
 ```
@@ -181,15 +183,15 @@ as a less file) and mix it up in my js. I also had to bind the events
 to nprogress, like this:
 
 ```js
-$(document).on('page:fetch', function() {
+$(document).on("page:fetch", function() {
   NProgress.start();
 });
 
-$(document).on('page:change', function() {
+$(document).on("page:change", function() {
   NProgress.done();
 });
 
-$(document).on('page:restore', function() {
+$(document).on("page:restore", function() {
   NProgress.remove();
 });
 
@@ -203,7 +205,6 @@ And it was working as expected.
 
 The result is what you're seeing right now. I found it neat and it loads
 really faster. Hope you like it!
-
 
 [turbolinks]: https://github.com/rails/turbolinks
 [pushstate]: https://www.google.com.br/search?q=AJAX+PushState

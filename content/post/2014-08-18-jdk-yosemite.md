@@ -26,10 +26,11 @@ Replace this function:
 
 ```js
 function pm_install_check() {
-  if(!(checkForMacOSX('10.7.3') == true)) {
-    my.result.title = 'OS X Lion required';
-    my.result.message = 'This Installer is supported only on OS X 10.7.3 or Later.';
-    my.result.type = 'Fatal';
+  if (!(checkForMacOSX("10.7.3") == true)) {
+    my.result.title = "OS X Lion required";
+    my.result.message =
+      "This Installer is supported only on OS X 10.7.3 or Later.";
+    my.result.type = "Fatal";
     return false;
   }
   return true;

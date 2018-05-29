@@ -45,12 +45,12 @@ The base itself is not a big deal. It have just these files:
 - **bootstrap.sh**: Instalation script;
 - **Makefile**: The Makefile skelecton;
 - **base.sh**: A base script that all other scripts will import. You can share
-stuff here between scripts (environment variables, functions). It already came
-with some funcions. You should take a look at them;
+  stuff here between scripts (environment variables, functions). It already came
+  with some funcions. You should take a look at them;
 - **example.sh**: An clean example task;
 - **newtask.sh**: A helper script to create tasks. `make newtask` will invoke
-it, ask for the task name, then create the `.sh` file based on `example.sh` and
-add it to `Makefile`.
+  it, ask for the task name, then create the `.sh` file based on `example.sh` and
+  add it to `Makefile`.
 
 The instalation is pretty easy, you can just call:
 

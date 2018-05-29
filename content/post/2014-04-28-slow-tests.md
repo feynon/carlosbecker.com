@@ -18,7 +18,7 @@ Paraphrasing Uncle Bob:
 > "The first rule about tests is that they should be
 > fast. The second rule about tests is that they should be faster than that."
 
-** Actually he said that about method sizing, but, I think this fits just fine.
+\*\* Actually he said that about method sizing, but, I think this fits just fine.
 
 To help with that, I created a [project][project] with scripts that
 can generate a list of the slowest JUnit tests in a project. It should give you

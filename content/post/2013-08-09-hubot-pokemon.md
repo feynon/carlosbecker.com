@@ -63,7 +63,6 @@ look at them to see which best fit your needs. For the sake of information, we a
 using talker and, except that it doesn't show us emojis by default,
 it is awesome and works well for us.
 
-
 [hubot]: http://hubot.github.com/
 [hubot-scripts]: https://github.com/github/hubot-scripts
 [hubot-install]: https://github.com/github/hubot/tree/master/docs

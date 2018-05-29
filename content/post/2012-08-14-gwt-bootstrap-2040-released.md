@@ -12,24 +12,24 @@ You can see the official announcements [here](https://groups.google.com/forum/?f
 
 I'll just copy and paste what I said in the first announcement linked here.
 
-	As the creator of the project, I'll like to say something, if you guys don't mind =D
+    As the creator of the project, I'll like to say something, if you guys don't mind =D
 
-	First, I would like to apologize. Last months my life was changing too much, I don't has the time and willpower to contribute as much I want to.
-	Second, I would like to thank very much some persons:
+    First, I would like to apologize. Last months my life was changing too much, I don't has the time and willpower to contribute as much I want to.
+    Second, I would like to thank very much some persons:
 
-	Keisuke aka 'Soundtricker' - He just take the lead of the project when I'm not with time to do that, and made a lot of  other very good contributions. Thank you very much bro, you're awesome.
-	Dominik Mayer - he's the first guy who give some importance to the project, when it is just a 'test', and he talk with keisuke and yusuke to help the project, thank you very much bro, you're awesome.
-	Yusuke - he give a lot of help around the project. Thank you bro, you're awesome!
-	All the other commiters and all the people that use GWT-Bootstrap and report bugs, give suggestions, etc - You, guys, are the people that made we believe in our project, and give us a reason to continue it. Thanks, you're awesome.
+    Keisuke aka 'Soundtricker' - He just take the lead of the project when I'm not with time to do that, and made a lot of  other very good contributions. Thank you very much bro, you're awesome.
+    Dominik Mayer - he's the first guy who give some importance to the project, when it is just a 'test', and he talk with keisuke and yusuke to help the project, thank you very much bro, you're awesome.
+    Yusuke - he give a lot of help around the project. Thank you bro, you're awesome!
+    All the other commiters and all the people that use GWT-Bootstrap and report bugs, give suggestions, etc - You, guys, are the people that made we believe in our project, and give us a reason to continue it. Thanks, you're awesome.
 
-	I think that that's it.
+    I think that that's it.
 
-	Thanks everyone, I hope you enjoy this first release, and hope that more releases come soon :)
+    Thanks everyone, I hope you enjoy this first release, and hope that more releases come soon :)
 
 
-	Cheers.
-	--
-	Carlos Alexandro Becker aka 'caarlos0'
+    Cheers.
+    --
+    Carlos Alexandro Becker aka 'caarlos0'
 
 I want to, again, thank everyone that made this happens, you guys are just awesome.
 

@@ -50,10 +50,10 @@ A basic tree would look like:
 ```
 
 - `Makefile`: contains common tasks for the project, like formating, testing,
-linting, etc;
+  linting, etc;
 - `cmd/example/main.go`: is the cli entrypoint;
 - `example.go` and `example_test.go`: is the "library" of the application and
-its respective files. Could be more than one file, of course;
+  its respective files. Could be more than one file, of course;
 - `goreleaser.yml`: the GoReleaser configuration;
 - `Gopkg.lock` and `Gopkg.toml`: dependencies locks and manifest.
 
@@ -172,7 +172,7 @@ To enable it, we just need to create a new
 with the `repo` box checked.
 
 Then, we need to add it as an environment variable named `GITHUB_TOKEN` on
-Travis  project settings.
+Travis project settings.
 
 We also need a tap repository. Mine is [caarlos0/homebrew-tap], which
 is kind of a standard. I also created a `Formula` folder inside it.
@@ -213,19 +213,18 @@ wanted to share it so other people may save some time as well.
 I'm curious, though, what tools do you use? How do you structure your projects?
 Let's discuss on the comments bellow!
 
-
 [alecthomas/gometalinter]: https://github.com/alecthomas/gometalinter
 [caarlos0/example]: https://github.com/caarlos0/example
 [caarlos0/homebrew-tap]: https://github.com/caarlos0/homebrew-tap
 [caarlos0/spin]: https://github.com/caarlos0/spin
-[Codecov]: https://codecov.io
+[codecov]: https://codecov.io
 [golang/dep]: https://github.com/golang/dep
-[GoReleaser]: https://github.com/goreleaser/goreleaser
+[goreleaser]: https://github.com/goreleaser/goreleaser
 [goreleaser]: https://github.com/goreleaser/goreleaser
 [goreleaser/goreleaser]: https://github.com/goreleaser/goreleaser
-[GoReportCard]: https://goreportcard.com/
-[SayThanks.io]: https://saythanks.io
+[goreportcard]: https://goreportcard.com/
+[saythanks.io]: https://saythanks.io
 [spf13/cobra]: https://github.com/spf13/cobra
 [stretchr/testify]: https://github.com/stretchr/testify
-[Travis]: http://travis-ci.org
+[travis]: http://travis-ci.org
 [urfave/cli]: https://github.com/urfave/cli

@@ -23,11 +23,11 @@ While it is pretty good, it also has some problems:
   We solved this by writing some Ruby and Terraform scripts, but it was
   giving us random build failures;
 - It was expensive for us. Dollars are very expensive here in Brazil,
-and Travis Enterprise costs a lot of them.
+  and Travis Enterprise costs a lot of them.
 
 So, I went out looking for cheaper and better alternatives.
 
-[ContaAzul]: http://contaazul.com
+[contaazul]: http://contaazul.com
 
 ## BuildKite
 
@@ -36,11 +36,11 @@ My friend [Caio](https://github.com/caiofbpa) told me they were using
 
 I decided to give it a try. My plan was:
 
-1. Setup Buildkite for some repositories;
-2. Let both Buildkite and Travis run for a few days;
-3. Interview the team to ask them what they think;
-4. If the results were good, migrate all repositories and `terminate` some
-machines.
+1.  Setup Buildkite for some repositories;
+2.  Let both Buildkite and Travis run for a few days;
+3.  Interview the team to ask them what they think;
+4.  If the results were good, migrate all repositories and `terminate` some
+    machines.
 
 Setting up the master and the workers was easy. Buildkite provides
 an Open Source tool called
@@ -56,8 +56,8 @@ was already working.
 Then, I set Buildkite up on the top 3 most changed repositories and let it
 run for a few days.
 
-[Buildkite]: https://buildkite.com/
-[MeusPedidos]: https://meuspedidos.com.br/
+[buildkite]: https://buildkite.com/
+[meuspedidos]: https://meuspedidos.com.br/
 
 ## Decision making
 
@@ -89,13 +89,13 @@ I had 50 projects to migrate.
 
 The migration process was:
 
-1. Clone the repository;
-2. Remove the `.travis.yml` file;
-3. Create a new pipe on Buildkite;
-4. Setup GitHub integration;
-5. Create `.buildkite/pipeline.yml` and other required files;
-6. Open a Pull Request;
-7. Check if it worked.
+1.  Clone the repository;
+2.  Remove the `.travis.yml` file;
+3.  Create a new pipe on Buildkite;
+4.  Setup GitHub integration;
+5.  Create `.buildkite/pipeline.yml` and other required files;
+6.  Open a Pull Request;
+7.  Check if it worked.
 
 7 steps x 50 repositories = A lot of work.
 
@@ -103,7 +103,7 @@ It would be easier if:
 
 - Buildkite had better GitHub integration;
 - Buildkite accepted `.travis.yml` as a fallback or had a conversion tool of
-some sort.
+  some sort.
 
 But none of those were true, so I automated some steps of the process.
 

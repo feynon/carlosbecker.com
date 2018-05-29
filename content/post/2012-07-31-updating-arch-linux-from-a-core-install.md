@@ -8,16 +8,16 @@ Recently I tried to made a fresh archlinux installation, with my old iso
 (don't remember exactly what version is)...
 Yo, first, I installed it with the local mirror only, without any update.
 The installation was ok, I rebooted, then try to update, using the arch linux
-home help about the */lib turn into a symlink to /usr/lib*. **Sweet** mistake.
+home help about the _/lib turn into a symlink to /usr/lib_. **Sweet** mistake.
 That crap just don't work.
 
 In last times, we have a lot of big arch linux changes:
 
-* [changes in rc.conf and crypttab](http://www.archlinux.org/news/changes-to-rcconf-and-crypttab/)
-* [grub legacy no longer supported](http://www.archlinux.org/news/grub-legacy-no-longer-supported/)
-* [/lib becomes a symlink](http://www.archlinux.org/news/the-lib-directory-becomes-a-symlink/)
-* [filesystem upgrade that needs manual intervention](http://www.archlinux.org/news/filesystem-upgrade-manual-intervention-required-1/)
-* [pacman-key](http://www.archlinux.org/news/having-pacman-verify-packages/)
+- [changes in rc.conf and crypttab](http://www.archlinux.org/news/changes-to-rcconf-and-crypttab/)
+- [grub legacy no longer supported](http://www.archlinux.org/news/grub-legacy-no-longer-supported/)
+- [/lib becomes a symlink](http://www.archlinux.org/news/the-lib-directory-becomes-a-symlink/)
+- [filesystem upgrade that needs manual intervention](http://www.archlinux.org/news/filesystem-upgrade-manual-intervention-required-1/)
+- [pacman-key](http://www.archlinux.org/news/having-pacman-verify-packages/)
 
 All these itens have man pages helping you to pass throug the most errors...
 but, the lib symlink made a lot of people angry **never use the force (-f) in

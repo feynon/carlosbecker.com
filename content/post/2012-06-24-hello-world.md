@@ -15,7 +15,7 @@ I don't really like Wordpress. Yeah, I just don't like it. I think thats is
 heavy and slow. So, I decided to give a chance to
 [Jekyll Bootstrap](http://jekyllbootstrap.com/).
 
-I'll not blog about "*how to setup jekyll*", you can read it
+I'll not blog about "_how to setup jekyll_", you can read it
 [here](http://jekyllbootstrap.com/).
 
 It's realy simple to configure, put to work, write posts, pages, and I can see
@@ -30,4 +30,3 @@ It also have built-in support for Disqus and Twitter/G+/Facebook/etc
 (aka addthis) buttons.
 
 In short: Jekyll is great, and I really like it!
-

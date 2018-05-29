@@ -19,7 +19,7 @@ realized that the sandbox cluster was too expensive for our needs.
 In this article I'll describe the strategies we used to decrease our
 sandbox cluster costs by ~70%.
 
-[Kops]: https://github.com/kubernetes/kops
+[kops]: https://github.com/kubernetes/kops
 
 ## Tune requests and limits
 
@@ -65,7 +65,7 @@ The best way I found is to:
 - Run it with really high limits;
 - Observe the initial resources (while idle): those are the `requests` values;
 - Put some traffic into it, observe the resource usage, add ~10%: those are
-the `limits` values;
+  the `limits` values;
 
 Of course, this isn't perfect. Some times it will not be enough and
 other times it will be too much.
@@ -201,10 +201,10 @@ a lot of idle CPU time.
 So, we looked for other machine types and end up deciding to use `r3.large`
 machines.
 
-| Machine Type | vCPUs  | Memory (Gb)  | Monthly Cost  |
-|:---|:---:|:---:|---:|
-| c4.xlarge  | 4  | 7.5  | 145.67  |
-| r3.large  | 2  | 15.2  | 121.52  |
+| Machine Type | vCPUs | Memory (Gb) | Monthly Cost |
+| :----------- | :---: | :---------: | -----------: |
+| c4.xlarge    |   4   |     7.5     |       145.67 |
+| r3.large     |   2   |    15.2     |       121.52 |
 
 With that change, we could schedule more pods per node while running with
 fewer nodes than before. Win-win.
@@ -250,23 +250,22 @@ a 1 year no upfront reservation - ~24% cheaper.
 If you do not wish to use spot instances for the nodes, you can buy
 reservations for them instead and save some money as well.
 
-
 ## How about production clusters?
 
 Some of the strategies I explained here can be safely used in production
 clusters. The attention points are, in my opinion:
 
-1. You won't want to shut down all pods of a given service in production,
-so, instead of downscaling to zero pods, you may want to use
-[Horizontal Pod Autoscalers][hpa] to autoscale horizontally based on
-CPU usage;
-2. It is probably not desirable nor safe to have a single node running in
-production, so I would not force the nodes downscale to that value. You
-may not have seasonal usage in production as we do in sandbox;
-3. Spot instances can be risky: you may loose the instances and
-end up with 0 nodes in your cluster. You can overcome that by having
-a mix of spot and on demand nodes instance groups, or by setting a very
-high bid and putting some alert in place. Beware.
+1.  You won't want to shut down all pods of a given service in production,
+    so, instead of downscaling to zero pods, you may want to use
+    [Horizontal Pod Autoscalers][hpa] to autoscale horizontally based on
+    CPU usage;
+2.  It is probably not desirable nor safe to have a single node running in
+    production, so I would not force the nodes downscale to that value. You
+    may not have seasonal usage in production as we do in sandbox;
+3.  Spot instances can be risky: you may loose the instances and
+    end up with 0 nodes in your cluster. You can overcome that by having
+    a mix of spot and on demand nodes instance groups, or by setting a very
+    high bid and putting some alert in place. Beware.
 
 ## Final thoughts and results
 
@@ -277,6 +276,7 @@ cluster on business days.
 in your AWS account, so you can generate useful reports like this one:
 
 <!-- TODO: update this image -->
+
 ![Daily cluster costs](/public/images/k8s-cluster-daily-cost.png)
 
 As you can see, I only realized that after some time, so, I don't have the
@@ -286,4 +286,4 @@ spending at least $30/day, ~70% more than we are now.
 What about you? What are your strategies for better use computational
 resources (and money)?
 
-[hpa]:https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
+[hpa]: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/

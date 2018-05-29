@@ -15,7 +15,7 @@ in production. We are committed to gradually re-implement them in better ways.
 One of those parts was our distributed locking mechanism and me and
 [@t-bonatti](https://github.com/t-bonatti) were up for the job.
 
-[ContaAzul]: http://contaazul.com
+[contaazul]: http://contaazul.com
 
 ## How it was
 
@@ -30,8 +30,8 @@ We cannot fix the government services' code, so, to avoid calling them
 several times for the same input (which they don't like, by the way),
 we had think about mainly two options:
 
-1. Run it all in a single server;
-2. Synchronize work, somehow.
+1.  Run it all in a single server;
+2.  Synchronize work, somehow.
 
 One server would probably not scale well, so we decided that
 synchronizing work between servers was the best way of solving this issue.
@@ -39,9 +39,9 @@ synchronizing work between servers was the best way of solving this issue.
 At the time, we also decided to use [Hazelcast][] for the job,
 which seemed reasonable because:
 
-1. It does have a [pretty good locking API](http://docs.hazelcast.org/docs/3.5/manual/html/lock.html);
-2. It is written in Java, and we are mainly a Java shop, which allowed us
-to more easily fix issues if needed ([and it was][hazel-issue]).
+1.  It does have a [pretty good locking API](http://docs.hazelcast.org/docs/3.5/manual/html/lock.html);
+2.  It is written in Java, and we are mainly a Java shop, which allowed us
+    to more easily fix issues if needed ([and it was][hazel-issue]).
 
 The architecture was something like this:
 
@@ -71,19 +71,19 @@ other applications as well, but still we had our issues with it:
 
 - Lack of proper monitoring (and kind of hard to do that right);
 - Sharing resources with the Jobs servers (which may not be considered a good
-practice);
+  practice);
 - Might not work in some cases, like services deployed to AWS BeanStalk (which
-allows you to open one port per service, so the nodes weren't able to sync);
+  allows you to open one port per service, so the nodes weren't able to sync);
 - Some ugly AWS Security Group rules to allow the connection between machines
-in the port range that Hazelcast uses (which we bothering us);
+  in the port range that Hazelcast uses (which we bothering us);
 - If Hazelcast nodes failed to sync with each other, the distributed lock
-would not be distributed anymore, causing possible duplicates, and, worst of
-all, no errors whatsoever.
+  would not be distributed anymore, causing possible duplicates, and, worst of
+  all, no errors whatsoever.
 
 So, we decided to move on and re-implement our distributed locking API.
 
 [hazel-issue]: https://github.com/hazelcast/hazelcast/issues/2217
-[Hazelcast]: https://hazelcast.com/
+[hazelcast]: https://hazelcast.com/
 
 ## The Proposal
 
@@ -102,13 +102,13 @@ The reasons behind this decision were:
 - Resolving the problems of the previous architecture;
 - Simplify our actual architecture (and that's a [good thing][simple]);
 - The ElastiCache cluster is supposed to always be up, meaning less stuff
-for us to worry about;
+  for us to worry about;
 
 But, of course, everything have a bad side:
 
 - Redis would now be a depedency of our system (as Hazelcast already was);
 - If, for any reason, the Redis cluster goes down, the entire jobs ecosystem
-simply stop working.
+  simply stop working.
 
 We called this project "_Operation Locker_", which is a very fun
 [Battlefield 4][bf4] map:
@@ -116,7 +116,7 @@ We called this project "_Operation Locker_", which is a very fun
 ![Operation Locker](/public/images/operation-locker.png)
 
 [simple]: https://medium.com/production-ready/simplicity-a-prerequisite-for-reliability-8d000f8d18df#.mv1o3i807
-[Redis]: https://redis.io/
+[redis]: https://redis.io/
 [bf4]: https://www.battlefield.com/games/battlefield-4
 
 ## Implementation
@@ -156,7 +156,7 @@ After that, we decided to also change all other apps using the previous
 version of our API. We opened pull requests for all of them, tested in sandbox,
 and, finally, put them in production. Success!
 
-[Redisson]: https://github.com/redisson/redisson
+[redisson]: https://github.com/redisson/redisson
 
 ## Results
 

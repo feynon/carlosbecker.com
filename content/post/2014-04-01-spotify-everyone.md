@@ -33,7 +33,6 @@ hostname and leave the rest as it is.
 You will receive an email with the password to access your server,
 and it will be up and running in about 60 seconds.
 
-
 ## 2. Create a SOCK5 proxy
 
 You will receive from DigitalOcean an email like this:
@@ -84,7 +83,7 @@ is expected. Just proceed and create your account.
 Now:
 
 - Go to the console where you ran that command I said before,
-and press CTRL+C. This will stop the proxy server;
+  and press CTRL+C. This will stop the proxy server;
 - Go to Firefox settings and check the "No Proxy" option.
 
 Now, access your Spotify Payment Method Setup and configure everything.

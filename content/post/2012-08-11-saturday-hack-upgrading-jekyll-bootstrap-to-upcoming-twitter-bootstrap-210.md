@@ -69,10 +69,8 @@ It should provide you a output like this:
     Thanks for using Bootstrap,
     <3 @mdo and @fat\n
 
-
 Hell yeah folks! It's much more easy than I think!
 So now, we have to upgrade Jekyll! Let's go?
-
 
 ### Upgrading Jekyll
 
@@ -82,17 +80,17 @@ So, will made it easy for you :)
 
 #### css
 
-* bootstrap-responsive.css
-* bootstrap.css
+- bootstrap-responsive.css
+- bootstrap.css
 
 #### js
 
-* bootstrap.min.js
+- bootstrap.min.js
 
 #### img
 
-* glyphicons-halflings-white.png
-* glyphicons-halflings.png
+- glyphicons-halflings-white.png
+- glyphicons-halflings.png
 
 Place these files in the correct folder (like I said earlier).
 Now, check your `**jekyll home**/_includes/themes/twitter/default.html` for the imports of the css and js files, check if the filename is correct, etc.

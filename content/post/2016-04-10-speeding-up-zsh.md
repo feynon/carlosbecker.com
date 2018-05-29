@@ -59,7 +59,7 @@ I know, I changed the way the program behave by doing that, but I think it's
 worth it.
 
 I did the same with `antibody` and `pyenv` and remove some unneeded `if`
-statements (e.g. `[ ! -d "$GOPATH" ] &&  mkdir -p "$GOPATH/bin"`) and
+statements (e.g. `[ ! -d "$GOPATH" ] && mkdir -p "$GOPATH/bin"`) and
 simplified some `PATH` changes (e.g. replacing to `export`s with one).
 
 Then, I measured it again:

@@ -35,14 +35,11 @@ to do that.
 
 See you soon.
 
-
-----
+---
 
 > PS: the example above is running locally, so, maybe you will not see it at first,
 > but, just look a little closer and you shall see a little fade while switching
 > pages :)
-
-
 
 [base]: http://basecamp.com
 [digital]: http://digitalocean.com

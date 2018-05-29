@@ -99,7 +99,7 @@ buy here ~411L of beer (using BRL ~12.69/L).
 Well, **MISSION ACCOMPLISHED**.
 
 > 50% usage because we only use them about 12 hours per day (business hours,
-give or take).
+> give or take).
 
 ## Try it out
 

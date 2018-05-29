@@ -19,10 +19,9 @@ put your name in it.
 
 Let's do this.
 
-----------
+---
 
 ### [Do not rebase commits that have already been pushed to the remote repository](http://git-scm.com/book/en/Git-Branching-Rebasing#The-Perils-of-Rebasing)
-
 
 ### See who and in which commit each line of a file was changed last time
 
@@ -43,7 +42,6 @@ $ git reflog
 more specifically, it will log each time the `HEAD` pointer changes, so, if clone
 a repository right now, the reflog will be empty. Also, the reflog is maintained
 for 30 days by default.
-
 
 ### Get revision code for anything
 
@@ -83,10 +81,10 @@ $ git show HEAD~3:path/to/file > path/to/file_3_commits_ago
 According to the docs:
 
 > Create a shallow clone with a history truncated to the specified number of
-revisions. A shallow repository has a number of limitations (you cannot clone
-or fetch from it, nor push from nor into it), but is adequate if you are only
-interested in the recent history of a large project with a long history, and
-would want to send in fixes as patches.
+> revisions. A shallow repository has a number of limitations (you cannot clone
+> or fetch from it, nor push from nor into it), but is adequate if you are only
+> interested in the recent history of a large project with a long history, and
+> would want to send in fixes as patches.
 
 So, if you want only the last revision:
 
@@ -284,5 +282,5 @@ branching, servers, and git internals.
 
 ---
 
-***Let's make this list bigger! Have your own tip/trick? Something I forgot to
-add? Share it with us!***
+**_Let's make this list bigger! Have your own tip/trick? Something I forgot to
+add? Share it with us!_**

@@ -55,5 +55,5 @@ use many more.
 
 **ad**: Work from anywhere with a
 [Cloud hosted desktop](https://www.clouddesktoponline.com) and stay connected
-to your team with	[hosted SharePoint](https://www.cloudappsportal.com) services.
+to your team with [hosted SharePoint](https://www.cloudappsportal.com) services.
 Take a risk free trial today.

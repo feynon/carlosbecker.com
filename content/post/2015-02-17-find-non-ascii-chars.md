@@ -23,7 +23,6 @@ as you can see in this [pull request][pr].
 
 So, using `grep`, I created the [`nonascii` function][commit]:
 
-
 ```bash
 #!/bin/bash
 nonascii() {

@@ -179,7 +179,6 @@ And you will be able to call `animalDao.someCustomMethod(animal)` =)
 This is a almost-infinite-work-in-progress, so, feel free to make pull-requests,
 suggestions and report eventual bugs.
 
-
 Cheers!
 
 [1]: https://github.com/caarlos0/persistence-base

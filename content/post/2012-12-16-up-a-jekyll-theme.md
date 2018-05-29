@@ -53,20 +53,20 @@ You should have a server up and running locally at `http://localhost:4000`.
 Next you'll want to change a few things. The list of files you may want to
 change is the following:
 
-- [_config.yml](https://github.com/caarlos0/up/blob/gh-pages/_config.yml): Put
-your config there, almost everything will be up and running.
+- [\_config.yml](https://github.com/caarlos0/up/blob/gh-pages/_config.yml): Put
+  your config there, almost everything will be up and running.
 - [about.html](https://github.com/caarlos0/up/blob/gh-pages/about/index.html):
-Well, that's about you, I would change it if I were you... OH WAIT!
+  Well, that's about you, I would change it if I were you... OH WAIT!
 - [CNAME](https://github.com/caarlos0/up/blob/gh-pages/CNAME): If you're using
-this on GitHub Pages with a custom domain name, you'll want to change this
-to be the domain you're going to use. All that should be in here is a
-domain name on the first line and nothing else (like: `example.com`).
+  this on GitHub Pages with a custom domain name, you'll want to change this
+  to be the domain you're going to use. All that should be in here is a
+  domain name on the first line and nothing else (like: `example.com`).
 - [favicon.ico](https://github.com/caarlos0/up/blob/gh-pages/favicon.ico): This
-is a smaller version of my gravatar for use as the icon in your browser's
-address bar. You should change it to whatever you'd like.
+  is a smaller version of my gravatar for use as the icon in your browser's
+  address bar. You should change it to whatever you'd like.
 - [apple-touch-icon.jpg](https://github.com/caarlos0/up/blob/gh-pages/apple-touch-icon.jpg):
-Again, this is my gravatar, and it shows up in iOS and various other apps
-that use this file as an "icon" for your site.
+  Again, this is my gravatar, and it shows up in iOS and various other apps
+  that use this file as an "icon" for your site.
 
 ## Create new posts
 

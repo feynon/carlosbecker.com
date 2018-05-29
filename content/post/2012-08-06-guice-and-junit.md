@@ -14,7 +14,7 @@ I will not explain much more about Guice in this post, maybe another day, in
 another post.
 
 But, if you use Guice in your apps, you of course has doubts about
-*how do I test this thing?*, am I right?
+_how do I test this thing?_, am I right?
 
 Yep, I has these doubts too, then, most of time, I just made something
 like this:

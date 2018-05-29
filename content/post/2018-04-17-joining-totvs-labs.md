@@ -35,4 +35,4 @@ I'm excited to see what we will accomplish together!
 See you all around!
 
 [labs]: http://www.totvslabs.com/
-[ContaAzul]: https://contaazul.com
+[contaazul]: https://contaazul.com

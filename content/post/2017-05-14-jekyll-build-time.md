@@ -16,7 +16,7 @@ of work, and I didn't know what the real problem was.
 In this post I'll show how I improved my Jekyll blog build time in about
 **75%**.
 
-[Hugo]: https://gohugo.io
+[hugo]: https://gohugo.io
 
 ## Current state
 
@@ -43,7 +43,7 @@ feed.xml                                                  |     1 |  104.09K | 0
                     done in 13.017 seconds.
 ```
 
- 13 seconds and a warning. Let's try to improve that.
+13 seconds and a warning. Let's try to improve that.
 
 ## Removing HTML compress
 
@@ -79,7 +79,6 @@ Some time ago I also put together a hack to inline the CSS in each page.
 It is good because the entire CSS comes with the page, but at the same time,
 Jekyll take years to build that. Reverting that commit seem to have done
 the greater good so far:
-
 
 ```console
 Filename                                                  | Count |    Bytes |  Time
@@ -199,4 +198,4 @@ I strongly recommend you take a look at it, it will even give you
 free HTTPS :)
 
 [jekyll-seo-tag]: https://github.com/jekyll/jekyll-seo-tag
-[Cloudfare]: https://www.cloudflare.com/
+[cloudfare]: https://www.cloudflare.com/

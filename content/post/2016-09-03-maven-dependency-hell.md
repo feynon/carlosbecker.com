@@ -24,7 +24,6 @@ Yeah, start with the basics!
 
 Let's use `maven-depedency-plugin` to find obvious (and easy) stuff to fix:
 
-
 ### 1. duplicated dependencies
 
 ```console
@@ -79,7 +78,6 @@ mvn dependency:list -Dsort=true | # list all deps
   grep -v '^ *1 '                 # grep groups that repeat
 ```
 
-
 You'll end up with a list like this:
 
 ```
@@ -131,8 +129,8 @@ So, my tips are:
 
 - Give more attention to it in code reviews;
 - Run `maven-dependency-plugin` and `tattletale-maven` in the build for
-every pull request to block problematic changes;
+  every pull request to block problematic changes;
 - You can tweak the script to find dependencies with multiple versions to
-`exit 1` in thoses cases, and just add it to the build too.
+  `exit 1` in thoses cases, and just add it to the build too.
 
 That's it. Hope it helps!

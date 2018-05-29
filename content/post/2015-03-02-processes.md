@@ -8,7 +8,7 @@ Don't get me wrong, I do believe that some set of basic rules must exist.
 What I don't believe is that they are the only way of fixing things.
 
 > Warning: this article will contain some philosophical and economics
-boring stuff.
+> boring stuff.
 
 ## Introduction
 
@@ -49,18 +49,18 @@ Friedrich Hayek, called
 ![Friedrich Hayek](/public/images/von-hayek.jpg)
 
 > (...) De Tocqueville's prediction of the "new kind of servitude" when
-after having thus successively taken each member of the community in its
-powerful grasp, and fashioned him at will, the supreme power then extends
-its arm over the whole community. It covers the surface of society with
-a network of small complicated rules, minute and uniform, through which
-the most original minds and the most energetic characters cannot penetrate
-to rise above the crowd. The will of man is not shattered but softened,
-bent and guided; men are seldom forced by it to act, but they are
-constantly restrained from acting. Such a power does not destroy, but
-it prevents existence; it does not tyrannize, but it compresses,
-enervates, extinguishes, and stupefies a people, till each nation is
-reduced to be nothing better than a flock of timid and industrial
-animals, of which government is the shepherd.
+> after having thus successively taken each member of the community in its
+> powerful grasp, and fashioned him at will, the supreme power then extends
+> its arm over the whole community. It covers the surface of society with
+> a network of small complicated rules, minute and uniform, through which
+> the most original minds and the most energetic characters cannot penetrate
+> to rise above the crowd. The will of man is not shattered but softened,
+> bent and guided; men are seldom forced by it to act, but they are
+> constantly restrained from acting. Such a power does not destroy, but
+> it prevents existence; it does not tyrannize, but it compresses,
+> enervates, extinguishes, and stupefies a people, till each nation is
+> reduced to be nothing better than a flock of timid and industrial
+> animals, of which government is the shepherd.
 
 That's exactly what how it feels in Brazil, and,
 if you ignore the government part, this can be applied to almost anything -
@@ -83,9 +83,9 @@ He defends that the solution is, in fact, better people. His writing
 is way better than mine, so, I will just quote him:
 
 > "Better people" has been recognized as the most promising silver bullet
-for addressing the software crisis, and yet almost all of our energy has
-been spent on creating better tools, methods, and processes instead of
-better people?
+> for addressing the software crisis, and yet almost all of our energy has
+> been spent on creating better tools, methods, and processes instead of
+> better people?
 
 And, well, there is XP with pair programming and other techniques that
 are made to, in the end, improve the people.
@@ -185,7 +185,6 @@ root cause will be just the lack of knowledge.
 Other times lack of communication. It might even be a one-time
 thing that - by definition - will never happen again. Let me know what you
 discover.
-
 
 ## Literature cited
 

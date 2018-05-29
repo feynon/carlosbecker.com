@@ -8,9 +8,9 @@ Olá! Yep, eu decidi escrever este post em português, pelo simples fato de que 
 
 Bem, eu acho que é padrão do mundo diferenciar as vagas para praticamente qualquer tipo de cargo em basicamente três níveis:
 
-* **Júnior**: O cara que está começando agora, não tem ~experiência~.
-* **Pleno**: Aquele cara que está manjando das coisas, o tal nível médio.
-* **Sênior**: Esse é O CARA, ele manja muito, tem bastante tempo de experiência, etc etc...
+- **Júnior**: O cara que está começando agora, não tem ~experiência~.
+- **Pleno**: Aquele cara que está manjando das coisas, o tal nível médio.
+- **Sênior**: Esse é O CARA, ele manja muito, tem bastante tempo de experiência, etc etc...
 
 PERA AÍ, você disse **tempo**? Sim, tempo.
 Infelizmente, toda empresa que vi nivela os profissionais pelo seu tempo de mercado.
@@ -28,7 +28,7 @@ O tempo passa. José está visivelmente totalmente acomodado com a vida na "Caf�
 
 Durante 5 anos de carreira, realmente aprendeu pouco ou muito pouco. Conhece pouco sobre poucos frameworks e tecnologias, a maioria, antigos, inclusive. Desconhece maneiras diferentes de fazer as coisas a não ser as que aprendeu com o ~framework~ da empresa.
 
-Queridos leitores e leitoras, vocês realmente acham que esse cara é um sênior? Acham que ele merecer ser posto e impor um ar de superioridade sobre aquele calouro visionário, que aprende uma nova tecnologia por semana, que **realmente ama a profissão**, e não a escolheu pelo dinheiro ou "*porque só tinha essa*"?
+Queridos leitores e leitoras, vocês realmente acham que esse cara é um sênior? Acham que ele merecer ser posto e impor um ar de superioridade sobre aquele calouro visionário, que aprende uma nova tecnologia por semana, que **realmente ama a profissão**, e não a escolheu pelo dinheiro ou "_porque só tinha essa_"?
 
 O que vocês realmente preferem: O cara que só tá preocupado em receber o cheque no final do mês com 5 anos de "experiência", ou o cara que está preocupado em fazer as coisas funcionarem do melhor jeito possível com 1 ano de experiência. **Reflitam**.
 

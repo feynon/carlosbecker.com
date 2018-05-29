@@ -62,7 +62,7 @@ For those who don't know, Alpine is a very minimalistic Linux distribution.
 It became "famous" (at least for me) because of its adoption in the Docker
 community, mainly, because its image is only 5MB in size:
 
-[![Alpine](https://badge.imagelayers.io/alpine:latest.svg)](https://imagelayers.io/?images=alpine:latest 'Get your own badge on imagelayers.io')
+[![Alpine](https://badge.imagelayers.io/alpine:latest.svg)](https://imagelayers.io/?images=alpine:latest "Get your own badge on imagelayers.io")
 
 We could probably use
 [kiasaki/alpine-golang](https://github.com/kiasaki/docker-alpine-golang),
@@ -94,7 +94,7 @@ alpine                     3.2                 31f630c65071        3 weeks ago  
 
 Yes, from ~5MB (of the alpine image) to **220.5MB**!!!!
 
-[![Example with Go language bundled](https://badge.imagelayers.io/caarlos0/example-small.svg)](https://imagelayers.io/?images=caarlos0/example-small 'Get your own badge on imagelayers.io')
+[![Example with Go language bundled](https://badge.imagelayers.io/caarlos0/example-small.svg)](https://imagelayers.io/?images=caarlos0/example-small "Get your own badge on imagelayers.io")
 
 Looking at the layers, we can see that the problem is that,
 well, the entire Go language and its tool, Git, Mercurial and a lot of stuff
@@ -149,7 +149,7 @@ alpine                     3.2                 31f630c65071        3 weeks ago  
 
 Just **11.43MB**:
 
-[![Example without Go Language bundled](https://badge.imagelayers.io/caarlos0/example-smaller:latest.svg)](https://imagelayers.io/?images=caarlos0/example-smaller:latest 'Get your own badge on imagelayers.io')
+[![Example without Go Language bundled](https://badge.imagelayers.io/caarlos0/example-smaller:latest.svg)](https://imagelayers.io/?images=caarlos0/example-smaller:latest "Get your own badge on imagelayers.io")
 
 I think that's literally the smaller you can get.
 
@@ -164,19 +164,24 @@ Besides, more free HD space is always a good thing.
 ## Show me the numbers
 
 ##### Empty official Golang image:
-[![Empty official Golang image](https://badge.imagelayers.io/golang:latest.svg)](https://imagelayers.io/?images=golang:latest 'Get your own badge on imagelayers.io')
+
+[![Empty official Golang image](https://badge.imagelayers.io/golang:latest.svg)](https://imagelayers.io/?images=golang:latest "Get your own badge on imagelayers.io")
 
 ##### Official Alpine image:
-[![Official Alpine image](https://badge.imagelayers.io/alpine.svg)](https://imagelayers.io/?images=alpine 'Get your own badge on imagelayers.io')
+
+[![Official Alpine image](https://badge.imagelayers.io/alpine.svg)](https://imagelayers.io/?images=alpine "Get your own badge on imagelayers.io")
 
 ##### My alpine-go image:
-[![My alpine-go image](https://badge.imagelayers.io/caarlos0/alpine-go:latest.svg)](https://imagelayers.io/?images=caarlos0/alpine-go:latest 'Get your own badge on imagelayers.io')
+
+[![My alpine-go image](https://badge.imagelayers.io/caarlos0/alpine-go:latest.svg)](https://imagelayers.io/?images=caarlos0/alpine-go:latest "Get your own badge on imagelayers.io")
 
 ##### example-small image:
-[![example-small image](https://badge.imagelayers.io/caarlos0/example-small.svg)](https://imagelayers.io/?images=caarlos0/example-small 'Get your own badge on imagelayers.io')
+
+[![example-small image](https://badge.imagelayers.io/caarlos0/example-small.svg)](https://imagelayers.io/?images=caarlos0/example-small "Get your own badge on imagelayers.io")
 
 ##### example-smaller image:
-[![example-smaller image](https://badge.imagelayers.io/caarlos0/example-smaller:latest.svg)](https://imagelayers.io/?images=caarlos0/example-smaller:latest 'Get your own badge on imagelayers.io')
+
+[![example-smaller image](https://badge.imagelayers.io/caarlos0/example-smaller:latest.svg)](https://imagelayers.io/?images=caarlos0/example-smaller:latest "Get your own badge on imagelayers.io")
 
 ## Conclusion
 

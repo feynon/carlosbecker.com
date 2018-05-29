@@ -10,7 +10,6 @@ It was in 01-set. Until now, no big fights, we're still alive, she didn't put me
 
 So, take some pictures, and I'll se you guys later.
 
-
 <table style="width:194px;">
 	<tr>
 		<td align="center" style="height:194px;background:url(https://picasaweb.google.com/s/c/transparent_album_background.gif) no-repeat left">

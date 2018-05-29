@@ -160,9 +160,9 @@ a nice experience for a useless holiday, and as a bonus it improved
 my shell performance!
 
 > I also shared it in both
-[zsh](http://www.reddit.com/r/zsh/comments/38lt3h/caarlos0antibody_a_faster_and_simpler_version_of/)
-and
-[golang](http://www.reddit.com/r/golang/comments/38t3r7/caarlos0antibody_a_faster_and_simpler_antigen/)
-Reddits.
+> [zsh](http://www.reddit.com/r/zsh/comments/38lt3h/caarlos0antibody_a_faster_and_simpler_version_of/)
+> and
+> [golang](http://www.reddit.com/r/golang/comments/38t3r7/caarlos0antibody_a_faster_and_simpler_antigen/)
+> Reddits.
 
 [antige]: http://github.com/zsh-users/antigen

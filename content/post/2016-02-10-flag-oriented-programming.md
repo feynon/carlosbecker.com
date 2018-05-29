@@ -218,18 +218,18 @@ the next programmer right away fix the mess and do the right thing?
 I'm sorry, but I believe it is more likely to happen this way:
 
 - Programmer X (the next guy - given `next = n`), arrives late at the office
-because of a flat tire - not very happy already;
+  because of a flat tire - not very happy already;
 - Programmer X needs to add another feature to the coffee making class,
-let's say, whether or not to add cinnamon, of course, as fast as possible;
+  let's say, whether or not to add cinnamon, of course, as fast as possible;
 - Programmer X opens the `Coffee.rb` file, takes a look around and start
-cursing someone - because he couldn't stand to look at that hundred `if`
-statements;
+  cursing someone - because he couldn't stand to look at that hundred `if`
+  statements;
 - Programmer X then refactor the entire code - commit message has some
-curse words in it;
+  curse words in it;
 - Programmer X then finally implements the Cinnamon feature and its tests -
-commit message again has some curse words in it;
+  commit message again has some curse words in it;
 - At this time, Programmer X's day is already ruined. He is mad. And he knows
-it was you (`git blame coffee.rb`). And he knows where you live.
+  it was you (`git blame coffee.rb`). And he knows where you live.
 
 Why is he mad?
 

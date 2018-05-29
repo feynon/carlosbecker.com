@@ -22,7 +22,6 @@ $ bundle gem somelibrary
 
 This command will create basically the following tree:
 
-
 ```console
 $ tree
 somelibrary
@@ -46,8 +45,7 @@ $ rm -rf lib/somelibrary
 ```
 
 > **Heads up:** Don't forget to change the `lib/someligrary.rb` and
-`somelibrary.gemspec` files!
-
+> `somelibrary.gemspec` files!
 
 ##### 2. As I said in item 1, change the `somelibrary.gemspec` file...
 

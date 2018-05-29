@@ -30,7 +30,6 @@ Then, in my `public/css` folder, I created a `styles.scss` like this one:
 @import "syntax";
 @import "lanyon";
 @import "carlos";
-
 ```
 
 Also, I added the following section to my `_config.yml`:
@@ -54,4 +53,3 @@ to one request with 12.8K!
 
 Besides that, now I have all the power that
 Sass provides, in my blog, without any hacks. And it works on GitHub pages!
-

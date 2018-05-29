@@ -68,7 +68,6 @@ That's all folks, hope to see you soon!
 
 > This post was last updated in Feb 4, 2015.
 
-
 [dotfiles]: http://github.com/caarlos0/dotfiles
 [readme]: https://github.com/caarlos0/dotfiles#install
 [zsh]: http://www.zsh.org/

@@ -88,7 +88,7 @@ Let's change Brazil! Thank you all for any help and support!
 
 {{< youtube zn8ndJOIEsI >}}
 
--------
+---
 
 Special thanks to [Diego Selzlein][nerde], who help improve this text by fixing
 some english issues and typo.

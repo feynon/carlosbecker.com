@@ -24,8 +24,8 @@ So, let's start using it.
 
 There are 2 ways to get the jar:
 
-* [Maven](https://github.com/gwtbootstrap/gwt-bootstrap/wiki/Using-GWT-Bootstrap-Maven-Repository)
-* [Downloading the jar by hand and put it in you app classpath](https://github.com/gwtbootstrap/gwt-bootstrap/downloads)
+- [Maven](https://github.com/gwtbootstrap/gwt-bootstrap/wiki/Using-GWT-Bootstrap-Maven-Repository)
+- [Downloading the jar by hand and put it in you app classpath](https://github.com/gwtbootstrap/gwt-bootstrap/downloads)
 
 ## Configuring you module
 
@@ -75,20 +75,18 @@ Then, just use the widget like this:
 <b2:DateBox format="dd/mm/yyyy" autoClose="true" />
 ```
 
-
 ## Pros and Cons
 
 ### Pros
 
-* Easy to setup and use
-* Themeable
-* Almost all widgets ported
-* Active forum and development
+- Easy to setup and use
+- Themeable
+- Almost all widgets ported
+- Active forum and development
 
 ### Cons
 
-* Doesn't support `less` files ([#29](https://github.com/gwtbootstrap/gwt-bootstrap/issues/29))
-* Load all the _JavaScript_ files in the bootstrap of the app ([#70](https://github.com/gwtbootstrap/gwt-bootstrap/issues/70))
-
+- Doesn't support `less` files ([#29](https://github.com/gwtbootstrap/gwt-bootstrap/issues/29))
+- Load all the _JavaScript_ files in the bootstrap of the app ([#70](https://github.com/gwtbootstrap/gwt-bootstrap/issues/70))
 
 **Happy coding!**

@@ -2,7 +2,6 @@
 
 Sources to my blog.
 
-
 ## create new post
 
 ```sh

@@ -12,11 +12,11 @@ X's are too much slow, can't follow the technology evolution and etc.
 I believe that there is basically two ignored facts here:
 
 - The Y's were raised by the X's, so, the Y's are basically what the X's
-needed and/or what the current environment needs. Environment that has been
-molded by the X's;
+  needed and/or what the current environment needs. Environment that has been
+  molded by the X's;
 - Wanting or not, Y's will take the place of the X's. At the same time
-the next generation will start to take the place of the Y's. That’s just
-the nature. People get old and die while children are born and grown.
+  the next generation will start to take the place of the Y's. That’s just
+  the nature. People get old and die while children are born and grown.
 
 The other day I was chatting with my boss, a X, exactly about this
 subject, due to a post we saw at Facebook. We both agreed that this kind

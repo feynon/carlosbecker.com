@@ -67,20 +67,20 @@ It is so easy that I'm already using it in all my suitable Go projects:
 
 - [GoReleaser itself](https://github.com/goreleaser/releaser)!
 - [Antibody](https://github.com/getantibody/antibody) - A faster and simpler
-antigen written in Golang
+  antigen written in Golang
 - [CloneOrg](https://github.com/caarlos0/clone-org) - Clone all repos
-of a github organization
+  of a github organization
 - [ForkCleaner](https://github.com/caarlos0/fork-cleaner) - Cleans up old
-and inactive forks on your github account
+  and inactive forks on your github account
 - [GithubVacations](https://github.com/caarlos0/github-vacations) -
-Automagically ignore all notifications related to work when you are on vacations
+  Automagically ignore all notifications related to work when you are on vacations
 - [KarmaHub](https://github.com/caarlos0/karmahub) - Compares the amount of
-issues and pull requests you created with the amount of comments and code
-reviews you did
+  issues and pull requests you created with the amount of comments and code
+  reviews you did
 - [OrgStats](https://github.com/caarlos0/org-stats) - Get the contributor
-stats summary from all repos of any given organization
+  stats summary from all repos of any given organization
 - [TorrentWatcher](https://github.com/caarlos0/twatcher) - Automagically
-download torrent files to ~/Downloads
+  download torrent files to ~/Downloads
 
 ### Roadmap
 
@@ -99,10 +99,10 @@ I believe those features will enable GoReleaser to be even more useful!
 I was very glad to see the results of GoReleaser!
 
 - First page on [/r/golang](https://www.reddit.com/r/golang/) for 2 days (and
-top 1 most of that time)
+  top 1 most of that time)
 - 300+ stars in just a few days
 - [GitHub trending on Go](https://github.com/trending/go) (still at the time
-of writing)
+  of writing)
 - Several comments on the [reddit post](https://www.reddit.com/r/golang/comments/5l3i9b/deliver_go_binaries_as_fast_and_easy_as_possible/)
 - [This issue](https://github.com/goreleaser/releaser/issues/26)
 

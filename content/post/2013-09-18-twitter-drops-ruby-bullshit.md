@@ -11,11 +11,11 @@ Java is the best language in the world.
 Before you read that, a little background on me would be good:
 
 - Java is the first language I worked with. I started 4 years ago and I'm
-still using it **every day**;
+  still using it **every day**;
 - No, I don't hate Java, it is just not my favorite language;
 - I started with Ruby about 2 years ago;
 - A lot of friends and coworkers try to troll me with that bullshit about
-Twitter and others.
+  Twitter and others.
 
 With that in mind, I decided to drop a few lines about this here.
 
@@ -126,8 +126,8 @@ The point is the same old conclusion that everyone keeps repeating but nobody is
 listening: **There is no silver bullet**.
 
 I like to see comparisons between languages. I don't mind if I read
-somewhere that "_[some lang I like]  [random feature]_ sucks",
- s long as they have valid arguments.
+somewhere that "_[some lang I like][random feature]_ sucks",
+s long as they have valid arguments.
 
 I also don't mind if someone says that _[lang X]_ is better than _[lang Y]_
 in some matter, as long as they prove me their point.

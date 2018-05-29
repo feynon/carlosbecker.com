@@ -24,12 +24,12 @@ The general idea is quite simple:
 
 - all things but nginx listen on `127.0.0.1` only;
 - nginx listens on `80` and `proxy_forward`s to [oauth_proxy][] and the
-other services:
+  other services:
   - `/` forwards to [prometheus][];
   - `/grafana` forwards to [grafana][];
   - `/alertmanager` forwards to [alertmanager][];
   - all of the above authenticate using `proxy_forward` and [nginx][]'s
-`auth_request` directive.
+    `auth_request` directive.
 
 So, let's get this thing started!
 
@@ -54,7 +54,7 @@ The important parts are:
 
 - listen on `127.0.0.1:9090` - so it won't be exposed to the world;
 - the `web.external-url` with the final URL: this is required for external
-links to work properly.
+  links to work properly.
 
 # AlertManager
 
@@ -78,7 +78,7 @@ The important parts are:
 
 - listen on `127.0.0.1:9093` - so it won't be exposed to the world;
 - the `web.external-url` with the final URL: this is required for external
-links to work properly.
+  links to work properly.
 
 # Grafana
 
@@ -117,9 +117,9 @@ The important things here are:
 - listen on `127.0.0.1:3000` - so it won't be exposed to the world;
 - mount the `grafana.ini` config file;
 - in the `grafana.ini`, the `root_url` defines the `/grafana/` suffix in the
-root. This is needed because otherwise, even with `proxy_pass` on [nginx][],
-[grafana][] keeps trying to redirect to `/`, as mentioned on the beggining,
-[prometheus][] will leave on `/`. This config file fixes that.
+  root. This is needed because otherwise, even with `proxy_pass` on [nginx][],
+  [grafana][] keeps trying to redirect to `/`, as mentioned on the beggining,
+  [prometheus][] will leave on `/`. This config file fixes that.
 
 # oauth2_proxy
 
@@ -157,11 +157,11 @@ The important things here are:
 - listen on `127.0.0.1:4180` - so it won't be exposed to the world;
 - `upstream` is set to the [nginx][] container;
 - `http-address` is set to listen on `0.0.0.0` so we can expose the service
-to the host (`oauth2_proxy` listens on `127.0.0.1` by default);
+  to the host (`oauth2_proxy` listens on `127.0.0.1` by default);
 - `redirect-url` must be the same as the one informed while creating the GitHub
-app;
+  app;
 - `cookie-secure` is set ot false due the lack of https. I'll manage to add
-[let's encrypt][letsencrypt] anoother and will create a new post.
+  [let's encrypt][letsencrypt] anoother and will create a new post.
 
 # nginx
 

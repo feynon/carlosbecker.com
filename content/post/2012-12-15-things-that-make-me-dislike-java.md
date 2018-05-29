@@ -27,7 +27,6 @@ on... but, it still not be a pure OOP language.
 For example, in OO, **everything** should be an object. Java primitives, for
 example, are not.
 
-
 ## autoboxing and null behaviors
 
 Like I said before, primitives are not objects, which means that you can't
@@ -77,7 +76,6 @@ puts t.class # NilClass
 puts t.nil? # true
 puts "t isn't nil" if t # nothing, t is nil
 ```
-
 
 In Ruby, [every object has a `nil?` method][rdoc_nil], and `nil` also is an
 object, which is awesome. I realy miss that behavior in Java.
@@ -186,7 +184,7 @@ Also, some of the concepts I talk about here could be simulated, sometimes with
 a weird syntax, using [Google Guava Libraries][guava]. I've
 [talked about][guava_post] it sometime ago.
 
-
 [rdoc_nil]: http://ruby-doc.org/core-1.9.3/Object.html#method-i-nil-3F
+
 [guava_post]: {{< ref "post/2012-08-08-rocking-out-with-google-guava.md" >}}
 [guava]: http://code.google.com/p/guava-libraries/

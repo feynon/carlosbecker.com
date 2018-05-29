@@ -7,7 +7,7 @@ title: Simple RoR AJAX Status
 ## tl;dr
 
 > A simple tutorial explaining how to made a simple coffeescript that can
-automagically show and hide a loading spin while doing a ajax call.
+> automagically show and hide a loading spin while doing a ajax call.
 
 ## Hi
 
@@ -53,9 +53,7 @@ gem 'jquery-rails'
 (...)
 ```
 
-
 You will also need to import them in you `application.js`.
-
 
 ## events
 
@@ -79,16 +77,13 @@ $(document).on 'ajax:complete ajaxComplete page:change', ->
   # hide spin
 ```
 
-
 But we also have another problem: if some user interaction fire multiple ajax calls?
 In my app, I don't need to worry too much about that for now, because I don't need to
 do more than one `$.get` (for example) in the same user interaction. I only have
 some `$.get` (for example) callbacks that call `Turbolinks.visit`, so, imagine something like:
 
-
         ajax:beforeSend--------------ajax:complete------------------>
         -------------------page:fetch------------------page:change-->
-
 
 The spin will shows up in `beforeSend`, and hide in `complete`, but there's another
 ajax going on in `page:fetch`. To solve that, I just cache in a variable the
@@ -103,7 +98,7 @@ Is pretty simple, but I'll let this for you guys :)
 The most "difficult" part of the solution is already explained, so, get the code,
 read it, and use the comment box if you have any doubts =)
 
------
+---
 
 `ajax.spin.js.coffee` code:
 
@@ -160,9 +155,9 @@ $(document).on 'ajax:before ajaxStart page:fetch', (event) ->
   loadState event
 $(document).on 'ajax:complete ajaxComplete page:change', (event) ->
   doneState event
-  ```
+```
 
--------------
+---
 
 The compiled `ajax.spin.js` file, for those wo don't use CoffeeScript:
 
@@ -177,15 +172,15 @@ The compiled `ajax.spin.js` file, for those wo don't use CoffeeScript:
     radius: 5,
     corners: 1,
     rotate: 0,
-    color: '#000',
+    color: "#000",
     speed: 1.1,
     trail: 100,
     shadow: false,
     hwaccel: false,
-    className: 'spinner',
+    className: "spinner",
     zIndex: 2e9,
-    top: 'auto',
-    left: 'auto'
+    top: "auto",
+    left: "auto"
   };
 
   lastEvent = void 0;
@@ -193,7 +188,7 @@ The compiled `ajax.spin.js` file, for those wo don't use CoffeeScript:
   $n = void 0;
 
   $(document).ready(function() {
-    return $n = $('.navbar.navbar-static-top');
+    return ($n = $(".navbar.navbar-static-top"));
   });
 
   eventType = function(event) {
@@ -202,8 +197,8 @@ The compiled `ajax.spin.js` file, for those wo don't use CoffeeScript:
       return false;
     }
     type = event.type;
-    if (type.indexOf(':') > -1) {
-      return type.split(':')[0];
+    if (type.indexOf(":") > -1) {
+      return type.split(":")[0];
     } else {
       return type.match(/[A-Z]?[a-z]+|[0-9]+/g)[0];
     }
@@ -221,15 +216,14 @@ The compiled `ajax.spin.js` file, for those wo don't use CoffeeScript:
     }
   };
 
-  $(document).on('ajax:before ajaxStart page:fetch', function(event) {
+  $(document).on("ajax:before ajaxStart page:fetch", function(event) {
     return loadState(event);
   });
 
-  $(document).on('ajax:complete ajaxComplete page:change', function(event) {
+  $(document).on("ajax:complete ajaxComplete page:change", function(event) {
     return doneState(event);
   });
-
-}).call(this);
+}.call(this));
 ```
 
 Hope it help somebody, enjoy.

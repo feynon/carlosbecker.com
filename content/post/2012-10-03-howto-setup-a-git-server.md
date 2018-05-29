@@ -5,6 +5,7 @@ title: Configuring a git server with gitolite
 ---
 
 ## Setup
+
 You will need:
 
 - git
@@ -89,7 +90,6 @@ Now, you will be able to clone the `foo` repo from the configured machines, wich
 ```console
 $ git clone git@SERVER:foo.git
 ```
-
 
 ## Final thoughts
 

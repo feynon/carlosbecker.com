@@ -17,9 +17,9 @@ So let's do this.
 
 > **hoist** - _noun_
 >
-> 1. An apparatus for lifting heavy or cumbersome objects.
+> 1.  An apparatus for lifting heavy or cumbersome objects.
 >
-> 2. The act of hoisting; a lift.
+> 2.  The act of hoisting; a lift.
 >
 > From [The Free Dictionary](http://www.thefreedictionary.com/hoist)
 
@@ -28,7 +28,7 @@ To explain what it means in JavaScript code, let's do some examples:
 ```javascript
 var msg = "Hello";
 
-(function () {
+(function() {
   alert(msg);
 })();
 ```
@@ -39,7 +39,7 @@ alert "Hello". Nice, but what happens now?
 ```javascript
 var msg = "Hello";
 
-(function () {
+(function() {
   alert(msg);
   var msg = "Bump";
 })();
@@ -56,7 +56,7 @@ However, if you try something like this instead:
 ```javascript
 var msg = "Hello";
 
-(function () {
+(function() {
   alert(msg);
   msg = "Bump";
 })();
@@ -76,7 +76,7 @@ so, the previous code will actually be interpreted like this:
 ```javascript
 var msg = "Hello";
 
-(function () {
+(function() {
   var msg;
   alert(msg);
   msg = "Bump";
@@ -107,13 +107,13 @@ x = 23432;
 
 There is no such thing in JavaScript. You can't prevent the hoisting, what you
 can - and **should** - do is "manually hoist" your variables. It will make
-your code far less confusing and  will help you and other people that may
+your code far less confusing and will help you and other people that may
 someday have to maintain it to debug an error or add new features.
 
 I would like to, again, recommend this excellent book by Douglas Crockford,
 "[JavaScript: The Good Parts][book]". It will surely help you to
 understand JavaScript and avoid a lot of common errors.
 
-[book]:http://amzn.to/14ZmSmZ
+[book]: http://amzn.to/14ZmSmZ
 
 Happy Coding!

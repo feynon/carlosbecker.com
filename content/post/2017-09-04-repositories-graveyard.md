@@ -59,12 +59,10 @@ It runs as a Lambda function and costs basicaly nothing.
 ## Results
 
 - I went from ~270 repositories in
-[my main account](https://github.com/caarlos0) to just 54
-(including private repos);
+  [my main account](https://github.com/caarlos0) to just 54
+  (including private repos);
 - My scripts run like 4x faster (not scientifically measured);
 - My profile now shows only things I'm actually working on - or worked on
-recentely - or that I intend to work on again;
+  recentely - or that I intend to work on again;
 - I don't need to worry about new issues and pulls on my abandoned repos;
 - Less clutter == Happier Carlos :)
-
-
