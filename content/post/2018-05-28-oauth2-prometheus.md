@@ -169,7 +169,7 @@ The important things here are:
 
 First, let's create a nginx config file:
 
-```conf
+```nginx
 # nginx.conf
 server {
   listen 80;
