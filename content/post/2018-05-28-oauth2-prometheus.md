@@ -23,7 +23,7 @@ up all the environment.
 The general idea is quite simple:
 
 - all things but nginx listen on `127.0.0.1` only;
-- nginx listens on `80` and `proxy_forward`s to [oauth_proxy][] and the
+- nginx listens on `80` and `proxy_forward`s to [oauth2_proxy][] and the
   other services:
   - `/` forwards to [prometheus][];
   - `/grafana` forwards to [grafana][];
@@ -286,3 +286,5 @@ Cheers!
 [grafana]: https://grafana.com/
 [oauth2_proxy]: https://github.com/bitly/oauth2_proxy
 [repo]: https://github.com/caarlos0/m.carlosbecker.com
+[docker-compose]: https://docs.docker.com/compose/
+[rsync]: https://linux.die.net/man/1/rsync
