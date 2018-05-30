@@ -110,16 +110,43 @@ file. Here are its contents:
 protocol = http
 domain = m.carlosbecker.com
 root_url = %(protocol)s://%(domain)s/grafana/
+
+[users]
+allow_sign_up = false
+auto_assign_org = true
+auto_assign_org_role = Admin
+
+[auth.proxy]
+enabled = true
+header_name = X-Email
+header_property = email
+auto_sign_up = true
 ```
 
-The important things here are:
+We have a couple of important things to look at here. On the
+`docker-compose.yml` file:
 
 - listen on `127.0.0.1:3000` - so it won't be exposed to the world;
 - mount the `grafana.ini` config file;
-- in the `grafana.ini`, the `root_url` defines the `/grafana/` suffix in the
-  root. This is needed because otherwise, even with `proxy_pass` on [nginx][],
-  [grafana][] keeps trying to redirect to `/`, as mentioned on the beggining,
-  [prometheus][] will leave on `/`. This config file fixes that.
+
+And in the `grafana.ini` file:
+
+#### In the `server` section:
+
+The `root_url` defines the `/grafana/` suffix in the root.
+
+This is needed because otherwise, even with `proxy_pass` on [nginx][],
+[grafana][] keeps trying to redirect to `/`, as mentioned on the beggining,
+[prometheus][] will leave on `/`. This config file fixes that;
+
+#### In the `users` and `auth.proxy` sections:
+
+Those sections tell [grafana][] to auto-create an user when someone authenticates
+through the proxy (using the `X-Email` header) and to give this user the
+`Admin` role and assing to the organization. It also disables the sign up form.
+
+This way we don't need to login on both [oauth2_proxy][] **and** [grafana][]:
+You log in within [oauth2_proxy][] and everything just works!
 
 # oauth2_proxy
 
@@ -143,12 +170,14 @@ services:
     - '-client-id=123'
     - '-client-secret=456'
     - '-provider=github'
-    - '-email-domain=carlosbecker.com'
+    - '-github-org=caarlos0-m'
+    - '-email-domain=*'
     - '-cookie-secret=foo bar 1234'
     - '-cookie-secure=false'
     - '-upstream=http://nginx:80'
     - '-http-address=0.0.0.0:4180'
-    - '--redirect-url=http://m.carlosbecker.com/oauth2/callback'
+    - '-redirect-url=http://m.carlosbecker.com/oauth2/callback'
+    - '-set-xauthrequest=true'
     # content hidden for the sake of brevity
 ```
 
@@ -160,6 +189,13 @@ The important things here are:
   to the host (`oauth2_proxy` listens on `127.0.0.1` by default);
 - `redirect-url` must be the same as the one informed while creating the GitHub
   app;
+- `client-id`, `client-secret` and `provider` are the GitHub oauth2 settings;
+- `github-org` is the required org an user needs to be member of to be allowed
+in;
+- `email-domain` could be an additional email domain filter - for me the org
+filter is enough;
+- `set-xauthrequest` is set to true se we can pass through the user and
+email headers - grafana uses this header to auto-create an user and log it in;
 - `cookie-secure` is set ot false due the lack of https. I'll manage to add
   [let's encrypt][letsencrypt] anoother and will create a new post.
 
