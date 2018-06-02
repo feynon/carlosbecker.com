@@ -1,6 +1,9 @@
 ---
 title: "Prometheus authentication with oauth2_proxy"
 date: 2018-05-28T21:24:04-03:00
+tags:
+- prometheus
+- monitoring
 ---
 
 I wanted to set up a [prometheus][] machine for me to monitor random stuff,

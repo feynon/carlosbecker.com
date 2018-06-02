@@ -35,4 +35,5 @@ avatar:
 		\( -clone 0 -resize 32x32 \) \
 		\( -clone 0 -resize 48x48 \) \
 		\( -clone 0 -resize 64x64 \) \
-		-delete 0 -alpha off -colors 256 static/favicon.ico
+		-delete 0 -alpha off -colors 256 static/img/favicon.ico
+	convert -resize x120 static/avatar.jpg static/img/apple-touch-icon.png

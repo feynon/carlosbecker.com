@@ -1,7 +1,7 @@
 baseurl = "https://carlosbecker.com/"
 languageCode = "en-us"
 title = "Carlos Alexandro Becker"
-theme = "hugo-type-theme"
+theme = "paper"
 disqusShortname = "caarlos0blog"
 googleAnalytics = "UA-50435491-1"
 paginate = 5
@@ -29,46 +29,31 @@ pygmentsStyle = "dracula"
 	post = "/posts/:slug"
 
 [privacy]
-  [privacy.googleAnalytics]
-    anonymizeIP = true
-    respectDoNotTrack = true
-    useSessionStorage = true
-  [privacy.twitter]
-    enableDNT = true
-  [privacy.youtube]
-    privacyEnhanced = true
+	[privacy.googleAnalytics]
+		anonymizeIP = true
+		respectDoNotTrack = true
+		useSessionStorage = true
+	[privacy.twitter]
+		enableDNT = true
+	[privacy.youtube]
+		privacyEnhanced = true
 
 [params]
 	author = "Carlos Alexandro Becker"
 	description = "Thoughts, rants and discoveries on software development and related stuff."
 	keywords = "software development, software, golang, devops, go, sre, site reliability engineering"
 	avatar = "avatar.jpg"
-  # gravatar = ""
-	# headerText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br><br>Remove all header text in **config.toml** to disable this feature."
-	# headerImage = ""
-	copyright = "Released under the MIT license<br>Powered by [Hugo](//gohugo.io/) with the [Type Theme](//github.com/digitalcraftsman/hugo-type-theme)"
 
-	[params.social]
-		rss = false
-		homepage = false
-		email = "contact@carlosbecker.com"
-		behance = ""
-		bitbucket  =""
-		dribbble = ""
-		facebook = ""
-		flickr = ""
-		github = "caarlos0"
-		googleplus = ""
-		instagram = ""
-		linkedin = ""
-		pinterest = ""
-		reddit = ""
-		soundcloud = ""
-		stackexchange = ""
-		steam = ""
-		tumblr = ""
-		twitter = "caarlos0"
-		wordpress = ""
-		youtube = ""
-		gitlab = ""
-		trello = ""
+[menu]
+	[[menu.main]]
+		identifier = "archive"
+		name = "Archive"
+		url = "/archive/"
+	[[menu.main]]
+		identifier = "talks"
+		name = "Talks"
+		url = "/talks/"
+	[[menu.main]]
+		identifier = "about"
+		name = "About"
+		url = "/about/"
