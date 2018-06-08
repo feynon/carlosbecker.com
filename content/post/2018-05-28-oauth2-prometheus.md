@@ -41,7 +41,7 @@ So, let's get this thing started!
 First one is [prometheus][] itself:
 
 ```yaml
-# prometheus.yml
+# docker-compose.yml
 version: '3'
 services:
   prometheus:
@@ -64,7 +64,7 @@ The important parts are:
 We will also need [alertmanager][] to route the alerts, right? Let's do it:
 
 ```yaml
-# prometheus.yml
+# docker-compose.yml
 version: '3'
 services:
   # content hidden for the sake of brevity
@@ -73,7 +73,7 @@ services:
     ports:
     - "127.0.0.1:9093:9093"
     command:
-    - '--web.external-url=http://m.carlosbecker.com:9093/'
+    - '--web.external-url=http://m.carlosbecker.com/alertmanager/'
     # content hidden for the sake of brevity
 ```
 
@@ -83,13 +83,33 @@ The important parts are:
 - the `web.external-url` with the final URL: this is required for external
   links to work properly.
 
+We also need to add [alertmanager][] to `prometheus.yml`:
+
+```yaml
+# prometheus.yml
+alerting:
+  alertmanagers:
+  - path_prefix: /alertmanager/
+    static_configs:
+    - targets:
+      - alertmanager:9093
+scrape_configs:
+  - job_name: 'alertmanager'
+    metrics_path: /alertmanager/metrics
+    static_configs:
+    - targets: ['alertmanager:9093']
+```
+
+Note that we change the `path_prefix` in the `alerting` section and also the
+`metrics_path` in the `scrape_configs` section.
+
 # Grafana
 
 Everyone likes dashboards, and [grafana][] is DOPE for doing that. Let's
 add it as well:
 
 ```yaml
-# prometheus.yml
+# docker-compose.yml
 version: '3'
 services:
   # content hidden for the sake of brevity
@@ -161,7 +181,7 @@ the [oauth2_proxy README][oauth2_proxy_readme].
 Once I had the client ID and secret, it was pretty straightforward:
 
 ```yaml
-# prometheus.yml
+# docker-compose.yml
 version: '3'
 services:
   # content hidden for the sake of brevity
@@ -242,7 +262,7 @@ server {
     auth_request_set $auth_cookie $upstream_http_set_cookie;
     add_header Set-Cookie $auth_cookie;
 
-    proxy_pass http://alertmanager:9093/;
+    proxy_pass http://alertmanager:9093/alertmanager/;
   }
 
   location /grafana/ {
@@ -282,7 +302,7 @@ Most of it is based on the [oauth2_proxy README examples][oauth2_proxy_readme_ng
 Now, let's add it to the `docker-compose.yml` file:
 
 ```yaml
-# prometheus.yml
+# docker-compose.yml
 version: '3'
 services:
   # content hidden for the sake of brevity
