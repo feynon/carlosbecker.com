@@ -6,6 +6,8 @@ disqusShortname = "caarlos0blog"
 googleAnalytics = "UA-50435491-1"
 paginate = 5
 
+disableAliases = true
+
 pygmentsCodeFences = true
 pygmentsStyle = "dracula"
 
@@ -22,7 +24,7 @@ pygmentsStyle = "dracula"
 		weight = 10
 
 	[[related.indices]]
-		name  = "tags"
+		name = "tags"
 		weight = 100
 
 [permalinks]
@@ -57,3 +59,24 @@ pygmentsStyle = "dracula"
 		identifier = "about"
 		name = "About"
 		url = "/about/"
+
+[outputs]
+home = [ "HTML", "RSS", "REDIR", "HEADERS" ]
+
+[mediaTypes]
+	[mediaTypes."text/netlify"]
+		suffix = ""
+		delimiter = ""
+
+[outputFormats]
+	[outputFormats.REDIR]
+		mediatype = "text/netlify"
+		baseName = "_redirects"
+		isPlainText = true
+		notAlternative = true
+
+	[outputFormats.HEADERS]
+		mediatype = "text/netlify"
+		baseName = "_headers"
+		isPlainText = true
+		notAlternative = true
