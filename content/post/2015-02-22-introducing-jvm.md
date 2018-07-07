@@ -2,6 +2,9 @@
 date: 2015-02-22T00:00:00Z
 slug: introducing-jvm
 title: Introducing JVM - The Java Version Manager
+city: Joinville
+tags:
+- shell
 ---
 
 Last years it becomes more and more common to work in different projects

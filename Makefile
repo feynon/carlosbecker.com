@@ -20,11 +20,11 @@ run:
 
 ci:
 	# TODO: eventually check htmls as well
-	vale --glob='**/*.md' .
+	$$(which vale) --glob='**/*.md' .
 	rm -rf ./public || true
 	hugo server -d ./public >/dev/null &
 	sleep 2
-	htmltest ./public
+	$$(which htmltest) ./public
 	pkill hugo
 
 avatar:

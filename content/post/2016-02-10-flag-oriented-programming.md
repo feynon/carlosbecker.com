@@ -2,6 +2,9 @@
 date: 2016-02-10T00:00:00Z
 slug: flag-oriented-programming
 title: Flag-oriented Programming
+city: Joinville
+tags:
+- programming
 ---
 
 `booleans`, right? What a wonderful piece of technology! They help us solve so

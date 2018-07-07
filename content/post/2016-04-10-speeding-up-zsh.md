@@ -2,6 +2,7 @@
 date: 2016-04-10T00:00:00Z
 slug: speeding-up-zsh
 title: Speeding up my ZSH load
+city: Joinville
 tags:
 - zsh
 ---

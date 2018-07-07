@@ -2,6 +2,7 @@
 date: 2016-08-07T00:00:00Z
 slug: glide-circleci
 title: Setting up a Go build with Glide on CircleCI
+city: Joinville
 tags:
 - ci
 - golang

@@ -2,6 +2,7 @@
 date: 2017-03-04T00:00:00Z
 slug: distributed-locks-redis
 title: Distributed Locking with Redis
+city: Joinville
 tags:
 - java
 - contaazul

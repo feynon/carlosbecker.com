@@ -2,6 +2,7 @@
 date: 2017-05-14T00:00:00Z
 slug: jekyll-build-time
 title: Improving Jekyll build time
+city: Joinville
 tags:
 - jekyll
 ---

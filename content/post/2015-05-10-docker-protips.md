@@ -2,6 +2,9 @@
 date: 2015-05-10T00:00:00Z
 slug: docker-protips
 title: Docker Protips™
+city: Joinville
+tags:
+- docker
 ---
 
 Like my old post [on git]({{< ref "post/2013-02-08-git-protips.md" >}}),

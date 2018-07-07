@@ -2,6 +2,7 @@
 date: 2015-07-05T00:00:00Z
 slug: avoid-static-imports
 title: Avoid static imports
+city: Joinville
 tags:
 - java
 ---

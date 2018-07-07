@@ -2,6 +2,7 @@
 date: 2015-07-09T00:00:00Z
 slug: small-go-apps-containers
 title: Small Go Apps Containers
+city: Joinville
 tags:
 - golang
 - docker

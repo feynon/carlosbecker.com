@@ -1,6 +1,7 @@
 ---
 title: "One month working remote"
 date: 2018-06-08T20:34:41-03:00
+city: Joinville
 tags:
 - totvslabs
 - life

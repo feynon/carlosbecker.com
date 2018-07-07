@@ -2,6 +2,7 @@
 date: 2015-05-15T00:00:00Z
 slug: selenium-grid-docker-compose
 title: Running a Selenium Grid with docker-compose
+city: Joinville
 tags:
 - java
 - docker

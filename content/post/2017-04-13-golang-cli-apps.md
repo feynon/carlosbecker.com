@@ -2,6 +2,7 @@
 date: 2017-04-13T00:00:00Z
 slug: golang-cli-apps
 title: Writing cli applications with Golang
+city: Joinville
 tags:
 - golang
 - cli

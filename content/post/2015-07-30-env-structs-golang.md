@@ -2,6 +2,7 @@
 date: 2015-07-30T00:00:00Z
 slug: env-structs-golang
 title: Parse environment variables to structs in Go
+city: Joinville
 tags:
 - golang
 ---

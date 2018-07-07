@@ -2,6 +2,7 @@
 date: 2015-06-06T00:00:00Z
 slug: go-antibody
 title: 'I wrote Antigen in Go: Antibody'
+city: Marechal Cândido Rondon
 tags:
 - golang
 - zsh

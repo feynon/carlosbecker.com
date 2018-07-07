@@ -1,6 +1,7 @@
 ---
 title: "Prometheus authentication with oauth2_proxy"
 date: 2018-05-28T21:24:04-03:00
+city: Joinville
 tags:
 - prometheus
 - monitoring

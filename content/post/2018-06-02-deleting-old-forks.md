@@ -1,6 +1,7 @@
 ---
 title: "Cleanup old GitHub Forks"
 date: 2018-06-02T14:16:41-03:00
+city: Joinville
 tags:
 - github
 - automation

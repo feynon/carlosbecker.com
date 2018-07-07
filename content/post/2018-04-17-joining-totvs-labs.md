@@ -1,6 +1,7 @@
 ---
 title: "I'm Joining TOTVS Labs"
 date: 2018-04-17T14:16:17-03:00
+city: Mountain View
 tags:
 - contaazul
 - totvslabs

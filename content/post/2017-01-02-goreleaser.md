@@ -2,6 +2,7 @@
 date: 2017-01-02T00:00:00Z
 slug: goreleaser
 title: Fast and easy Go binaries delivery
+city: Marechal Cândido Rondon
 tags:
 - golang
 - goreleaser

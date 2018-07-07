@@ -1,6 +1,7 @@
 ---
 title: "Moving to Hugo"
 date: 2018-03-19T01:21:36-03:00
+city: Joinville
 tags:
 - jekyll
 - hugo

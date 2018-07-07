@@ -2,6 +2,7 @@
 date: 2017-09-04T00:00:00Z
 slug: repositories-graveyard
 title: A Repository Graveyard
+city: Joinville
 ---
 
 This past weekend I decided I need to clean up my GitHub profile. In this post

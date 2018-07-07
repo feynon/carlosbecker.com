@@ -2,6 +2,9 @@
 date: 2015-03-05T00:00:00Z
 slug: injectmocks
 title: Using Mockito's InjectMocks
+city: Joinville
+tags:
+- java
 ---
 
 > FYI: Like the [previous post]({{< ref "post/2015-02-19-dump-postgres-table-inserts.md" >}}),

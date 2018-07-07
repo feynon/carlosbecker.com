@@ -2,6 +2,7 @@
 date: 2016-09-27T00:00:00Z
 slug: how-to-make-clients-love-your-product
 title: How to make people love your product
+city: Joinville
 tags:
 - product
 ---

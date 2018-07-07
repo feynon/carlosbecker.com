@@ -1,6 +1,7 @@
 ---
 title: "GoReleaser: 1k repositories and beyond"
 date: 2018-04-09T20:09:13-03:00
+city: Joinville
 tags:
 - goreleaser
 - golang

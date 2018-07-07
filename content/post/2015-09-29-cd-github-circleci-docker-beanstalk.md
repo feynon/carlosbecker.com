@@ -2,6 +2,7 @@
 date: 2015-09-29T00:00:00Z
 slug: cd-github-circleci-docker-beanstalk
 title: Continuous Delivery with GitHub, CircleCI, Docker and AWS Elastic Beanstalk
+city: Joinville
 tags:
 - ci
 - aws

@@ -2,6 +2,9 @@
 date: 2015-02-19T00:00:00Z
 slug: dump-postgres-table-inserts
 title: Dump a PostgreSQL table as insert statements
+city: Joinville
+tags:
+- postgresql
 ---
 
 > FYI: Like the [previous post]({{< ref "post/2015-02-17-find-non-ascii-chars.md" >}}),

@@ -2,6 +2,7 @@
 date: 2017-07-08T00:00:00Z
 slug: chart-repo-stars
 title: Charting Repository Stars
+city: Joinville
 tags:
 - golang
 - github

@@ -2,6 +2,9 @@
 date: 2015-05-12T00:00:00Z
 slug: docker-basics
 title: 'Docker: The very basics'
+city: Joinville
+tags:
+- docker
 ---
 
 Or "what the hell is this Docker thing?"

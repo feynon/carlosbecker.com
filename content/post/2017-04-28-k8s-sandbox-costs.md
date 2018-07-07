@@ -2,6 +2,7 @@
 date: 2017-04-28T00:00:00Z
 slug: k8s-sandbox-costs
 title: 70% cheaper Kubernetes cluster on AWS
+city: Joinville
 tags:
 - kubernetes
 - aws

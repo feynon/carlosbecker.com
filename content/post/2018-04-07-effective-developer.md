@@ -1,6 +1,7 @@
 ---
 title: "On being an effective developer"
 date: 2018-04-07T16:55:28-03:00
+city: Joinville
 tags:
 - programming
 ---
