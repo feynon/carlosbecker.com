@@ -1,7 +1,5 @@
 ---
 date: 2012-06-26T00:00:00Z
-aliases:
-- /code/2012/06/26/getting-started-with-gwt-bootstrap/
 slug: getting-started-with-gwt-bootstrap
 title: Getting started with GWT-Bootstrap
 ---

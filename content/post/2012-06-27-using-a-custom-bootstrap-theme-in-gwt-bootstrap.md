@@ -55,7 +55,7 @@ And then, update your project with a `$ mvn clean install`.
 
 In this point, we have to setup the `*.gwt.xml` file and our `UIBinder` XML
 file. You can follow
-[getting started tutorial](/code/2012/06/26/getting-started-with-gwt-bootstrap/)
+[getting started tutorial]({{< ref "post/2012-06-26-getting-started-with-gwt-bootstrap.md" >}}).
 to do that in the right way.
 
 ## Get a custom Bootstrap Theme
