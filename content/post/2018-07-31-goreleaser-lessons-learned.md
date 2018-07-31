@@ -1,7 +1,6 @@
 ---
 title: "GoReleaser: lessons learned so far"
 date: 2018-07-31
-draft: true
 slug: goreleaser-lessons-learned
 city: Joinville
 tags:
@@ -72,20 +71,6 @@ as most of them will expect `context` to be the language's
 I'm not sure that was a good idea, but it is confusing. Maybe I could at
 least rename the package - but that would require renaming things in a lot
 of files, so I keep postponing it.
-
-# Package organization
-
-At this point I still don't know what's the best way to organize packages.
-I've seen some projects having a `pkg` package - which I'm not sure what
-the convention is.
-
-I do have an `internal` package, which is supposed to be things for
-[GoReleaser] only, but then I think almost all its packages should be there.
-
-{{< figure src="/public/images/crawling.gif" alt="I just kept crawling and it kept working" >}}
-
-What I've learned is that those conventions are not very clear, so it
-actually does no matter much.
 
 # Tests using the same fake data
 
@@ -202,10 +187,11 @@ When writing [nfpm], I've also learned:
 - people have some really complex packaging needs - and that's why packaging
 software is complex.
 
-> **Important**: is not that [fpm] is not good, it is awesome software, I just
+> **Important**: is not that [fpm] is not good, it is awesome software! I just
 > didn't want to guard [GoReleaser] against all the combinations of things that
-> could go wrong and I didn't need all its features. If you need to package
-> your software in a lot of formats using a single tool, [fpm] for the win!
+> could go wrong and I didn't need all its features either. If you need to
+> package your software in a lot of formats using a single tool,
+> [fpm] for the win!
 
 # Documentation is hard
 
@@ -376,7 +362,9 @@ not sure about it.
 I've also learned it is hard to find if someone is using that thing you
 want to deprecate. Maybe I should add some kind of tracking? Don't know.
 
-I've learned that I just don't know how to handle those things.
+I've learned that I just don't know how to handle those things on GoReleaser
+because people may not even read the log unless it fails (e.g. running on
+the CI).
 
 # No one owes anyone anything
 
@@ -401,19 +389,27 @@ You don't owe your users anything.
 
 Or, as I like to say, **no one owes anyone anything**.
 
+# Slack is not the best place to ask questions
+
+In the issue template, I ask people to ask questions on Slack. I think that
+is not optimal, as most people will try to search for they problem on
+Google, and Google does not index Slack conversations.
+
+I've learned that probably the best place for questions on rather small
+communities is GitHub issues. I've seen bigger ones, like Hugo's, using
+[Discourse](https://discourse.gohugo.io/), and it seems to serve them well.
+On GoReleaser's case that seems overkill.
+
 # Famous last words
 
-Some of those lessons I learned thanks to great people working on OSS,
-namely [Bjørn Erik Pedersen][bep], [TJ Holowaychuk][tj] and many others.
-Sometimes it was through reading code, sometimes discussing on Twitter,
-sometimes on blog posts... either way, thanks folks, I really appreciate it!
+I hope this reading was interesting and I hope you enjoyed it.
+Otherwise, feel free to comment bellow or contact me in any way
+(except maybe phone calls haha)! I'll be glad to discuss about it and maybe
+learn that I was wrong.
 
-Spoiler: I'll talk more or less about this at this year's
-[GopherCon Brazil][con], hope to see you there!
-
-Of course, if you disagree with anything I just said, feel free to comment
-bellow or contact me in any way (except maybe phone calls haha)!
-I'll be glad to talk about it.
+> **Spoiler**: I'll talk more or less about those topics at
+> [GopherCon Brazil][con], so your feedback is greatly appreciated!
+> Hope to see you there!
 
 <!-- footnotes -->
 [^fn:debs]: Basically two `tar.gz` files inside an `ar` file, one of the `tar.gz` files has the software itself, the other has control files.
