@@ -263,7 +263,7 @@ artifacts. The way it was lead to a lot of bad code all spread across almost
 all pipes.
 
 Later on, I've added the `artifact` package, which abstract this into a
-more proper data structure, adding also a nice DSL to filter artifacts
+simple slice of `Artifact`, als adding a nice DSL to filter artifacts
 by kind and etc - and [I had to refactor a lot of things for that][pr463].
 
 So, now if I want to upload all Linux packages for `amd64` in a pipe,
@@ -277,6 +277,22 @@ ctx.Artifacts.Filter(
   ),
 ).List()
 ```
+
+Before that, it was stored as a `map[string]map[string][]Binary`, so I had
+to do things like:
+
+```go
+for platform, binaries := range ctx.Binaries {
+  if !strings.Contains(platform, "amd64") {
+    continue
+  }
+  for folder, binaries := range groups {
+  }
+}
+```
+
+And the only way to say if a `Binary` was actually a Linux Package would be
+by the file extention.
 
 I'm still not sure that current form is the best solution, but for sure is
 better than the first ones. Another good catch here is that I can replace the
@@ -418,7 +434,7 @@ it and maybe learn that I was wrong about one more thing.
 <!-- footnotes -->
 [^fn:debs]: Basically two `tar.gz` files inside an `ar` file, one of the `tar.gz` files has the software itself, the other has control files.
 [^fn:rpmbuild]: `rpmbuild` is a CLI provided by RedHat to build `.rpm` packages from a spec file.
-[^fn:tdt]: Table-driven tests are useful if you need to copy/paste some structure on a lot of tests. You learn more about it [here](https://github.com/golang/go/wiki/TableDrivenTests).
+[^fn:tdt]: Table-driven tests are useful if you need to copy/paste some structure on a lot of tests for functions pure functions. You can learn more about it [here](https://github.com/golang/go/wiki/TableDrivenTests).
 [^fn:rust]: Adding Rust support to [GoReleaser] was discussed [some times](https://github.com/goreleaser/goreleaser/issues?utf8=%E2%9C%93&q=rust), but was still not implemented.
 [^fn:hykes]: One of the founders of Docker and dotCloud.
 
