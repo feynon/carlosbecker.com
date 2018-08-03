@@ -375,3 +375,5 @@ For now, I hope that the receipts for the test environment serve you well!
 
 On the next posts we will explore the rack awareness strategy.
 
+<!-- links -->
+[carol]: https://carol.ai/
