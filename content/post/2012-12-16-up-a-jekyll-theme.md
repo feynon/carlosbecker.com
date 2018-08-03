@@ -25,7 +25,7 @@ anyway. I also took something from
 [jekyll-bootstrap](https://github.com/plusjade/jekyll-bootstrap), and, of course,
 I'm using [bootstrap](https://github.com/twitter/bootstrap) as a base for all the thing.
 
-![Up](http://i.imgur.com/4bKG5.png)
+![Up](https://i.imgur.com/4bKG5.png)
 
 It's fully-responsive (open it in your phone and/or tablet and you will see), with
 no JS at all (except twitter button, but you can remove it, of course), with a

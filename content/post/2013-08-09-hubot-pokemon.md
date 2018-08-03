@@ -36,7 +36,7 @@ and tons of other things. Better than that, we can tell him to burn things:
 
 > charmander burn that crap
 
-![charmander burning things](http://24.media.tumblr.com/69c947ad72c230f72d55a93bed958417/tumblr_mhthj8aPR21s595b5o1_500.gif)
+![charmander burning things](https://24.media.tumblr.com/69c947ad72c230f72d55a93bed958417/tumblr_mhthj8aPR21s595b5o1_500.gif)
 
 Dude, this is awesome!
 

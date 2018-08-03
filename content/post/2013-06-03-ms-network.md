@@ -27,7 +27,7 @@ You can either set the proxy direct on Network Proxy Setup and give the
 password ten thousand times a day or use CNTLM. I strongly suggest you
 to use CNTLM.
 
-You can download it from [here](http://sourceforge.net/projects/cntlm/files/cntlm/cntlm%200.92.3/).
+You can download it from [here](https://sourceforge.net/projects/cntlm/files/cntlm/cntlm%200.92.3/).
 Setup is a little tricky, but I will guide you. You shall have a
 `/etc/cntlm.conf` file, setup the URL, domain, user and exceptions.
 

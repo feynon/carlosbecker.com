@@ -12,7 +12,7 @@ zsh.
 Anyway, I have my personal computer and my job computer, and, like almost every
 developer, I create aliases and scripts for everything I have to do repeatedly.
 
-![Automate all the things!](http://www.anchor.com.au/blog/wp-content/uploads/2011/08/automate-all-the-things1.png)
+![Automate all the things!](https://www.anchor.com.au/blog/wp-content/uploads/2011/08/automate-all-the-things1.png)
 
 Well... you can imagine.. my `.bashrc` had about 300 lines. It was really big.
 Almost impossible to share with others, full of personal data, full of my

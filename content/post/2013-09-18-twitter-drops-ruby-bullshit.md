@@ -35,7 +35,7 @@ Java is, in fact, more scalable than Ruby. And Erlang is more scalable than
 Java. So if scalability is your only argument and concern, let's Erlang
 everything.
 
-![Erlang all the things](http://i.imgur.com/h1W5V8W.jpg)
+![Erlang all the things](https://i.imgur.com/h1W5V8W.jpg)
 
 Oh, are you talking about performance now? Why don't you write your
 entire application in C using [raphters][raphters]?
@@ -97,7 +97,7 @@ interpreter process. In other hand, Java has a very well tested and stable
 concurrency model with one lock per thread, as well other concurrecy
 models (like Actor model using things like Akka).
 
-![Ruby GIL](http://i.imgur.com/SnTf2hl.png)
+![Ruby GIL](https://i.imgur.com/SnTf2hl.png)
 
 The implications of Ruby's behavior is that if you want a 10 level concurrency,
 you will need to start 10 application processes. Assuming that each
