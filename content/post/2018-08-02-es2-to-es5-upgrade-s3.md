@@ -9,7 +9,10 @@ tags:
 - totvslabs
 ---
 
-We are upgrading our ElasticSearch v2 to ElasticSearch v5.
+At [TOTVSLabs][labs], we are upgrading our ElasticSearch v2 cluster to
+ElasticSearch v5, seeking to improve our search performance and overall cluster
+stability.
+
 In this post we will explore one of the strategies we are thinking about
 using on the migration.
 
