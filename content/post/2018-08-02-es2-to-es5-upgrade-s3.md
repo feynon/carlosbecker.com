@@ -48,8 +48,8 @@ We come up with 3 strategies:
 
 1. use rack awaraness to split the cluster and selectively upgrade one rack
 to ES5 later on;
-1. use NFS and snaphost on ES2 and restore on ES5;
-1. use S3 snapshot on ES2 and restore on ES5.
+1. snaphost on ES2 and restore on ES5 using NFS;
+1. snapshot on ES2 and restore on ES5 using S3 (this post subject).
 
 For sure, the rack awareness strategy requires more manual intervertions and
 therefore is probably less safe. About NFS... S3 is just simpler and probably
