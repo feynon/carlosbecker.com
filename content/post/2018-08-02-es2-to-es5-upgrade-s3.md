@@ -3,7 +3,7 @@ title: "Upgrading ElasticSearch 2 to 5: S3 snapshot/restore strategy"
 date: 2018-08-02T10:08:53-03:00
 city: Joinville
 slug: es2-to-es5-upgrade-s3
-toc: true
+draft: true
 tags:
 - elasticsearch
 - totvslabs
