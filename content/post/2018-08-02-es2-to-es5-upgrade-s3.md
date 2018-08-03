@@ -380,3 +380,4 @@ On the next posts we will explore the rack awareness strategy.
 
 <!-- links -->
 [carol]: https://carol.ai/
+[labs]: http://totvslabs.com/
