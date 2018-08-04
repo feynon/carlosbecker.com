@@ -3,15 +3,9 @@ title: "Upgrading ElasticSearch 2 to 5: S3 snapshot/restore strategy"
 date: 2018-08-02T10:08:53-03:00
 city: Joinville
 slug: es2-to-es5-upgrade-s3
-draft: true
 tags:
 - elasticsearch
-# - totvslabs
 ---
-
-<!-- At [TOTVSLabs][labs], we are upgrading our ElasticSearch v2 cluster to
-ElasticSearch v5, seeking to improve our search performance and overall cluster
-stability. -->
 
 Migrating an ElasticSearch cluster from version 2 to 5 can be challenging,
 even more if it is a big cluster.
@@ -36,20 +30,6 @@ ES5
 
 # Introduction
 
-<!-- We have a quite big ES2 cluster, more precisely, we have:
-
-- 3 `master` nodes;
-- ~40 `data`+`ingest` nodes;
-- ~600 indices summing up ~13K shards;
-- ~6 trillion documents on primary indices, ~16 trillion total;
-- ~8 terabytes on primary indices, ~25 terabytes total.
-
-We want to migrate from ES2 to ES5, which hopefully will improve the search
-performance a bit - and maybe fix some issues we're having with ES2.
-
-We come up with 3 strategies:
--->
-
 Let's say you need to do a migration like that, you may come up with three
 strategies:
 
@@ -65,7 +45,6 @@ more robust.
 Since production is no place to play around and test things out, I
 created two docker-compose environments to learn, test and polish the
 procedure so I can eventually do it in production cluster in a more safe maner.
-<!-- procedure to later apply in sandbox and even later in production. -->
 
 So, without further due, let's get started!
 
@@ -386,12 +365,6 @@ it yourself 🤷‍♂️.
 Using this strategy is fairly easy and you can basically abort it at any time
 if you find bugs in your app, for example.
 
-<!-- For now, I've successfully used this strategy to upgrade a sandbox environment.
-We are validating our [app][carol] to make sure everything will work on ES5.
-
-Once production is done, I'll probably write another post telling the story,
-including time to restore and etc. -->
-
 I hope that the receipts for the test environment serve you well and that you
 can also use them to practice in a safe environment before working on "real"
 environments.
@@ -400,6 +373,6 @@ environments.
 
 On the next posts we will explore the rack awareness strategy.
 
-<!-- links -->
-<!-- [carol]: https://carol.ai/
-[labs]: http://totvslabs.com/ -->
+# Links
+
+- [ElasticSearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-snapshots.html)
