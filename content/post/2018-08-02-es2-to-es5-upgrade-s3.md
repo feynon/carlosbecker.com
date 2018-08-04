@@ -6,15 +6,18 @@ slug: es2-to-es5-upgrade-s3
 draft: true
 tags:
 - elasticsearch
-- totvslabs
+# - totvslabs
 ---
 
-At [TOTVSLabs][labs], we are upgrading our ElasticSearch v2 cluster to
+<!-- At [TOTVSLabs][labs], we are upgrading our ElasticSearch v2 cluster to
 ElasticSearch v5, seeking to improve our search performance and overall cluster
-stability.
+stability. -->
 
-In this post we will explore one of the strategies we are thinking about
-using on the migration.
+Migrating an ElasticSearch cluster from version 2 to 5 can be challenging,
+even more if it is a big cluster.
+
+In this post we will explore one of the strategies that can be used to do
+such migration.
 
 We will also set a up a playground environment in which we can play around
 with the migration procedures.
@@ -33,7 +36,7 @@ ES5
 
 # Introduction
 
-We have a quite big ES2 cluster, more precisely, we have:
+<!-- We have a quite big ES2 cluster, more precisely, we have:
 
 - 3 `master` nodes;
 - ~40 `data`+`ingest` nodes;
@@ -45,6 +48,10 @@ We want to migrate from ES2 to ES5, which hopefully will improve the search
 performance a bit - and maybe fix some issues we're having with ES2.
 
 We come up with 3 strategies:
+-->
+
+Let's say you need to do a migration like that, you may come up with three
+strategies:
 
 1. use rack awaraness to split the cluster and selectively upgrade one rack
 to ES5 later on;
@@ -57,7 +64,8 @@ more robust.
 
 Since production is no place to play around and test things out, I
 created two docker-compose environments to learn, test and polish the
-procedure to later apply in sandbox and even later in production.
+procedure so I can eventually do it in production cluster in a more safe maner.
+<!-- procedure to later apply in sandbox and even later in production. -->
 
 So, without further due, let's get started!
 
@@ -345,10 +353,11 @@ curl -s "localhost:9400/_count?pretty"
 
 # Incremental snapshots
 
-So, on our _real_ scenario, snapshots would take a lot of time, and users
-will still use the app meanwhile.
+So, on a _real_ scenario, snapshots would probably take a lot of time (let's
+say the cluster have hundreds of terabytes), and your users will still want to
+use the app meanwhile.
 
-To minimize downtimes, we will probably do the following:
+To minimize downtimes, you can probably do the following:
 
 1. full snapshot
 1. restore full snapshot
@@ -359,25 +368,38 @@ To minimize downtimes, we will probably do the following:
 1. restore incremental snapshot 2
 1. bring app up again, pointing to the new cluster
 
-So our downtime will be reduced. We can leave the app in read-only mode for
+Doing it like that, your downtime will be reduced to the time between steps
+5 and 8. If your app have such feature, you can leave it in read-only mode for
 some time to validate more things and avoid a split brain scenario, and once
-we are confident, finnaly enable everything, from that time on we can't go
+you are confident, finnaly enable everything - from that time on we can't go
 back anymore.
+
+# Timings
+
+I tested the same documents in both Amazon S3 and DigitalOcean Spaces.
+Amazon S3 seemed orders of magnitude faster (70% or so), so I would
+probably recommend you use S3 for production environments - or just measure
+it yourself 🤷‍♂️.
 
 # Conclusion
 
-For now, I've successfully used this strategy to upgrade a sandbox environment.
+Using this strategy is fairly easy and you can basically abort it at any time
+if you find bugs in your app, for example.
+
+<!-- For now, I've successfully used this strategy to upgrade a sandbox environment.
 We are validating our [app][carol] to make sure everything will work on ES5.
 
 Once production is done, I'll probably write another post telling the story,
-including time to restore and etc.
+including time to restore and etc. -->
 
-For now, I hope that the receipts for the test environment serve you well!
+I hope that the receipts for the test environment serve you well and that you
+can also use them to practice in a safe environment before working on "real"
+environments.
 
 # Next steps
 
 On the next posts we will explore the rack awareness strategy.
 
 <!-- links -->
-[carol]: https://carol.ai/
-[labs]: http://totvslabs.com/
+<!-- [carol]: https://carol.ai/
+[labs]: http://totvslabs.com/ -->
