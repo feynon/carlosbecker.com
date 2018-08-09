@@ -22,7 +22,7 @@ about it first:
 - [Announce]({{< ref "post/2017-01-02-goreleaser.md" >}});
 - [1k users]({{< ref "post/2018-04-09-goreleaser-1k-repos.md" >}}).
 
-I tried to organize things in subtopics, some of them are bigger may go
+I tried to organize things in subtopics, some of them are bigger and may go
 further into the subject than others.
 
 Without further due, let's get started!
@@ -61,8 +61,8 @@ the "regular" `context` package (like cancellation). So I created an internal
 `context` package, which holds all the data I need plus a `context.Context`
 instance, so I can use them interchangeably.
 
-The good thing is that things are checked at compile time: I know I
-that can access `ctx.Config.ProjectName` and that it will work.
+The good thing is that everything is checked at compile time: I know that I
+can access `ctx.Config.ProjectName` and that it will work.
 
 The bad thing about it is that it can be confusing for new contributors,
 as most of them will expect `context` to be the language's
@@ -74,8 +74,8 @@ of files, so I keep postponing it.
 
 # Tests using the same fake data
 
-[GoReleaser] can do a lot of things and because of that it also has a lot of
-tests, and some of them are kind of complex.
+[GoReleaser] can do a lot of things. Because of that, it also has a lot of
+tests, and some of them can be complex.
 
 A good example is the Docker pipe tests, in which I have things like this:
 
@@ -102,7 +102,7 @@ were sharing the same image name and binary name.
 When a test failed, it was hard to figure things out based on logs - especially
 when you have table-driven tests [^fn:tdt] - which is the case for this example.
 
-I've been slowly fixing this kind of thing, so the fake data is unique - most
+I've been slowly fixing those, so the fake data is unique - most
 times by using the test name or something like that. It helps **a lot**.
 
 A cool trick I've learned reading other's people code: the `errChecker`
@@ -130,25 +130,23 @@ Then, on my cases I can have things like:
 
 ```go
 "successfull test case": {
-  // omited details for the sake of brevity
+  // omitted details for the sake of brevity
   assertError: shouldNotErr,
 },
 "bad template test case": {
-  // omited details for the sake of brevity
+  // omitted details for the sake of brevity
   assertError: shouldErr(`template: tmpl:1: unexpected "}" in operand`),
 },
 ```
 
-With that I can have a lot of complex test cases and wrap them all without
-repeating code.
-
-Of course, you can use that for other things as well instead of only errors.
+Now I can wrap several complex tests with no repeated code.
+Of course, besides error handling, you can use that for other purposes.
 
 # Dependencies on 3rd parties and weird environments
 
-This was the main reason I decide to [nfpm]. I was using [fpm], which is good,
-but **people will have weird environments**. Random versions of things - or
-just very old versions of things, weird `PATH` setups and a whole lot of
+This was the main reason I decided to write [nfpm]. I was using [fpm], which is
+good, but **people will have weird environments**. Random versions of things -
+or just very old versions of things, weird `PATH` setups and a whole lot of
 things you were not expecting.
 
 You can either "guard" your software against that - say, works only on version
@@ -176,7 +174,7 @@ I think it would have a bad return over the investiment of my time, so, **no**.
 There is no lib to deal with that, and RPM packages seem to be really complex
 to generate. Plus, `rpmbuild` is already distributed for all major platforms.
 
-Was removing [fpm] a good investment of my time? I think so, yes: I have
+Was removing [fpm] a good investment of my time? **Yes**, I have
 way fewer reports of "deb packaging not working" and way less
 unstable builds.
 
@@ -200,15 +198,15 @@ documentation so it doesn't suck.
 
 If you write too much, people probably won't read. It is also likely to get
 too complex, thus also hard to grasp.
-If you write too little, people maybe will read, but will not learn all things
+If you write too little, people maybe will read, but will not learn everything
 they need.
 
 Writing more docs also eventually leads to more complicated and confusing
 docs - just like writing more code, who knew!?
 
-I tried to provide some kind of commented config examples, thinking it may
-be straightforward enough (as people could copy and change), but, just as
-most commented config files out there, most people won't read them.
+I tried providing some kind of commented config examples, thinking it may
+be straightforward enough (as people could copy and change).
+But, just as most commented config files out there, most people won't read them.
 And I don't blame them, I should probably do a better job on that.
 
 I still don't know the right/best way of doing this, just learned one more
@@ -241,7 +239,7 @@ easier to manage:
 
 So, yes, I probably should have gone with a monorepo.
 
-Is not that a monorepo is the fix for all problems though.
+Is not that a monorepo is the fix for all the problems though.
 
 I think the real issue is that I forced myself to split things too early.
 Maybe [nfpm] and [godownloader] are less wrong, but [archive] for sure was a
