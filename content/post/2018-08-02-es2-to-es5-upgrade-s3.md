@@ -308,11 +308,15 @@ curl -sXPUT "localhost:9400/_snapshot/backups?pretty" -d'
   "type": "s3",
   "settings": {
     "bucket": "my-bucket",
-    "base_path": "my-subfolder"
+    "base_path": "my-subfolder",
+    "readonly": true
   }
 }
 '
 ```
+
+Note the `readonly` part. This is important because only a single cluster
+can have write permissions into the bucket at a time.
 
 And then, finally, restore that snapshot:
 
