@@ -344,9 +344,11 @@ To minimize downtimes, you can probably do the following:
 1. full snapshot
 1. restore full snapshot
 1. incremental snapshot 1
+1. close all indices
 1. restore incremental snapshot 1
 1. bring app down or put it in read-only mode
 1. incremental snapshot 2
+1. close all indices
 1. restore incremental snapshot 2
 1. bring app up again, pointing to the new cluster
 
