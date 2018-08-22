@@ -7,7 +7,7 @@ tags:
 - java
 ---
 
-> FYI: Like the [previous post]({{< ref "post/2015-02-19-dump-postgres-table-inserts.md" >}}),
+> FYI: Like the [previous post]({{< ref "2015-02-19-dump-postgres-table-inserts.md" >}}),
 > this is a really quick tip.
 
 Let's imagine we have two classes, and one depends on another:

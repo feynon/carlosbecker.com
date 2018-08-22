@@ -31,7 +31,7 @@ Besides that, you can use [maven-profiler](https://github.com/takari/maven-profi
 to find other slow parts of your build and fix them.
 
 One last tip: if you have problems with low test coverage in your project,
-try [coverage-maven-plugin]({{< ref "post/2014-03-18-mvn-pr-coverage-blammer.md" >}}),
+try [coverage-maven-plugin]({{< ref "2014-03-18-mvn-pr-coverage-blammer.md" >}}),
 a maven plugin that will blame pull request with coverage bellow a specified
 amount.
 

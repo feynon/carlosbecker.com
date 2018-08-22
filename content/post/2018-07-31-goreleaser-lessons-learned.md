@@ -19,8 +19,8 @@ things I've learned down the road.
 I already talked about [GoReleaser] here a few times, if you feel like reading
 about it first:
 
-- [Announce]({{< ref "post/2017-01-02-goreleaser.md" >}});
-- [1k users]({{< ref "post/2018-04-09-goreleaser-1k-repos.md" >}}).
+- [Announce]({{< ref "2017-01-02-goreleaser.md" >}});
+- [1k users]({{< ref "2018-04-09-goreleaser-1k-repos.md" >}}).
 
 I tried to organize things in subtopics, some of them are bigger and may go
 further into the subject than others.

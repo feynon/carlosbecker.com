@@ -6,7 +6,7 @@ slug: gunit-guice-and-junit-fall-in-love
 title: Guice Junit test-runner
 ---
 
-Yesterday, I wrote a [small article]({{< ref "post/2012-08-06-guice-and-junit.md" >}})
+Yesterday, I wrote a [small article]({{< ref "2012-08-06-guice-and-junit.md" >}})
 talking about Guice and JUnit, so, this time, I'll just say how to use the
 small lib that I build (not big deal, one class, one annotation =] )
 
@@ -32,7 +32,7 @@ Now, just add it in your `pom.xml` dependencies:
 ```
 
 And follow the instructions code example and the motivation of doing
-this in [this article]({{< ref "post/2012-08-06-guice-and-junit.md" >}}), but,
+this in [this article]({{< ref "2012-08-06-guice-and-junit.md" >}}), but,
 basically, your tests will look like this:
 
 ```java

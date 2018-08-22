@@ -7,7 +7,7 @@ tags:
 - golang
 ---
 
-When [first announced GoReleaser]({{< ref "post/2017-01-02-goreleaser.md" >}})
+When [first announced GoReleaser]({{< ref "2017-01-02-goreleaser.md" >}})
 roughly 1 year ago, on January 2017, I never thought it would be somewhat
 famous.
 

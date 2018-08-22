@@ -16,7 +16,7 @@ builds were really slow, and the feedback loop was too big. I get easily
 distracted, so, I was not writing much.
 
 You can read some of my fight to make it faster
-[here]({{< ref "post/2017-05-14-jekyll-build-time.md" >}}). Well, with Hugo,
+[here]({{< ref "2017-05-14-jekyll-build-time.md" >}}). Well, with Hugo,
 doesn't matter which features I use, full build time is always less than
 1 second and incremental builds take ~300ms. **Fast** should be Hugo's
 middle name!

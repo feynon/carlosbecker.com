@@ -7,7 +7,7 @@ tags:
 - postgresql
 ---
 
-> FYI: Like the [previous post]({{< ref "post/2015-02-17-find-non-ascii-chars.md" >}}),
+> FYI: Like the [previous post]({{< ref "2015-02-17-find-non-ascii-chars.md" >}}),
 > this is a really quick tip.
 
 This week I'm working closely to the "front-end guy". Not that I don't know
