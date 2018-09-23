@@ -66,7 +66,7 @@ community, mainly, because its image is only 5MB in size:
 [![Alpine](https://badge.imagelayers.io/alpine:latest.svg)](https://imagelayers.io/?images=alpine:latest "Get your own badge on imagelayers.io")
 
 We could probably use
-[kiasaki/alpine-golang](https://github.com/kiasaki/docker-alpine-golang),
+<a data-proofer-ignore href="https://github.com/kiasaki/docker-alpine-golang">kiasaki/alpine-golang<a/>
 but, seems like it still bundling Go 1.3, and, because I wanted to use Go 1.4+,
 I created a new image, based on kiasaki's image, but with Go 1.4.2.
 [[source](https://github.com/caarlos0/docker-alpine-go)]

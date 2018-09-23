@@ -217,7 +217,7 @@ Once it is done, you can already restore it on another cluster.
 # Check the elasticsearch-migration plugin
 
 You can explore the migration plugin by going to
-http://localhost:9200/_plugin/elasticsearch-migration
+<a data-proofer-ignore href='http://localhost:9200/_plugin/elasticsearch-migration'>its URL</a>.
 
 # Setup an ES5 cluster
 

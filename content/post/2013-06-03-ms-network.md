@@ -19,7 +19,7 @@ This was the trickiest: I needed an "GOD-mode certificate", you should
 ask the domain admins for something like it. After that, the setup was
 pretty easy:
 
-![network setup](http://f.cl.ly/items/110e0e1g3P3S0F1H2219/Screenshot%20from%202013-06-03%2009%3A39%3A41.png)
+![network setup](/public/images/Screenshot from 2013-06-03 09_39_41.png)
 
 # Proxy
 
@@ -43,7 +43,7 @@ given hashes to the `/etc/cntlm.conf` and restart the service with
 `/etc/cntlm restart`, setup your proxy as `127.0.0.1:3128` (8010
 for SOCKS) and you are ready to go (remember to apply system wide):
 
-![proxy setup](http://f.cl.ly/items/0S1N2W1X1Q19250N1F0R/Screenshot%20from%202013-06-03%2013%3A51%3A51.png)
+![proxy setup](public/images/Screenshot from 2013-06-03 13_51_51.png)
 
 This will fix browsing, apt and most of the things (everything that reads
 `http_proxy` environment variable). You may also want to `chmod 0600` the
@@ -63,7 +63,7 @@ To change it, go to your account settings, and change the "Automatically quote
 the original message when replaying Then," to _"start my reply above the
 quote"_ in the "Compositing & Addressing" tab:
 
-![thunderbird](http://f.cl.ly/items/3a1s1W3b02111z3j4723/Screenshot%20from%202013-06-03%2014%3A10%3A22.png)
+![thunderbird](/public/images/Screenshot from 2013-06-03 14_10_22.png)
 
 # Lync / Communicator
 
