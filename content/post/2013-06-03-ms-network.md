@@ -43,7 +43,7 @@ given hashes to the `/etc/cntlm.conf` and restart the service with
 `/etc/cntlm restart`, setup your proxy as `127.0.0.1:3128` (8010
 for SOCKS) and you are ready to go (remember to apply system wide):
 
-![proxy setup](public/images/Screenshot from 2013-06-03 13_51_51.png)
+![proxy setup](/public/images/Screenshot from 2013-06-03 13_51_51.png)
 
 This will fix browsing, apt and most of the things (everything that reads
 `http_proxy` environment variable). You may also want to `chmod 0600` the
