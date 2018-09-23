@@ -9,14 +9,14 @@ tags:
 - opensource
 ---
 
-I've started [GoReleaser] almost 2 years ago. This is a summary of (some)
+I've started [GoReleaser][] almost 2 years ago. This is a summary of (some)
 things I've learned down the road.
 
 <!--more-->
 
 {{< figure src="https://github.com/goreleaser/artwork/raw/master/goreleaserfundo.png" alt="goreleaser new logo" height="200px" >}}
 
-I already talked about [GoReleaser] here a few times, if you feel like reading
+I already talked about [GoReleaser][] here a few times, if you feel like reading
 about it first:
 
 - [Announce]({{< ref "2017-01-02-goreleaser.md" >}});
@@ -34,7 +34,7 @@ Without further due, let's get started!
 >
 > --- Phil Karlton
 
-People misreading [GoReleaser] as "gore leaser" is quite common.
+People misreading [GoReleaser][] as "gore leaser" is quite common.
 I thought it was a really good name because it has "Go" and "Releaser", so,
 yeah, it releases Go projects, pretty easy to figure out what is going on
 there.
@@ -74,7 +74,7 @@ of files, so I keep postponing it.
 
 # Tests using the same fake data
 
-[GoReleaser] can do a lot of things. Because of that, it also has a lot of
+[GoReleaser][] can do a lot of things. Because of that, it also has a lot of
 tests, and some of them can be complex.
 
 A good example is the Docker pipe tests, in which I have things like this:
@@ -157,7 +157,7 @@ What I've learned is that the less 3rd parties you depend on, the better.
 More importantly, I've learned that sometimes it is just not worth it to
 remove some dependency from a 3rd party.
 
-For example, [GoReleaser] depended on [fpm]. At some point, I decided to remove
+For example, [GoReleaser][] depended on [fpm]. At some point, I decided to remove
 the dependency entirely because it was generating a lot of bugs and random
 build failures.
 
@@ -186,7 +186,7 @@ When writing [nfpm], I've also learned:
 software is complex.
 
 > **Important**: is not that [fpm] is not good, it is awesome software! I just
-> didn't want to guard [GoReleaser] against all the combinations of things that
+> didn't want to guard [GoReleaser][] against all the combinations of things that
 > could go wrong and I didn't need all its features either. If you need to
 > package your software in a lot of formats using a single tool,
 > [fpm] for the win!
@@ -221,7 +221,7 @@ though it would be useful to other people as well.
 
 > I'll eventually move it into goreleaser's tree very soon.
 
-I don't usually work with monorepos, so I haven't planned [GoReleaser] to work
+I don't usually work with monorepos, so I haven't planned [GoReleaser][] to work
 in that way. A few things are already fixed, but it still won't support
 releasing each [artifact with a separated tag][i723], for example.
 
@@ -352,7 +352,7 @@ be a bad experience.
 
 One thing that I've learned and that I think helps: open an issue first,
 ask if the maintainer would be interested in a PR implementing the feature
-you want to implement. Someone did that on [GoReleaser] (I think) and I
+you want to implement. Someone did that on [GoReleaser][] (I think) and I
 believe it is a great way of saving everyone's time!
 
 If the maintainer says no but you still really do want that feature,
@@ -360,7 +360,7 @@ keep a fork. Everybody wins. 🙂
 
 # Announce breaking changes to your users is hard
 
-Technically, [GoReleaser] is still not v1, so it should mean that I could just
+Technically, [GoReleaser][] is still not v1, so it should mean that I could just
 break stuff... of course, I don't want to do that. I want the transitions
 to be as easy and painless as they can be.
 
@@ -433,7 +433,7 @@ it and maybe learn that I was wrong about one more thing.
 [^fn:debs]: Basically two `tar.gz` files inside an `ar` file, one of the `tar.gz` files has the software itself, the other has control files.
 [^fn:rpmbuild]: `rpmbuild` is a CLI provided by RedHat to build `.rpm` packages from a spec file.
 [^fn:tdt]: Table-driven tests are useful if you need to copy/paste some structure on a lot of tests for functions pure functions. You can learn more about it [here](https://github.com/golang/go/wiki/TableDrivenTests).
-[^fn:rust]: Adding Rust support to [GoReleaser] was discussed [some times](https://github.com/goreleaser/goreleaser/issues?utf8=%E2%9C%93&q=rust), but was still not implemented.
+[^fn:rust]: Adding Rust support to [GoReleaser][] was discussed [some times](https://github.com/goreleaser/goreleaser/issues?utf8=%E2%9C%93&q=rust), but was still not implemented.
 [^fn:hykes]: One of the founders of Docker and dotCloud.
 
 <!-- links -->
