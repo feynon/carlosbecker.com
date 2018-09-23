@@ -8,5 +8,6 @@ Gemfile.lock
 .sass-cache/
 .jekyll-metadata
 public
+!static/public
 tmp
 bin
