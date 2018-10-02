@@ -5,5 +5,5 @@ Sources to my blog.
 ## create new post
 
 ```sh
-hugo new "post/$(date +%Y-%m-%d)-$(filter-out $@,$(MAKECMDGOALS)).md"
+e $(hugo new -k post post/$(date +%Y-%m-%d)-TITLE.md)
 ```
