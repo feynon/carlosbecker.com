@@ -10,6 +10,8 @@ tags:
 I have an old Couchbase 4.5.x cluster, and I though it would be nice to upgrade
 it. This are my notes and the tests I did before doing it "in production"™️.
 
+<!--more-->
+
 ## Breaking changes
 
 First thing I did was going through the changelogs and look for breaking
