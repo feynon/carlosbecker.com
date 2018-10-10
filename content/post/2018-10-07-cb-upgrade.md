@@ -1,5 +1,5 @@
 ---
-title: "Couchbase: rolling upgrade from 4.5.x to 5.5.x"
+title: "Couchbase: rolling upgrade from 4.5.x to 5.1.x"
 date: 2018-10-07T16:18:00-03:00
 city: Joinville
 slug: cb-upgrade
@@ -25,6 +25,9 @@ changes.
 Turns out there is only one: [MB-18042 FTS UI: Remove Byte Array Converter from UI - Couchbase](https://issues.couchbase.com/browse/MB-18042).
 
 Since I don't use the feature, not a problem, yay! 🚀
+
+The last community version available at the time of writing is 5.1, so we
+will use that one!
 
 ## Procedure
 
@@ -180,13 +183,13 @@ You can see your cluster using the new Couchbase 5 interface by going to its
 
 ### Compatibility mode
 
-Since the cluster has nodes with version `4.5.x` and `5.5.x`,
+Since the cluster has nodes with version `4.5.x` and `5.1.x`,
 it will run in "4.5 compatibility mode", which is OK:
 
 ![couchbase showing compatibility mode msg](/public/images/204716C2-23B8-4FF7-99AE-942CF5CAC71A.png)
 
 While in that mode, we can add and remove nodes from both versions. Once all
-nodes are on Couchbase 5.5, you can't add old version nodes anymore.
+nodes are on Couchbase 5.1, you can't add old version nodes anymore.
 
 ### Swap rebalance all other nodes
 
@@ -213,7 +216,7 @@ docker exec cb_cb4_1 couchbase-cli rebalance \
   --server-remove=172.21.0.11
 ```
 
-Once the rebalance is over, we should have a full 5.5 Couchbase cluster -
+Once the rebalance is over, we should have a full 5.1 Couchbase cluster -
 without any downtimes!
 
 The compatibility warning should go away as well:

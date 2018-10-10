@@ -2,6 +2,8 @@
 date: 2012-10-04T00:00:00Z
 slug: just-married
 title: Just Married
+tags:
+- life
 ---
 
 I just realized that I got married, but, didn't spread the word about it for you guys.
