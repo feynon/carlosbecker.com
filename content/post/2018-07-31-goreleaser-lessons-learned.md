@@ -43,9 +43,7 @@ But I totally forgot about trying it all lowercase and without context.
 
 On the bright side, "gore leaser" would be a very good heavy metal band name,
 as someone already pointed out on Twitter (I just need a band and more
-guitar skills 😂):
-
-{{< tweet 1017028524840976385 >}}
+guitar skills 😂).
 
 I still think the name is OK though, after all, it is easy to write and it
 tells what the software does. What can be bad is that the scope is very
