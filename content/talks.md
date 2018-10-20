@@ -12,7 +12,7 @@ Some talks I gave over the years, just in case you want to see the slides.
 
 ### GopherCon Brazil
 
-My first ever talk at a GopherCon. I shared my exxperiences coding GoReleaser,
+My first ever talk at a GopherCon. I shared my experiences coding GoReleaser,
 more or less related to [this post]({{< ref "2018-07-31-goreleaser-lessons-learned.md" >}}).
 
 {{< speakerdeck 962142857c0c46c9bd8fa516611cd90e >}}
