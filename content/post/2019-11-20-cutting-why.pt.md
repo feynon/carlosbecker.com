@@ -74,7 +74,7 @@ C
 : Pernas completo e abdomem.
 
 Eu monto o treino meio que "on the fly" e faço séries até morrer. Não estou
-contando repetições.
+focando em X ou Y repetições, mas tento manter acima de 8.
 
 Faço bastante rest-pauses e a técnica de ponto zero do Sardinha.
 
