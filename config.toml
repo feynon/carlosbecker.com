@@ -11,6 +11,12 @@ disableAliases = true
 pygmentsCodeFences = true
 pygmentsStyle = "dracula"
 
+[languages]
+  [languages.en]
+    weight = 2
+  [languages.pt]
+    weight = 1
+
 [taxonomies]
 	tag = "tags"
 
