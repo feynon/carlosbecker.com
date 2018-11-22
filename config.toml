@@ -30,7 +30,7 @@ pygmentsStyle = "dracula"
 	tag = "tags"
 
 [related]
-	threshold = 10
+	threshold = 80
 	includeNewer = true
 	toLower = true
 
