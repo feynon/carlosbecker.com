@@ -1,9 +1,7 @@
 ---
 title: Talks
-permalink: /talks
-menu: nav
-featureimage: public/images/talks_header.jpg
-disableComments: true
+comments: false
+type: page
 ---
 
 Some talks I gave over the years, just in case you want to see the slides.

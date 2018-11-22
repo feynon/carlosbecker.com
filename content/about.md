@@ -1,9 +1,7 @@
 ---
 title: "About"
-permalink: /about
-menu: nav
-disableComments: true
-featureimage: public/images/header.jpg
+comments: false
+type: page
 ---
 
 Carlos is a software developer based in Joinville, Brazil. He currently works

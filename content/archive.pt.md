@@ -1,5 +1,5 @@
 ---
-title: "Archive"
+title: "Arquivo"
 layout: archive
 type: page
 ---
