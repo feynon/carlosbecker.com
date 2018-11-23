@@ -4,7 +4,7 @@ slug: dotfiles-are-meant-to-be-forked
 title: Dotfiles Are Meant to Be Forked
 ---
 
-![dotfiles](https://github.com/caarlos0/dotfiles/raw/master/docs/screenshot.png)
+![dotfiles](https://github.com/caarlos0/dotfiles/raw/master/docs/screenshot1.png)
 
 Well, it has been a while since I replaced my old (but gold) bash by the great
 zsh.

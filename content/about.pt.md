@@ -20,4 +20,4 @@ nas seguintes redes sociais:
 
 - [twitter](https://twitter.com/caarlos0)
 - [instagram](https://instagram.com/caarlos0)
-- [facebook](https://facebook.com/caarlos0)
+- [facebook](https://www.facebook.com/caarlos0)
