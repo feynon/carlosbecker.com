@@ -16,7 +16,7 @@ endif
 	chmod +x ./bin/*
 
 run:
-	hugo server -w
+	hugo server --watch --buildFuture --cleanDestinationDir
 
 ci:
 	# TODO: eventually check htmls as well
