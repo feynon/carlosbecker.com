@@ -1,5 +1,5 @@
 ---
-title: "Monitoring GitHub with Prometheus"
+title: "Monitoring GitHub releases with Prometheus"
 date: 2018-12-15T00:00:00-02:00
 slug: "monitor-github"
 city: Joinville
