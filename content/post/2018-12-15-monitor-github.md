@@ -108,6 +108,6 @@ I hope at least some of these tools can be useful for you!
 
 Feel free to ping me on the comments bellow if you have any questions.
 
-[exporter]: https://github.com/search?q=topic%3Aprometheus-exporter+user%3Acaarlos0&type=Repositories
+[exporters]: https://github.com/search?q=topic%3Aprometheus-exporter+user%3Acaarlos0&type=Repositories
 [tools]: https://github.com/search?q=topic%3Agithub-api+user%3Acaarlos0&type=Repositories
 
