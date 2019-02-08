@@ -16,13 +16,13 @@ lifting weights and learning new things.
 Carlos is interested in programming languages, containers and distributed
 systems in general.
 
-{{< instagram BVkAmf_FoQh hidecaption >}}
+![Carine and I](/public/images/BVkAmf_FoQh.jpg)
 
 He's married to the [beautiful girl](http://twitter.com/carinemeyer) in the
 photo and lives with her and their Chinchila, Zakk,
 in [Joinville - SC, Brazil](http://goo.gl/maps/9tvI4).
 
-{{< instagram xAxDpgKG5H hidecaption >}}
+![Us and Zakk](/public/images/xAxDpgKG5H.jpg)
 
 He organizes both Joinville [Go](https://www.meetup.com/Joinville-Go-Meetup/)
 and [SRE](https://www.meetup.com/Joinville-SRE-Meetup/) Meetups and

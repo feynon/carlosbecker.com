@@ -11,21 +11,6 @@ disableAliases = true
 pygmentsCodeFences = true
 pygmentsStyle = "dracula"
 
-[languages]
-  [languages.en]
-    weight = 2
-  [languages.pt]
-    weight = 1
-    [languages.pt.menu]
-      [[languages.pt.menu.main]]
-        identifier = "archive"
-        name = "Arquivo"
-        url = "/archive/"
-      [[languages.pt.menu.main]]
-        identifier = "about"
-        name = "Sobre"
-        url = "/about/"
-
 [taxonomies]
 	tag = "tags"
 

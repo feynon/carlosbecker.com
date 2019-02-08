@@ -89,7 +89,7 @@ drinks and etc.
 
 In fact, just did that last week:
 
-{{< instagram BkB0jk6l8PB >}}
+![me and some friends at a bar](/public/images/BkB0jk6l8PB.jpg)
 
 I think we all need a beer with friends sometimes. 😬
 
