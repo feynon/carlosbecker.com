@@ -28,7 +28,7 @@ ci:
 	pkill hugo
 
 avatar:
-	wget -O static/avatar.jpg https://avatars0.githubusercontent.com/u/245435
+	wget -O static/avatar.jpg https://github.com/caarlos0.png
 	convert static/avatar.jpg \
 		-bordercolor white -border 0 \
 		\( -clone 0 -resize 16x16 \) \
