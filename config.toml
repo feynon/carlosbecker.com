@@ -45,6 +45,7 @@ pygmentsStyle = "dracula"
 	description = "Thoughts, rants and discoveries on software development and related stuff."
 	keywords = "software development, software, golang, devops, go, sre, site reliability engineering"
 	avatar = "avatar.jpg"
+	gauges = "50f1f940613f5d2cfe000026"
 
 [menu]
 	[[menu.main]]
