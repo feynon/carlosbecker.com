@@ -2,6 +2,7 @@
 date: 2012-11-28T00:00:00Z
 slug: msfonts-archlinux
 title: Easy-install MS Fonts in Arch Linux
+draft: true
 ---
 
 I just made a all-new fresh installation of archlinux a couple of days ago, and realized that my fonts are tottaly weird in the browser.

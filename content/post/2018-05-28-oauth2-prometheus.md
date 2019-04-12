@@ -327,9 +327,9 @@ So that's it! I'm running this on http://m.carlosbecker.com - which, given
 that everything is working as expected, you won't be able to access, and it
 is working great.
 
-You can see **all** the code (including all config files, the exporters I'm
+<!-- You can see **all** the code (including all config files, the exporters I'm
 using, the `Makefile` I use to sync things up and etc) on
-[this github repository][repo].
+[this github repository][repo]. -->
 
 I hope this is usefull to you somehow and feel free to ask question in the
 comments box down bellow.
@@ -345,6 +345,6 @@ Cheers!
 [alertmanager]: https://prometheus.io/docs/alerting/alertmanager/
 [grafana]: https://grafana.com/
 [oauth2_proxy]: https://github.com/bitly/oauth2_proxy
-[repo]: https://github.com/caarlos0/m.carlosbecker.com
+<!-- [repo]: https://github.com/caarlos0/m.carlosbecker.com -->
 [docker-compose]: https://docs.docker.com/compose/
 [rsync]: https://linux.die.net/man/1/rsync
