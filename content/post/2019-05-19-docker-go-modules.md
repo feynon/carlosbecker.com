@@ -14,41 +14,41 @@ Quick tip to improve the docker build speed using go modules.
 
 Normally, I would do something like this:
 
-```dockerfile
+{{< highlight dockerfile "linenos=table" >}}
 FROM golang as builder
 ENV GO111MODULE=on
 WORKDIR /code
-COPY . .
+ADD . .
 RUN go build -o /app main.go
 
 FROM gcr.io/distroless/base
 EXPOSE 8080
 WORKDIR /
-COPY --from=builder /app /usr/bin/app
+ADD --from=builder /app /usr/bin/app
 ENTRYPOINT ["/usr/bin/app"]
-```
+{{< / highlight >}}
 
 The problem with this approach is that, if I change any `.go` file and rebuild,
 it will download the dependencies again - which takes some time.
 
-Taking into account that dependencies are not changed very often, we can
-add a couple of lines and improve the build perfomance **a lot**:
+Taking into account that dependencies do not change very often, we can
+add just two lines and improve the build perfomance **a lot**:
 
-```dockerfile
+{{< highlight dockerfile "linenos=table,hl_lines=4-5" >}}
 FROM golang as builder
 ENV GO111MODULE=on
 WORKDIR /code
-COPY go.mod go.sum /code/
+ADD go.mod go.sum /code/
 RUN go mod download
-COPY . .
+ADD . .
 RUN go build -o /app main.go
 
 FROM gcr.io/distroless/base
 EXPOSE 8080
 WORKDIR /
-COPY --from=builder /app /usr/bin/app
+ADD --from=builder /app /usr/bin/app
 ENTRYPOINT ["/usr/bin/app"]
-```
+{{< / highlight >}}
 
 This way, we'll only download the dependencies again if `go.mod` or `go.sum`
 changed.
