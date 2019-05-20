@@ -24,7 +24,7 @@ RUN go build -o /app main.go
 FROM gcr.io/distroless/base
 EXPOSE 8080
 WORKDIR /
-ADD --from=builder /app /usr/bin/app
+COPY --from=builder /app /usr/bin/app
 ENTRYPOINT ["/usr/bin/app"]
 {{< / highlight >}}
 
@@ -46,7 +46,7 @@ RUN go build -o /app main.go
 FROM gcr.io/distroless/base
 EXPOSE 8080
 WORKDIR /
-ADD --from=builder /app /usr/bin/app
+COPY --from=builder /app /usr/bin/app
 ENTRYPOINT ["/usr/bin/app"]
 {{< / highlight >}}
 
