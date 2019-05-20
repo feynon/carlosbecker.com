@@ -1,5 +1,5 @@
 ---
-title: "Faster Docker builds usign go modules"
+title: "Faster Docker builds using go modules"
 date: 2019-05-19T15:01:38-03:00
 slug: "docker-go-mod"
 city: Joinville
