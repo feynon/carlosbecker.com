@@ -233,8 +233,12 @@ check [their repository README][stan] for further information about this.
 
 I tried to keep it as simple as possible, hope it is helpful! 🙂
 
+If you want, you can also try this with `docker-compose`. I put all
+the code (including the client) in a [GitHub Repository][repo].
+
 Let me know in the comments if you have any questions!
 
 [stan]: https://github.com/nats-io/stan.go
 [NATS]: https://github.com/nats-io/nats-server
 [nats-streaming-server]: https://github.com/nats-io/nats-streaming-server
+[repo]: https://github.com/caarlos0/nats-streaming-server-cluster
