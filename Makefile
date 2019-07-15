@@ -24,7 +24,7 @@ ci:
 	rm -rf ./public || true
 	hugo server -d ./public >/dev/null &
 	sleep 2
-	$$(which htmltest) ./public
+	$$(which htmltest) -s ./public
 	pkill hugo
 
 avatar:
