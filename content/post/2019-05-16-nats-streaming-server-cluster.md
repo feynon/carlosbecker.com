@@ -1,8 +1,10 @@
 ---
-title: "High availability with nats-streaming-server"
+title: "High availability with nats-streaming-server (clustering)"
 date: 2019-05-16T12:00:38-03:00
-slug: "nats-streaming-server-ha"
+slug: "nats-streaming-server-cluster"
 city: Joinville
+aliases:
+- /posts/nats-streaming-server-ha/
 tags:
 - nats-streaming-server
 - nats
@@ -120,7 +122,7 @@ So, now let's stop both client and server, and start a
 Create 3 config files as follows:
 
 ```conf
-# a.conf
+; a.conf
 port: 4221
 cluster {
   listen: 0.0.0.0:6221
@@ -142,7 +144,7 @@ streaming {
 ```
 
 ```conf
-# b.conf
+; b.conf
 port: 4222
 cluster {
   listen: 0.0.0.0:6222
@@ -164,7 +166,7 @@ streaming {
 ```
 
 ```conf
-# c.conf
+; c.conf
 port: 4223
 cluster {
   listen: 0.0.0.0:6223
