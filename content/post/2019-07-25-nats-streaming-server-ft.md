@@ -69,12 +69,14 @@ for example, NFS.
 
 On the [previous post]({{< ref "2019-05-16-nats-streaming-server-cluster.md" >}})
 I added that funny joke about NFS being the culmination of 3 lies and etc...
+it didn't age well. 😂
 
 We didn't want to manage our own NFS, nor have one more database to look after,
-so we decided to rely on [Google Cloud Filestore][filestore] - a
-NFS as a service.
+so we decided to rely on [Google Cloud Filestore][filestore] - a NFS as a
+service offered by Google.
 
-NATS FT works by having an active server and one or more standby servers.
+NATS Fault Tolerant mode works by having an active server and one or more
+standby servers.
 The filestore is shared between all instances, so there is no replication in
 place on [NATS][] level.
 
