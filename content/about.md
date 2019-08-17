@@ -2,6 +2,8 @@
 title: "About"
 comments: false
 type: page
+aliases:
+- /contact/
 ---
 
 Carlos is a software developer based in Joinville, Brazil.
