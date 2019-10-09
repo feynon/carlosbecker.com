@@ -6,6 +6,17 @@ type: page
 
 Some talks I gave over the years, just in case you want to see the slides.
 
+## 2019
+
+### 1º Open Source Joinville Meetup
+
+> Oct 08, 2019
+
+Shared some tips about managing medium-sized OpenSource projects. The slides
+are in portuguese.
+
+{{< speakerdeck a088943ef7e64eb28325c1efb84d55b5 wide >}}
+
 ## 2018
 
 ### Hacktoberfest Joinville
