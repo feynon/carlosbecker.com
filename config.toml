@@ -56,10 +56,6 @@ pygmentsStyle = "dracula"
 		name = "Talks"
 		url = "/talks/"
 	[[menu.main]]
-		identifier = "setup"
-		name = "Setup"
-		url = "/setup/"
-	[[menu.main]]
 		identifier = "about"
 		name = "About"
 		url = "/about/"
