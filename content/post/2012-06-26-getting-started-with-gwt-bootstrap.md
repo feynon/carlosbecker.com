@@ -23,7 +23,7 @@ There are 2 ways to get the jar:
 
 You will have to configure your *App.gwt.xml* file to *inherit* the GWT-Bootstrap widget library. You can do it like this:
 
-```
+```xml
 <inherits name="com.github.gwtbootstrap.Bootstrap"/>
 ```
 
@@ -31,13 +31,13 @@ You will have to configure your *App.gwt.xml* file to *inherit* the GWT-Bootstra
 
 Assuming that you're using UIBinder, add the following namespace to the `<ui:UIBinder>` element:
 
-```
+```xml
 xmlns:b="urn:import:com.github.gwtbootstrap.client.ui"
 ```
 
 Then you can easily use the `b` namespace in your widget design, like `Heading`:
 
-```
+```xml
 <b:heading size="2">Hello World GWT-Bootstrap</b:heading>
 ```
 
@@ -47,19 +47,19 @@ We also have the [bootstrap datepicker](https://github.com/eternicode/bootstrap-
 
 Add to your *App.gwt.xml*:
 
-```
+```xml
 <inherits name='com.github.gwtbootstrap.datepicker.Datepicker' />
 ```
 
 And in your *Widget.ui.xml* file:
 
-```
+```xml
 xmlns:b2="urn:import:com.github.gwtbootstrap.datepicker.client.ui"
 ```
 
 Then, just use the widget like this:
 
-```
+```xml
 <b2:DateBox format="dd/mm/yyyy" autoClose="true" />
 ```
 

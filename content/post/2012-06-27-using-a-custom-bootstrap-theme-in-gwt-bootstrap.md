@@ -32,7 +32,7 @@ Now, lets add the `GWT-Bootstrap` dependency to the `pom.xml` file:
 
 ### Add the repository:
 
-```
+```xml
 <repositories>
   <repository>
     <id>gwt-bootstrap</id>
@@ -44,7 +44,7 @@ Now, lets add the `GWT-Bootstrap` dependency to the `pom.xml` file:
 
 ### And the dependency itself:
 
-```
+```xml
 <dependency>
   <groupId>com.github.gwtbootstrap</groupId>
   <artifactId>gwt-bootstrap</artifactId>
@@ -115,7 +115,7 @@ Now, lets create a UIBinder class to made our amazing test widget! Create a new 
 
 ### ExampleUiBinder.ui.xml:
 
-```
+```xml
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
@@ -143,7 +143,7 @@ Now, lets create a UIBinder class to made our amazing test widget! Create a new 
   </g:HTMLPanel>
 </ui:UiBinder>
 ```
-```
+```java
 public class ExampleUiBinder extends Composite {
   interface ExampleUiBinderUiBinder
       extends UiBinder<HTMLPanel, ExampleUiBinder> {
@@ -185,7 +185,7 @@ As said before, we also need a `Resources` and `Configuration` files. This files
 
 ### ExampleResources.java
 
-```
+```java
 package com.github.caarlos0.resources;
 
 import com.github.gwtbootstrap.client.ui.resources.Resources;
@@ -199,7 +199,7 @@ public interface ExampleResources extends Resources {
 
 ### ExampleConfigurator.java
 
-```
+```java
 package com.github.caarlos0.resources;
 
 import com.github.gwtbootstrap.client.ui.config.Configurator;
@@ -237,7 +237,7 @@ src/main/java/com/github/caarlos0/
 
 Now, we have to do a little hack in our `*.gwt.xml`. We will need to replace `com.github.gwtbootstrap.client.ui.config.Configurator` with our Configurator, and setup the resources dir. So, in the end, we will have something like this:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <module rename-to='Example'>
     <inherits name='com.google.gwt.user.User'/>

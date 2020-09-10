@@ -7,8 +7,13 @@ paginate = 5
 
 disableAliases = true
 
-pygmentsCodeFences = true
-pygmentsStyle = "dracula"
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    style = "dracula"
+    noClasses = true
+    tabWidth = 2
 
 [related]
 	threshold = 80
@@ -54,21 +59,3 @@ pygmentsStyle = "dracula"
 
 [outputs]
 home = [ "HTML", "RSS", "REDIR", "HEADERS" ]
-
-[mediaTypes]
-	[mediaTypes."text/netlify"]
-		suffixes = []
-		delimiter = ""
-
-[outputFormats]
-	[outputFormats.REDIR]
-		mediatype = "text/netlify"
-		baseName = "_redirects"
-		isPlainText = true
-		notAlternative = true
-
-	[outputFormats.HEADERS]
-		mediatype = "text/netlify"
-		baseName = "_headers"
-		isPlainText = true
-		notAlternative = true
