@@ -235,9 +235,8 @@ func renderPage(
 				converter.Printf("[See slides](%s).", block.Source)
 				converter.Newline()
 				return true
-			} else {
-				log.Println("unhandled embed:", block.Source)
 			}
+			log.Println("unhandled embed:", block.Source)
 		}
 
 		if block.Type == notionapi.BlockTweet {
