@@ -59,7 +59,7 @@ Now, when other folks read this code, they will see this `BAR` there and will ha
 
 It would be much simpler if it was written as `FooType.BAR`, right? Besides, we just polluted the namespace with all `FooTypes`, which is also a bad thing.
 
-I know… static importing some stuff can make the code "prettier" or look simpler. Yeah, nope. If your code is not simple or pretty enough, it's not the job of static imports to fix it. Probably your design is just bad.
+I know... static importing some stuff can make the code "prettier" or look simpler. Yeah, nope. If your code is not simple or pretty enough, it's not the job of static imports to fix it. Probably your design is just bad.
 
 I'm not the only one who believe in this:
 

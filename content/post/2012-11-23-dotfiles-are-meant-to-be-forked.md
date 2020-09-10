@@ -14,7 +14,7 @@ Anyway, I have my personal computer and my job computer, and, like almost every 
 
 ![](/public/images/dotfiles-are-meant-to-be-forked/3c1791a6-8f8c-4ba0-b1b9-fbb2a33ab316.png)
 
-Well… you can imagine.. my `.bashrc` had about 300 lines. It was really big. Almost impossible to share with others, full of personal data, full of my machine specific data, bloated with old things I left behind… well, it was a real mess.
+Well... you can imagine.. my `.bashrc` had about 300 lines. It was really big. Almost impossible to share with others, full of personal data, full of my machine specific data, bloated with old things I left behind... well, it was a real mess.
 
 Then, I decided to make a huge step in my life: move to [ZSH](http://www.zsh.org/)!
 
@@ -24,7 +24,7 @@ Then, I decided to make a huge step in my life: move to [ZSH](http://www.zsh.org
 > 
 > —- [Arch Wiki about ZSH](https://wiki.archlinux.org/index.php/Zsh)
 
-But, well, I didn't knew where to start. So, I forked [oh-my-zsh][ohmyzsh] project. I've used it for a while, also did some contributions… but well, it has so many things I didn't use, and it doesn't had a simple way to share configuration files across computers.
+But, well, I didn't knew where to start. So, I forked [oh-my-zsh][ohmyzsh] project. I've used it for a while, also did some contributions... but well, it has so many things I didn't use, and it doesn't had a simple way to share configuration files across computers.
 
 Then I found [holman's dotfiles](http://github.com/holman/dotfiles). And it was perfect! Except for the fact that it was full of Mac OS X-related stuff.
 

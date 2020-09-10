@@ -27,7 +27,7 @@ dockers:
   dockerfile: Dockerfile
 ```
 
-It didn't allow multiple tags, registries or anything like that… at least
+It didn't allow multiple tags, registries or anything like that... at least
 not without building the image several times.
 
 Of course, some users needed those things, and the it went through a few

@@ -122,7 +122,7 @@ public class BlahTest {
 
 ## Custom Rules
 
-That's neat, but… what if you need something else… something more "custom"?
+That's neat, but... what if you need something else... something more "custom"?
 
 Well, you can implement your own rules by implementing the `TestRuleinterface`, for example, a Rule that init Mockito mocks (not very useful):
 

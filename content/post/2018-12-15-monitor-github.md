@@ -59,9 +59,9 @@ I hope it is useful for you and/or your team and that the README is good enough
 
 ## My Projects Releases
 
-I'm a curious person, I want to know how many downloads my releases get…
+I'm a curious person, I want to know how many downloads my releases get...
 unfortunately, GitHub does not provide that information in its interface,
-nor provide it as a time-series on the API, so… you guessed it, I wrote
+nor provide it as a time-series on the API, so... you guessed it, I wrote
 another exporter: its called [github_releases_exporter](https://github.com/caarlos0/github_releases_exporter)!
 
 On this exporter, I just set up a list of repositories I want to watch, and
@@ -90,8 +90,8 @@ Besides that, I also have [other exporters](https://github.com/search?q=topic%3A
 [github-related tools](https://github.com/search?q=topic%3Agithub-api+user%3Acaarlos0&type=Repositories). Feel free to check them out!
 
 I've been using most of those tools for years (and I more-or-less constantly
-update them)… the reason I'm writing about them just now is because I was
-improving them during this weekend (because both had a very… let's say…
+update them)... the reason I'm writing about them just now is because I was
+improving them during this weekend (because both had a very... let's say...
 primitive design).
 
 I hope at least some of these tools can be useful for you!

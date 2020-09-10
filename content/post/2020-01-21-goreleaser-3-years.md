@@ -6,7 +6,7 @@ slug: goreleaser-3-years
 city: Joinville
 ---
 
-[GoReleaser](https://goreleaser.com/)‘s journey begins in December 21, 2016: the day I made its [very first commit](https://github.com/goreleaser/goreleaser/commit/8b63e6555be45234c4c2a69576ca2ddab705302c). It has been a long road since then.
+[GoReleaser](https://goreleaser.com/)'s journey begins in December 21, 2016: the day I made its [very first commit](https://github.com/goreleaser/goreleaser/commit/8b63e6555be45234c4c2a69576ca2ddab705302c). It has been a long road since then.
 
 <!--more-->
 
@@ -32,7 +32,7 @@ That being said, I also wanted to take a look on what we achieved so far.
 
 > You can check the thread on Twitter (and his work on github).
 
-By the time Mike gather the data, there were more than **3800** unique public repositories with `/.?goreleaser.ya?ml/` file! It is… **a lot** of repositories!
+By the time Mike gather the data, there were more than **3800** unique public repositories with `/.?goreleaser.ya?ml/` file! It is... **a lot** of repositories!
 
 What also surprised me was the amount of "high profile" users (repositories that have a lot of stars), among them:
 
@@ -47,7 +47,7 @@ What also surprised me was the amount of "high profile" users (repositories that
 - NATS
 - Traefik
 - Vegeta
-- …
+- ...
 
 You can see the full list [here](https://docs.google.com/spreadsheets/d/1zT_AIQCA7Ux7a_6eDj2eVF7LZaFaw-bbVHOHCOqkJzo/edit?usp=sharing) and the "top users" [here](https://gist.github.com/mfridman/d61502bbd837c81e50c370d2dd5a7496).
 
@@ -70,11 +70,11 @@ in how it works and api-wise), so I'll just wait for the remaining [deprecation 
 
 If everything goes according to the plan, this should happen by the June.
 
-I also plan to finally tackle the problem of generating the `.sh` files, which today is [GoDownloader](https://github.com/goreleaser/godownloader)‘s job. If you have ideas about this, I invite you to participate on the [discussion](https://www.notion.so/caarlos0/8a13b651f9ff49e9b0f93f21e24563e5?v=82b7951324d84ebfa81295134ee82e48).
+I also plan to finally tackle the problem of generating the `.sh` files, which today is [GoDownloader](https://github.com/goreleaser/godownloader)'s job. If you have ideas about this, I invite you to participate on the [discussion](https://www.notion.so/caarlos0/8a13b651f9ff49e9b0f93f21e24563e5?v=82b7951324d84ebfa81295134ee82e48).
 
 I have in the back of my mind an itch regarding the documentation as
 well. I wanted it to be searchable, maybe add a config generator as
-well… not sure yet (help/ideas appreciated here as well).
+well... not sure yet (help/ideas appreciated here as well).
 
 From there, the idea is to keep `v1` stable (maybe adding small features) and start thinking about `v2`, which, at this point is too fresh to have any ideas about how it should look like.
 

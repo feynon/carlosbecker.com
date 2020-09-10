@@ -12,7 +12,7 @@ The key to learn javascript is understanging the following:
 
 ## **The context only changes inside functions**
 
-You might be asking something like *"but doesn't it changes in …"* **NO**, it doesn't.
+You might be asking something like *"but doesn't it changes in ..."* **NO**, it doesn't.
 
 I could literally just stop writing here, but I will be kind and give you some examples.
 
@@ -79,7 +79,7 @@ console.log(test.inc()); // called inc
 console.log(test.getLocal()); // 110
 ```
 
-## Just like I said before…
+## Just like I said before...
 
 The context **only** changes inside functions.
 

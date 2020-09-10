@@ -25,7 +25,7 @@ The general idea is quite simple:
     - `/` forwards to [prometheus](https://prometheus.io/);
     - `/grafana` forwards to [grafana](https://grafana.com/);
     - `/alertmanager` forwards to [alertmanager](https://prometheus.io/docs/alerting/alertmanager/);
-    - all of the above authenticate using `proxy_forward` and [nginx](https://www.nginx.com/)‘s `auth_request` directive.
+    - all of the above authenticate using `proxy_forward` and [nginx](https://www.nginx.com/)'s `auth_request` directive.
 
 So, let's get this thing started!
 

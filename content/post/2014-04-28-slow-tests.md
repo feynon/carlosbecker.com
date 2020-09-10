@@ -6,7 +6,7 @@ slug: slow-tests
 city: Joinville
 ---
 
-I found that it's pretty hard to have a project with high test coverage and fast build… if the tests are slow, people will feel the need to skip them to speed up the build, and will probably write less tests than they should, afraid that the build will became even slower. You go out for a walk and when  you come back no one is running or writing tests anymore…
+I found that it's pretty hard to have a project with high test coverage and fast build... if the tests are slow, people will feel the need to skip them to speed up the build, and will probably write less tests than they should, afraid that the build will became even slower. You go out for a walk and when  you come back no one is running or writing tests anymore...
 
 One way to avoid that is to track down the slowest tests and fix them. The less dependencies your test have, the fast it will run. Just saying.
 

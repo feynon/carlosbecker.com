@@ -22,7 +22,7 @@ For starters, there is no description of the actual job. "Java developer" of wha
 
 You should also tell what your company and products do. Not everyone knows your big little company, doesn't matter how famous you think they are. Please, describe them.
 
-Also, about this company-as-a-verb thing… I particularly think it's stupid. 
+Also, about this company-as-a-verb thing... I particularly think it's stupid. 
 
 But that's just my opinion.
 

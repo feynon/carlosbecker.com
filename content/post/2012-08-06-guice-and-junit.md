@@ -28,7 +28,7 @@ public class FooTests {
 }
 ```
 
-Pretty easy, **but**, when you want to inject some generic thing, like `Foo<Bar>`, e.g., the things start to be ugly. So, you start look around, trying to found some framework… and found it, but these frameworks come with a lot of thing you don't need, like Mockito or anything else. What could you do, so?
+Pretty easy, **but**, when you want to inject some generic thing, like `Foo<Bar>`, e.g., the things start to be ugly. So, you start look around, trying to found some framework... and found it, but these frameworks come with a lot of thing you don't need, like Mockito or anything else. What could you do, so?
 
 Well, I found a great way to solve this.
 

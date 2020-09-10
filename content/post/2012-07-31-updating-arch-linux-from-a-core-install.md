@@ -6,7 +6,7 @@ slug: updating-arch-linux-from-a-core-install
 city: Joinville
 ---
 
-Recently I tried to made a fresh archlinux installation, with my old iso (don't remember exactly what version is)… Yo, first, I installed it with the local mirror only, without any update. The installation was ok, I rebooted, then try to update, using the arch linux home help about the */lib turn into a symlink to /usr/lib*. **Sweet** mistake. That crap just don't work.
+Recently I tried to made a fresh archlinux installation, with my old iso (don't remember exactly what version is)... Yo, first, I installed it with the local mirror only, without any update. The installation was ok, I rebooted, then try to update, using the arch linux home help about the */lib turn into a symlink to /usr/lib*. **Sweet** mistake. That crap just don't work.
 
 In last times, we have a lot of big arch linux changes:
 
@@ -16,9 +16,9 @@ In last times, we have a lot of big arch linux changes:
 - [filesystem upgrade that needs manual intervention](http://www.archlinux.org/news/filesystem-upgrade-manual-intervention-required-1/)
 - [pacman-key](http://www.archlinux.org/news/having-pacman-verify-packages/)
 
-All these itens have man pages helping you to pass throug the most errors… but, the lib symlink made a lot of people angry **never use the force (-f) in pacman, NEVER**.
+All these itens have man pages helping you to pass throug the most errors... but, the lib symlink made a lot of people angry **never use the force (-f) in pacman, NEVER**.
 
-So, I tried to reinstall, but, this time, using the remote mirrors (getting all the new packages), and it was OK, until the bootloader install part. Seem like the installer lost the GRUB config file somewhere…
+So, I tried to reinstall, but, this time, using the remote mirrors (getting all the new packages), and it was OK, until the bootloader install part. Seem like the installer lost the GRUB config file somewhere...
 
 Then, I do my research, and found a [very helpful article by Allan McRae](http://allanmcrae.com/2012/07/updating-arch-linux-from-a-core-install/). I will just "rewrite" it here with some thought, but you can also read the original if you want.
 

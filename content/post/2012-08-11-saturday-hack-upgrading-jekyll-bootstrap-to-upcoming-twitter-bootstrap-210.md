@@ -14,7 +14,7 @@ HELL YEAH, finally a new version!
 
 So, today is saturday and I has nothing to do that could made the world a better place. Let's do this!
 
-I'll describe here my ‘steps' to update jekyll to the new version!
+I'll describe here my 'steps' to update jekyll to the new version!
 
 ### No more talks, let's do this!
 
@@ -91,8 +91,8 @@ So, will made it easy for you :)
 
 Place these files in the correct folder (like I said earlier). Now, check your `**jekyll home**/_includes/themes/twitter/default.html` for the imports of the css and js files, check if the filename is correct, etc.
 
-Now, you should be able to run a `jekyll --server`, in my case it works just fine, but, my layout was modified a lot… don't sure if it works in a default jekyll. So, test it, and tell me what you got :)
+Now, you should be able to run a `jekyll --server`, in my case it works just fine, but, my layout was modified a lot... don't sure if it works in a default jekyll. So, test it, and tell me what you got :)
 
-I also do a lot of other hacks, using `docs.css` file as example, tweak footer, [about](https://carlosbecker.com/about/) page and other things…
+I also do a lot of other hacks, using `docs.css` file as example, tweak footer, [about](https://carlosbecker.com/about/) page and other things...
 
 Cheers!

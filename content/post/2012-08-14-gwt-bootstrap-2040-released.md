@@ -39,7 +39,7 @@ I want to, again, thank everyone that made this happens, you guys are just aweso
 
 Right now, GWT-Bootstrap is for the first time disponible in the [Maven Central Repositories](http://search.maven.org/#artifactdetails%7Ccom.github.gwtbootstrap%7Cgwt-bootstrap%7C2.0.4.0%7Cjar), you can change your `pom.xml` to use the stable version like this:
 
-```
+```xml
 <dependency>
 	<groupId>com.github.gwtbootstrap</groupId>
 	<artifactId>gwt-bootstrap</artifactId>
@@ -49,7 +49,7 @@ Right now, GWT-Bootstrap is for the first time disponible in the [Maven Central 
 
 Now, we will work to port the components that wasn't in this first release, and also update to Twitter Bootstrap 2.1.0.
 
-I also want to, again, apologize. Last weeks my life was changing in much ways, and I didn't has all the time and energy that I like, so, I didn't made much contributions… but, in few weeks it will be more ‘stable', and them I'll back with the fury of a hundred billion suns.
+I also want to, again, apologize. Last weeks my life was changing in much ways, and I didn't has all the time and energy that I like, so, I didn't made much contributions... but, in few weeks it will be more 'stable', and them I'll back with the fury of a hundred billion suns.
 
 Thats all.
 

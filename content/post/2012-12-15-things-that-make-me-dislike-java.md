@@ -16,7 +16,7 @@ So, if you only programmed in Java until today and/or have Java as a mother for 
 
 ## OOP aspects
 
-Even though people say that Java is an object oriented language, well, it is not that much. It has some concepts of OO, like classes, object, inheretance, and so on… but, it still not be a pure OOP language.
+Even though people say that Java is an object oriented language, well, it is not that much. It has some concepts of OO, like classes, object, inheretance, and so on... but, it still not be a pure OOP language.
 
 For example, in OO, **everything** should be an object. Java primitives, for example, are not.
 
@@ -55,7 +55,7 @@ For God sake, I really miss this. Closures, IMHO, are the most usefull thing in 
 
 I also know that is something that's comming with Java 8, but, most languages have this functionally for years, and Java 8 is not ready yet. It kinda sucks.
 
-Anyway, I'll really like to believe that someday I'll could use Java Methods as objects, like it should be in a pure OOP lang… (fingers crossed)
+Anyway, I'll really like to believe that someday I'll could use Java Methods as objects, like it should be in a pure OOP lang... (fingers crossed)
 
 ## metaprogramming
 
@@ -118,7 +118,7 @@ You can do a lot of things with that. It's very useful.
 
 Well, I feel like Java is always making me repeat myself. An example that surely you have been noticed: The ";".
 
-For me, is pretty obvious that if I start coding in a new line, the previous line is completed. A lot of languages doesn't force you to put a ";" at the end of the line: Ruby, CoffeeScript, Haskell, Groovy, (almost infinite list…).
+For me, is pretty obvious that if I start coding in a new line, the previous line is completed. A lot of languages doesn't force you to put a ";" at the end of the line: Ruby, CoffeeScript, Haskell, Groovy, (almost infinite list...).
 
 And it's just one example. There is a lot more. You will feel it a lot working with collections.
 

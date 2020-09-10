@@ -6,7 +6,7 @@ slug: lint-shell-scripts
 city: Joinville
 ---
 
-I will start this by quoting the [bashstyle](https://github.com/progrium/bashstyle)‘s readme:
+I will start this by quoting the [bashstyle](https://github.com/progrium/bashstyle)'s readme:
 
 > Bash is like the JavaScript of systems programming. Although in some cases it's better to use a systems language like C or Go, Bash is actually an ideal systems language for many smaller POSIX-oriented or command line tasks.
 > 

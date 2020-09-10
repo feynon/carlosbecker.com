@@ -7,7 +7,7 @@ city: Joinville
 ---
 
 Often I need to "do X only if files on some folder changed" or whatever. I
-always need to Google that or find it on old scripts…
+always need to Google that or find it on old scripts...
 
 This is a quick post for me to find on Google when I need it again and think
 "oh its me!".

@@ -12,7 +12,7 @@ In Go, it's dead simple to get the value from an environment variable:
 fmt.Println(os.Getenv("HOME"))
 ```
 
-But, sometimes you have default values… so you would have to do something
+But, sometimes you have default values... so you would have to do something
 like this:
 
 ```go

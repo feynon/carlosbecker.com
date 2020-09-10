@@ -32,7 +32,7 @@ to ES5 later on;
 3. snapshot on ES2 and restore on ES5 using S3 (this post subject).
 
 The rack awareness strategy requires more manual intervertions and therefore
-is probably less safe (there will be a post about that). About NFS… well, S3
+is probably less safe (there will be a post about that). About NFS... well, S3
 is simpler and probably safer.
 
 Since production is no place to play around and test things out, I

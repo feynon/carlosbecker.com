@@ -11,7 +11,7 @@ According to the [project site on GitHub](https://github.com/google/guava), *The
 I'll show you some cool features that could make you like Guava Libraries even more:
 
 - I'm pretty sure that at least one time in you life you have needed a `Map<Foo, Collection<Bar>>` or something similar, huh? If not, someday you will need it, and when you need, you will see the crap that is doing a lot of checks for a existing collection with some key and creating and adding it if it isn't there.
-- [Ordering](https://github.com/google/guava/wiki/OrderingExplained) - Basically, a *fluent* comparator class, with a lot of utilities… you will be surprised when you see how cow it is, and will ask yourself *how could I live without it until now?*, you can bet.
+- [Ordering](https://github.com/google/guava/wiki/OrderingExplained) - Basically, a *fluent* comparator class, with a lot of utilities... you will be surprised when you see how cow it is, and will ask yourself *how could I live without it until now?*, you can bet.
 - `Objects#equal` - A null safe equals method. Never write `if(foo != null && bar != null && foo.equals(bar))` in your life again. BTW, take a look in all [Object common methods](https://github.com/google/guava/wiki/CommonObjectUtilitiesExplained) , you can use `Objects#firstNonNull(Object, Object)`, as example, while Elvis operator and Java 8 are not ready :)
 - [@Nullable and other utilities](https://github.com/google/guava/wiki/UsingAndAvoidingNullExplained) to help you follow the [Null Object Pattern](http://en.wikipedia.org/wiki/Null_Object_pattern#Java).
 - [IO Handling](https://github.com/google/guava/wiki/IOExplained), the `Files` class e.g.. Want to read the lines of a text file? Are you opening a BufferedReader? Don't do that:
@@ -32,8 +32,8 @@ Iterable<String> columns = Splitter
 
 Pretty easy :)
 
-- [Preconditions](https://github.com/google/guava/wiki/PreconditionsExplained) plus a `static import` made your arguments, state and null check easy and clean, throwing the respective exceptions (`IllegalStateException`, `IllegalArgumentException`, `NullPointerException`, etc…).
-- [Immutable collections](https://github.com/google/guava/wiki/ImmutableCollectionsExplained) types (Immutable Maps, Lists, Sets, etc…).
+- [Preconditions](https://github.com/google/guava/wiki/PreconditionsExplained) plus a `static import` made your arguments, state and null check easy and clean, throwing the respective exceptions (`IllegalStateException`, `IllegalArgumentException`, `NullPointerException`, etc...).
+- [Immutable collections](https://github.com/google/guava/wiki/ImmutableCollectionsExplained) types (Immutable Maps, Lists, Sets, etc...).
 - [CharMatcher](https://github.com/google/guava/wiki/StringsExplained#charmatcher). pretty easy way to match characteres sequences, eg:
 ```java
 String phoneNumber = CharMatcher

@@ -10,7 +10,7 @@ In an ideal world, applications will never go down, for example. In the real wor
 
 Let's take the example of a server going down for some reason (which shouldn't happen, ever). I want the team to be notified as soon as possible to mitigate the issue. To do that in a easy and free way, I decided to use [Telegram](https://telegram.org/).
 
-### Wait, wait… what is this Telegram thing again?
+### Wait, wait... what is this Telegram thing again?
 
 According to [their website](https://telegram.org/):
 
@@ -44,7 +44,7 @@ check "another server" "http://myserver2.blah.fake.address/check" "Server2"
 check "Google" "http://google.com" "General"
 ```
 
-Sure, you can script it in order to notify you about anything, including some business specific things, dependency on third-party systems… well, use your imagination.
+Sure, you can script it in order to notify you about anything, including some business specific things, dependency on third-party systems... well, use your imagination.
 
 I also added it to the `crontab`, so it will run every minute.
 

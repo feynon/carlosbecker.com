@@ -6,14 +6,14 @@ slug: go-antibody
 city: Marechal Cândido Rondon
 ---
 
-Learning Go was in my TODO list for a while, and finally I did something about it. This post contains some thoughts about it…
+Learning Go was in my TODO list for a while, and finally I did something about it. This post contains some thoughts about it...
 
 Before we start, I should familiarize you with antigen.
 
 [Antigen](http://github.com/zsh-users/antigen) is particularly slow. With the plugins I have, it takes an eternity to load. I saw an attempt to re-write Antigen in Haskell, but I always believed that Antigen does too much, so I decided that it would be
 a nice thing to play with. 
 
-And I also wanted to learn Go… so… there it is: [Antibody](http://github.com/caarlos0/antibody)
+And I also wanted to learn Go... so... there it is: [Antibody](http://github.com/caarlos0/antibody)
 
 ## The "strange at first sight"
 
@@ -79,7 +79,7 @@ The niceties includes `go fmt`. Ever heard about those endless discussions about
 
 You cannot change it, so, it is what it is.
 
-Other tool above my expectations was `go build`. `go build` will break if there are unused imports or variables (as well if there is any error in your code). I wish I had something like this for all languages I ever worked with. Java just turned 20 years old, and we don't yet have any of this…
+Other tool above my expectations was `go build`. `go build` will break if there are unused imports or variables (as well if there is any error in your code). I wish I had something like this for all languages I ever worked with. Java just turned 20 years old, and we don't yet have any of this...
 
 ## The Nicest
 

@@ -63,7 +63,7 @@ But either way, I rarely stop working in the time I should. I'm trying to force 
 
 ## Lessons learned
 
-This I already posted on twitter, but anyway…
+This I already posted on twitter, but anyway...
 
 {{< tweet 1004448888995090438 >}}
 
@@ -96,7 +96,7 @@ It's not the mouse and keyboard I wanted, but I'll get those soon anyway.
 
 ### Video conference apps never work well
 
-It can be the internet connection of anyone, can be the computer of anyone, can be the app itself… I don't know. What I know is that the more people participating in the same meeting, the greater the chance of it not working.
+It can be the internet connection of anyone, can be the computer of anyone, can be the app itself... I don't know. What I know is that the more people participating in the same meeting, the greater the chance of it not working.
 
 I eventually need to ask people later on slack to be sure if I really understood the audio durign the cracks or whatever.
 
@@ -120,7 +120,7 @@ Also, of course, the regular health care is more expensive.
 
 Pay the taxes is kind of easy, but I will have to go to the bank every month because for some stupid reason if I transfer the profits of my company from my company's bank account to mine, it's wrong. If I withdraw and deposit, it's ok.
 
-Oh, and about the taxes, it's **a lot of them**, federal taxes, state taxes, city taxes, etc…
+Oh, and about the taxes, it's **a lot of them**, federal taxes, state taxes, city taxes, etc...
 
 This topic could have a blog post of its own, but it's probably not interesting for people outside Brazil, so I might as well do it in Portuguese.
 

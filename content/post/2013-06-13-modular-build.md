@@ -6,7 +6,7 @@ slug: modular-build
 city: Joinville
 ---
 
-No one likes to do the same stuff lots of times. Copy a file from here to somewhere, start a bunch of services, do a tricky build with maven… all this shit are acceptable if you do one time and will never need to do it again. When you do it two or three times in a little space of time, you will write a script. Everyone does that. If you don't, you should.
+No one likes to do the same stuff lots of times. Copy a file from here to somewhere, start a bunch of services, do a tricky build with maven... all this shit are acceptable if you do one time and will never need to do it again. When you do it two or three times in a little space of time, you will write a script. Everyone does that. If you don't, you should.
 
 I realized that most of this scripts are project specific. In my case, at my daily job, I created a `scripts` folder inside project root folder, and start coding a bunch of scripts inside it.
 

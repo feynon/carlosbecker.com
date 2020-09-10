@@ -209,7 +209,7 @@ func renderPage(
 	}
 
 	if pageSkipper(page) {
-		logger("skipping")
+		logger("skipping " + page.Root().Title)
 		return nil
 	}
 
@@ -299,6 +299,8 @@ func buildMarkdown(header string, content []byte) []byte {
 		"“", "\"",
 		"”", "\"",
 		"’", "'",
+		"‘", "'",
+		"…", "...",
 	).Replace(ss)
 
 	return []byte(

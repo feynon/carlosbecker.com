@@ -160,7 +160,7 @@ Again, not perfect, but it's way better than 10 apps and 321 lists if you ask me
 
 Like any other thing in the word, it takes practice - and practice takes time.
 
-So, don't be too hasty. Practice every day, read other people's code, maybe join some OpenSource project… eventually, you will get there.
+So, don't be too hasty. Practice every day, read other people's code, maybe join some OpenSource project... eventually, you will get there.
 
 ---
 

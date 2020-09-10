@@ -63,7 +63,7 @@ For the `awsebcli` to work, after the app is already created, we need a `Dockerr
 }
 ```
 
-Nothing extraordinary here, I just expose the port `3000` and set the image name, which has a `%BUILD_NUM%` expression in it… but I'll explain that later.
+Nothing extraordinary here, I just expose the port `3000` and set the image name, which has a `%BUILD_NUM%` expression in it... but I'll explain that later.
 
 I put this file inside a `.deploy` folder. The only thing in that folder is this single file, because `awsebcli` zips and uploads everything inside the folder you are when you run `eb deploy`, and we need just that one file.
 
@@ -133,7 +133,7 @@ Isn't that great? You can track down a version deployed in production directly t
 
 I know, it is a very simple workflow and might not work for everyone, but it is simple enough so you can basically copy-paste on your own pet project and try it!
 
-BTW: I'm using AWS free tier for the app, so, yup, it's free… at least for now.
+BTW: I'm using AWS free tier for the app, so, yup, it's free... at least for now.
 
 Last but not least, you can see the entire source code [here](https://github.com/getantibody/getantibody).
 

@@ -66,7 +66,7 @@ a5b60fe97da5: Download complete
 Status: Downloaded newer image for bobrik/image-cleaner:latest
 ```
 
-Each of those checksums are nothing but AuFS "layers". So, if I decide to do another image adding some stuff to this one, I will not have to push the entire image, just the "diff"… more or less like a git  commit.
+Each of those checksums are nothing but AuFS "layers". So, if I decide to do another image adding some stuff to this one, I will not have to push the entire image, just the "diff"... more or less like a git  commit.
 
 Also, `docker pull`?
 

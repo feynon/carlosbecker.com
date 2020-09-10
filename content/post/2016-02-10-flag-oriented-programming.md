@@ -6,7 +6,7 @@ slug: flag-oriented-programming
 city: Joinville
 ---
 
-`booleans`, am I right? What a wonderful piece of technology! They help us solve so many problems…
+`booleans`, am I right? What a wonderful piece of technology! They help us solve so many problems...
 
 > I just need this method to behave slightly different when some condition is true.
 
@@ -49,9 +49,9 @@ Coffee.new(:large).make(true)
 
 So, what's wrong?
 
-At the first sight, you might think it is OK: "Just a single flag. This wouldn't hurt anybody…"
+At the first sight, you might think it is OK: "Just a single flag. This wouldn't hurt anybody..."
 
-The problem is that, later on, someone else will like to add another feature, for example, whether to add or not sugar…
+The problem is that, later on, someone else will like to add another feature, for example, whether to add or not sugar...
 
 ```ruby
 class Coffee
@@ -106,9 +106,9 @@ end
 Coffee.new(:large).make(true, true, true)
 ```
 
-I dare you to guess what happens next…
+I dare you to guess what happens next...
 
-At this point, the code is already a mess. Maybe the developers will attempt to apply some clean code and put the contents of each `if` statement in separated functions… but, is this [good design](https://carlosbecker.com/posts/good-code/), at all?
+At this point, the code is already a mess. Maybe the developers will attempt to apply some clean code and put the contents of each `if` statement in separated functions... but, is this [good design](https://carlosbecker.com/posts/good-code/), at all?
 
 Of course not. This is imperative, flag-oriented programming.
 
@@ -187,17 +187,17 @@ WhippedCreamCoffee.new(
 ).make
 ```
 
-Yes, it is a little more verbose, but in the other hand it is more readable, maintainable, extendable, testable, etc… and, of course, more object oriented.
+Yes, it is a little more verbose, but in the other hand it is more readable, maintainable, extendable, testable, etc... and, of course, more object oriented.
 
 I know it feels like a lot of work (and of classes), but that is how Objects are intended to be: small, doing one thing very well, composable, and that's it.
 
-## Just blame the next guy…
+## Just blame the next guy...
 
 Looking back at the beginning of the post, one can argue that the second programmer shouldn't have added more flags.
 
-Yeah, maybe… but… **humans**… right?
+Yeah, maybe... but... **humans**... right?
 
-We often do what we know is not the right thing because… *reasons*. I have no intend to approach the psychology aspect of this, but I do recommend [this book](http://amzn.to/1SH7rJV), if you want to learn something about it.
+We often do what we know is not the right thing because... *reasons*. I have no intend to approach the psychology aspect of this, but I do recommend [this book](http://amzn.to/1SH7rJV), if you want to learn something about it.
 
 The big question is: will you trust that, given a method with one flag already, the next programmer right away fix the mess and do the right thing?
 

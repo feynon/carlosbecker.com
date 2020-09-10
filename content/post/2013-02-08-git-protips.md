@@ -85,7 +85,7 @@ This can drastically reduce the clone. The bad thing is that you will have NO HI
 
 ### Move a recent commit to another branch
 
-This is pretty useful when you're working on something, commit, and them realize that it would fit better in another branch (or that you're in the wrong branch)… this is how to move it to another branch.
+This is pretty useful when you're working on something, commit, and them realize that it would fit better in another branch (or that you're in the wrong branch)... this is how to move it to another branch.
 
 ```
 $ git branch new

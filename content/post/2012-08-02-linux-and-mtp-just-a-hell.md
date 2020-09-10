@@ -6,7 +6,7 @@ slug: linux-and-mtp-just-a-hell
 city: Joinville
 ---
 
-Recently I bought a Samsung Galaxy X phone (brazilian Nexus). Yeah, it is a pretty cool device, fast, etc etc… oh, yep, a little expensive too…
+Recently I bought a Samsung Galaxy X phone (brazilian Nexus). Yeah, it is a pretty cool device, fast, etc etc... oh, yep, a little expensive too...
 
 I was pretty happy with it, until I tried to copy some files to it (basically, music). Then, I discover that nexus android force you to use something called [MTP (Media Transfer Protocol)](http://en.wikipedia.org/wiki/Media_Transfer_Protocol). According to them, this decision is to made android better, but, I believe that force the user to use it, is not.
 

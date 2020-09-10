@@ -193,7 +193,7 @@ Is not that a monorepo is the fix for all the problems though.
 I think the real issue is that I forced myself to split things too early.
 
 Maybe [nfpm](https://github.com/goreleaser/nfpm) and [godownloader](https://github.com/goreleaser/godownloader) are less wrong, but [archive](https://github.com/goreleaser/archive) for sure was a
-mistake. Premature optimization… of sorts.
+mistake. Premature optimization... of sorts.
 
 # Data structures and relationships
 
@@ -251,7 +251,7 @@ I have been trying to follow what Solomon Hykes once said:
 
 {{< tweet 715277134978113536 >}}
 
-Some things are, like, just… cute… you will regret adding those. Other people also learned adding things because it's kind of cool may not be a very good idea:
+Some things are, like, just... cute... you will regret adding those. Other people also learned adding things because it's kind of cool may not be a very good idea:
 
 [https://youtu.be/M3BM9TB-8yA](https://youtu.be/M3BM9TB-8yA)
 
@@ -278,11 +278,11 @@ If the maintainer says no but you still really do want that feature, keep a fork
 
 # Announce breaking changes to your users is hard
 
-Technically, [GoReleaser](http://goreleaser.com/) is still not v1, so it should mean that I could just break stuff… of course, I don't want to do that. I want the transitions to be as easy and painless as they can be.
+Technically, [GoReleaser](http://goreleaser.com/) is still not v1, so it should mean that I could just break stuff... of course, I don't want to do that. I want the transitions to be as easy and painless as they can be.
 
 That's why I've added deprecation notices to the [docs](https://goreleaser.com/deprecations/), and when you run `goreleaser` with a deprecated config, it will put a `WARN` log pointing to that URL.
 
-I still think there should be a way of making that more visible to users… maybe adding a 1min sleep or something can be a valid approach, but I'm still not sure about it.
+I still think there should be a way of making that more visible to users... maybe adding a 1min sleep or something can be a valid approach, but I'm still not sure about it.
 
 I've also learned it is hard to find if someone is using that thing you want to deprecate. Maybe I should add some kind of tracking? Don't know.
 
@@ -315,7 +315,7 @@ On GoReleaser's case that seems overkill.
 
 # Famous last words
 
-I could probably write about more things, for sure. Some topics were still really hard for me to externalize in words in a form that makes sense, so I end up removing them… at least for now.
+I could probably write about more things, for sure. Some topics were still really hard for me to externalize in words in a form that makes sense, so I end up removing them... at least for now.
 
 Anyway, I hope that the reading of my many screw ups was interesting and that you enjoyed it. If not, please feel free to comment/complain bellow or contact me in any way (except maybe phone calls haha)! I'll be glad to discuss about it and maybe learn that I was wrong about one more thing.
 

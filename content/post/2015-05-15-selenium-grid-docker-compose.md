@@ -54,7 +54,7 @@ $ docker-compose up
 
 After that, it is just a matter of telling the selenium test runner to connect on the Docker host machine on port `4444` and everything will just work.
 
-But, well, we had 30 machines before… now I only have 2 selenium instances running (one with Firefox and the other with Chrome). How can I fix that?
+But, well, we had 30 machines before... now I only have 2 selenium instances running (one with Firefox and the other with Chrome). How can I fix that?
 
 Well, I'm glad you asked:
 

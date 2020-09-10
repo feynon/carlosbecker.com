@@ -40,7 +40,7 @@ We decided to try the fault tolerant mode after some feedback from the NATS Slac
 
 ## Fault Tolerance
 
-Another solution for deploying a highly available [NATS Streaming Server](https://github.com/nats-io/nats-streaming-server) is to use its Fault Tolerant mode - which requires a shared filesystem, for example, NFS.  On the [previous post](https://carlosbecker.com/posts/nats-streaming-server-cluster/) I added that funny joke about NFS being the culmination of 3 lies and etc… that didn't age well. 😂
+Another solution for deploying a highly available [NATS Streaming Server](https://github.com/nats-io/nats-streaming-server) is to use its Fault Tolerant mode - which requires a shared filesystem, for example, NFS.  On the [previous post](https://carlosbecker.com/posts/nats-streaming-server-cluster/) I added that funny joke about NFS being the culmination of 3 lies and etc... that didn't age well. 😂
 
 We didn't want to manage our own NFS, nor have one more database to look after, so we decided to rely on [Google Cloud Filestore](https://cloud.google.com/filestore/) - a NFS as a service offered by Google.
 

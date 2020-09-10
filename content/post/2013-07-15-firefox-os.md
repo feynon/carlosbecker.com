@@ -48,14 +48,14 @@ Anyway, you can call people and send messages just fine (see ya, ubuntu). There 
 
 I just starting to fix Wealcash to work with Firefox OS. The work I had for Firefox OS specifically was just to create the `manifest.webapp` and change the nginx `mime.types` file to deal with it. The rest of the work, is just about do the responsiveness right. That's the cool thing about Firefox OS: you made your app responsive, it just works out of the box.
 
-I made the needed file and the changes to the server in a couple of minutes, and submited the app for approval…
+I made the needed file and the changes to the server in a couple of minutes, and submited the app for approval...
 
 ![](/public/images/firefox-os/583f588c-0ba9-4593-8296-a1e7a6bc7296.png)
 
-I figured it would take while to the app to be approved, since it was in the position 62 in the queue… well, I was wrong.. ~20 minutes later it was approved, and I just installed it in my phone:
+I figured it would take while to the app to be approved, since it was in the position 62 in the queue... well, I was wrong.. ~20 minutes later it was approved, and I just installed it in my phone:
 
 ![](/public/images/firefox-os/90517a5b-e7d2-4e1d-8e4c-93e480d44991.png)
 
 Surely, it has a lot that still need to be done. Lots of places are just unusable due to the large amount of information, things that I don't figure out how to fix, yet, but it is usable in its basics.
 
-In the end, I believe that Firefox OS has much more chances to win that Ubuntu Touch, but I'm not sure if it could beat Android or iOS… I believe that they probably don't even want to. While most of platforms try to "lock" you in their ecosystem, Firefox OS is just open, and doesn't not demand you to learn an specific language/framework to build an app, just vanilla HTML, JS and CSS.
+In the end, I believe that Firefox OS has much more chances to win that Ubuntu Touch, but I'm not sure if it could beat Android or iOS... I believe that they probably don't even want to. While most of platforms try to "lock" you in their ecosystem, Firefox OS is just open, and doesn't not demand you to learn an specific language/framework to build an app, just vanilla HTML, JS and CSS.

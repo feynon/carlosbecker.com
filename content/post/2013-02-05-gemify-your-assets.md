@@ -44,11 +44,11 @@ $ rm -rf lib/somelibrary
 
 > **Heads up**: Don't forget to change the `lib/someligrary.rb` and `somelibrary.gemspec` files!
 
-### 2. As I said in item 1, change the `somelibrary.gemspec` file…
+### 2. As I said in item 1, change the `somelibrary.gemspec` file...
 
 Remove the references to `version.rb`, put a static version, replace the TODO's by your own texts.
 
-### 3. As I said in item 1, change the `lib/somelibrary.rb` file…
+### 3. As I said in item 1, change the `lib/somelibrary.rb` file...
 
 You had to force it to load the rails engine:
 
@@ -76,7 +76,7 @@ Even easier, just copy the respective `js` and `css` files to `javascripts` and 
 Now, create some rails app, and add the following to the Gemfile:
 
 ```
-gem ‘somelibrary', path: ‘absolute/path/to/your/gem'
+gem 'somelibrary', path: 'absolute/path/to/your/gem'
 ```
 
 And, off course, add the respective imports in your `application.js` and `application.css` files.

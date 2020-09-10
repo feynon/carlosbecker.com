@@ -8,7 +8,7 @@ city: Marechal Cândido Rondon
 
 `go build` generates a binary for the platform you run it in. So, if I build [antibody](https://github.com/caarlos0/antibody) in a Linux machine - which uses Mach-O, it will not work in OS X - which uses ELF.
 
-I wanted to distribute [antibody](https://github.com/caarlos0/antibody) at least for Linux and OS X, so I went out searching for how to do this in a not so complicated way…
+I wanted to distribute [antibody](https://github.com/caarlos0/antibody) at least for Linux and OS X, so I went out searching for how to do this in a not so complicated way...
 
 I found an [article from 2012](http://solovyov.net/en/2012/cross-compiling-go/), demonstrating how to compile Go itself for multiple platforms, so you can use the specific go to build the binary for the specific platform, which is a lot of work to do.
 

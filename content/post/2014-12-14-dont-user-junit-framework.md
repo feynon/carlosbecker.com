@@ -8,7 +8,7 @@ city: Joinville
 
 Every once in a while I see somewhere a wrong import to the old, deprecated `junit.framework` instead of `org.junit`.
 
-I particularly believe they should remove this package and put it in a `junit-compat` jar or something… but, while they don't do that, we can avoid those old imports with 2 basic steps:
+I particularly believe they should remove this package and put it in a `junit-compat` jar or something... but, while they don't do that, we can avoid those old imports with 2 basic steps:
 
 ### 1. Replace all old imports with the new imports
 
