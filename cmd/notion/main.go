@@ -229,6 +229,17 @@ func renderPage(
 			return true
 		}
 
+		if block.Type == notionapi.BlockEmbed {
+			if strings.HasPrefix(block.Source, "https://speakerdeck.com/") || strings.HasPrefix(block.Source, "https://slides.com") {
+				converter.Newline()
+				converter.Printf("[See slides](%s).", block.Source)
+				converter.Newline()
+				return true
+			} else {
+				log.Println("unhandled embed:", block.Source)
+			}
+		}
+
 		if block.Type == notionapi.BlockTweet {
 			converter.Newline()
 			converter.Printf("{{< tweet %s >}}", tweetExp.FindStringSubmatch(block.Source)[1])
