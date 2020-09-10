@@ -56,7 +56,7 @@ func main() {
 				client,
 				k,
 				func(t string) {
-					log.Println("[", atomic.AddInt64(&done, 1), "/", total, "]", "rendering", t)
+					log.Println("[", atomic.AddInt64(&done, 1), "/", total, "]", t)
 				},
 				func(page *notionapi.Page) string {
 					return toString(page.Root().Prop("properties.S6_\""))
@@ -73,6 +73,9 @@ func main() {
 					city := toString(page.Root().Prop("properties.%]Hm"))
 					title := page.Root().Title
 					return blogHeader(title, date, draft, slug, city)
+				},
+				func(page *notionapi.Page) bool {
+					return !toBool(page.Root().Prop("properties.la`A"))
 				},
 				func(page *notionapi.Page) error {
 					if toString(page.Root().Prop("properties.S6_\"")) == "" {
@@ -128,7 +131,7 @@ func main() {
 				client,
 				k,
 				func(t string) {
-					log.Println("[", atomic.AddInt64(&done, 1), "/", total, "]", "rendering", t)
+					log.Println("[", atomic.AddInt64(&done, 1), "/", total, "]", t)
 				},
 				func(page *notionapi.Page) string {
 					return toString(page.Root().Prop("properties.7F2|"))
@@ -139,6 +142,9 @@ func main() {
 				},
 				func(page *notionapi.Page) string {
 					return pageHeader(page.Root().Title)
+				},
+				func(page *notionapi.Page) bool {
+					return false
 				},
 				func(page *notionapi.Page) error {
 					if toString(page.Root().Prop("properties.7F2|")) == "" {
@@ -187,15 +193,21 @@ func queryCollection(client *notionapi.Client, colID, colViewID string) (*notion
 func renderPage(
 	client *notionapi.Client,
 	k string,
-	progressLogger func(t string),
+	logger func(t string),
 	slugProvider func(p *notionapi.Page) string,
 	filenameProvider func(p *notionapi.Page) string,
 	headerProvider func(p *notionapi.Page) string,
+	pageSkipper func(p *notionapi.Page) bool,
 	pageValidator func(p *notionapi.Page) error,
 ) error {
 	page, err := client.DownloadPage(k)
 	if err != nil {
 		return err
+	}
+
+	if pageSkipper(page) {
+		logger("skipping")
+		return nil
 	}
 
 	if err := pageValidator(page); err != nil {
@@ -204,7 +216,7 @@ func renderPage(
 
 	slug := slugProvider(page)
 
-	progressLogger(slug)
+	logger("rendering " + slug)
 
 	converter := tomarkdown.NewConverter(page)
 	converter.RenderBlockOverride = func(block *notionapi.Block) bool {
