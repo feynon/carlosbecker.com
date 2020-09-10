@@ -8,11 +8,11 @@ city: Joinville
 
 Quick tip to improve the docker build speed using go modules.
 
----
+<!--more-->
 
 Normally, I would do something like this:
 
-```
+```docker
 FROM golang as builder
 ENV GO111MODULE=on
 WORKDIR /code
@@ -30,7 +30,7 @@ The problem with this approach is that, if I change any `.go` file and rebuild, 
 
 Taking into account that dependencies do not change very often, we can add just two lines and improve the build performance **a lot**:
 
-```
+```docker
 FROM golang as builder
 ENV GO111MODULE=on
 WORKDIR /code

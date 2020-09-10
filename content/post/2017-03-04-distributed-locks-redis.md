@@ -16,7 +16,7 @@ In normal workloads, we have two servers responsible for running previously sche
 
 An ideal scenario would consist of idempotent services, but, since most of those tasks talk to government services, we are pretty ~~fucking~~ far from an ideal scenario.
 
-We cannot fix the government services’ code, so, to avoid calling them several times for the same input (which they don't like, by the way), we had think about mainly two options:
+We cannot fix the government services' code, so, to avoid calling them several times for the same input (which they don't like, by the way), we had think about mainly two options:
 
 1. Run it all in a single server;
 2. Synchronize work, somehow.
@@ -38,7 +38,7 @@ After that, it reads this same table looking for other nodes, and synchronizes w
 
 Finally, in the code, we would basically get a new `ILock` from Hazelcast API and use it, something like this:
 
-```
+```java
 if (hazelcast.getLock( jobName + ":" + elementId ).tryLock() {
   // do the work
 }
@@ -89,7 +89,7 @@ Our distributed lock API required the implementation of two main interfaces to c
 
 `JobLockManager`:
 
-```
+```java
 public interface JobLockManager {
 	<E> boolean lock(Job<E> job, E element);
 
@@ -101,7 +101,7 @@ public interface JobLockManager {
 
 and `JobSemaphore`:
 
-```
+```java
 public interface JobSemaphore {
 	boolean tryAcquire(Job<?> job);
 

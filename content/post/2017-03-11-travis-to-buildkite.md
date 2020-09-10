@@ -90,7 +90,7 @@ But none of those were true, so I automated some steps of the process.
 
 First of all, I cloned all repositories with the help of [clone-org](http://github.com/caarlos0/clone-org):
 
-```
+```shell
 $ clone-org --org ContaAzul --destination /tmp/ca
 ```
 
@@ -100,13 +100,14 @@ After that, I created some template files for Java Buildkite builds. Since most 
 
 With all that in place, I wrote an "one-liner" and a helper function that would do most of the work for me:
 
-```
+```shell
 # helper function
 setup_buildkite() {
   cd ~/Code/github-buildkite-wire &&
     ./setup-pipeline.sh ContaAzul "$(basename "$1")"
 }
-``````
+```
+```shell
 # the one liner
 $ find . -depth 1 -type d | while read -r folder; do
   cd "$folder"
@@ -135,4 +136,4 @@ obvious reason.
 
 Buildkite native elastic stack works great. Their web interface feels faster and cleaner. We also didn't experience any random job failures. 
 
-Having a base Docker image for our builds also allowed us to have faster builds. Travis’ base image had a lot of stuff we didn’t need and configurations we didn’t knew about. We tweaked ours for our use case, dropping the average build time in ~20%.
+Having a base Docker image for our builds also allowed us to have faster builds. Travis' base image had a lot of stuff we didn't need and configurations we didn't knew about. We tweaked ours for our use case, dropping the average build time in ~20%.

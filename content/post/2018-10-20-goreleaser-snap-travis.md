@@ -8,7 +8,7 @@ city: Joinville
 
 [GoReleaser](https://goreleaser.com/) was able to build [snap](https://snapcraft.io/goreleaser) packages for a long time, but it wasn't able to push them until today. Let's see how to wrap to your [TravisCI](https://travis-ci.org/goreleaser/goreleaser) build!
 
----
+<!--more-->
 
 Since [v0.28.0](https://github.com/goreleaser/goreleaser/releases/tag/v0.28.0), [GoReleaser](https://goreleaser.com/) can create snapcraft packages and
 upload them to the GitHub release. On [v0.91.0](https://github.com/goreleaser/goreleaser/releases/tag/v0.91.0), we added the support
@@ -21,7 +21,7 @@ On this post I'll show how to wrap that with you [TravisCI](https://travis-ci.or
 Let's assume you have a snapcraft section more or less like the bellow
 on you `.goreleaser.yml` file::
 
-```
+```yaml
 # .goreleaser.yaml
 snapcraft:
   summary: Foo bar
@@ -32,7 +32,7 @@ snapcraft:
 The only change needed here is to add a `publish: true` to the config, like
 this:
 
-```
+```yaml
 # .goreleaser.yaml
 snapcraft:
   summary: Foo bar
@@ -47,7 +47,7 @@ And that should be it on the [GoReleaser](https://goreleaser.com/) side.
 
 On your `.travis.yml`, you probably have something like this:
 
-```
+```yaml
 language: go
 go: '1.11.x'
 script: make build
@@ -62,7 +62,7 @@ deploy:
 So, the first step is to install snapcraft on Travis, we can do it with
 a combination of `addons`, `env` and `install`:
 
-```
+```yaml
 language: go
 go: '1.11.x'
 
@@ -88,26 +88,26 @@ deploy:
 
 Now, we need to do an export login on snapcraft:
 
-```
+```shell
 snapcraft export-login snap.login
 ```
 
 This will create a `snap.login` file. Make sure to add it to the `.gitignore`:
 
-```
+```shell
 echo snap.login >> .gitignore
 ```
 
 Now, we need to somehow add that file to Travis. The way we do that is to use
-the [encrypt file](https://docs.travis-ci.com/user/encrypting-files/) Travis’ feature:
+the [encrypt file](https://docs.travis-ci.com/user/encrypting-files/) Travis' feature:
 
-```
+```shell
 travis encrypt-file snap.login --add
 ```
 
 This will add a line more or less like this to our `.travis.yml`:
 
-```
+```yaml
 before_install:
 - openssl aes-256-cbc -K $encrypted_123abc123_key -iv $encrypted_123abc123_iv -in snap.login.enc -out snap.login -d
 ```
@@ -115,14 +115,14 @@ before_install:
 So, the only step left is to do a snapcraft login on Travis, just add this
 to your `.travis.yml`:
 
-```
+```yaml
 after_success:
 - test -n "$TRAVIS_TAG" && snapcraft login --with snap.login
 ```
 
 So, in the end, our `.travis.yml` will look like this:
 
-```
+```yaml
 language: go
 go: '1.11.x'
 addons:
@@ -154,7 +154,7 @@ Now you can just do a `git tag v1.2.3; git push --tags`, and [TravisCI](https://
 If you are creating a new snap, you will also need to register the snap
 first:
 
-```
+```shell
 snapcraft register ${APP_NAME}
 ```
 
@@ -168,7 +168,7 @@ to the [Snapcraft store](https://snapcraft.io/goreleaser) by looking into the [b
 
 That means you can now install [GoReleaser](https://goreleaser.com/) on Linux using something like:
 
-```
+```shell
 snap install goreleaser --classic
 ```
 

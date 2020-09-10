@@ -8,7 +8,7 @@ city: Joinville
 
 [GoReleaser](https://goreleaser.com/)‘s journey begins in December 21, 2016: the day I made its [very first commit](https://github.com/goreleaser/goreleaser/commit/8b63e6555be45234c4c2a69576ca2ddab705302c). It has been a long road since then.
 
----
+<!--more-->
 
 I didn't have big aspirations for it. Just wanted to reliably automate my workflow in another project, so, the first version was pretty hacky, but whatever, just scratching my own itch.
 

@@ -33,7 +33,7 @@ Then, I discovered [gox](https://github.com/mitchellh/gox), which compiles Go fo
 
 And it's damn easy to use:
 
-```
+```shell
 $ go get github.com/mitchellh/gox
 $ gox -build-toolchain
 $ gox

@@ -8,11 +8,11 @@ city: Joinville
 
 Apdex is an industry standard to measure application performance.
 
----
+<!--more-->
 
 The only thing we need to define is a `target` response time. With that, we can use the following formula to calculate the apdex of a given app:
 
-```
+```bash
 apdex = (satisfactory + (tolerable / 2)) / total
 ```
 
@@ -34,7 +34,7 @@ We will need 2 things to calculate the apdex of our service:
 
 Here's an example in Go:
 
-```
+```go
 package main
 
 import (
@@ -106,7 +106,7 @@ func main() {
 
 OK, let's also setup a Prometheus server monitoring our app, create a `prometheus.yaml` file like this:
 
-```
+```yaml
 global:
   scrape_interval: 10s
   scrape_timeout: 10s
@@ -122,7 +122,7 @@ scrape_configs:
 
 And a `rules.yaml` like this (for now):
 
-```
+```yaml
 groups:
 - name: apdex
   rules: []
@@ -130,7 +130,7 @@ groups:
 
 You should be able to start both the app and prometheus, and metrics should show up:
 
-```
+```shell
 $ go run main.go
 $ prometheus --config.file ./prometheus.yaml
 ```
@@ -143,14 +143,14 @@ OK, now let's start working on our recording rules!
 
 We may have several instances of the same app running, and they may have different targets. This should be a temporary thing, so, lets just assume the max:
 
-```
+```yaml
 - record: job:http_apdex_target_seconds:max
   expr: max(http_apdex_target_seconds) BY (job)
 ```
 
 OK, next step is to have a recording rule for both `target` and `target * 4`:
 
-```
+```yaml
 - record: job_le:http_apdex_target_seconds:max
   expr: |
     clamp_max(
@@ -178,7 +178,7 @@ We now need to calculate a couple of things:
 
 **Satisfactory:**
 
-```
+```yaml
 sum(
   rate(http_request_duration_seconds_bucket{status_code!~"5.."}[1m])
   *
@@ -188,7 +188,7 @@ sum(
 
 **Tolerable:**
 
-```
+```yaml
 sum(
   rate(http_request_duration_seconds_bucket{status_code!~"5.."}[1m])
   *
@@ -198,7 +198,7 @@ sum(
 
 **Total:**
 
-```
+```yaml
 sum(rate(http_request_duration_seconds_count[1m])) BY (job)
 ```
 
@@ -206,7 +206,7 @@ That's all we need!
 
 The end formula will look like this:
 
-```
+```yaml
 - record: job:http_apdex
   expr: |
     (
@@ -230,7 +230,7 @@ The end formula will look like this:
 
 We could probably also alert when Apdex is bad. Bellow `0.8` is pretty standard, so let's do it:
 
-```
+```yaml
 - alert: HTTPApdexViolation
   expr: job:http_apdex < 0.8
   for: 5m
@@ -243,6 +243,6 @@ And that's it!
 
 The full `rules.yaml` will look like this:
 
-```
+```yaml
 
 ```

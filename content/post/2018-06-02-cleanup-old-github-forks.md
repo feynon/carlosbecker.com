@@ -8,7 +8,7 @@ city: Joinville
 
 I like to keep my GitHub clean. I delete forks I'm not using anymore, move old abandoned repositories to my [graveyard](https://carlosbecker.com/posts/repositories-graveyard/) and etc.
 
----
+<!--more-->
 
 I don't like to delete things manually though.
 
@@ -33,13 +33,13 @@ Anyway, it does all the checks mentioned above, plus, you can customize the inac
 
 You can install it On macOS:
 
-```
+```shell
 $ brew install fork-cleaner
 ```
 
 or on Linux:
 
-```
+```shell
 $ snap install fork-cleaner
 ```
 
@@ -51,7 +51,7 @@ You can then either export it as the `GITHUB_TOKEN` environment variable or usin
 
 Then just run `fork-cleaner`:
 
-```
+```shell
 $ fork-cleaner
 3 forks to delete:
  --> https://github.com/caarlos0/coinmarketcap-exporter

@@ -18,7 +18,7 @@ Well, before we learn all that, let's start with the basics, shall we?
 
 Let's take a simple example: Suppose that you want to set a timeout for all test methods in a given class, an easy way to do that is like this:
 
-```
+```java
 public class BlahTest {
 	@Test(timeout = 1000)
 	public void testA() throws Exception {
@@ -51,7 +51,7 @@ public class BlahTest {
 
 Besides that you repeated yourself tons of times, if you want to change this timeout, you will have to change it in all methods. There is no need to do that. Just use the `Timeout` Rule:
 
-```
+```java
 public class BlahTest {
 	@Rule
 	public Timeout timeout = new Timeout(2000);
@@ -89,7 +89,7 @@ public class BlahTest {
 
 Have you ever needed to do some test that uses `File` and/or needed a temporary file/folder? `TemporaryFolder` to the rescue:
 
-```
+```java
 public class BlahTest {
 	@Rule
 	public TemporaryFolder tempFolder = new TemporaryFolder();
@@ -106,7 +106,7 @@ public class BlahTest {
 
 Ever needed more control on exceptions? Try the `ExpectedException` rule:
 
-```
+```java
 public class BlahTest {
 	@Rule
 	public ExpectedException exception = ExpectedException.none();
@@ -126,7 +126,7 @@ That's neat, but… what if you need something else… something more "custom"?
 
 Well, you can implement your own rules by implementing the `TestRuleinterface`, for example, a Rule that init Mockito mocks (not very useful):
 
-```
+```java
 @RequiredArgsConstructor
 public class MockRule implements TestRule {
   private final Object target;
@@ -145,7 +145,7 @@ public class MockRule implements TestRule {
 
 To use it, you just need to declare that rule in your test class:
 
-```
+```java
 public class BlahTest {
 	@Rule
 	public MockRule mock = new MockRule(this);
@@ -167,7 +167,7 @@ public class BlahTest {
 
 Returning to the example of this post's first paragraph, you can also have custom external resources rules by extending the `ExternalResource` class:
 
-```
+```java
 public class MyServer extends ExternalResource {
   @Override
   protected void before() throws Throwable {
@@ -183,7 +183,7 @@ public class MyServer extends ExternalResource {
 
 I believe that this makes more sense with Integration Tests, though. Also, in this case, you probably would not want/need to start and stop the server before and after each test method, right? So, you can use the `@ClassRule` annotation:
 
-```
+```java
 public class BlahServerTest {
 	@ClassRule
 	public static MyServer server = new MyServer();

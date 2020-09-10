@@ -14,7 +14,7 @@ Nice, what's the problem in that?
 
 We had a method like this:
 
-```
+```ruby
 class Coffee
   def initialize(size)
     @size = size
@@ -30,7 +30,7 @@ Coffee.new(:large).make
 
 Now, we have something like this:
 
-```
+```ruby
 class Coffee
   def initialize(size)
     @size = size
@@ -53,7 +53,7 @@ At the first sight, you might think it is OK: "Just a single flag. This wouldn't
 
 The problem is that, later on, someone else will like to add another feature, for example, whether to add or not sugar…
 
-```
+```ruby
 class Coffee
   def initialize(size)
     @size = size
@@ -80,7 +80,7 @@ What happens next?
 
 Of course, another feature:
 
-```
+```ruby
 class Coffee
   def initialize(size)
     @size = size
@@ -118,7 +118,7 @@ Exactly: **nobody**.
 
 Maybe this problem could be better solved with decorators, for example:
 
-```
+```ruby
 class Coffee
   def initialize(size)
     @size = size
@@ -218,7 +218,7 @@ Do you want to be the "Programmer X" in this case? Do you want to be one of the 
 
 I know I don't.
 
----
+<!--more-->
 
 This is my point of view on this subject, if you disagree, please, comment bellow, let's discuss how to write better code.
 

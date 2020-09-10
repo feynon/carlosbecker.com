@@ -8,14 +8,14 @@ city: Joinville
 
 Caching things can be hard to do and hard to test. In this post I'll demonstrate a convenient way of doing that using interfaces.
 
----
+<!--more-->
 
 ## The problem
 
 Let's suppose we want to cache calls to the GitHub API. Let's say we want
 to get the my repository list for whatever reason:
 
-```
+```go
 package client
 
 type Repository struct {
@@ -35,7 +35,7 @@ if they see data for 5 minutes ago.
 We could easily do that using an in-memory cache, like [go-cache](https://github.com/patrickmn/go-cache). The
 first thing that comes to mind is to something like:
 
-```
+```go
 var cache = cache.New(5*time.Minute, 5*time.Minute)
 
 func GetRepositories() ([]Repository, error) {
@@ -64,7 +64,7 @@ caching.
 
 For our example, we could create an interface like this:
 
-```
+```go
 // client.go
 package client
 
@@ -79,7 +79,7 @@ type Client interface {
 
 And then the "real" implementation:
 
-```
+```go
 // github.go
 package client
 
@@ -98,7 +98,7 @@ func (ghClient) GetRepositories() ([]Repository, error) {
 And finally, a cached implementation that wraps any other `Client`
 implementation:
 
-```
+```go
 // cache.go
 package client
 
@@ -136,7 +136,7 @@ and then write some tests for it.
 
 Code example of a very simple implementation:
 
-```
+```go
 // cache_test.go
 package client
 

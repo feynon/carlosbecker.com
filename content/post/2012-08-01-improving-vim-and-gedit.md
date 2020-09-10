@@ -20,7 +20,7 @@ with `method` already selected. So, I type the name, parameters, press `[TAB]` a
 
 ## Gedit powered by GMate
 
-GMate is a set of plugins that try to ‘transform’ gedit in a ' textmate for linux’.
+GMate is a set of plugins that try to ‘transform' gedit in a ' textmate for linux'.
 
 The installation is pretty simple:
 
@@ -34,7 +34,7 @@ Then close and open your Gedit, go to settings, and take a look at themes and pl
 
 ## Vim powered by a gorgeus vimfiles setup
 
-This ‘*vimfiles*’ project is nothing more than a lot of plugins and some hacks in *vimrc* file, plus some themes, like Monokai (I already said thats the best theme ever!).
+This ‘*vimfiles*' project is nothing more than a lot of plugins and some hacks in *vimrc* file, plus some themes, like Monokai (I already said thats the best theme ever!).
 
 The installation is a little more complex than GMate, but, is not like build a Boing-747 :)
 

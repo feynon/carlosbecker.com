@@ -8,7 +8,7 @@ city: Joinville
 
 I wanted to set up a [prometheus](https://prometheus.io/) machine for me to monitor random stuff, but I was always postpone that because I didn't want to use SSH port-forwarding, firewalls, create a VPC and/or setup an OpenVPN server or anything like that.
 
----
+<!--more-->
 
 I just wanted something simple to maybe authenticate with github and go on.
 
@@ -33,7 +33,7 @@ So, let's get this thing started!
 
 First one is [prometheus](https://prometheus.io/) itself:
 
-```
+```yaml
 # docker-compose.yml
 version: '3'
 services:
@@ -55,7 +55,7 @@ The important parts are:
 
 We will also need [alertmanager](https://prometheus.io/docs/alerting/alertmanager/) to route the alerts, right? Let's do it:
 
-```
+```yaml
 # docker-compose.yml
 version: '3'
 services:
@@ -76,7 +76,7 @@ The important parts are:
 
 We also need to add [alertmanager](https://prometheus.io/docs/alerting/alertmanager/) to `prometheus.yml`:
 
-```
+```yaml
 # prometheus.yml
 alerting:
   alertmanagers:
@@ -97,7 +97,7 @@ Note that we change the `path_prefix` in the `alerting` section and also the `me
 
 Everyone likes dashboards, and [grafana](https://grafana.com/) is DOPE for doing that. Let's add it as well:
 
-```
+```yaml
 # docker-compose.yml
 version: '3'
 services:
@@ -115,7 +115,7 @@ services:
 
 Here things get a little more tricky: we also have a `granafa.ini` config file. Here are its contents: 
 
-```
+```perl
 ; grafana.ini
 [server]
 protocol = http
@@ -159,7 +159,7 @@ Finally, let's require authentication using [oauth2_proxy](https://github.com/bi
 
 Once I had the client ID and secret, it was pretty straightforward:
 
-```
+```yaml
 # docker-compose.yml
 version: '3'
 services:
@@ -201,7 +201,7 @@ The important things here are:
 
 First, let's create a nginx config file:
 
-```
+```perl
 # nginx.conf
 server {
   listen 80;
@@ -274,7 +274,7 @@ Most of it is based on the [oauth2_proxy README examples](https://github.com/bit
 
 Now, let's add it to the `docker-compose.yml` file:
 
-```
+```yaml
 # docker-compose.yml
 version: '3'
 services:

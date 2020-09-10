@@ -9,14 +9,14 @@ city: Joinville
 The next [GoReleaser](https://goreleaser.com/) version will have a more flexible [Docker](https://docker.io/) configuration
 format. In this post we'll explore it a bit.
 
----
+<!--more-->
 
 When I first added [Docker](https://docker.io/) support on [GoReleaser](https://goreleaser.com/), I did a couple of
 assumptions - and most of them were wrong.
 
 At that time, the config file looked like this:
 
-```
+```yaml
 dockers:
 -
   binary: foo
@@ -46,7 +46,7 @@ interactions:
 And now, I think we finally arrived at something closer to the what will be on
 1.0:
 
-```
+```yaml
 dockers:
   -
     goos: linux
@@ -101,7 +101,7 @@ For example, imagine you have a simple project, more or less like this:
 
 Your `Dockerfile` may look like:
 
-```
+```docker
 FROM scratch
 ADD foo /usr/bin/foo
 ADD config/foo.conf /etc/foo.conf
@@ -110,7 +110,7 @@ ADD config/foo.conf /etc/foo.conf
 So, as a developer, you would `go build` your project and then
 simply `docker build`:
 
-```
+```shell
 go build -o foo
 docker build -t caarlos0/goreleaser-docker-test .
 ```
@@ -120,7 +120,7 @@ And that would work, as expected.
 You could then automate that using [GoReleaser](https://goreleaser.com/) by creating a
 `.goreleaser.yaml` config file that looks like this:
 
-```
+```yaml
 project_name: foo
 builds:
 - env:

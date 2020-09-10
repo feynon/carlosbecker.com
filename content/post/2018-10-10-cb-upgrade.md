@@ -8,7 +8,7 @@ city: Joinville
 
 I have an old Couchbase 4.5.x cluster, and I though it would be nice to upgrade it. This are my notes and the tests I did before doing it "in production"™️.
 
----
+<!--more-->
 
 ## Breaking changes
 
@@ -54,7 +54,7 @@ again, but it will not be a swap rebalance anymore and thus will take more time.
 We can try this out in a test cluster using Docker! Create a
 `docker-compose.yaml` file like the following:
 
-```
+```yaml
 version: '2'
 
 services:
@@ -108,7 +108,7 @@ If you are using Docker 4 Mac, I recommend increasing the CPU limits:
 
 Once that's done, fire the machines up:
 
-```
+```shell
 docker-compose up
 ```
 
@@ -116,7 +116,7 @@ docker-compose up
 
 Initialize the Couchbase `4.5.x` cluster:
 
-```
+```shell
 docker exec cb_cb1_1 couchbase-cli cluster-init \
   --cluster-username=adm \
   --cluster-password=secret \
@@ -128,7 +128,7 @@ docker exec cb_cb1_1 couchbase-cli cluster-init \
 
 Add the other nodes and rebalance:
 
-```
+```shell
 docker exec cb_cb1_1 couchbase-cli rebalance \
   -c localhost -u adm -p secret \
   --server-add=172.21.0.11 \
@@ -143,7 +143,7 @@ docker exec cb_cb1_1 couchbase-cli server-list \
 
 Create a bucket and insert some data:
 
-```
+```shell
 docker exec cb_cb1_1 couchbase-cli bucket-create \
   -c localhost -u adm -p secret \
   --bucket=customer \
@@ -167,7 +167,7 @@ Couchbase Console.
 
 Let's do a single node swap rebalance first to see what happens:
 
-```
+```shell
 docker exec cb_cb1_1 couchbase-cli rebalance \
   -c localhost -u adm -p secret \
   --server-remove=172.21.0.12 \
@@ -194,7 +194,7 @@ nodes are on Couchbase 5.1, you can't add old version nodes anymore.
 
 Let's finish the upgrade by swap rebalancing the last nodes:
 
-```
+```shell
 docker exec cb_cb4_1 couchbase-cli server-add \
   -c localhost -u adm -p secret \
   --server-add=172.21.0.21 \
@@ -226,7 +226,7 @@ The compatibility warning should go away as well:
 
 Kill all containers and remove them.
 
-```
+```shell
 docker-compose kill
 yes | docker-compose rm
 ```

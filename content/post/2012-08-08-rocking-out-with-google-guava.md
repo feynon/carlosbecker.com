@@ -42,7 +42,8 @@ String phoneNumber = CharMatcher
 CharMatcher
   .inRange('a','z')
   .or(inRange('A','Z'));
-```- There are also [Functional](https://github.com/google/guava/wiki/FunctionalExplained) classes, maybe you will want to use them.
+```
+- There are also [Functional](https://github.com/google/guava/wiki/FunctionalExplained) classes, maybe you will want to use them.
 - [EventBus](https://github.com/google/guava/wiki/EventBusExplained). Basically, a better EventListener.
 - [Caching](https://github.com/google/guava/wiki/CachesExplained). Make your app faster.
 

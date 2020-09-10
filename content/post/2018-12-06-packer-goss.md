@@ -8,7 +8,7 @@ city: Joinville
 
 Ever wanted to validate your [Packer](https://packer.io/) image with [Goss](http://goss.rocks/)? Well, you can!
 
----
+<!--more-->
 
 I was looking into ways to make sure that the image I just provisioned with
 [Packer](https://packer.io/) and [Chef](https://www.chef.io/) is working as expected. After some research, I found
@@ -28,7 +28,7 @@ You can download the binary from the releases page and save it as
 The usage is very simple, jsut add a `goss` provisioner to your [Packer](https://packer.io/)
 build:
 
-```
+```json
 {
   "builders": [
     {

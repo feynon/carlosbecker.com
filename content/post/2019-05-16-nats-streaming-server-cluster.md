@@ -9,7 +9,7 @@ city: Joinville
 I wanted to set up a high available [nats-streaming-server](https://github.com/nats-io/nats-streaming-server) cluster,
 but couldn't find a "quick" guide on how to do it.
 
----
+<!--more-->
 
 In this post I'll try to write something that would have helped me earlier.
 
@@ -56,7 +56,7 @@ I choose to use the embed one.
 Let's start with a single [nats-streaming-server](https://github.com/nats-io/nats-streaming-server) node and an example
 client:
 
-```
+```go
 package main
 
 import (
@@ -104,9 +104,10 @@ screen for each message received.
 
 So, now we can just start both:
 
-```
+```shell
 $ ./nats-streaming-server
-``````
+```
+```shell
 $ go run main.go localhost:4222
 ```
 
@@ -141,7 +142,8 @@ streaming {
     peers: ["b", "c"]
   }
 }
-``````
+```
+```
 ; b.conf
 port: 4222
 cluster {
@@ -161,7 +163,8 @@ streaming {
     peers: ["a", "c"]
   }
 }
-``````
+```
+```
 ; c.conf
 port: 4223
 cluster {
@@ -200,11 +203,13 @@ Since we are running all nodes on the same machine, notice that the
 
 Once that's done, we can start the 3 servers:
 
-```
+```shell
 $ ./nats-streaming-server -c a.conf
-``````
+```
+```shell
 $ ./nats-streaming-server -c b.conf
-``````
+```
+```shell
 $ ./nats-streaming-server -c c.conf
 ```
 
@@ -217,7 +222,7 @@ Once all of them are up, you should see logs like the following on each of them:
 
 Now, we can connect start our client again:
 
-```
+```shell
 $ go run main.go nats://localhost:4221 nats://localhost:4222 nats://localhost:4223
 ```
 

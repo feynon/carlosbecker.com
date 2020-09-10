@@ -31,6 +31,6 @@ I'll be glad to hear your suggestions and merge your pull-requests! Feel free to
 
 See you soon.
 
----
+<!--more-->
 
 > PS: the example above is running locally, so, maybe you will not see it at first, but, just look a little closer and you shall see a little fade while switching pages :)

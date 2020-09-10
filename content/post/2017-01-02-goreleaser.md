@@ -29,7 +29,7 @@ So, I created [goreleaser](https://github.com/goreleaser/releaser)!
 
 GoReleaser can build and release go binaries in `tar.gz` for several platforms, and can create/update homebrew formulaes. All that by having a simple `goreleaser.yml` in the repository root:
 
-```
+```yaml
 repo: goreleaser/releaser
 binary_name: release
 brew:
@@ -43,7 +43,7 @@ build:
 
 Then, I basically wire this in the `.travis.yml`:
 
-```
+```yaml
 after_success:
   test -n "$TRAVIS_TAG" && curl -s https://raw.githubusercontent.com/goreleaser/get/master/latest | bash
 ```

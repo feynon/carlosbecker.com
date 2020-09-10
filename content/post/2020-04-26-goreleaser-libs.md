@@ -8,7 +8,7 @@ city: Joinville
 
 What if I told you you can now automate the release of your libraries as well?
 
----
+<!--more-->
 
 I think some of you are used to just run `goreleaser` and have your binaries compiled, archived, packaged and published... but the experience was not that great regarding libraries.
 
@@ -16,7 +16,7 @@ Thanks to [@leogr](https://github.com/leogr), on [v0.131.0](https://github.com/g
 
 The usage is pretty simple, just create a config setting `build.skip: true` and you're good to go:
 
-```
+```yaml
 before:
   hooks:
     - go mod tidy

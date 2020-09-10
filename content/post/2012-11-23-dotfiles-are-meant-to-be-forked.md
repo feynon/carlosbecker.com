@@ -47,6 +47,6 @@ If you wanna contribute with anything, just issue a pull-request. I'll be glad t
 
 That's all folks, hope to see you soon!
 
----
+<!--more-->
 
 > This post was last updated in Feb 4, 2015.

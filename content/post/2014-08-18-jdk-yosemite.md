@@ -20,7 +20,7 @@ $ vim Distribution
 
 Replace this function:
 
-```
+```c
 function pm_install_check() {
   if (!(checkForMacOSX("10.7.3") == true)) {
     my.result.title = "OS X Lion required";
@@ -35,7 +35,7 @@ function pm_install_check() {
 
 with this:
 
-```
+```c
 function pm_install_check() {
   return true;
 }

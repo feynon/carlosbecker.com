@@ -8,7 +8,7 @@ city: Joinville
 
 Kubernetes Pod lifecycle does not cover everything just yet.
 
----
+<!--more-->
 
 I'm working on an app that listens to Buildkite `job.scheduled` webhook and creates a Kubernetes Job to execute it.
 
@@ -16,7 +16,7 @@ The idea is to have a "scale-to-zero" approach, with the max number of nodes bei
 
 Buildkite has a pretty nice CLI which allows us to do start the agent with something like:
 
-```
+```shell
 buildkite-agent-entrypoint start \
 	--disconnect-after-job \
 	--disconnect-after-idle-timeout=50
@@ -40,7 +40,7 @@ The idea is actually pretty simple:
 
 So, what we do, in YAML, is:
 
-```
+```yaml
 # ...
 containers:
 - name: agent

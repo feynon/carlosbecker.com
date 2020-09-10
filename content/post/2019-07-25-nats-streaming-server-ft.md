@@ -8,7 +8,7 @@ city: Marechal Cândido Rondon
 
 I wanted to set up a fault tolerant [nats-streaming-server](https://github.com/nats-io/nats-streaming-server), but couldn't find a "quick" guide on how to do it - so here we are.
 
----
+<!--more-->
 
 I would also recommend you to read a [previous post](https://carlosbecker.com/posts/nats-streaming-server-cluster/) I wrote about how to do it using the clustering method.
 
@@ -65,7 +65,8 @@ streaming {
   dir: /opt/nats_state
   ft_group: test
 }
-``````
+```
+```
 ; b.conf
 port: 4222
 cluster {
@@ -88,15 +89,16 @@ Note that each config listens on different ports:
 
 And then you can just start each node pointing to the specific config file:
 
-```
+```shell
 $ ./nats-streaming-server -c a.conf
-``````
+```
+```shell
 $ ./nats-streaming-server -c b.conf
 ```
 
 We can then run our client from the [previous post](https://carlosbecker.com/posts/nats-streaming-server-cluster/) to test it:
 
-```
+```shell
 $ go run main.go nats://localhost:4221 nats://localhost:4222
 ```
 

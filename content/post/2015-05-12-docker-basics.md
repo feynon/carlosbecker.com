@@ -55,7 +55,7 @@ Supposing you have 10 Docker containers based on, let's say, a 1Gb Ubuntu Server
 
 So, if you pull, let's say, the `bobrik/image-cleaner` image, you will see something like:
 
-```
+```shell
 $ docker pull bobrik/image-cleaner
 Pulling repository bobrik/image-cleaner
 28b7cd17052f: Download complete
@@ -80,14 +80,14 @@ A Dockerfile is a text file that contains all the commands you would normally ex
 
 The sintax is pretty simple (of course this is a very basic example), for example:
 
-```
+```docker
 FROM busybox
 ENTRYPOINT echo "Hello world"
 ```
 
 You can then build this image, tagging it as `hello-world`:
 
-```
+```shell
 $ docker build -t hello-world .
 Sending build context to Docker daemon 2.048 kB
 Sending build context to Docker daemon
@@ -98,7 +98,7 @@ cf2616975b4a: Pull complete
 8c2e06607696: Already exists
 Digest: sha256:38a203e1986cf79639cfb9b2e1d6e773de84002feea2d4eb006b52004ee8502d
 Status: Downloaded newer image for busybox:latest
- ---> 8c2e06607696
+ <!--more-->> 8c2e06607696
 Step 1 : ENTRYPOINT echo Hello World
  ---> Running in b29590127d4f
  ---> 7fa687f18c73
@@ -108,14 +108,14 @@ Successfully built 7fa687f18c73
 
 Now you can finally run it:
 
-```
+```shell
 $ docker run -t hello-world
 Hello World
 ```
 
 If you create a Docker Registry account and if this wasn't a totally useless image, you could a so push it with something like:
 
-```
+```shell
 $ docker push caarlos0/hello-world
 ```
 

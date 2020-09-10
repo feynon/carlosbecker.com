@@ -76,7 +76,7 @@ Even easier, just copy the respective `js` and `css` files to `javascripts` and 
 Now, create some rails app, and add the following to the Gemfile:
 
 ```
-gem ‘somelibrary’, path: ‘absolute/path/to/your/gem’
+gem ‘somelibrary', path: ‘absolute/path/to/your/gem'
 ```
 
 And, off course, add the respective imports in your `application.js` and `application.css` files.

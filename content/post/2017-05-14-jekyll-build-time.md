@@ -20,7 +20,7 @@ Let's see how much time it takes right now:
 
 ```
 Filename                                                  | Count |    Bytes |  Time
-----------------------------------------------------------+-------+----------+------
+<!--more-->-------------------------------------------------------+-------+----------+------
 _layouts/default.html                                     |   117 | 3155.23K | 9.095
 _includes/head.html                                       |   118 | 2242.11K | 9.025
 _layouts/compress.html                                    |   117 | 3094.18K | 0.610
@@ -93,7 +93,7 @@ Down to 4 secs! Can we improve it even more?
 
 I had a code block like this in my `default.html`:
 
-```
+```ruby
 {% if site.google_analytics %}
 <script type="text/javascript">
   // the default google analytics script
@@ -134,7 +134,7 @@ The highlighter can be replaced by `highlight.js`, which also seems to work bett
 
 First, disable the highlighter in the `_config.yml` file:
 
-```
+```yaml
 kramdown:
   syntax_highlighter_opts:
     disable : true
@@ -142,7 +142,7 @@ kramdown:
 
 Then, add the `script` and `link` tags into my `_post.html` layout (including custom langs and theme):
 
-```
+```html
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/darcula.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/go.min.js"></script>

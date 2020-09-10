@@ -9,7 +9,7 @@ city: Joinville
 I've started [GoReleaser](http://goreleaser.com/) almost 2 years ago. This is a summary of (some)
 things I've learned down the road.
 
----
+<!--more-->
 
 RenderImage when len(FileIDs) == 0 NYI
 ![](goreleaserfundo-.png)
@@ -60,7 +60,7 @@ I'm not sure that was a good idea, but it is confusing. Maybe I could at least r
 
 A good example is the Docker pipe tests, in which I have things like this:
 
-```
+```go
 var table = map[string]struct {
   dockers     []config.Docker
   publish     bool
@@ -85,13 +85,13 @@ I've been slowly fixing those, so the fake data is unique - most times by using 
 
 A cool trick I've learned reading other's people code: the `errChecker` interface I have on this suite:
 
-```
+```go
 type errChecker func(*testing.T, error)
 ```
 
 I also have some "helper" functions:
 
-```
+```go
 var shouldErr = func(msg string) errChecker {
   return func(t *testing.T, err error) {
     assert.Error(t, err)
@@ -105,7 +105,7 @@ var shouldNotErr = func(t *testing.T, err error) {
 
 Then, on my cases I can have things like:
 
-```
+```go
 "successfull test case": {
   // omitted details for the sake of brevity
   assertError: shouldNotErr,
@@ -211,7 +211,7 @@ Later on, I've added the `artifact` package, which abstract this into a simple s
 
 So, now if I want to upload all Linux packages for `amd64` in a pipe, for example, I can:
 
-```
+```go
 ctx.Artifacts.Filter(
   artifact.And(
     artifact.ByGoarch("amd64"),
@@ -222,7 +222,7 @@ ctx.Artifacts.Filter(
 
 Before that, it was stored as a `map[string]map[string][]Binary`, so I had to do things like:
 
-```
+```go
 for platform, binaries := range ctx.Binaries {
   if !strings.Contains(platform, "amd64") {
     continue

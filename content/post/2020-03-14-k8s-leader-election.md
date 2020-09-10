@@ -8,7 +8,7 @@ city: Joinville
 
 Ever needed a simple leader election mechanism on something that will run on a Kubernetes cluster? There's an easy way to do that!
 
----
+<!--more-->
 
 A couple of days ago I was working on an app that needed to do some work from time to time, but only in a single replica.
 
@@ -18,7 +18,7 @@ I considered a couple of different things, like creating a `CronJob` and another
 
 After a some minutes thinking about running an `etcd` backend and all that, I though "well maybe Kubernetes has something for that already".
 
-And then I found the `[coordination.k8s.io](http://coordination.k8s.io/)` API, and the `[leaderelection](https://pkg.go.dev/k8s.io/client-go/tools/leaderelection)` [package in the Go SDK](https://pkg.go.dev/k8s.io/client-go/tools/leaderelection).
+And then I found the [coordination.k8s.io](http://coordination.k8s.io/) API, and the [leaderelection package in the Go SDK](https://pkg.go.dev/k8s.io/client-go/tools/leaderelection).
 
 ## Leader Election
 
@@ -34,7 +34,7 @@ I prefer to use the pod name.
 
 To do that, we can accept a flag, like this:
 
-```
+```go
 package main
 
 import "flag"
@@ -47,7 +47,7 @@ func main() {
 
 And then pass it on the the deployment:
 
-```
+```yaml
 spec:
   template:
     spec:
@@ -68,14 +68,14 @@ This way, the identifier will always be the pod name.
 
 First thing we need to do is to create a `context`:
 
-```
+```go
 ctx, cancel := context.WithCancel(context.Background())
 defer cancel()
 ```
 
 Then, we need to create the `lock` object:
 
-```
+```go
 var lock = &resourcelock.LeaseLock{
 	LeaseMeta: metav1.ObjectMeta{
 		Name:      "my-lock",
@@ -90,7 +90,7 @@ var lock = &resourcelock.LeaseLock{
 
 Finally, we use the `leaderelection` API to do the rest:
 
-```
+```go
 leaderelection.RunOrDie(ctx, leaderelection.LeaderElectionConfig{
 	Lock:            lock,
 	ReleaseOnCancel: true,
@@ -128,7 +128,7 @@ The default Service Account does not have access to the coordination API, so we'
 
 Something like this:
 
-```
+```yaml
 apiVersion: v1
 automountServiceAccountToken: true
 kind: ServiceAccount
@@ -166,7 +166,7 @@ subjects:
 
 And then we just need to use that account on our deployment:
 
-```
+```yaml
 # ...
 spec:
   template:
@@ -183,7 +183,7 @@ And that should be it.
 
 Deploying all that, you can see the lease being created and changing over time:
 
-```
+```go
 λ k describe lease
 Name:         my-lock
 Namespace:    default
@@ -213,19 +213,19 @@ You can find a complete working example on [this GitHub Repository](https://gith
 
 You can apply it with:
 
-```
+```shell
 kubectl apply -f kube/
 ```
 
 And then watch the pods logs:
 
-```
+```shell
 stern leaderz
 ```
 
 And see the lease:
 
-```
+```shell
 kubectl describe lease my-lock
 ```
 

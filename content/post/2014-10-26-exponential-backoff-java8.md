@@ -15,7 +15,7 @@ So, I used Java 8 Functional Interfaces to implement this in a not-so-ugly way, 
 
 ### The `ExponentialBackOffFunction` Functional Interface:
 
-```
+```java
 import java.rmi.RemoteException;
 
 @FunctionalInterface
@@ -26,7 +26,7 @@ public interface ExponentialBackOffFunction<T> {
 
 ### The `ExponentialBackOff` main class:
 
-```
+```java
 import static java.util.Arrays.asList;
 
 import java.net.SocketTimeoutException;
@@ -75,7 +75,7 @@ public final class ExponentialBackOff {
 
 ### Usage:
 
-```
+```java
 ExponentialBackoff.execute( () -> work() );
 ```
 

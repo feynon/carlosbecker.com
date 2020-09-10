@@ -12,7 +12,7 @@ Let's imagine we have two classes, and one depends on another:
 
 ### Another.java:
 
-```
+```java
 @Log
 public class Another {
     public final void doSomething() {
@@ -23,7 +23,7 @@ public class Another {
 
 ### One.java:
 
-```
+```java
 @Log
 @RequiredArgsConstructor
 public class One {
@@ -43,7 +43,7 @@ In Java world, it's pretty common to use Mockito for such cases. A common approa
 
 ### OneTest.java:
 
-```
+```java
 public final class OneTest {
     @Mock
     private transient Another another;
@@ -63,11 +63,11 @@ public final class OneTest {
 }
 ```
 
-It works, but it's unnecessary to call the `One` constructor by hand, we can just use `[@InjectMocks](https://static.javadoc.io/org.mockito/mockito-core/2.5.0/org/mockito/InjectMocks.html)` instead:
+It works, but it's unnecessary to call the `One` constructor by hand, we can just use [@InjectMocks](https://static.javadoc.io/org.mockito/mockito-core/2.5.0/org/mockito/InjectMocks.html) instead:
 
 ### OneTest.java (2):
 
-```
+```java
 public final class OneTest {
     @Mock
     private transient Another another;

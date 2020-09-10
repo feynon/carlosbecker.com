@@ -11,7 +11,7 @@ People suddenly start this thing that looks pretty much like a war. Generation X
 I believe that there is basically two ignored facts here:
 
 - The Y's were raised by the X's, so, the Y's are basically what the X's needed and/or what the current environment needs. Environment that has been molded by the X's;
-- Wanting or not, Y's will take the place of the X's. At the same time the next generation will start to take the place of the Y's. That’s just the nature. People get old and die while children are born and grown.
+- Wanting or not, Y's will take the place of the X's. At the same time the next generation will start to take the place of the Y's. That's just the nature. People get old and die while children are born and grown.
 
 The other day I was chatting with my boss, a X, exactly about this subject, due to a post we saw at Facebook. We both agreed that this kind of fight between generations is totally unnecessary. The generations aren't better or worse, just different.
 
@@ -25,6 +25,6 @@ That doesn't make one generation better or worse. I see the meritocracy thing as
 
 In the other hand, be loyal to a company usually leads to more trust. Be patient could also leads to less stress (I guess) and maybe it could help while solving some specific type of problems. Can't follow the technology evolution could also be good: some fresh-new-technology solutions could not be better than the old ones.
 
-What I see is that the X’s seems to feel fear. Fear from being replaced. Fear to not be the smarter and most respected person in the room. **Fear**.
+What I see is that the X's seems to feel fear. Fear from being replaced. Fear to not be the smarter and most respected person in the room. **Fear**.
 
 But the thing is: don't matter how much fear you feel, nature will do its job. You and I will be dead sooner or later and the next generations will rule the world. It's hard to accept, but we cannot do anything about it, so, stop fighting it and just let it be.

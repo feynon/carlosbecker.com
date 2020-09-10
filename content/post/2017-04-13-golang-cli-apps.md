@@ -29,7 +29,7 @@ Maybe it is, but, right now [urfave/cli](https://github.com/urfave/cli) is worki
 
 A basic tree would look like:
 
-```
+```shell
 .
 ├── Makefile
 ├── cmd
@@ -40,7 +40,8 @@ A basic tree would look like:
 ├── goreleaser.yml
 ├── Gopkg.lock
 └── Gopkg.toml
-```- `Makefile`: contains common tasks for the project, like formating, testing, linting, etc;
+```
+- `Makefile`: contains common tasks for the project, like formating, testing, linting, etc;
 - `cmd/example/main.go`: is the cli entrypoint;
 - `example.go` and `example_test.go`: is the "library" of the application and its respective files. Could be more than one file, of course;
 - `goreleaser.yml`: the GoReleaser configuration;
@@ -54,7 +55,7 @@ To help me (and hopefully others) start projects faster, I created [caarlos0/exa
 
 To use it, we can simply:
 
-```
+```shell
 $ cd $GOPATH/src/github.com/myuser
 $ git clone git@github.com:caarlos0/example.git myapp
 $ cd myapp
@@ -63,14 +64,14 @@ $ ./script/setup myuser MyApp # notice the case on the second arg
 
 It is actually a working app (that does nothing), to run it:
 
-```
+```shell
 $ make setup
 $ go run ./cmd/example/main.go -h
 ```
 
 Now, we create a GitHub repository for our new app and push it:
 
-```
+```shell
 $ git push origin master
 ```
 
@@ -102,7 +103,7 @@ Yep, just as simple.
 
 Now, we need commit and push something to fire a Travis build and check if both Travis and Codecov badges work:
 
-```
+```shell
 $ git commit --allow-empty -m 'fire travis build'
 $ git push origin master
 ```
@@ -121,7 +122,7 @@ It is the "newcomer guide" and usually helps having more contributions, so, it's
 
 tl;dr: there are some make tasks:
 
-```
+```shell
 $ make setup # install tools and deps
 $ make fmt # format code
 $ make test # runs tests
@@ -156,7 +157,7 @@ Finally, we need to change the `gorelaser.yml` file, pointing to our new homebre
 
 Now, commit and push everything:
 
-```
+```shell
 $ git add goreleaser.yml
 $ git commit -m 'setup goreleaser'
 $ git push origin master
@@ -164,7 +165,7 @@ $ git push origin master
 
 To fire a release, GoReleaser expects us to create semantic versioned tags, for example, `v1.2.3`. We can do that using either the command line or GitHub web interface:
 
-```
+```shell
 $ git tag v1.0.0
 $ git push origin v1.0.0
 ```

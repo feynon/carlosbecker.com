@@ -14,7 +14,7 @@ I particularly believe they should remove this package and put it in a `junit-co
 
 This is pretty straightforward with a simple bash script:
 
-```
+```shell
 #!/bin/bash
 for file in $(git grep --break --heading "import junit." | grep java); do
   sed -i.bak s/junit.framework/org.junit/g $file
@@ -30,7 +30,7 @@ A simple way to do that is using the [restrict-maven-plugin](https://github.com/
 
 An example of configuration for maven will look like this:
 
-```
+```xml
 <plugin>
   <groupId>com.yamanyar</groupId>
   <artifactId>restrict-maven-plugin</artifactId>

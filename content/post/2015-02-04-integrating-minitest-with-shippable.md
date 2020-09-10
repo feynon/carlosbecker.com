@@ -18,7 +18,7 @@ So, this is my attempt to compile all that in a *how-to* like blog post.
 
 First thing we need is the `.shippable.yml` file. Mine looks like this:
 
-```
+```yaml
 language: ruby
 rvm:
   - 2.1.2
@@ -33,7 +33,7 @@ The `env` is required for that nice tabs I said before to work.
 
 Don't forget to add the required stuff to `Gemfile`:
 
-```
+```ruby
 source "https://rubygems.org"
 gem "rake" # make sure you have rake here!
 # ...
@@ -47,7 +47,7 @@ end
 
 I also created a `Rakefile` (so I can call it in the `.shippable.yml` file):
 
-```
+```ruby
 require 'rake/testtask'
 Rake::TestTask.new do |t|
   t.pattern = "spec/*_spec.rb"
@@ -56,7 +56,7 @@ end
 
 The last thing we need is the `spec/spec_helper.rb` file:
 
-```
+```ruby
 require "simplecov"
 require "simplecov-csv"
 SimpleCov.formatters = [

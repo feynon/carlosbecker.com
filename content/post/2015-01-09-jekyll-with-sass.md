@@ -18,8 +18,8 @@ So, I moved all those files to a `_scss` subfolder, and changed their extensions
 
 Then, in my `public/css` folder, I created a `styles.scss` like this one:
 
-```
----
+```sass
+<!--more-->
 # Needed for jekyll...
 ---
 
@@ -31,7 +31,7 @@ Then, in my `public/css` folder, I created a `styles.scss` like this one:
 
 Also, I added the following section to my `_config.yml`:
 
-```
+```yaml
 sass:
   sass_dir: _scss
   style: :compressed
@@ -39,7 +39,7 @@ sass:
 
 Finally, changed my `_includes/head.html` to import only the new `styles.css`:
 
-```
+```html
 <link rel="stylesheet" href="/public/css/styles.css">
 ```
 

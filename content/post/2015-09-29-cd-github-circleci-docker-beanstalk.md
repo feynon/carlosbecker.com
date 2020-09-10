@@ -21,7 +21,7 @@ Let's see how this can be done using [GitHub](http://github.com/), [CircleCI](ht
 
 The very first part of all this process is the `Dockerfile`. This file describes the software needed to run our service, also how the service is deployed inside it:
 
-```
+```docker
 FROM alpine:3.2
 
 ENV GOPATH=/gopath \
@@ -48,7 +48,7 @@ As you can see, I get all dependencies, do what I need with them and clean it up
 
 For the `awsebcli` to work, after the app is already created, we need a `Dockerrun.aws.json` file. Mine looks like this:
 
-```
+```docker
 {
   "AWSEBDockerrunVersion": "1",
   "Image": {
@@ -79,7 +79,7 @@ The `circle.yml` file must do the following:
 
 That said, mine looks like this:
 
-```
+```json
 machine:
   services:
     - docker

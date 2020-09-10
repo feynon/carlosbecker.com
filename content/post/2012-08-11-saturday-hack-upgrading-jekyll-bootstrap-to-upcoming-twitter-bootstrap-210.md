@@ -14,7 +14,7 @@ HELL YEAH, finally a new version!
 
 So, today is saturday and I has nothing to do that could made the world a better place. Let's do this!
 
-I'll describe here my ‘steps’ to update jekyll to the new version!
+I'll describe here my ‘steps' to update jekyll to the new version!
 
 ### No more talks, let's do this!
 

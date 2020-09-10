@@ -8,14 +8,14 @@ city: Marechal Cândido Rondon
 
 In Go, it's dead simple to get the value from an environment variable:
 
-```
+```go
 fmt.Println(os.Getenv("HOME"))
 ```
 
 But, sometimes you have default values… so you would have to do something
 like this:
 
-```
+```go
 home := os.Getenv("HOME")
 if home == "" {
   home = "THE DEFAULT HOME"
@@ -29,7 +29,7 @@ I found this to be extremely boring.
 
 So, I created a small lib that let me do this:
 
-```
+```go
 package main
 
 import (

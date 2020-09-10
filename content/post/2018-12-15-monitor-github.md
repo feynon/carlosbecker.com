@@ -9,16 +9,16 @@ city: Joinville
 I have written some exporters to observe things on GitHub. This is how and
 why.
 
----
+<!--more-->
 
 We will talk about 2 things:
 
-1. other projects’ releases;
-2. my projects’ releases;
+1. other projects' releases;
+2. my projects' releases;
 
 So let's get started!
 
-## Other Projects’ Releases
+## Other Projects' Releases
 
 On my work and personal projects I use **a lot** of OpenSource projects. It
 is really hard to catch up with latest security updates and new features of
@@ -35,7 +35,7 @@ setup to let me know when it's time to update things! I just need to add
 the repositories and semantic versioning constraints to a YAML file and create
 the alerting rules for Prometheus, for example:
 
-```
+```yaml
 - alert: SoftwareOutOfDate
   expr: version_up_to_date == 0
   for: 1s

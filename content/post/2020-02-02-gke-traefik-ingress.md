@@ -8,13 +8,13 @@ city: Joinville
 
 I recently fall into a trap using Traefik as the ingress controller in one cluster. I decided to write about it so maybe it helps someone.
 
----
+<!--more-->
 
 ## Context
 
 We got the architecture like this:
 
-```
+```shell
 Cloudflare -> Traefik LoadBalancer -> Traefik Pods -> App Pods
 ```
 
@@ -71,11 +71,11 @@ So, what we need, ideally, is to have only the nodes that are actually running T
 
 After digging a bit, I found out about a setting called `externalTrafficPolicy`.
 
-The default for it is `Cluster`, which makes the traffic being NATed. The main reason to change this is, usually, because you want to use  `[traefik.ingress.kubernetes.io/whitelist-source-range](http://traefik.ingress.kubernetes.io/whitelist-source-range)` to filter traffic, but, since by default the requests get NATed, you can't, because you won't get the correct client IP.
+The default for it is `Cluster`, which makes the traffic being NATed. The main reason to change this is, usually, because you want to use  [traefik.ingress.kubernetes.io/whitelist-source-range](http://traefik.ingress.kubernetes.io/whitelist-source-range) to filter traffic, but, since by default the requests get NATed, you can't, because you won't get the correct client IP.
 
 Setting `externalTrafficPolicy` to `Local` has two effects:
 
-1. traffic is no longer NATed - which means  `[traefik.ingress.kubernetes.io/whitelist-source-range](http://traefik.ingress.kubernetes.io/whitelist-source-range)` now works;
+1. traffic is no longer NATed - which means  [traefik.ingress.kubernetes.io/whitelist-source-range](http://traefik.ingress.kubernetes.io/whitelist-source-range) now works;
 2. oh, and also: **only the nodes that have Traefik running in then will pass the load balancer healthchecks.**
 
 Which, yeah, fixes our issue.

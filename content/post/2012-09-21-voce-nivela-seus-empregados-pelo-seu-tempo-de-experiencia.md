@@ -36,7 +36,7 @@ Eu conheço diversos exemplos dos tipos aqui citados. Conheço diversos "júnior
 
 Mas e aí caros leitores… qual tipo vocês preferem? Qual destes tipos melhor se encaixa com o seu perfil?
 
-Minha dica para vossas senhorias: **Não sejam fracos. Não se acomodem. Não deixem a rotina vencer vocês. ‘Code hard, die young.’ Estude. Estude mais. Espera aí, já falei ESTUDE? Então cara, ESTUDE.**
+Minha dica para vossas senhorias: **Não sejam fracos. Não se acomodem. Não deixem a rotina vencer vocês. ‘Code hard, die young.' Estude. Estude mais. Espera aí, já falei ESTUDE? Então cara, ESTUDE.**
 
 E vossa senhoria, caro empresário, recomendo-lhe fortemente procurar o tipo de profissional que não é o acomodado. Não importa o ~nível~: Júnior, Pleno, Sênior. O que importa é a ambição. E, claro, quando achar um cara assim, **pague-o** enquanto é tempo. Esse tipo de pessoa não tem medo de sair por aí explorar outras partes do mundo, e você não vai "segurá-lo" na sua empresa com uma merreca.
 

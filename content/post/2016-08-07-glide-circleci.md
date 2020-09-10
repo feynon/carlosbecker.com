@@ -16,7 +16,7 @@ The tips are:
 
 The final `circle.yml` would look like this:
 
-```
+```yaml
 machine:
   environment:
     IMPORT_PATH: "/home/ubuntu/.go_workspace/src/github.com/myuser"

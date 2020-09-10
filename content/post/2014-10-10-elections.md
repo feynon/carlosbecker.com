@@ -12,7 +12,7 @@ Well, last sunday (Oct 5) was the brazilian elections. I was doing nothing, so I
 
 Besides the reverse clean-code done by the TSE (Superior Electoral Court), it was pretty easy:
 
-```
+```ruby
 require 'net/http'
 require 'uri'
 require 'json'
@@ -21,12 +21,13 @@ class String; def percent_of(n) "#{(self.to_f / n.to_f * 100.0).round(2)}%"; end
 begin
   data = JSON(Net::HTTP.get_response(uri).body)
   system('clear')
-  puts "\n\n----\n#{data['ht']} - #{data['ea'].percent_of(data['e'])} dos votos apurados\n----"
+  puts "\n\n<!--more-->-\n#{data['ht']} - #{data['ea'].percent_of(data['e'])} dos votos apurados\n----"
   data['cand'].take(3).each do |candidate|
     puts "[#{candidate['n']}] #{candidate['nm']} - #{candidate['v'].percent_of(data['vv'])}"
   end
 end while sleep(60)
-``````
+```
+```ruby
 require 'net/http'
 require 'uri'
 require 'json'

@@ -21,7 +21,7 @@ Most of the language might look strange for people who just came from Java or Ru
 
 I think the worst of them is the first capitalized character modifier:
 
-```
+```go
 func privateFunction() {
   fmt.Println("private function...")
 }
@@ -36,7 +36,7 @@ Yes, anything starting with a capitalized letter will be public. Doesn't matter 
 
 It's also a little strange the way you declare variables and method parameters:
 
-```
+```go
 // declared an empty variable
 var name string
 
@@ -54,7 +54,7 @@ func sum(a int, b int) int {
 
 The way you declare a method in a `struct` is also different from what I was used to in other languages:
 
-```
+```go
 // this is how you define a type
 type Person struct {
   Name string
@@ -87,7 +87,7 @@ But, the nicest thing I played with until now surely is `goroutines`.
 
 A `goroutine` is basically a lightweight thread of execution. I used it to support a list of bundles coming from `STDIN` (like Antigen does):
 
-```
+```shell
 $ antibody apply < bundles.txt
 ```
 
@@ -97,7 +97,7 @@ Antibody will iterate the lines and check if the respective folder exists, in ca
 
 This (cloning stuff) can be very slow, so, I did it with `goroutines`, so the lines could be checked concurrently. I also used a `sync.WaitGroup` to wait for all lines to complete processing before exit (avoiding premature termination):
 
-```
+```go
 func process(bundle string, home string, wg *sync.WaitGroup) {
   defer wg.Done()
   Bundle(bundle, home)

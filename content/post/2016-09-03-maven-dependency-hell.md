@@ -20,7 +20,7 @@ Let's use `maven-depedency-plugin` to find obvious (and easy) stuff to fix:
 
 ### 1. duplicated dependencies
 
-```
+```shell
 mvn dependency:analyze-duplicate
 ```
 
@@ -28,7 +28,7 @@ Just remove what's duplicated and that's it.
 
 ### 2. used and declared; used and undeclared; unused and declared
 
-```
+```shell
 mvn dependency:analyze
 ```
 
@@ -46,7 +46,7 @@ This is the harder, as maven doesn't have a plugin to find them easily.
 
 So, I used a little bit of bash trickery to do the job for me:
 
-```
+```shell
 mvn dependency:list -Dsort=true |
   grep "^\[INFO\]    " |
   awk '{print $2}' |
@@ -60,7 +60,7 @@ mvn dependency:list -Dsort=true |
 
 Line-by-line, explained version:
 
-```
+```shell
 mvn dependency:list -Dsort=true | # list all deps
   grep "^\[INFO\]    " |          # grep for the deps list only
   awk '{print $2}' |              # remove the INFO prefix
@@ -88,13 +88,13 @@ You'll end up with a list like this:
 
 Now, for each of these deps, you'll have to run:
 
-```
+```shell
 mvn dependency:tree -Dincludes=DEP
 ```
 
 as in
 
-```
+```shell
 mvn dependency:tree -Dincludes=org.mapstruct:mapstruct
 ```
 

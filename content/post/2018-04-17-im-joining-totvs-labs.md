@@ -8,7 +8,7 @@ city: Mountain View
 
 Everything in life eventually comes to an end, including life itself. This is not that kind of post, though.
 
----
+<!--more-->
 
 After 4 years and a lot of work, I'm leaving [ContaAzul](https://contaazul.com/).
 
@@ -22,7 +22,7 @@ My last day at ContaAzul will be this Friday (Apr 20th).
 
 It's time to face the new challenges ahead!
 
-Starting next week (Apr 23th), I'll be joining [TOTVS Labs](http://www.totvslabs.com/)! I’ll work remotely as a Site Reliability Engineer.
+Starting next week (Apr 23th), I'll be joining [TOTVS Labs](http://www.totvslabs.com/)! I'll work remotely as a Site Reliability Engineer.
 
 I'm excited to see what we will accomplish together!
 

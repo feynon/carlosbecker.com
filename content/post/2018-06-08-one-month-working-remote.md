@@ -8,7 +8,7 @@ city: Joinville
 
 It has been one month since I started working fully remote, and I think I learned some things I can share.
 
----
+<!--more-->
 
 I break the post down in good, bad and lessons learned:
 

@@ -142,7 +142,8 @@ Now, lets create a UIBinder class to made our amazing test widget! Create a new 
     </b:Container>
   </g:HTMLPanel>
 </ui:UiBinder>
-``````
+```
+```
 public class ExampleUiBinder extends Composite {
   interface ExampleUiBinderUiBinder
       extends UiBinder<HTMLPanel, ExampleUiBinder> {

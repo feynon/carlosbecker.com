@@ -24,7 +24,7 @@ First, install the [telegram-client](https://telegram.org/dl/cli) following thei
 
 Then, write your script. Mine looks like this:
 
-```
+```bash
 #!/bin/bash
 TG=/opt/tg
 

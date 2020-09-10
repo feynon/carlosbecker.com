@@ -8,7 +8,7 @@ city: Joinville
 
 When [first announced GoReleaser](https://carlosbecker.com/posts/goreleaser/) roughly 1 year ago, on January 2017, I never thought it would be somewhat famous.
 
----
+<!--more-->
 
 I was just solving a problem I had like I always do.
 

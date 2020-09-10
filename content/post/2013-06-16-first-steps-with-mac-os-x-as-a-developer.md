@@ -36,7 +36,8 @@ $ ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 
 ```
 $ brew install grc coreutils spark z ack git
-```- grc is tool to colorize things. You can easily use it by sourcing `$(brew --prefix)/etc/grc.bashrc`;
+```
+- grc is tool to colorize things. You can easily use it by sourcing `$(brew --prefix)/etc/grc.bashrc`;
 - coreutils is kinda obvious;
 - spark lets you echo bar charts in your terminal.. might be useful time to time;
 - z shows you the most folders you access most and let's you easily access any of them;

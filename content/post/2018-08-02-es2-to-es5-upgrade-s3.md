@@ -8,7 +8,7 @@ city: Joinville
 
 Migrating an ElasticSearch cluster from version 2 to 5 can be challenging, even more if it is a big cluster.
 
----
+<!--more-->
 
 In this post we will explore one of the strategies that can be used to do
 such migration, setting a up a playground environment in which we can learn
@@ -47,7 +47,7 @@ So, without further due, let's get started!
 First, we need an ES2 cluster. For testing purposes, we'll create a 4 node
 cluster, one master and three data nodes:
 
-```
+```yaml
 # es2/docker-compose.yml
 version: '2.2'
 
@@ -77,7 +77,7 @@ also depends on some config files.
 
 The `Dockerfile` looks like this:
 
-```
+```docker
 # es2/Dockerfile
 FROM elasticsearch:2.4.6-alpine
 # cloud-aws is required for s3 snapshots
@@ -100,7 +100,7 @@ AWS_SECRET_KEY=your secret
 
 The `data.yml` file:
 
-```
+```yaml
 # es2/data.yml
 network.host: 0.0.0.0
 cluster.name: beckerz
@@ -112,7 +112,7 @@ node.data: true
 
 And finally the `master.yml` file:
 
-```
+```yaml
 network.host: 0.0.0.0
 cluster.name: beckerz
 discovery.zen.minimum_master_nodes: 1
@@ -122,7 +122,7 @@ node.data: false
 
 So, we should have a `es2` folder with the following structure:
 
-```
+```shell
 .
 └── es2
     ├── .env
@@ -134,13 +134,13 @@ So, we should have a `es2` folder with the following structure:
 
 Now, we can just up our env with:
 
-```
+```shell
 docker-compose up
 ```
 
 You can check that the cluster is green:
 
-```
+```shell
 curl -s "localhost:9200/_cluster/health"
 ```
 
@@ -151,7 +151,7 @@ master.
 
 Let's create a `customer` index and add some fake data to it:
 
-```
+```shell
 curl -sXPUT 'http://localhost:9200/customer/?pretty' -d '{
   "settings" : {
       "index" : {
@@ -181,7 +181,7 @@ Once that is done, time to snapshot it!
 The first thing you need to do is to create a repository, let's call it
 `backups`:
 
-```
+```shell
 curl -sXPUT "localhost:9200/_snapshot/backups?pretty" -d'
 {
   "type": "s3",
@@ -195,13 +195,13 @@ curl -sXPUT "localhost:9200/_snapshot/backups?pretty" -d'
 
 You can check it with:
 
-```
+```shell
 curl -s "localhost:9200/_snapshot?pretty"
 ```
 
 Now, let's snapshot everything:
 
-```
+```shell
 curl -sXPUT "localhost:9200/_snapshot/backups/snapshot_1?wait_for_completion=true&pretty"
 ```
 
@@ -217,7 +217,7 @@ its URL.
 We'll create another 4-node cluster using docker-compose, this time running
 ES5:
 
-```
+```yaml
 # es5/docker-compose.yml
 version: '2.2'
 
@@ -249,7 +249,7 @@ services:
 We can use the same `.env`, `master.yml` and `data.yml` file from our ES2 env.
 The `Dockerfile` is different though:
 
-```
+```docker
 # es5/Dockerfile
 FROM elasticsearch:5.6.10-alpine
 # repository-s3 is required for s3 snapshots
@@ -258,7 +258,7 @@ RUN /usr/share/elasticsearch/bin/elasticsearch-plugin install --batch repository
 
 So we will have the following structure now:
 
-```
+```shell
 .
 ├── es2
 │   ├── .env
@@ -276,13 +276,13 @@ So we will have the following structure now:
 
 Great, let's fire this cluster up!
 
-```
+```shell
 docker-compose up
 ```
 
 You can check that the cluster is green:
 
-```
+```shell
 curl -s "localhost:9400/_cluster/health"
 ```
 
@@ -295,7 +295,7 @@ We should now have one master and three data nodes running ES5 as well!
 For that, we need to create a repository with the same arguments we used on
 ES2.
 
-```
+```shell
 curl -sXPUT "localhost:9400/_snapshot/backups?pretty" -d'
 {
   "type": "s3",
@@ -313,13 +313,13 @@ can have write permissions into the bucket at a time.
 
 And then, finally, restore that snapshot:
 
-```
+```shell
 curl -sXPOST "localhost:9400/_snapshot/backups/snapshot_1/_restore?wait_for_completion=true&pretty"
 ```
 
 You can always check that documents count and settings match and etc:
 
-```
+```shell
 curl -s "localhost:9200/customer/_settings?pretty"
 curl -s "localhost:9400/customer/_settings?pretty"
 curl -s "localhost:9200/_count?pretty"

@@ -10,7 +10,7 @@ There are a lot of Java API's and Frameworks which rely in `static` methods and 
 
 For example, it is pretty common to write unit tests like this:
 
-```
+```java
 package blah;
 
 import static org.junit.Assert.assertTrue;
@@ -30,7 +30,7 @@ While it's kind of pretty to `import static org.junit.Assert.assertTrue`  and us
 
 What I believe not to be a good thing is this:
 
-```
+```java
 package foo;
 
 public enum FooType {
@@ -40,7 +40,7 @@ public enum FooType {
 
 Later:
 
-```
+```java
 package bar;
 
 import static foo.FooType.*;

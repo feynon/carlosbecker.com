@@ -8,7 +8,7 @@ city: Joinville
 
 After some time, I finally decided to move my blog from [Jekyll](https://jekyllrb.com/) to [Hugo](https://gohugo.io/).
 
----
+<!--more-->
 
 That was probably the best thing I did in the past few weeks. My Jekyll builds were really slow, and the feedback loop was too big. I get easily distracted, so, I was not writing much.
 
