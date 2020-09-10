@@ -16,8 +16,7 @@ Well, I'm pretty happy, except that I don't had those awesome bad-ass animations
 
 ## [turbolinks_transitions](https://github.com/caarlos0/turbolinks_transitions)
 
-RenderImage when len(FileIDs) == 0 NYI
-![](turbolinks_transition-.gif)
+![](/public/images/animating-page-transitions-in-turbolinks/77a541f6-e264-4b6d-97a1-508dc406b22a.gif)
 
 Just a cool animated gif with the example!
 

@@ -22,7 +22,7 @@ In the weekend, I sit next to a pack of beers and a considerable amount of coffe
 
 You can see a Pull Request example [here](https://github.com/caarlos0/coverage-maven-plugin/pull/16). All my comments in this PR are actually the plugin working via the Github API.
 
-![](Untitled-fe7b8f08-9238-4534-abda-0036893496ad.png)
+![](/public/images/mvn-pr-coverage-blammer/8c56d9b5-674a-47b6-8719-b96c11bd6721.png)
 
 We already have [Sonar](http://lepaysmaudit.blogspot.com.br/2014/03/getting-pull-request-and-sonar-playing.html) and [Code Formatter](http://lepaysmaudit.blogspot.com.br/2014/03/one-formatter-to-rule-them-all.html) Maven Plugins (both written by [@velo](http://github.com/velo)) that will fail the build in case of code style changes and report code with bugs and other issues, respectively, so, it makes sense to us to add coverage to the party.
 

@@ -8,7 +8,7 @@ city: Joinville
 
 This is just a quick overview of how I did it in antibody's homepage.
 
-![](Untitled-a2904d07-3fb0-4bdb-bda5-7ed0d0614782.png)
+![](/public/images/cd-github-circleci-docker-beanstalk/068cd2bd-3359-4789-bfaa-751713064751.png)
 
 The site has a very simple `index.html` plus a service that can discover and download the latest
 [antibody](https://github.com/getantibody/antibody) version from GitHub releases. Not sure how relevant this is, but the service is written in Go.
@@ -113,19 +113,19 @@ I tag the image and the deployment with the CircleCI build number, so I can trac
 
 For example, at the time I wrote this, tag `63` was deployed to Elastic Beanstalk:
 
-![](Untitled-ad5de2af-ea68-4d1e-8acc-519312f79b46.png)
+![](/public/images/cd-github-circleci-docker-beanstalk/276ad772-0e69-4398-9898-f0ad44d3110b.png)
 
 Which I know is deploying the Docker image tag `63`:
 
-![](Untitled-e0967f20-c03b-4794-b06d-5ed401102849.png)
+![](/public/images/cd-github-circleci-docker-beanstalk/baaeadef-41dd-4e33-a1f4-082e648ab1e8.png)
 
 Which I know was built in build number `63` in CircleCI:
 
-![](Untitled-078c6f72-1737-4670-8a12-f80e7c54a74d.png)
+![](/public/images/cd-github-circleci-docker-beanstalk/1bb8b146-50a7-429f-8b5b-4b0a13f532d1.png)
 
 In which were added the following changes (click the "compare" link on CircleCI):
 
-![](Untitled-ade7ac49-9bfc-4cb4-8f99-c6ba44cbf2ce.png)
+![](/public/images/cd-github-circleci-docker-beanstalk/80df76ea-d144-4e1f-9c87-77a5059b96ea.png)
 
 Isn't that great? You can track down a version deployed in production directly to the source code that was introduced with it. Since the Docker image config is in the repo too, we can also kind of track infrastructure changes!
 

@@ -23,9 +23,7 @@ And he will lovely do all needed work to made it happen.
 We also use it to get NewRelic and Gaug.es statuses, weather, movie suggestions and tons of other things. Better than that, we can tell him to burn things:
 
 > charmander burn that crap
-
-RenderImage when len(FileIDs) == 0 NYI
-![](tumblr_mhthj8aPR21s595b5o1_500-.gif)
+![](/public/images/hubot-pokemon/ebfd3e1f-755c-4d2f-85d9-df1a2047261c.gif)
 
 Dude, this is awesome!
 

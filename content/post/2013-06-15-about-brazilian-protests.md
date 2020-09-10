@@ -12,7 +12,7 @@ It's now well known in media that, we, brazilian people, were facing our governm
 
 Well, let's say that this was only the last drop in São Paulo, which made almost all people fight for it too and all other shit too.
 
-![](Untitled-a86e92e6-c324-42d2-9022-bee58371f975.png)
+![](/public/images/about-brazilian-protests/ee1b6209-b639-40c0-a3a2-4066bbe102b2.png)
 
 > It's not for cents, it's for rights.
 
@@ -20,7 +20,7 @@ Believe you or not, my grandmother is right now, in some city in Mato Grosso do 
 
 You think that I'm overreacting? Look at this map:
 
-![](Untitled-e8546ab3-ca13-4f35-9c74-f196ce50b761.png)
+![](/public/images/about-brazilian-protests/05be348d-5e61-4b38-9531-75783f92e65b.png)
 
 Basically, they want to **give** all this collored areas to the indians. The big green one at the bottom is one of the newest and biggest one. But the protests are not just about that.
 

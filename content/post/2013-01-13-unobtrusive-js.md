@@ -6,7 +6,7 @@ slug: unobtrusive-js
 city: Joinville
 ---
 
-![](Untitled-55abddfd-d80f-4a0a-9aa3-7996a780496d.png)
+![](/public/images/unobtrusive-js/4aebb97c-0ec2-437e-b6f6-426395e89121.png)
 
 One of the principles of Unobtrusive JS is the *"separation of functionality (the "behavior layer") from a Web page's structure/content and presentation"*.
 

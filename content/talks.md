@@ -1,6 +1,5 @@
 ---
 title: "Talks"
-comments: false
 type: page
 ---
 

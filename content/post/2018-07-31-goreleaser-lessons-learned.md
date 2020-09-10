@@ -11,8 +11,7 @@ things I've learned down the road.
 
 <!--more-->
 
-RenderImage when len(FileIDs) == 0 NYI
-![](goreleaserfundo-.png)
+![](/public/images/goreleaser-lessons-learned/acb45b15-0cab-45b5-8849-fa39ba318fae.png)
 
 I already talked about [GoReleaser](http://goreleaser.com/) here a few times, if you feel like reading
 about it first:

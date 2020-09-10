@@ -44,15 +44,11 @@ Basically, any node can route to a pod running in any other node.
 
 That is handled by `kube-proxy` and `iptables`:
 
-![](Untitled-cfba5dde-cc24-4b5a-95a7-3a89c9fd68d6.png)
-
-Original: [https://cloud.google.com/kubernetes-engine/docs/concepts/network-overview](https://cloud.google.com/kubernetes-engine/docs/concepts/network-overview)
+![Original: https://cloud.google.com/kubernetes-engine/docs/concepts/network-overview](/public/images/gke-traefik-ingress/1b7f6f92-a65a-4280-bf6b-66688f6ae396.png)
 
 That, plus the following screenshot made clicked me:
 
-![](Untitled-e075452b-7b7f-4fa1-baa5-9a9017167c53.png)
-
-One of our load balancers showing all nodes as "green", even the ones with no Traefik pods running...
+![One of our load balancers showing all nodes as "green", even the ones with no Traefik pods running...](/public/images/gke-traefik-ingress/ae0eb9a1-30a7-429b-978a-fdca08ac0b6f.png)
 
 Even though we had Traefik running only on non-preemptible nodes, all nodes, including the preemtible ones, were receiving traffic from the load balancer.
 

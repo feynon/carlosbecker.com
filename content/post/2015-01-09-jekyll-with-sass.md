@@ -10,7 +10,7 @@ I followed [@mdo](http://markdotto.com/) recent article "[Using Sass with Jekyll
 
 I'm using some version of [Lanyon](http://lanyon.getpoole.com/) with some custom stuff. So, I had 4 CSS files:
 
-![](Untitled-82e54acf-8300-4d8c-a8de-0349f2bce1a9.png)
+![](/public/images/jekyll-with-sass/e0b0995c-c4ab-48e3-9980-9e008d636600.png)
 
 Summing it up, ~22K. It's not a lot, but, thinking about mobile 3G plans that are shit (like brazilian ones), why not save some bytes and requests?
 
@@ -45,7 +45,7 @@ Finally, changed my `_includes/head.html` to import only the new `styles.css`:
 
 And boom! It worked. With this, my previously four requests of ~22K went to one request with 12.8K!
 
-![](Untitled-5b66e73f-1523-47c9-bbb1-c884145882da.png)
+![](/public/images/jekyll-with-sass/3e621997-bf4c-4958-b6f7-04462cc5f468.png)
 
 Besides that, now I have all the power that Sass provides, in my blog, without any hacks. 
 

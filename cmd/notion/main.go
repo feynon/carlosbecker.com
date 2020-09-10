@@ -6,6 +6,8 @@ import (
 	"io/ioutil"
 	"log"
 	"os"
+	"path"
+	"path/filepath"
 	"strings"
 	"sync/atomic"
 
@@ -55,6 +57,9 @@ func main() {
 				k,
 				func(t string) {
 					log.Println("[", atomic.AddInt64(&done, 1), "/", total, "]", "rendering", t)
+				},
+				func(page *notionapi.Page) string {
+					return toString(page.Root().Prop("properties.S6_\""))
 				},
 				func(page *notionapi.Page) string {
 					slug := toString(page.Root().Prop("properties.S6_\""))
@@ -126,6 +131,9 @@ func main() {
 					log.Println("[", atomic.AddInt64(&done, 1), "/", total, "]", "rendering", t)
 				},
 				func(page *notionapi.Page) string {
+					return toString(page.Root().Prop("properties.7F2|"))
+				},
+				func(page *notionapi.Page) string {
 					slug := toString(page.Root().Prop("properties.7F2|"))
 					return fmt.Sprintf("content/%s.md", strings.ReplaceAll(slug, "/", ""))
 				},
@@ -180,6 +188,7 @@ func renderPage(
 	client *notionapi.Client,
 	k string,
 	progressLogger func(t string),
+	slugProvider func(p *notionapi.Page) string,
 	filenameProvider func(p *notionapi.Page) string,
 	headerProvider func(p *notionapi.Page) string,
 	pageValidator func(p *notionapi.Page) error,
@@ -193,18 +202,41 @@ func renderPage(
 		return err
 	}
 
-	progressLogger(page.Root().Title)
+	slug := slugProvider(page)
+
+	progressLogger(slug)
 
 	converter := tomarkdown.NewConverter(page)
 	converter.RenderBlockOverride = func(block *notionapi.Block) bool {
-		if block.Type != notionapi.BlockCode {
-			return false
+		if block.Type == notionapi.BlockCode {
+			converter.Printf("```" + toLang(block.CodeLanguage) + "\n")
+			converter.Printf(block.Code + "\n")
+			converter.Printf("```\n")
+			return true
 		}
 
-		converter.Printf("```" + toLang(block.CodeLanguage) + "\n")
-		converter.Printf(block.Code + "\n")
-		converter.Printf("```\n")
-		return true
+		if block.Type == notionapi.BlockImage {
+			file, err := client.DownloadFile(block.Source, block.ID)
+			if err != nil {
+				log.Fatalln(err)
+			}
+			imgPath := fmt.Sprintf("static/public/images/%s/%s%s", slug, block.ID, path.Ext(block.Source))
+			log.Println("downloading image", imgPath)
+			if err := os.MkdirAll(filepath.Dir(imgPath), 0750); err != nil {
+				log.Fatalln(err)
+			}
+			if err := ioutil.WriteFile(imgPath, file.Data, 0644); err != nil {
+				log.Fatalln(err)
+			}
+			converter.Printf(
+				"![%s](%s)\n",
+				toCaption(block),
+				strings.Replace(imgPath, "static/", "/", 1),
+			)
+			return true
+		}
+
+		return false
 	}
 
 	if err := ioutil.WriteFile(
@@ -218,6 +250,18 @@ func renderPage(
 		return err
 	}
 	return nil
+}
+
+func toCaption(block *notionapi.Block) string {
+	if block.GetCaption() == nil {
+		return ""
+	}
+
+	var caption = ""
+	for _, t := range block.GetCaption() {
+		caption += t.Text
+	}
+	return caption
 }
 
 func toLang(s string) string {
@@ -259,7 +303,6 @@ city: %s
 func pageHeader(title string) string {
 	return fmt.Sprintf(`---
 title: "%s"
-comments: false
 type: page
 ---`, title)
 }

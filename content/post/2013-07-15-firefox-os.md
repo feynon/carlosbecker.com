@@ -50,11 +50,11 @@ I just starting to fix Wealcash to work with Firefox OS. The work I had for Fire
 
 I made the needed file and the changes to the server in a couple of minutes, and submited the app for approval…
 
-![](Untitled-6cc3ad40-9042-41a9-902b-f48c39b926a2.png)
+![](/public/images/firefox-os/583f588c-0ba9-4593-8296-a1e7a6bc7296.png)
 
 I figured it would take while to the app to be approved, since it was in the position 62 in the queue… well, I was wrong.. ~20 minutes later it was approved, and I just installed it in my phone:
 
-![](Untitled-8288b0fc-8d27-460b-907c-4e53a1dfc645.png)
+![](/public/images/firefox-os/90517a5b-e7d2-4e1d-8e4c-93e480d44991.png)
 
 Surely, it has a lot that still need to be done. Lots of places are just unusable due to the large amount of information, things that I don't figure out how to fix, yet, but it is usable in its basics.
 

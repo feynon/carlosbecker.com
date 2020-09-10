@@ -151,7 +151,7 @@ Right now, the only ways I found to make it even faster is disabling completion 
 
 Oh, I also graphed all these things (with 100 executions in a fresh shell):
 
-![](Untitled-79915076-d489-450c-addc-15c6c72d0683.png)
+![](/public/images/speeding-up-zsh/8b7abdac-7509-49fe-a6ca-b2b619ee29d1.png)
 
 For reference, [here](https://docs.google.com/spreadsheets/d/150esx1EvZSqSH6JbRiPjK5pPHYUMsD7yiwSvDCzoS0U) is the table of mins, maxes, medians and modes for all of them too.
 

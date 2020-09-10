@@ -66,7 +66,7 @@ Around 10 seconds later, 30 selenium instances up and running. **Sweet**.
 
 ## Let's talk money
 
-![](Untitled-16885e2a-29b1-4df3-8eb6-59088b0c6db2.png)
+![](/public/images/selenium-grid-docker-compose/e5b72975-b893-4c82-8a85-4bd9ad9cd4e6.png)
 
 The objective was to decrease our costs with EC2 instances in our development VPC.
 
@@ -74,7 +74,7 @@ With this changes, we dropped our monthly EC2 billing related to Selenium by ~**
 
 Well, even if the instances were already Linux boxes before, it would still be a cut of ~**57%**:
 
-![](Untitled-e9ec4c95-2a54-409d-811a-130ccb157c15.png)
+![](/public/images/selenium-grid-docker-compose/2bf3ad0d-a466-4a4d-ab3c-e3c8ff8b7c9f.png)
 
 It is also important to notice that we pay the Amazon bill in USD, and we pay around BRL 4.5 per USD. That said, USD 1161 costs us around BRL 5224.5, which can buy here ~411L of beer (using BRL ~12.69/L).
 
@@ -117,7 +117,7 @@ This will scale the grid to 10 Chrome containers and 10 Firefox containers (be a
 
 On my Mac, I scaled it to 4 Chrome and 4 Firefox instances, and it works:
 
-![](Untitled-f9bd9a09-5a22-4c47-94b3-955287aee885.png)
+![](/public/images/selenium-grid-docker-compose/c7e94107-fa8b-45df-b53f-2744f16e3715.png)
 
 Just 5 seconds to start 8 containers. *Neat*.
 

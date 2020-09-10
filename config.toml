@@ -2,7 +2,6 @@ baseurl = "https://carlosbecker.com/"
 languageCode = "en-us"
 title = "Carlos Alexandro Becker"
 theme = "paper"
-disqusShortname = "caarlos0blog"
 googleAnalytics = "UA-50435491-1"
 paginate = 5
 
@@ -10,9 +9,6 @@ disableAliases = true
 
 pygmentsCodeFences = true
 pygmentsStyle = "dracula"
-
-[taxonomies]
-	tag = "tags"
 
 [related]
 	threshold = 80
@@ -22,10 +18,6 @@ pygmentsStyle = "dracula"
 	[[related.indices]]
 		name = "keywords"
 		weight = 10
-
-	[[related.indices]]
-		name = "tags"
-		weight = 100
 
 [permalinks]
 	post = "/posts/:slug"

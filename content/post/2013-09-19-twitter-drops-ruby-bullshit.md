@@ -27,7 +27,7 @@ People like to generalize things. Like "Twitter says they get more performance w
 
 Java is, in fact, more scalable than Ruby. And Erlang is more scalable than Java. So if scalability is your only argument and concern, let's Erlang everything.
 
-![](Untitled-fd384b92-3b79-44f6-a122-c36fc3227424.png)
+![](/public/images/twitter-drops-ruby-bullshit/567e1df8-9b29-4dcc-80e7-50753ce2e891.png)
 
 Oh, are you talking about performance now? Why don't you write your entire application in C using [raphters](https://github.com/DanielWaterworth/Raphters)?
 
@@ -65,7 +65,7 @@ So, what's the real concurrency problem with Ruby?
 
 The main problem is that Ruby uses a Global Interpreter Lock (GIL), which means that even if you use multiple threads, there will be only one lock per interpreter process. In other hand, Java has a very well tested and stable concurrency model with one lock per thread, as well other concurrecy models (like Actor model using things like Akka).
 
-![](Untitled-5a98ac34-9495-4613-ba53-ee54e9d77665.png)
+![](/public/images/twitter-drops-ruby-bullshit/eaebed20-d049-4173-aa31-e4f5daaca3b3.png)
 
 The implications of Ruby's behavior is that if you want a 10 level concurrency, you will need to start 10 application processes. Assuming that each application instance uses around 200mb of memory, 10 x 200 = 2Gb~ (which is indeed a lot of memory), while in Java it would probably use less, depending on the application server.
 

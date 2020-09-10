@@ -16,7 +16,7 @@ What I don't believe is that they are the only way of fixing things.
 
 I would like to start my rationale with a quote about politics I recently found which I think applies perfectly to this scenario:
 
-![](the_more_corrupt_the_state_the_more_numerous_the_laws-b7a3811e-9f91-4030-bd2b-19588a4b7b3d.jpg)
+![](/public/images/processes/36d7d60b-f001-4a72-86b2-dc0a9e54ac1a.jpg)
 
 I think we can interpret this as something like
 
@@ -38,7 +38,7 @@ Giving this lack of good citizen values in Brazilian culture in general - which 
 
 This issue is also addressed in a economics book from 1944, written by Friedrich Hayek, called ["The Road of Serfdom"](http://www.amazon.com/gp/product/0226320553/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=0226320553&linkCode=as2&tag=carlbeck-20&linkId=GWMI44FYUFMMSGRJ):
 
-![](Untitled-19e24ad6-c431-4c6e-b7c9-4ac9a901c208.png)
+![](/public/images/processes/eba82ae3-d746-4156-b94d-582392ae3705.png)
 
 > (…) De Tocqueville's prediction of the "new kind of servitude" when after having thus successively taken each member of the community in its powerful grasp, and fashioned him at will, the supreme power then extends its arm over the whole community. It covers the surface of society with a network of small complicated rules, minute and uniform, through which the most original minds and the most energetic characters cannot penetrate to rise above the crowd. The will of man is not shattered but softened, bent and guided; men are seldom forced by it to act, but they are constantly restrained from acting. Such a power does not destroy, but it prevents existence; it does not tyrannize, but it compresses, enervates, extinguishes, and stupefies a people, till each nation is reduced to be nothing better than a flock of timid and industrial animals, of which government is the shepherd.
 

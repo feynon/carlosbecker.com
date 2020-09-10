@@ -50,6 +50,6 @@ I also added it to the `crontab`, so it will run every minute.
 
 And, sure enough, it works:
 
-![](Untitled-8ec34ecf-67d3-4e6e-9921-be7d8f91e579.png)
+![](/public/images/telegram-notifications/390610a2-e32f-49c7-9c79-595af9224e9c.png)
 
 Hope it helps!

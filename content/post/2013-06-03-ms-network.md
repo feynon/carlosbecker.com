@@ -14,7 +14,7 @@ I particurarly hate to use MS Windows anytime, even more for work. So, I install
 
 This was the trickiest: I needed an "GOD-mode certificate", you should ask the domain admins for something like it. After that, the setup was pretty easy:
 
-![](Untitled-2d15c017-294f-43f8-bebf-dc51a89b2656.png)
+![](/public/images/ms-network/cdaf2ee3-24a4-4c9b-ad5b-c28aa977c11d.png)
 
 # Proxy
 
@@ -30,7 +30,7 @@ $ sudo cntlm -H -c /etc/cntlm.conf
 
 Then put you root password followed by the domain password. Copy the given hashes to the `/etc/cntlm.conf` and restart the service with `/etc/cntlm restart`, setup your proxy as `127.0.0.1:3128` (8010 for SOCKS) and you are ready to go (remember to apply system wide):
 
-![](Untitled-89d18a2a-2127-4fce-b136-e4c94f1c286b.png)
+![](/public/images/ms-network/af7cdd85-525a-4326-8683-aa6752f2fec4.png)
 
 This will fix browsing, apt and most of the things (everything that reads `http_proxy` environment variable). You may also want to `chmod 0600` the config file to avoid others access.
 
@@ -42,7 +42,7 @@ The only trick I could give you here is about new message composing: Outlook cre
 
 To change it, go to your account settings, and change the "Automatically quote the original message when replaying Then," to *"start my reply above the quote"* in the "Compositing & Addressing" tab:
 
-![](Untitled-e0fa1c8b-3f17-430c-b372-3e3524597baa.png)
+![](/public/images/ms-network/d7dcf823-9741-4f28-bc70-1675d9f68c6d.png)
 
 # Lync / Communicator
 

@@ -74,7 +74,7 @@ drinks and etc.
 
 In fact, just did that last week:
 
-![](Untitled-db6eee07-64c3-42c7-8b04-c3a21e2002d3.png)
+![](/public/images/one-month-working-remote/488ce9cb-2dab-4e60-a5cb-9895a3824075.png)
 
 I think we all need a beer with friends sometimes. 😬
 
