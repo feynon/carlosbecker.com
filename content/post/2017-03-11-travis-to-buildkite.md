@@ -56,8 +56,6 @@ How would you feel if we fully migrate to Buildkite?
 
 All the scores were good:
 
-All the scores were good:
-
 - Buildkite had higher satisfaction;
 - No one voted against migrating to Buildkite.
 

@@ -286,7 +286,7 @@ func buildMarkdown(header string, content []byte) []byte {
 				strings.Split(ss, "\n")[1:]...,
 			),
 			"\n",
-		),
+		) + "\n",
 	)
 }
 
