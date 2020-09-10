@@ -37,3 +37,7 @@ avatar:
 		\( -clone 0 -resize 64x64 \) \
 		-delete 0 -alpha off -colors 256 static/img/favicon.ico
 	convert -resize x120 static/avatar.jpg static/img/apple-touch-icon.png
+
+refresh:
+	rm -rf content/post/* static/public/images/*
+	go run cmd/notion/main.go

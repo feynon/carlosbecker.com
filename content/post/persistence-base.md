@@ -1,5 +1,5 @@
 ---
-title: "JPA2 with Guice - Carlos Alexandro Becker"
+title: "JPA2 with Guice"
 date: 2013-06-26
 draft: false
 slug: persistence-base
