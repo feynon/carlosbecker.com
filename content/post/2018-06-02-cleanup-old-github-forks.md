@@ -1,20 +1,16 @@
 ---
 title: "Cleanup old GitHub Forks"
-date: 2018-06-02T14:16:41-03:00
+date: 2018-06-02
+draft: false
+slug: cleanup-old-github-forks
 city: Joinville
-tags:
-- github
-- automation
 ---
 
-I like to keep my GitHub clean. I delete forks I'm not using anymore,
-move old abandoned repositories to my [graveyard][graveyard] and etc.
+I like to keep my GitHub clean. I delete forks I'm not using anymore, move old abandoned repositories to my [graveyard](https://carlosbecker.com/posts/repositories-graveyard/) and etc.
+
+---
 
 I don't like to delete things manually though.
-
-<!--more-->
-
-[graveyard]: {{< ref "2017-09-04-repositories-graveyard.md" >}}
 
 I assume I can just delete forks that match all these rules:
 
@@ -23,9 +19,7 @@ I assume I can just delete forks that match all these rules:
 - have no open pull requests to upstream - my PR was either merged or closed;
 - had no activity in the last 1 month - I'll probably won't use it again;
 
-So, I was basically looking over the repository list and manually going to
-the fork settings, copying the name of the repo, pasting in the delete
-popup and etc.
+So, I was basically looking over the repository list and manually going to the fork settings, copying the name of the repo, pasting in the delete popup and etc.
 
 Doing that from time to time is really boring.
 
@@ -33,35 +27,31 @@ Doing that from time to time is really boring.
 
 So, I wrote a tool for that - in **2016**. Yes, 2 years ago already.
 
-Anyway, it does all the checks mentioned above, plus, you can customize
-the inactivity time (e.g. `1d` instead of `1m`), blacklist repos and include
-or not private forks.
+Anyway, it does all the checks mentioned above, plus, you can customize the inactivity time (e.g. `1d` instead of `1m`), blacklist repos and include or not private forks.
 
 ### Install
 
 You can install it On macOS:
 
-```console
+```
 $ brew install fork-cleaner
 ```
 
 or on Linux:
 
-```console
+```
 $ snap install fork-cleaner
 ```
 
 ### Usage
 
-You'll need a GitHub token with the `repo` scope, you can create one in the
-[settings page](https://github.com/settings/tokens/new).
+You'll need a GitHub token with the `repo` scope, you can create one in the [settings page](https://github.com/settings/tokens/new).
 
-You can then either export it as the `GITHUB_TOKEN` environment variable or
-using the `--token` flag.
+You can then either export it as the `GITHUB_TOKEN` environment variable or using the `--token` flag.
 
 Then just run `fork-cleaner`:
 
-```console
+```
 $ fork-cleaner
 3 forks to delete:
  --> https://github.com/caarlos0/coinmarketcap-exporter

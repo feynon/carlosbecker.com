@@ -1,24 +1,22 @@
 ---
-date: 2013-08-12T00:00:00Z
+title: "Javascript Context"
+date: 2013-08-12
+draft: false
 slug: js-context
-title: Javascript Context
+city: Joinville
 ---
 
-People make a lot of confusion about Javascript context mechanism. I don't think
-it's confusing at all, is just that it's different when compared with other
-languages we generally use.
+People make a lot of confusion about Javascript context mechanism. I don't think it's confusing at all, is just that it's different when compared with other languages we generally use.
 
 The key to learn javascript is understanging the following:
 
 ## **The context only changes inside functions**
 
-You might be asking something like _"but doesn't it changes in ..."_
-**NO**, it doesn't.
+You might be asking something like *"but doesn't it changes in …"* **NO**, it doesn't.
 
-I could literally just stop writing here, but I will be kind and give you some
-examples.
+I could literally just stop writing here, but I will be kind and give you some examples.
 
-```javascript
+```
 var global, local;
 
 // the context will change inside the test() function declaration
@@ -40,7 +38,7 @@ console.log(global); // 100
 
 We can also encapsulate variables with something like this:
 
-```javascript
+```
 var global = 100;
 
 var testFn = function() {
@@ -81,11 +79,11 @@ console.log(test.inc()); // called inc
 console.log(test.getLocal()); // 110
 ```
 
-## Just like I said before...
+## Just like I said before…
 
 The context **only** changes inside functions.
 
-```js
+```
 var obj1 = {
   a: {
     b: {
@@ -113,13 +111,6 @@ console.log(obj1.a.b.c.d); // Window
 console.log(obj2.a.b.c.d()); // Object {d: function}
 ```
 
----
-
-Yep, that's it. If you want to learn more about Javascript, I strongly
-recommend you to read the "[JavaScript: The Good Parts][book]" book,
-by Douglas Crockford. It will guide you through some misunderstood
-Javascript features in a pretty simple way.
+Yep, that's it. If you want to learn more about Javascript, I strongly recommend you to read the "[JavaScript: The Good Parts](http://amzn.to/14ZmSmZ)" book, by Douglas Crockford. It will guide you through some misunderstood Javascript features in a pretty simple way.
 
 If you have any questions, please, use the comment box below.
-
-[book]: http://amzn.to/14ZmSmZ

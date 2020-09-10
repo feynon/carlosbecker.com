@@ -1,15 +1,16 @@
 ---
-date: 2012-06-27T00:00:00Z
+title: "Theming GWT-Bootstrap"
+date: 2012-06-27
+draft: false
 slug: using-a-custom-bootstrap-theme-in-gwt-bootstrap
-title: Theming GWT-Bootstrap
+city: Joinville
 ---
 
-First of all, if you haven't done it yet, read
-[Getting started with GWT-Bootstrap]({{< ref "2012-06-26-getting-started-with-gwt-bootstrap.md" >}}).
+First of all, if you haven't done it yet, read [Getting started with GWT-Bootstrap](https://carlosbecker.com/posts/getting-started-with-gwt-bootstrap/).
 
 ## Create the GWT-Project
 
-```console
+```
 $ mvn archetype:generate \
    -DarchetypeRepository=repo1.maven.org \
    -DarchetypeGroupId=org.codehaus.mojo \
@@ -19,17 +20,19 @@ $ mvn archetype:generate \
 
 I created my project with the following properties:
 
-    Define value for property 'groupId': : com.github.caarlos0
-    Define value for property 'artifactId': : Example
-    Define value for property 'version':  1.0-SNAPSHOT: :
-    Define value for property 'package':  com.github.caarlos0: :
-    Define value for property 'module': : Example
+```
+Define value for property 'groupId': : com.github.caarlos0
+Define value for property 'artifactId': : Example
+Define value for property 'version':  1.0-SNAPSHOT: :
+Define value for property 'package':  com.github.caarlos0: :
+Define value for property 'module': : Example
+```
 
 Now, lets add the `GWT-Bootstrap` dependency to the `pom.xml` file:
 
-#### Add the repository:
+### Add the repository:
 
-```xml
+```
 <repositories>
   <repository>
     <id>gwt-bootstrap</id>
@@ -39,9 +42,9 @@ Now, lets add the `GWT-Bootstrap` dependency to the `pom.xml` file:
 </repositories>
 ```
 
-#### And the dependency itself:
+### And the dependency itself:
 
-```xml
+```
 <dependency>
   <groupId>com.github.gwtbootstrap</groupId>
   <artifactId>gwt-bootstrap</artifactId>
@@ -53,27 +56,21 @@ And then, update your project with a `$ mvn clean install`.
 
 ## Configure GWT-Bootstrap
 
-In this point, we have to setup the `*.gwt.xml` file and our `UIBinder` XML
-file. You can follow
-[getting started tutorial]({{< ref "2012-06-26-getting-started-with-gwt-bootstrap.md" >}}).
-to do that in the right way.
+In this point, we have to setup the `*.gwt.xml` file and our `UIBinder` XML file. You can follow [getting started tutorial](https://carlosbecker.com/posts/getting-started-with-gwt-bootstrap/). to do that in the right way.
 
 ## Get a custom Bootstrap Theme
 
 You can get a custom `bootstrap.min.css` file in several ways:
 
 - Making your own CSS changing the `.less` files and re-generating the files
-- [Customizing your download](http://getbootstrap.com/customize)
-  (Basically the option above in a easy way)
+- [Customizing your download](http://getbootstrap.com/customize) (Basically the option above in a easy way)
 - [Downloading it somewhere](https://www.google.com.br/search?q=twitter+bootstrap+themes)
 
-For this example, I'll use [this theme](http://bootswatch.com/slate/).
-Download the `bootstrap.min.css` from the site.
+For this example, I'll use [this theme](http://bootswatch.com/slate/). Download the `bootstrap.min.css` from the site.
 
 ## Clean the example
 
-By default, the Maven GWT Archetype will generate a lot of junk, "by example",
-for you. You can clean it up.
+By default, the Maven GWT Archetype will generate a lot of junk, "by example", for you. You can clean it up.
 
 You can remove:
 
@@ -86,7 +83,7 @@ You can remove:
 
 At this point we will have a structure like this:
 
-```console
+```
 $ tree
 |-- src
 |   |-- main
@@ -114,13 +111,11 @@ $ tree
 
 ## Create our example
 
-Now, lets create a UIBinder class to made our amazing test widget!
-Create a new UiBinder class/xml combo called `ExampleUiBinder`, with the
-following content:
+Now, lets create a UIBinder class to made our amazing test widget! Create a new UiBinder class/xml combo called `ExampleUiBinder`, with the following content:
 
-#### ExampleUiBinder.ui.xml:
+### ExampleUiBinder.ui.xml:
 
-```xml
+```
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
@@ -147,11 +142,7 @@ following content:
     </b:Container>
   </g:HTMLPanel>
 </ui:UiBinder>
-```
-
-#### ExampleUiBinder.java
-
-```java
+``````
 public class ExampleUiBinder extends Composite {
   interface ExampleUiBinderUiBinder
       extends UiBinder<HTMLPanel, ExampleUiBinder> {
@@ -168,22 +159,15 @@ public class ExampleUiBinder extends Composite {
 
 At this point, if everything is OK, we will get a window like this:
 
-![The not themed version](/public/images/Captura%20de%20tela%20de%202012-06-26%2020%3A11%3A18.png)
+![](Untitled-3feb69b5-30a1-405b-b6e6-7bab7f8c3edb.png)
 
 ## Hacking
 
-Right now, we will have to write our own `Resources` and `Configuration`
-classes. I'll advise you that it's a boring thing to do, but the result
-could be really awesome. So, let's go.
+Right now, we will have to write our own `Resources` and `Configuration` classes. I'll advise you that it's a boring thing to do, but the result could be really awesome. So, let's go.
 
-### Dir structure
+We will have to create a `resources` folder under the same folder of our `*.gwt.xml` file. Just to you understand better, the folders `client`, `shared`, `server` and `resources` **must be** in the same hierarchical level, just like this:
 
-We will have to create a `resources` folder under the same folder of our
-`*.gwt.xml` file. Just to you understand better, the folders `client`,
-`shared`, `server` and `resources` **must be** in the same hierarchical
-level, just like this:
-
-```console
+```
 $ tree
 src/main/java/com/github/caarlos0/
 |-- client
@@ -194,16 +178,13 @@ src/main/java/com/github/caarlos0/
 
 ### Creating the needed files
 
-Assuming that we will only change the CSS file, inside your `resources` file,
-create a `css` folder, and paste the `bootstrap.min.css` file downloaded
-before inside it. Yes, the file name **must** be `bootstrap.min.css`.
+Assuming that we will only change the CSS file, inside your `resources` file, create a `css` folder, and paste the `bootstrap.min.css` file downloaded before inside it. Yes, the file name **must** be `bootstrap.min.css`.
 
-As said before, we also need a `Resources` and `Configuration` files. This
-files must be inside our `resources` folder too. The content is the following:
+As said before, we also need a `Resources` and `Configuration` files. This files must be inside our `resources` folder too. The content is the following:
 
-#### ExampleResources.java
+### ExampleResources.java
 
-```java
+```
 package com.github.caarlos0.resources;
 
 import com.github.gwtbootstrap.client.ui.resources.Resources;
@@ -215,9 +196,9 @@ public interface ExampleResources extends Resources {
 }
 ```
 
-#### ExampleConfigurator.java
+### ExampleConfigurator.java
 
-```java
+```
 package com.github.caarlos0.resources;
 
 import com.github.gwtbootstrap.client.ui.config.Configurator;
@@ -237,7 +218,7 @@ public class ExampleConfigurator implements Configurator {
 
 At this point, the structure should be something like this:
 
-```console
+```
 $ tree
 src/main/java/com/github/caarlos0/
 |-- client
@@ -253,11 +234,9 @@ src/main/java/com/github/caarlos0/
 `-- shared
 ```
 
-Now, we have to do a little hack in our `*.gwt.xml`. We will need to replace
-`com.github.gwtbootstrap.client.ui.config.Configurator` with our Configurator,
-and setup the resources dir. So, in the end, we will have something like this:
+Now, we have to do a little hack in our `*.gwt.xml`. We will need to replace `com.github.gwtbootstrap.client.ui.config.Configurator` with our Configurator, and setup the resources dir. So, in the end, we will have something like this:
 
-```xml
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <module rename-to='Example'>
     <inherits name='com.google.gwt.user.User'/>
@@ -283,12 +262,11 @@ and setup the resources dir. So, in the end, we will have something like this:
 
 That's it :)
 
-![The Themed Version](/public/images/Captura%20de%20tela%20de%202012-06-26%2020%3A58%3A45.png)
+![](Untitled-c0323fa3-3965-4209-88c6-075fb8878dee.png)
 
 ## Considerations
 
-Sometimes GWT caches everything, and seems like it doesn't work. In this cases,
-do the following:
+Sometimes GWT caches everything, and seems like it doesn't work. In this cases, do the following:
 
 - `mvn clean`;
 - Delete the `webapp/Example` folder (in our case, `Example` is the Module name);
@@ -301,4 +279,4 @@ If it still dont working, do this:
 
 For me, this process always works.
 
-#### [Download the code](http://github.com/gwtbootstrap/custom-theme-example)
+[Download the code](http://github.com/gwtbootstrap/custom-theme-example).

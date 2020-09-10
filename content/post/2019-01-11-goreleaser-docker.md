@@ -1,26 +1,22 @@
 ---
 title: "GoReleaser Docker support"
-date: 2019-01-11T14:56:42-02:00
-slug: "goreleaser-docker"
+date: 2019-01-11
+draft: false
+slug: goreleaser-docker
 city: Joinville
-tags:
-- goreleaser
-- golang
-- docker
-- ci
 ---
 
-The next [GoReleaser][] version will have a more flexible [Docker][] configuration
+The next [GoReleaser](https://goreleaser.com/) version will have a more flexible [Docker](https://docker.io/) configuration
 format. In this post we'll explore it a bit.
 
-<!--more-->
+---
 
-When I first added [Docker][] support on [GoReleaser][], I did a couple of
+When I first added [Docker](https://docker.io/) support on [GoReleaser](https://goreleaser.com/), I did a couple of
 assumptions - and most of them were wrong.
 
 At that time, the config file looked like this:
 
-```yaml
+```
 dockers:
 -
   binary: foo
@@ -31,26 +27,26 @@ dockers:
   dockerfile: Dockerfile
 ```
 
-It didn't allow multiple tags, registries or anything like that... at least
+It didn't allow multiple tags, registries or anything like that… at least
 not without building the image several times.
 
 Of course, some users needed those things, and the it went through a few
 interactions:
 
-- https://github.com/goreleaser/goreleaser/pull/355
-- https://github.com/goreleaser/goreleaser/pull/359
-- https://github.com/goreleaser/goreleaser/pull/367
-- https://github.com/goreleaser/goreleaser/pull/370
-- https://github.com/goreleaser/goreleaser/pull/435
-- https://github.com/goreleaser/goreleaser/pull/512
-- https://github.com/goreleaser/goreleaser/pull/840
-- https://github.com/goreleaser/goreleaser/pull/819
-- https://github.com/goreleaser/goreleaser/pull/919
+- [https://github.com/goreleaser/goreleaser/pull/355](https://github.com/goreleaser/goreleaser/pull/355)
+- [https://github.com/goreleaser/goreleaser/pull/359](https://github.com/goreleaser/goreleaser/pull/359)
+- [https://github.com/goreleaser/goreleaser/pull/367](https://github.com/goreleaser/goreleaser/pull/367)
+- [https://github.com/goreleaser/goreleaser/pull/370](https://github.com/goreleaser/goreleaser/pull/370)
+- [https://github.com/goreleaser/goreleaser/pull/435](https://github.com/goreleaser/goreleaser/pull/435)
+- [https://github.com/goreleaser/goreleaser/pull/512](https://github.com/goreleaser/goreleaser/pull/512)
+- [https://github.com/goreleaser/goreleaser/pull/840](https://github.com/goreleaser/goreleaser/pull/840)
+- [https://github.com/goreleaser/goreleaser/pull/819](https://github.com/goreleaser/goreleaser/pull/819)
+- [https://github.com/goreleaser/goreleaser/pull/919](https://github.com/goreleaser/goreleaser/pull/919)
 
 And now, I think we finally arrived at something closer to the what will be on
 1.0:
 
-```yaml
+```
 dockers:
   -
     goos: linux
@@ -105,7 +101,7 @@ For example, imagine you have a simple project, more or less like this:
 
 Your `Dockerfile` may look like:
 
-```Dockerfile
+```
 FROM scratch
 ADD foo /usr/bin/foo
 ADD config/foo.conf /etc/foo.conf
@@ -114,17 +110,17 @@ ADD config/foo.conf /etc/foo.conf
 So, as a developer, you would `go build` your project and then
 simply `docker build`:
 
-```sh
+```
 go build -o foo
 docker build -t caarlos0/goreleaser-docker-test .
 ```
 
 And that would work, as expected.
 
-You could then automate that using [GoReleaser][] by creating a
+You could then automate that using [GoReleaser](https://goreleaser.com/) by creating a
 `.goreleaser.yaml` config file that looks like this:
 
-```yaml
+```
 project_name: foo
 builds:
 - env:
@@ -153,6 +149,3 @@ So, that's it. Few words just to point out how things are evolving.
 Looking forward to make releasing easier, better and more reliable for everyone!
 
 Cheers!
-
-[GoReleaser]: https://goreleaser.com
-[Docker]: https://docker.io

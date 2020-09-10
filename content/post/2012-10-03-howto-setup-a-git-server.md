@@ -1,7 +1,9 @@
 ---
-date: 2012-10-03T00:00:00Z
+title: "Configuring a git server with gitolite"
+date: 2012-10-03
+draft: false
 slug: howto-setup-a-git-server
-title: Configuring a git server with gitolite
+city: Joinville
 ---
 
 ## Setup
@@ -15,7 +17,7 @@ You will need:
 
 Install everything:
 
-```console
+```
 $ apt-get install git ssh gitolite git-daemon-run
 ```
 
@@ -23,26 +25,26 @@ $ apt-get install git ssh gitolite git-daemon-run
 
 The server needs a public/private key pair. So, you will need to generate it:
 
-```console
+```
 $ ssh-keygen -t rsa
 ```
 
 Now, will copy it to `/tmp` folder, we will need it there later.
 
-```console
+```
 $ cp ~/.ssh/id_rsa.pub /tmp/local.pub
 ```
 
 ## Setup your git profile
 
-```console
+```
 $ git config --global user.name "Your Name"
 $ git config --global user.email your@email.com
 ```
 
 ## Creating the `git` user:
 
-```console
+```
 $ sudo adduser --system --shell /bin/bash --gecos 'git version control' --group --disabled-password --home /home/git git
 $ sudo su git
 $ echo "PATH=$HOME/bin:$PATH" > ~/.bashrc
@@ -55,19 +57,19 @@ When you run `gl-setup` command, it will open a file in edit mode.. probably wit
 
 Now, go back to the previous user:
 
-```console
+```
 $ exit
 ```
 
 Go to some folder, e.g., `~/code`, and clone the configuration gitolite repository:
 
-```console
+```
 $ git clone git@ubuntu:gitolite-admin.git && cd gitolite-admin
 ```
 
 Take a look the `conf/gitolite.conf` file. In this file you will be able to configure groups, users and their access to repositories. By example:
 
-```cfg
+```
 repo foo
 	RW+	= local
 	R 	= carlos william
@@ -79,7 +81,7 @@ In that example, I created a repository called `foo`, with `RW+` access (read an
 
 After doing your changes, commit and push:
 
-```console
+```
 $ git add -A
 $ git commit -m 'added repo foo'
 $ git push origin master
@@ -87,7 +89,7 @@ $ git push origin master
 
 Now, you will be able to clone the `foo` repo from the configured machines, wich something like:
 
-```console
+```
 $ git clone git@SERVER:foo.git
 ```
 

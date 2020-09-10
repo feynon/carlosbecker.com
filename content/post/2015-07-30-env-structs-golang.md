@@ -1,22 +1,21 @@
 ---
-date: 2015-07-30T00:00:00Z
+title: "Parse environment variables to structs in Go"
+date: 2015-07-30
+draft: false
 slug: env-structs-golang
-title: Parse environment variables to structs in Go
-city: Joinville
-tags:
-- golang
+city: Marechal Cândido Rondon
 ---
 
 In Go, it's dead simple to get the value from an environment variable:
 
-```go
+```
 fmt.Println(os.Getenv("HOME"))
 ```
 
-But, sometimes you have default values... so you would have to do something
+But, sometimes you have default values… so you would have to do something
 like this:
 
-```go
+```
 home := os.Getenv("HOME")
 if home == "" {
   home = "THE DEFAULT HOME"
@@ -24,14 +23,13 @@ if home == "" {
 fmt.Println(home)
 ```
 
-If you need those values in a lot of places, you would end up creating a
-function for each one or something like that.
+If you need those values in a lot of places, you would end up creating a function for each one or something like that.
 
 I found this to be extremely boring.
 
 So, I created a small lib that let me do this:
 
-```go
+```
 package main
 
 import (

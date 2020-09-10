@@ -1,23 +1,21 @@
 ---
 title: "Golang: cache things using interfaces"
-date: 2018-12-17T00:00:00-02:00
-slug: "golang-cache-interface"
+date: 2018-12-17
+draft: false
+slug: golang-cache-interface
 city: Joinville
-tags:
-- golang
 ---
 
-Caching things can be hard to do and hard to test. In this post I'll
-demonstrate a convenient way of doing that using interfaces.
+Caching things can be hard to do and hard to test. In this post I'll demonstrate a convenient way of doing that using interfaces.
 
-<!--more-->
+---
 
 ## The problem
 
 Let's suppose we want to cache calls to the GitHub API. Let's say we want
 to get the my repository list for whatever reason:
 
-```go
+```
 package client
 
 type Repository struct {
@@ -34,10 +32,10 @@ Let's say this will be called from another website, so, it could easily
 rate-limit. This information also does not change much, and users won't care
 if they see data for 5 minutes ago.
 
-We could easily do that using an in-memory cache, like [go-cache][]. The
+We could easily do that using an in-memory cache, like [go-cache](https://github.com/patrickmn/go-cache). The
 first thing that comes to mind is to something like:
 
-```go
+```
 var cache = cache.New(5*time.Minute, 5*time.Minute)
 
 func GetRepositories() ([]Repository, error) {
@@ -66,7 +64,7 @@ caching.
 
 For our example, we could create an interface like this:
 
-```go
+```
 // client.go
 package client
 
@@ -81,7 +79,7 @@ type Client interface {
 
 And then the "real" implementation:
 
-```go
+```
 // github.go
 package client
 
@@ -100,7 +98,7 @@ func (ghClient) GetRepositories() ([]Repository, error) {
 And finally, a cached implementation that wraps any other `Client`
 implementation:
 
-```go
+```
 // cache.go
 package client
 
@@ -138,7 +136,7 @@ and then write some tests for it.
 
 Code example of a very simple implementation:
 
-```go
+```
 // cache_test.go
 package client
 
@@ -202,8 +200,5 @@ decouple implementations and to test them.
 
 Hope this was useful for you.
 
-> **Side note**: the examples provided here are based on real code from
-> my [version_exporter][] repository.
-
-[version_exporter]: https://github.com/caarlos0/version_exporter
-[go-cache]: https://github.com/patrickmn/go-cache
+> Side note: the examples provided here are based on real code from
+> my version_exporter repository.

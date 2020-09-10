@@ -1,60 +1,62 @@
 ---
 title: "High availability with nats-streaming-server (clustering)"
-date: 2019-05-16T12:00:38-03:00
-slug: "nats-streaming-server-cluster"
+date: 2019-05-16
+draft: false
+slug: nats-streaming-server-cluster
 city: Joinville
-aliases:
-- /posts/nats-streaming-server-ha/
-tags:
-- nats-streaming-server
-- nats
 ---
 
-I wanted to set up a high available [nats-streaming-server][] cluster,
+I wanted to set up a high available [nats-streaming-server](https://github.com/nats-io/nats-streaming-server) cluster,
 but couldn't find a "quick" guide on how to do it.
+
+---
 
 In this post I'll try to write something that would have helped me earlier.
 
-<!--more-->
-
-First things first, we have 2 kinds of HA setups for [nats-streaming-server][]:
+First things first, we have 2 kinds of HA setups for [nats-streaming-server](https://github.com/nats-io/nats-streaming-server):
 
 1. Fault Tolerance
-1. Clustering
+2. Clustering
 
 Let's dig deeper on them.
 
 ## 1. Fault Tolerance
 
-In this mode, you setup a _active node_ and one or more _stand-by nodes_.
+In this mode, you setup a *active node* and one or more *stand-by nodes*.
 They can share the state through NFS, for example.
 
-{{< tweet 1122815233565892608 >}}
+> NFS is the culmination of three lies:
+> 
+> 1. Network
+> 2. File
+> 3. System
+> 
+> — electrified filth (@sadisticsystems) April 29, 2019
 
 I don't like NFS, so I didn't like this option either, although the
 performance may be better than the clustering option.
 
 ## 2. Clustering
 
-Clustering uses [RAFT][] for leader election and has no shared resources. A
+Clustering uses [RAFT](https://raft.github.io/) for leader election and has no shared resources. A
 write in one node will be replicated to other nodes.
 
 This seemed like the best option for my case, so I'll go with that for now on.
 
-[nats-streaming-server][] embeds a [NATS][] server too, and to cluster
-[nats-streaming-server][] we need to cluster [NATS][] as well.
+[nats-streaming-server](https://github.com/nats-io/nats-streaming-server) embeds a [NATS](https://github.com/nats-io/nats-server) server too, and to cluster
+[nats-streaming-server](https://github.com/nats-io/nats-streaming-server) we need to cluster [NATS](https://github.com/nats-io/nats-server) as well.
 
-We have two alternatives here, either setup a separated [NATS][] cluster
-or cluster the one already embedded in [nats-streaming-server][].
+We have two alternatives here, either setup a separated [NATS](https://github.com/nats-io/nats-server) cluster
+or cluster the one already embedded in [nats-streaming-server](https://github.com/nats-io/nats-streaming-server).
 
 I choose to use the embed one.
 
 ## A simple example
 
-Let's start with a single [nats-streaming-server][] node and an example
+Let's start with a single [nats-streaming-server](https://github.com/nats-io/nats-streaming-server) node and an example
 client:
 
-```go
+```
 package main
 
 import (
@@ -96,32 +98,30 @@ func main() {
 }
 ```
 
-It basically connects to the [nats-streaming-server][] URL's passed to it,
+It basically connects to the [nats-streaming-server](https://github.com/nats-io/nats-streaming-server) URL's passed to it,
 subscribeds to a topic and keeps sending messages. A `.` is print on the
 screen for each message received.
 
 So, now we can just start both:
 
-```sh
-$ ./nats-streaming-server
 ```
-
-```sh
+$ ./nats-streaming-server
+``````
 $ go run main.go localhost:4222
 ```
 
 You should see a lot of `.` being print on the screen, meaning that it is
-working. If you kill the [nats-streaming-server][], you'll notice that the
+working. If you kill the [nats-streaming-server](https://github.com/nats-io/nats-streaming-server), you'll notice that the
 client will die too.
 
 ## Clustering
 
 So, now let's stop both client and server, and start a
-[nats-streaming-server][] cluster.
+[nats-streaming-server](https://github.com/nats-io/nats-streaming-server) cluster.
 
 Create 3 config files as follows:
 
-```conf
+```
 ; a.conf
 port: 4221
 cluster {
@@ -141,9 +141,7 @@ streaming {
     peers: ["b", "c"]
   }
 }
-```
-
-```conf
+``````
 ; b.conf
 port: 4222
 cluster {
@@ -163,9 +161,7 @@ streaming {
     peers: ["a", "c"]
   }
 }
-```
-
-```conf
+``````
 ; c.conf
 port: 4223
 cluster {
@@ -194,9 +190,9 @@ Note that each config listens on different ports:
 - `c`: `4223` and `6223`
 
 Also note that in each config's `cluster` we setup the routes to the other 2
-instances. This cluster config is the actual [NATS][] cluster.
+instances. This cluster config is the actual [NATS](https://github.com/nats-io/nats-server) cluster.
 
-The `streaming.cluster` config is the actual [nats-streaming-server][] cluster
+The `streaming.cluster` config is the actual [nats-streaming-server](https://github.com/nats-io/nats-streaming-server) cluster
 configuration, and only IDs each node and add the other 2 as peers.
 
 Since we are running all nodes on the same machine, notice that the
@@ -204,43 +200,39 @@ Since we are running all nodes on the same machine, notice that the
 
 Once that's done, we can start the 3 servers:
 
-```sh
+```
 $ ./nats-streaming-server -c a.conf
+``````
 $ ./nats-streaming-server -c b.conf
-$ ./nats-streaming-server -c b.conf
+``````
+$ ./nats-streaming-server -c c.conf
 ```
 
 Once all of them are up, you should see logs like the following on each of them:
 
-```log
+```
 [11361] 2019/05/16 14:03:55.994864 [INF] ::1:52022 - rid:8 - Route connection created
 [11361] 2019/05/16 14:03:55.997790 [INF] ::1:52023 - rid:9 - Route connection created
 ```
 
 Now, we can connect start our client again:
 
-```sh
+```
 $ go run main.go nats://localhost:4221 nats://localhost:4222 nats://localhost:4223
 ```
 
 > Notice that I'm passing the URL for all the 3 servers.
 
-Now, play around killing some servers. You'll notice that sometimes nothing
-happens to the client, and other times the client also dies.
+Now, play around killing some servers. You'll notice that sometimes nothing happens to the client, and other times the client also dies.
 
 You may better handle that using a `ConnectionLostHandler`. You may
-check [their repository README][stan] for further information about this.
+check [their repository README](https://github.com/nats-io/stan.go) for further information about this.
 
 ---
 
 I tried to keep it as simple as possible, hope it is helpful! 🙂
 
 If you want, you can also try this with `docker-compose`. I put all
-the code (including the client) in a [GitHub Repository][repo].
+the code (including the client) in a [GitHub Repository](https://github.com/caarlos0/nats-streaming-server-cluster).
 
 Let me know in the comments if you have any questions!
-
-[stan]: https://github.com/nats-io/stan.go
-[NATS]: https://github.com/nats-io/nats-server
-[nats-streaming-server]: https://github.com/nats-io/nats-streaming-server
-[repo]: https://github.com/caarlos0/nats-streaming-server-cluster

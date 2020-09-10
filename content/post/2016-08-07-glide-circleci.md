@@ -1,18 +1,12 @@
 ---
-date: 2016-08-07T00:00:00Z
+title: "Setting up a Go build with Glide on CircleCI"
+date: 2016-08-07
+draft: false
 slug: glide-circleci
-title: Setting up a Go build with Glide on CircleCI
 city: Joinville
-tags:
-- ci
-- golang
 ---
 
-I've lost a considerable amount of time trying to bind those things together,
-so I decided to write this quick post about it, so others could also benefit
-from it.
-
-<!--more-->
+I've lost a considerable amount of time trying to bind those things together, so I decided to write this quick post about it, so others could also benefit from it.
 
 The tips are:
 
@@ -22,7 +16,7 @@ The tips are:
 
 The final `circle.yml` would look like this:
 
-```yaml
+```
 machine:
   environment:
     IMPORT_PATH: "/home/ubuntu/.go_workspace/src/github.com/myuser"
@@ -41,7 +35,6 @@ test:
     - cd "$APP_PATH" && go test -cover $(glide nv)
 ```
 
-Replace `myuser` and `myproject` to the username and repository name of your
-project on github.
+Replace `myuser` and `myproject` to the username and repository name of your project on github.
 
 There is probably some easy way to make this work, but I coulnd't find it.

@@ -1,16 +1,14 @@
 ---
 title: "Couchbase: rolling upgrade from 4.5.x to 5.1.x"
-date: 2018-10-07T16:18:00-03:00
-city: Joinville
+date: 2018-10-10
+draft: false
 slug: cb-upgrade
-tags:
-- couchbase
+city: Joinville
 ---
 
-I have an old Couchbase 4.5.x cluster, and I though it would be nice to upgrade
-it. This are my notes and the tests I did before doing it "in production"™️.
+I have an old Couchbase 4.5.x cluster, and I though it would be nice to upgrade it. This are my notes and the tests I did before doing it "in production"™️.
 
-<!--more-->
+---
 
 ## Breaking changes
 
@@ -56,7 +54,7 @@ again, but it will not be a swap rebalance anymore and thus will take more time.
 We can try this out in a test cluster using Docker! Create a
 `docker-compose.yaml` file like the following:
 
-```yaml
+```
 version: '2'
 
 services:
@@ -102,22 +100,23 @@ networks:
      config:
       - subnet: 172.21.0.0/16
         gateway: 172.21.0.1
-
 ```
 
 If you are using Docker 4 Mac, I recommend increasing the CPU limits:
 
-![docker 4 mac UI](/public/images/3D2762C8-1392-4F1A-8460-92C5A6C113C0.png)
+![](Untitled-6a8164f6-ef49-4a93-a8f2-1307ccd2b52c.png)
 
 Once that's done, fire the machines up:
 
-```shell
+```
 docker-compose up
 ```
 
+`docker-compose up`
+
 Initialize the Couchbase `4.5.x` cluster:
 
-```shell
+```
 docker exec cb_cb1_1 couchbase-cli cluster-init \
   --cluster-username=adm \
   --cluster-password=secret \
@@ -129,7 +128,7 @@ docker exec cb_cb1_1 couchbase-cli cluster-init \
 
 Add the other nodes and rebalance:
 
-```shell
+```
 docker exec cb_cb1_1 couchbase-cli rebalance \
   -c localhost -u adm -p secret \
   --server-add=172.21.0.11 \
@@ -144,7 +143,7 @@ docker exec cb_cb1_1 couchbase-cli server-list \
 
 Create a bucket and insert some data:
 
-```shell
+```
 docker exec cb_cb1_1 couchbase-cli bucket-create \
   -c localhost -u adm -p secret \
   --bucket=customer \
@@ -162,13 +161,13 @@ done
 ```
 
 You can confirm everything by going to the
-<a data-proofer-ignore href='http://localhost:8091'>Couchbase Console</a>.
+Couchbase Console.
 
 ### Swap rebalance 1 node
 
 Let's do a single node swap rebalance first to see what happens:
 
-```sh
+```
 docker exec cb_cb1_1 couchbase-cli rebalance \
   -c localhost -u adm -p secret \
   --server-remove=172.21.0.12 \
@@ -179,14 +178,14 @@ docker exec cb_cb1_1 couchbase-cli rebalance \
 ```
 
 You can see your cluster using the new Couchbase 5 interface by going to its
-<a data-proofer-ignore href='http://localhost:9091'>Couchbase Console</a>.
+Couchbase Console.
 
 ### Compatibility mode
 
 Since the cluster has nodes with version `4.5.x` and `5.1.x`,
 it will run in "4.5 compatibility mode", which is OK:
 
-![couchbase showing compatibility mode msg](/public/images/204716C2-23B8-4FF7-99AE-942CF5CAC71A.png)
+![](Untitled-288dcda6-8fb3-40d7-bfea-a3deef19811c.png)
 
 While in that mode, we can add and remove nodes from both versions. Once all
 nodes are on Couchbase 5.1, you can't add old version nodes anymore.
@@ -195,7 +194,7 @@ nodes are on Couchbase 5.1, you can't add old version nodes anymore.
 
 Let's finish the upgrade by swap rebalancing the last nodes:
 
-```sh
+```
 docker exec cb_cb4_1 couchbase-cli server-add \
   -c localhost -u adm -p secret \
   --server-add=172.21.0.21 \
@@ -221,13 +220,13 @@ without any downtimes!
 
 The compatibility warning should go away as well:
 
-![couchbase 5 interface](/public/images/72CD2617-4345-4F93-A997-52D380242531.png)
+![](Untitled-06310b10-486d-4257-a42c-56baa2c93517.png)
 
 ### Cleanup
 
 Kill all containers and remove them.
 
-```sh
+```
 docker-compose kill
 yes | docker-compose rm
 ```

@@ -1,33 +1,24 @@
 ---
-date: 2017-05-14T00:00:00Z
+title: "Improving Jekyll build time"
+date: 2017-05-14
+draft: false
 slug: jekyll-build-time
-title: Improving Jekyll build time
 city: Joinville
-tags:
-- jekyll
 ---
 
-I've been using Jekyll on my blog since 2012. It is great!
-But, lately, its slow build times started to bother me.
+I've been using Jekyll on my blog since 2012. It is great! But, lately, its slow build times started to bother me.
 
-<!--more-->
+I consider moving to [Hugo](https://gohugo.io/), but that seemed like a lot of work, and I didn't know what the real problem was. 
 
-I consider moving to [Hugo], but that seemed like a lot
-of work, and I didn't know what the real problem was.
-In this post I'll show how I improved my Jekyll blog build time in about
-**75%**.
-
-[hugo]: https://gohugo.io
+In this post I'll show how I improved my Jekyll blog build time in about **75%**.
 
 ## Current state
 
-We will use `jekyll build --profile` to see what's taking too much time to
-build. In order to not make this too extensive, I'll keep only the top 10
-files and the final time.
+We will use `jekyll build --profile` to see what's taking too much time to build. In order to not make this too extensive, I'll keep only the top 10 files and the final time.
 
 Let's see how much time it takes right now:
 
-```console
+```
 Filename                                                  | Count |    Bytes |  Time
 ----------------------------------------------------------+-------+----------+------
 _layouts/default.html                                     |   117 | 3155.23K | 9.095
@@ -50,12 +41,11 @@ feed.xml                                                  |     1 |  104.09K | 0
 
 I added it last year, while I was still not using Cloudfare.
 
-As you can see in the profile, it was taking almost 1s, and Cloudfare
-already do that, so it's kind of useless in this case.
+As you can see in the profile, it was taking almost 1s, and Cloudfare already do that, so it's kind of useless in this case.
 
 I reverted the commit and profile again:
 
-```console
+```
 Filename                                                  | Count |    Bytes |  Time
 ----------------------------------------------------------+-------+----------+------
 _layouts/default.html                                     |   117 | 3157.83K | 8.535
@@ -77,11 +67,10 @@ sitemap.xml                                               |     1 |   12.79K | 0
 ## Remove CSS inlining
 
 Some time ago I also put together a hack to inline the CSS in each page.
-It is good because the entire CSS comes with the page, but at the same time,
-Jekyll take years to build that. Reverting that commit seem to have done
-the greater good so far:
 
-```console
+It is good because the entire CSS comes with the page, but at the same time, Jekyll take years to build that. Reverting that commit seem to have done the greater good so far:
+
+```
 Filename                                                  | Count |    Bytes |  Time
 ----------------------------------------------------------+-------+----------+------
 _layouts/default.html                                     |   117 | 1132.99K | 1.532
@@ -98,13 +87,13 @@ archive.md                                                |     1 |   14.61K | 0
                     done in 4.806 seconds.
 ```
 
-Down to 4secs! Can we improve it even more?
+Down to 4 secs! Can we improve it even more?
 
 ## Split Google Analytics into another file
 
 I had a code block like this in my `default.html`:
 
-```erb
+```
 {% if site.google_analytics %}
 <script type="text/javascript">
   // the default google analytics script
@@ -116,7 +105,7 @@ I've put that in a file and just included it in the `default.html` layout.
 
 Results:
 
-```console
+```
 Filename                                                  | Count |    Bytes |  Time
 ----------------------------------------------------------+-------+----------+------
 _layouts/default.html                                     |   117 | 1136.08K | 1.224
@@ -137,27 +126,23 @@ I don't really know why this is faster, but it is. Some kind of caching maybe?
 
 ## The last 3 seconds
 
-Now, if I disable the [jekyll-seo-tag] plugin and the highlighter, I'm
-down to 1.4secs.
+Now, if I disable the [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag) plugin and the highlighter, I'm down to 1.4 secs.
 
 SEO tags are kind of important, so I don't want to remove them.
 
-The highlighter can be replaced by `highlight.js`, which also seems to
-work better in some cases. In order to do that, I needed to change some
-things.
+The highlighter can be replaced by `highlight.js`, which also seems to work better in some cases. In order to do that, I needed to change some things.
 
 First, disable the highlighter in the `_config.yml` file:
 
-```yaml
+```
 kramdown:
   syntax_highlighter_opts:
     disable : true
 ```
 
-Then, add the `script` and `link` tags into my `_post.html` layout
-(including custom langs and theme):
+Then, add the `script` and `link` tags into my `_post.html` layout (including custom langs and theme):
 
-```html
+```
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/darcula.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/go.min.js"></script>
@@ -168,7 +153,7 @@ Then, add the `script` and `link` tags into my `_post.html` layout
 
 Now, if I profile it again:
 
-```console
+```
 Filename                                                 | Count |   Bytes |  Time
 ---------------------------------------------------------+-------+---------+------
 _layouts/default.html                                    |   117 | 991.15K | 1.225
@@ -189,14 +174,8 @@ sitemap.xml                                              |     1 |  12.79K | 0.0
 
 ## How about the users?
 
-Well, [Cloudfare] has several neat features. It can minify files,
-improve image sizes, bundle js files and so forth.
+Well, [Cloudfare](https://www.cloudflare.com/) has several neat features. It can minify files, improve image sizes, bundle js files and so forth.
 
-All those features actually give me faster page loads than the
-bundling and etc that I had before (from ~3.5s to ~1.9s)!
+All those features actually give me faster page loads than the bundling and etc that I had before (from ~3.5s to ~1.9s)!
 
-I strongly recommend you take a look at it, it will even give you
-free HTTPS :)
-
-[jekyll-seo-tag]: https://github.com/jekyll/jekyll-seo-tag
-[cloudfare]: https://www.cloudflare.com/
+I strongly recommend you take a look at it, it will even give you free HTTPS :)

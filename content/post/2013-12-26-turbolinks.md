@@ -1,35 +1,28 @@
 ---
-date: 2013-12-26T00:00:00Z
+title: "This site is now powered by Turbolinks"
+date: 2013-12-26
+draft: false
 slug: turbolinks
-title: This site is now powered by Turbolinks
+city: Marechal Cândido Rondon
 ---
 
-I think that [turbolinks][turbolinks] is great: it mades it easy to
-add [AJAX PushState][pushstate] to your [Rails][rails] Applications. The only
-problem with that is that we can't use it **any**
-WEB application, because it's a Ruby Gem. So I did
-some ugly-but-easy hacks and add it to this very site.
-I will describe the steps above.
+I think that [turbolinks](https://github.com/rails/turbolinks) is great: it mades it easy to add [AJAX PushState](https://www.google.com.br/search?q=AJAX+PushState) to your [Rails](http://rubyonrails.org/) Applications. The only problem with that is that we can't use it **any** WEB application, because it's a Ruby Gem. So I did some ugly-but-easy hacks and add it to this very site. I will describe the steps above.
 
 ### First things first
 
-- This site is [OpenSource][blog].
-- I'm using Jekyll alongside with less, bower, grunt and of course,
-  node and npm.
-- You can take a look at [these commits][commits] to see what I did.
+- This site is [OpenSource](https://github.com/caarlos0/caarlos0.github.com.git).
+- I'm using Jekyll alongside with less, bower, grunt and of course, node and npm.
+- You can take a look at [these commits](https://github.com/caarlos0/caarlos0.github.com/commit/cb17b421e57aec67f3d7a582696e62d863c3689f) to see what I did.
 
 With that said, let's do the thing.
 
 ### Getting turbolinks
 
-Well, turbolinks is a rubygem, but it has a lot of dependencies, and Jekyll
-don't have the Rails Asset Pipeline, so I can't figure out how to use this
-way.
+Well, turbolinks is a rubygem, but it has a lot of dependencies, and Jekyll don't have the Rails Asset Pipeline, so I can't figure out how to use this way.
 
-So, to get the pure turbolinks file, I used grunt-curl and compiled it to
-javascript using grunt-contrib-coffee:
+So, to get the pure turbolinks file, I used grunt-curl and compiled it to javascript using grunt-contrib-coffee:
 
-```js
+```
 curl: {
   turbolinks: {
     src: 'https://raw.github.com/rails/turbolinks/master/lib/assets/javascripts/turbolinks.js.coffee',
@@ -61,17 +54,13 @@ uglify: {
 }
 ```
 
-As you can see, I get always the last file from trunk and compile to plain old
-JavaScript. After that, I also concatenate it with other JS files and uglify the
-result (using grunt-contrib-concat and grunt-contrib-uglify, respectively).
+As you can see, I get always the last file from trunk and compile to plain old JavaScript. After that, I also concatenate it with other JS files and uglify the result (using grunt-contrib-concat and grunt-contrib-uglify, respectively).
 
 ### Dealing with `style="background-image: url(image.jpg);"`
 
-For some reason I'm now quite sure, turbolinks mess up with this kind
-of style declaration (which I use in the image headers). The solution I've
-found is kinda weird, but it works:
+For some reason I'm now quite sure, turbolinks mess up with this kind of style declaration (which I use in the image headers). The solution I've found is kinda weird, but it works:
 
-```js
+```
 var reloadImages = function() {
   var styles, style, url, _i, _len, _el;
   styles = Array.prototype.slice.call(
@@ -92,13 +81,9 @@ $(document).on("page:change", function() {
 });
 ```
 
-### Dealing with the twitter button
+The twitter button adds a script to the head, which turbolinks doesn't replace, so, it gets buggy. To fix that I changed a little the default button markup:
 
-The twitter button adds a script to the head, which turbolinks doesn't replace,
-so, it gets buggy. To fix that I changed a little the
-default button markup:
-
-```html
+```
 <a  href="https://twitter.com/share" class="twitter-share-button"
 data-lang="en" data-size="large"
 data-url="{{ site.production_url }}{{ page.url }}"
@@ -120,7 +105,7 @@ data-text="{{ page.title }}">
 
 And add something at the page change event:
 
-```js
+```
 var twttr;
 $(document).on("page:change", function() {
   if (twttr) {
@@ -133,10 +118,9 @@ It was the best solution I've found.
 
 ### Dealing with Disqus load on bottom
 
-I changed the Disqus scripts to only load the commends when the user
-reach the bottom of the page:
+I changed the Disqus scripts to only load the commends when the user reach the bottom of the page:
 
-```html
+```
 <div id="disqus_thread">
   Loading Comments...
 </div>
@@ -166,7 +150,7 @@ reach the bottom of the page:
 
 But it causes me some trouble with Turbolinks. To fix that, I simply did:
 
-```js
+```
 $(document).on("page:fetch", function() {
   window.onscroll = void 0;
 });
@@ -174,15 +158,9 @@ $(document).on("page:fetch", function() {
 
 And it worked!
 
-### Adding nprogress
+I also decided to add nprogress, a lib that provides the loading bar medium-style (and youtube-style). I had to add it to my `bower.json`, add the import in my less file (with a `(less)` prefix, so it imports it as a less file) and mix it up in my js. I also had to bind the events to nprogress, like this:
 
-I also decided to add nprogress, a lib that provides the loading bar
-medium-style (and youtube-style). I had to add it to my `bower.json`,
-add the import in my less file (with a `(less)` prefix, so it imports it
-as a less file) and mix it up in my js. I also had to bind the events
-to nprogress, like this:
-
-```js
+```
 $(document).on("page:fetch", function() {
   NProgress.start();
 });
@@ -203,11 +181,4 @@ And it was working as expected.
 
 ### The Final Countdown
 
-The result is what you're seeing right now. I found it neat and it loads
-really faster. Hope you like it!
-
-[turbolinks]: https://github.com/rails/turbolinks
-[pushstate]: https://www.google.com.br/search?q=AJAX+PushState
-[rails]: http://rubyonrails.org/
-[blog]: https://github.com/caarlos0/caarlos0.github.com.git
-[commits]: https://github.com/caarlos0/caarlos0.github.com/commit/cb17b421e57aec67f3d7a582696e62d863c3689f
+The result is what you're seeing right now. I found it neat and it loads really faster. Hope you like it!
