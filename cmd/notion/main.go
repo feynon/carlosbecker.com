@@ -19,32 +19,11 @@ import (
 func main() {
 	client := &notionapi.Client{}
 	client.AuthToken = os.Getenv("NOTION_TOKEN")
-	blogColID := os.Getenv("BLOG_COLLECTION_ID")
 
-	log.Println("Querying collection", blogColID)
-	index, err := client.QueryCollection(blogColID, os.Getenv("BLOG_COLLECTION_VIEW_ID"), &notionapi.Query{
-		Aggregate: []*notionapi.AggregateQuery{
-			{
-				AggregationType: "count",
-				ID:              "count",
-				Type:            "title",
-				Property:        "title",
-				ViewType:        "table",
-			},
-		},
-		FilterOperator: "and",
-		Sort: []*notionapi.QuerySort{
-			{
-				Direction: "descending",
-				Property:  "a`af",
-			},
-		},
-	}, &notionapi.User{
-		Locale:   "en",
-		TimeZone: "America/Sao_Paulo",
-	})
+	colID := os.Getenv("BLOG_COLLECTION_ID")
+	index, err := queryCollection(client, colID, os.Getenv("BLOG_COLLECTION_VIEW_ID"))
 	if err != nil {
-		log.Fatalf("DownloadPage() failed with %s\n", err)
+		log.Fatalln("failed to query blog index", err)
 	}
 
 	g := New(10)
@@ -55,11 +34,11 @@ func main() {
 			total--
 			continue
 		}
-		if k == blogColID {
+		if k == colID {
 			total--
 			continue
 		}
-		if v.Block.ParentID != blogColID {
+		if v.Block.ParentID != colID {
 			total--
 			continue
 		}
@@ -110,9 +89,92 @@ func main() {
 	if err := g.Wait(); err != nil {
 		log.Fatalln(err)
 	}
+
+	colID = os.Getenv("OTHER_COLLECTION_ID")
+	index, err = queryCollection(client, colID, os.Getenv("OTHER_COLLECTION_VIEW_ID"))
+	if err != nil {
+		log.Fatalln("failed to query other pages index", err)
+	}
+
+	total = len(index.RecordMap.Blocks)
+	done = 0
+	for k, v := range index.RecordMap.Blocks {
+		if v == nil {
+			total--
+			continue
+		}
+		if k == colID {
+			total--
+			continue
+		}
+		if v.Block.ParentID != colID {
+			total--
+			continue
+		}
+		if v.Block.Type != "page" {
+			total--
+			log.Println("not a page:", k, v.Block.Type)
+			continue
+		}
+
+		k := k
+		g.Go(func() error {
+			return renderPage(
+				client,
+				k,
+				func(t string) {
+					log.Println("[", atomic.AddInt64(&done, 1), "/", total, "]", "rendering", t)
+				},
+				func(page *notionapi.Page) string {
+					slug := toString(page.Root().Prop("properties.7F2|"))
+					return fmt.Sprintf("content/%s.md", strings.ReplaceAll(slug, "/", ""))
+				},
+				func(page *notionapi.Page) string {
+					return pageHeader(page.Root().Title)
+				},
+				func(page *notionapi.Page) error {
+					if toString(page.Root().Prop("properties.7F2|")) == "" {
+						return errors.New("missing slug")
+					}
+					if page.Root().Title == "" {
+						return errors.New("title")
+					}
+
+					return nil
+				},
+			)
+		})
+	}
+
+	if err := g.Wait(); err != nil {
+		log.Fatalln(err)
+	}
 }
 
-type logProcess func(title string)
+func queryCollection(client *notionapi.Client, colID, colViewID string) (*notionapi.QueryCollectionResponse, error) {
+	log.Println("Querying collection", colID)
+	return client.QueryCollection(colID, colViewID, &notionapi.Query{
+		Aggregate: []*notionapi.AggregateQuery{
+			{
+				AggregationType: "count",
+				ID:              "count",
+				Type:            "title",
+				Property:        "title",
+				ViewType:        "table",
+			},
+		},
+		FilterOperator: "and",
+		Sort: []*notionapi.QuerySort{
+			{
+				Direction: "descending",
+				Property:  "a`af",
+			},
+		},
+	}, &notionapi.User{
+		Locale:   "en",
+		TimeZone: "America/Sao_Paulo",
+	})
+}
 
 func renderPage(
 	client *notionapi.Client,
