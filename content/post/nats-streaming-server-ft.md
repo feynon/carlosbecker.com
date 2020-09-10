@@ -10,7 +10,7 @@ I wanted to set up a fault tolerant [nats-streaming-server](https://github.com/n
 
 <!--more-->
 
-I would also recommend you to read a [previous post](https://carlosbecker.com/posts/nats-streaming-server-cluster/) I wrote about how to do it using the clustering method.
+I would also recommend you to read a [previous post]({{< ref nats-streaming-server-cluster.md >}}) I wrote about how to do it using the clustering method.
 
 ## Why not Clustering
 
@@ -40,7 +40,7 @@ We decided to try the fault tolerant mode after some feedback from the NATS Slac
 
 ## Fault Tolerance
 
-Another solution for deploying a highly available [NATS Streaming Server](https://github.com/nats-io/nats-streaming-server) is to use its Fault Tolerant mode - which requires a shared filesystem, for example, NFS.  On the [previous post](https://carlosbecker.com/posts/nats-streaming-server-cluster/) I added that funny joke about NFS being the culmination of 3 lies and etc... that didn't age well. 😂
+Another solution for deploying a highly available [NATS Streaming Server](https://github.com/nats-io/nats-streaming-server) is to use its Fault Tolerant mode - which requires a shared filesystem, for example, NFS.  On the [previous post]({{< ref nats-streaming-server-cluster.md >}}) I added that funny joke about NFS being the culmination of 3 lies and etc... that didn't age well. 😂
 
 We didn't want to manage our own NFS, nor have one more database to look after, so we decided to rely on [Google Cloud Filestore](https://cloud.google.com/filestore/) - a NFS as a service offered by Google.
 
@@ -96,7 +96,7 @@ $ ./nats-streaming-server -c a.conf
 $ ./nats-streaming-server -c b.conf
 ```
 
-We can then run our client from the [previous post](https://carlosbecker.com/posts/nats-streaming-server-cluster/) to test it:
+We can then run our client from the [previous post]({{< ref nats-streaming-server-cluster.md >}}) to test it:
 
 ```shell
 $ go run main.go nats://localhost:4221 nats://localhost:4222

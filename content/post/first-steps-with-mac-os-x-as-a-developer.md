@@ -92,7 +92,7 @@ Some examples:
 
 - [my dotfiles](https://github.com/caarlos0/dotfiles-osx) (which actually do most of this stuff for me)
 
-I've [already wrote about this before](https://carlosbecker.com/posts/dotfiles-are-meant-to-be-forked/), in case you want to read something about it.
+I've [already wrote about this before]({{< ref dotfiles-are-meant-to-be-forked.md >}}), in case you want to read something about it.
 
 In this example, let's install [my dotfiles for osx](https://github.com/caarlos0/dotfiles-osx) (basically, the holman's with some custom things):
 

@@ -6,7 +6,7 @@ slug: docker-protips
 city: Joinville
 ---
 
-Like my old post [on git](https://carlosbecker.com/posts/git-protips/), this is somewhat a collection of useful Docker commands/tricks/whatever.
+Like my old post [on git]({{< ref git-protips.md >}}), this is somewhat a collection of useful Docker commands/tricks/whatever.
 
 Feel free to leave yours in the comments!
 

@@ -64,8 +64,7 @@ func main() {
 				},
 				func(page *notionapi.Page) string {
 					slug := toString(page.Root().Prop("properties.S6_\""))
-					date := toDateString(page.Root().Prop("properties.a`af"))
-					return fmt.Sprintf("content/post/%s-%s.md", date, strings.ReplaceAll(slug, "/", ""))
+					return fmt.Sprintf("content/post/%s.md", strings.ReplaceAll(slug, "/", ""))
 				},
 				func(page *notionapi.Page) string {
 					slug := toString(page.Root().Prop("properties.S6_\""))
@@ -293,6 +292,8 @@ func toLang(s string) string {
 	return strings.ToLower(s)
 }
 
+var postURLRegex = regexp.MustCompile(`\(https://carlosbecker.com/posts/(.+)/\)`)
+
 func buildMarkdown(header string, content []byte) []byte {
 	ss := strings.Replace(string(content), "---", "<!--more-->", 1) // replaces the first divider with the more thing for hugo
 	ss = strings.NewReplacer(
@@ -302,6 +303,8 @@ func buildMarkdown(header string, content []byte) []byte {
 		"‘", "'",
 		"…", "...",
 	).Replace(ss)
+
+	ss = postURLRegex.ReplaceAllString(ss, "({{< ref $1.md >}})")
 
 	return []byte(
 		strings.Join(

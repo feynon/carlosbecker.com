@@ -8,9 +8,9 @@ city: Joinville
 
 This is the story on how I speed up my terminal load time.
 
-Some time ago I shared my [dotfiles to the world](https://carlosbecker.com/posts/dotfiles-are-meant-to-be-forked/).
+Some time ago I shared my [dotfiles to the world]({{< ref dotfiles-are-meant-to-be-forked.md >}}).
 
-I was never really happy with the shell load time, though. Most of it was spent by antigen loading the plugins I use. By then, my shell was taking almost 10 seconds to load. To address that issue, I created [antibody](https://carlosbecker.com/posts/go-antibody/). My shell went from almost 10 seconds to ~2 seconds. It was a huge step, still, I was no happy about it.
+I was never really happy with the shell load time, though. Most of it was spent by antigen loading the plugins I use. By then, my shell was taking almost 10 seconds to load. To address that issue, I created [antibody]({{< ref go-antibody.md >}}). My shell went from almost 10 seconds to ~2 seconds. It was a huge step, still, I was no happy about it.
 
 Today, I decided to go and figure out why. The first step was to gather data on why it was so slow:
 

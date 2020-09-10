@@ -12,7 +12,7 @@ After some time, I finally decided to move my blog from [Jekyll](https://jekyllr
 
 That was probably the best thing I did in the past few weeks. My Jekyll builds were really slow, and the feedback loop was too big. I get easily distracted, so, I was not writing much.
 
-You can read some of my fight to make it faster [here](https://carlosbecker.com/posts/jekyll-build-time/). Well, with Hugo,
+You can read some of my fight to make it faster [here]({{< ref jekyll-build-time.md >}}). Well, with Hugo,
 doesn't matter which features I use, full build time is always less than 1 second and incremental builds take ~300ms. **Fast** should be Hugo's middle name!
 
 Also, my build was running [htmlproof](https://github.com/gjtorikian/html-proofer), which is nice, but also extremelly slow, so I only ran it on Travis. With old posts breaking randomly, I eventually gave up.

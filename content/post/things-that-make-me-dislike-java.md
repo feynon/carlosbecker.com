@@ -126,4 +126,4 @@ And it's just one example. There is a lot more. You will feel it a lot working w
 
 I'll like to didn't have to say that, but, well, most of Java programmers have Java more like a religion than a work tool, so, I'm not saying that Java is wrong. I'm discussing some behaviors, comparing with other languages, etc. Please folks, don't crucify me.
 
-Also, some of the concepts I talk about here could be simulated, sometimes with a weird syntax, using [Google Guava Libraries](http://code.google.com/p/guava-libraries/). I've [talked about](https://carlosbecker.com/posts/rocking-out-with-google-guava/) it sometime ago.
+Also, some of the concepts I talk about here could be simulated, sometimes with a weird syntax, using [Google Guava Libraries](http://code.google.com/p/guava-libraries/). I've [talked about]({{< ref rocking-out-with-google-guava.md >}}) it sometime ago.

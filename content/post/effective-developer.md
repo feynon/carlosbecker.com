@@ -93,7 +93,7 @@ I don't mean buying new hardware or changing OSes or anything like that.
 
 I spend most of my time on my terminal, so it makes sense to know how to use it.
 
-It is amazing the amount of work you can avoid by knowing some shell script and piping things. If you read my blog and attend to details, you'll see that sometimes I post my shell witchcraft here, for example, [when I migrated a lot of repositories from one CI to another]({{< ref "2017-03-11-travis-to-buildkite.md" >}}).
+It is amazing the amount of work you can avoid by knowing some shell script and piping things. If you read my blog and attend to details, you'll see that sometimes I post my shell witchcraft here, for example, [when I migrated a lot of repositories from one CI to another](https://carlosbecker.com/posts/travis-to-buildkite).
 
 I also have a lot of automation in place. Common tasks should be fast to execute or execute themselves.
 

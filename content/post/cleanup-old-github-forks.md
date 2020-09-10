@@ -6,7 +6,7 @@ slug: cleanup-old-github-forks
 city: Joinville
 ---
 
-I like to keep my GitHub clean. I delete forks I'm not using anymore, move old abandoned repositories to my [graveyard](https://carlosbecker.com/posts/repositories-graveyard/) and etc.
+I like to keep my GitHub clean. I delete forks I'm not using anymore, move old abandoned repositories to my [graveyard]({{< ref repositories-graveyard.md >}}) and etc.
 
 <!--more-->
 

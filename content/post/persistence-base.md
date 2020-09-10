@@ -6,7 +6,7 @@ slug: persistence-base
 city: Joinville
 ---
 
-Some time ago, I [posted here](https://carlosbecker.com/posts/modular-persistence/) about a simple project that I've done in my post-graduation classes. Since I need it in other projects, and also some friends ended up using it in small projects, I decided to evolve it a little bit.
+Some time ago, I [posted here]({{< ref modular-persistence.md >}}) about a simple project that I've done in my post-graduation classes. Since I need it in other projects, and also some friends ended up using it in small projects, I decided to evolve it a little bit.
 
 So, this is just another post (better, I hope) about [that project](https://github.com/caarlos0/persistence-base). It's basically, a "base" for your Java projects that will somehow need to persist data to some database (almost any app). It's baked by Guice, Guava, EclipseLink and Apache B-Val, so, you must have almost everything you need to get started almost instantly (you still need to add the JDBC driver).
 

@@ -22,7 +22,7 @@ The [project's README](https://github.com/caarlos0/junit-slowest-tests) is prett
 
 Besides that, you can use [maven-profiler](https://github.com/takari/maven-profiler) to find other slow parts of your build and fix them.
 
-One last tip: if you have problems with low test coverage in your project, try [coverage-maven-plugin](https://carlosbecker.com/posts/mvn-pr-coverage-blammer/),
+One last tip: if you have problems with low test coverage in your project, try [coverage-maven-plugin]({{< ref mvn-pr-coverage-blammer.md >}}),
 a maven plugin that will blame pull request with coverage bellow a specified amount.
 
 That's it for today, happy hacking!

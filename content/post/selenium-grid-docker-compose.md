@@ -127,7 +127,7 @@ Just 5 seconds to start 8 containers. *Neat*.
 
 Some people don't yet trust Docker enough to put it in production, or are scared of it because of the lack of knowledge. I can only suggest you to start testing it in development machines, CI environments and so forth. It is safe and you will surely learn a lot (and love almost every second of it).
 
-You can also read my [previous post about how Docker works](https://carlosbecker.com/posts/docker-basics/). 
+You can also read my [previous post about how Docker works]({{< ref docker-basics.md >}}). 
 
 The best part: need more speed? Just change the instance type and let `docker-compose` scale it up!
 The other best part (yes there is more than one): you can put 30 Selenium machines to run in a few seconds. Try that with 30 Windows machines.

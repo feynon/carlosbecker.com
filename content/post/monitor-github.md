@@ -47,7 +47,7 @@ the alerting rules for Prometheus, for example:
 ```
 
 I created this tool on my previous work because we had a lot of tooling in
-place there, I use it on my [own prometheus instance](https://carlosbecker.com/posts/prometheus-authentication-with-oauth2_proxy/) and also on my
+place there, I use it on my [own prometheus instance]({{< ref prometheus-authentication-with-oauth2_proxy.md >}}) and also on my
 current work.
 
 A few weeks ago, GitHub launched a new feature so you can watch
