@@ -58,4 +58,4 @@ disableAliases = true
 		url = "/about/"
 
 [outputs]
-home = [ "HTML", "RSS", "REDIR", "HEADERS" ]
+home = [ "HTML", "RSS" ]
