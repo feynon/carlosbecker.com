@@ -84,7 +84,7 @@ Oh, I'm working on having t-shirts and stickers, if anyone is interested!
 
 **edit**:
 
-[https://twitter.com/caarlos0/status/983696191564152832?ref_src=twsrc%5Etfw](https://twitter.com/caarlos0/status/983696191564152832?ref_src=twsrc%5Etfw)
+{{< tweet 983696191564152832 >}}
 
 ### OpenCollective
 

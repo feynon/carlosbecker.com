@@ -8,7 +8,7 @@ city: Joinville
 
 As you may know, this blog uses [Jekyll Bootstrap](http://jekyllbootstrap.com/) as engine. Yeah, Jekyll Bootstrap uses Twitter-Bootstrap, but, it uses the version 2.0.x (mine is 2.0.4, don't remember if I update or if it hsa like this since the begin of times), and the version 2.1.0 is comming! Like you can see in the @[twbootstrap](https://twitter.com/twbootstrap) twitter profile, 2.1.0 will be released a few days!
 
-[https://twitter.com/getbootstrap/status/230470118562484224?ref_src=twsrc%5Etfw](https://twitter.com/getbootstrap/status/230470118562484224?ref_src=twsrc%5Etfw)
+{{< tweet 230470118562484224 >}}
 
 HELL YEAH, finally a new version!
 
@@ -20,7 +20,7 @@ I'll describe here my ‘steps' to update jekyll to the new version!
 
 First of all, you will need the Node.js Package Manager (NPM), so, install nodejs! In my archlinux box, it was simple like that:
 
-```
+```shell
 $ pacman -Sy nodejs
 ```
 

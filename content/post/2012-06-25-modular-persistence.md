@@ -24,7 +24,7 @@ To show hot it works, let's do a little example.
 
 First, clone the repository:
 
-```
+```shell
 $ git clone https://github.com/caarlos0/persistence-base sample
 ```
 
@@ -34,7 +34,7 @@ Then, open the project in your preferred IDE, then, open the `pom.xml` file and 
 
 Open `src/main/java/com/github/caarlos0/model` and create a class called `Foo` with the following code:
 
-```
+```java
 @Entity
 public class Foo extends Bean {
 
@@ -60,7 +60,7 @@ public class Foo extends Bean {
 
 Now, we have to create the specific DAO for this entity. Go into `src/main/java/com/github/caarlos0/dao` and create a `FooDao.java`, with this code:
 
-```
+```java
 public class FooDao extends AbstractDao<Foo> {
   @Inject
   public FooDao(Provider<EntityManager> emf) {
@@ -71,7 +71,7 @@ public class FooDao extends AbstractDao<Foo> {
 
 We also need to setup our `PersistenceModule` to bind this DAO. Open `src/main/java/com/github/caarlos0/dao/inject/PersistenceModule.java` adding the bind to `FooDao` to look like this:
 
-```
+```java
 public class PersistenceModule extends AbstractModule {
 
   @Override
@@ -90,7 +90,7 @@ If you want to change the *Persistence Unit* name, you will have to do this in t
 
 We have to add classes, configure the database and etc in the `src/main/resources/META-INF/persistence.xml` file:
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
   <persistence-unit name="base" transaction-type="RESOURCE_LOCAL">
@@ -111,7 +111,7 @@ We have to add classes, configure the database and etc in the `src/main/resource
 
 Now, we have to create the database in our MySQL:
 
-```
+```shell
 $ mysqladmin -u root -p create foodb
 ```
 
@@ -119,7 +119,7 @@ $ mysqladmin -u root -p create foodb
 
 Now, let's write a test. Open `src/main/java/com/github/caarlos0/App.java` and do some code.
 
-```
+```java
 public class App {
   public static void main(String[] args) {
     Injector i = PersistenceHelper.getInjector();
@@ -134,7 +134,7 @@ public class App {
 
 Run the tests with
 
-```
+```shell
 $ mvn exec:java \
   -Dexec.mainClass="com.github.caarlos0.App" \
   -Dexec.classpathScope=runtime

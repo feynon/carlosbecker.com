@@ -10,7 +10,7 @@ I just started to learn Ruby and Ruby on Rails, and, as I read somewhere, most R
 
 Curious, I tried to use some IDEs, like IntelliJ, Netbeans and others… and really, it just slow you. A good text editor is incredible better. For example, in my VIm config, I could simply type `def[TAB]` and VIm create for me:
 
-```
+```ruby
 def method
 
 end
@@ -24,7 +24,7 @@ GMate is a set of plugins that try to ‘transform' gedit in a ' textmate for li
 
 The installation is pretty simple:
 
-```
+```shell
 $ git clone git://github.com/gmate/gmate.git
 cd gmate
 ./install.sh
@@ -42,19 +42,19 @@ Just follow these steps:
 
 ### Clone the project from github:
 
-```
+```shell
 $ git clone git://github.com/caarlos0/vimfiles.git ~/.vim
 ```
 
 ### Edit/Create your main `vimrc` file
 
-```
+```shell
 $ vim ~/.vimrc
 ```
 
 With the following content:
 
-```
+```shell
 source ~/.vim/vimrc
 colorscheme molokai
 ```
@@ -63,7 +63,7 @@ Then save and exit;
 
 ### Update the submodules:
 
-```
+```shell
 $ cd ~/.vim
 $ git submodule update --init
 ```

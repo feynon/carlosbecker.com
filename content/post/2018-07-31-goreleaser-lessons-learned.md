@@ -243,13 +243,13 @@ It is not easy to be the product owner and the developer at the same time.
 
 As a developer, it is easy to say "yes" to things. It is just more code, right? It reminds me of this Tweet:
 
-[https://twitter.com/ingramchen/status/532572556159488000?ref_src=twsrc%5Etfw](https://twitter.com/ingramchen/status/532572556159488000?ref_src=twsrc%5Etfw)
+{{< tweet 532572556159488000 >}}
 
 Assuming that `errors = (more code)^2` and `more features = more code` are both true, how do I decide if something goes in or not?
 
 I have been trying to follow what Solomon Hykes once said:
 
-[https://twitter.com/solomonstre/status/715277134978113536](https://twitter.com/solomonstre/status/715277134978113536)
+{{< tweet 715277134978113536 >}}
 
 Some things are, like, just… cute… you will regret adding those. Other people also learned adding things because it's kind of cool may not be a very good idea:
 

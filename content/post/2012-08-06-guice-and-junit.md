@@ -16,7 +16,7 @@ But, if you use Guice in your apps, you of course has doubts about *how do I tes
 
 Yep, I has these doubts too, then, most of time, I just made something like this:
 
-```
+```java
 public class FooTests {
   Injector i = Guice.createInjector(new FooModule());
 
@@ -34,7 +34,7 @@ Well, I found a great way to solve this.
 
 I'll push it to Github soon, but, I can tell you that the use is pretty simple, and it only depends on JUnit 4.10. With my lib, you will do tests just like this:
 
-```
+```java
 @RunWith(GuiceTestRunner.class)
 @GuiceModules(FooModule.class)
   public class FooTests {

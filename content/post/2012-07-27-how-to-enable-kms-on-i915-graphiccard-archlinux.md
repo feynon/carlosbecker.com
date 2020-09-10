@@ -14,7 +14,7 @@ So, you can see this is a good thing, uh? I'll show you the steps needed to acti
 
 If the following command return `1`, your KMS module is already active, and you can go and drink a coffee. Otherwise, goto the next steps.
 
-```
+```shell
 $ cat /sys/module/i915/parameters/modeset
 ```
 
@@ -30,7 +30,7 @@ xf86-video-vesa
 
 You can install it in a archlinux box with
 
-```
+```shell
 $ pacman -Sy xf86-video-{fbdev,intel,vesa}
 ```
 
@@ -64,7 +64,7 @@ EndSection
 
 Now, we can regen initframs with
 
-```
+```shell
 $ sudo mkinitcpio -p linux
 ```
 
@@ -74,7 +74,7 @@ Now, reboot your system, and when it came up, run the first command again, and s
 
 Also, this is my `lspci`:
 
-```
+```shell
 $ lspci | grep -i vga
 	00:02.0 VGA compatible controller: Intel Corporation Core Processor Integrated Graphics Controller (rev 18)
 ```

@@ -21,7 +21,7 @@ I end up with a tecnical easy solution for arch linux, after follow a thousand t
 -   Reboot
 
 > **PS**: If you have yaourt, you can do all this with one command:
-```
+```shell
 $ yaourt -S android-udev gvfs-gphoto2 --noconfirm
 ```
 

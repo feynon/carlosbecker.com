@@ -65,7 +65,7 @@ But either way, I rarely stop working in the time I should. I'm trying to force 
 
 This I already posted on twitter, but anyway…
 
-[https://twitter.com/caarlos0/status/1004448888995090438?ref_src=twsrc%5Etfw](https://twitter.com/caarlos0/status/1004448888995090438?ref_src=twsrc%5Etfw)
+{{< tweet 1004448888995090438 >}}
 
 ### Don't forget your friends
 

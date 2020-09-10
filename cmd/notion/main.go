@@ -8,6 +8,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"regexp"
 	"strings"
 	"sync/atomic"
 
@@ -190,6 +191,8 @@ func queryCollection(client *notionapi.Client, colID, colViewID string) (*notion
 	})
 }
 
+var tweetExp = regexp.MustCompile(`^https://twitter.com/.*/status/(\d+).*$`)
+
 func renderPage(
 	client *notionapi.Client,
 	k string,
@@ -224,6 +227,13 @@ func renderPage(
 			converter.Printf("```" + toLang(block.CodeLanguage) + "\n")
 			converter.Printf(block.Code + "\n")
 			converter.Printf("```\n")
+			return true
+		}
+
+		if block.Type == notionapi.BlockTweet {
+			converter.Newline()
+			converter.Printf("{{< tweet %s >}}", tweetExp.FindStringSubmatch(block.Source)[1])
+			converter.Newline()
 			return true
 		}
 
