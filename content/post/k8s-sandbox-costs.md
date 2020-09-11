@@ -58,7 +58,7 @@ the `limits` values;
 Of course, this isn't perfect. Some times it will not be enough and other times it will be too much.
 Apps also change, and their resource usage tend to change as well.
 
-You need to constantly keep an eye on that.Load balancersAWS Elastic LoadBalancers costs almost $20/mo. At the beginning, we created all the services with the [service.beta.kubernetes.io/aws-load-balancer-internal](http://service.beta.kubernetes.io/aws-load-balancer-internal) annotation set, ending up with tons of ELBs and spending a lot of money.
+You need to constantly keep an eye on that.Load balancersAWS Elastic LoadBalancers costs almost $20/mo. At the beginning, we created all the services with the `service.beta.kubernetes.io/aws-load-balancer-internal` annotation set, ending up with tons of ELBs and spending a lot of money.
 
 Later on, we created an Ingress controller with nginx, and most of our services are served through it. So, instead of having a ELB for each service, we now have a single ELB for the Ingress. All requests pass through it, with nginx doing the work of sending them to the right pods.
 

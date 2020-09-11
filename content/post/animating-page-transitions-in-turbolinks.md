@@ -8,6 +8,8 @@ city: Joinville
 
 Since I've seen the new [Basecamp](http://basecamp.com/), I fall in love with it.
 
+<!--more-->
+
 It's fast, had sleek animations in page changes and so on.
 
 Well, I put one thing in my head: "if they can, I can". So I worked. Can get a really good speed with a 1Gb RAM + SSD HD from [DigitalOcean](http://digitalocean.com/) for $ 10 per month (really cheap, I believe), and tweaked my app to use the [Puma](http://puma.io/) server (with socket, of course) + [Nginx](http://nginx.org/) (that also serves the assets), [cache-digest](https://github.com/rails/cache_digests) GEM to up the irons while caching things, and [turbolinks](https://github.com/rails/turbolinks) for a really simple AJAX (done with pushstate) (I'll talk about this architecture another day).
@@ -16,7 +18,7 @@ Well, I'm pretty happy, except that I don't had those awesome bad-ass animations
 
 ## [turbolinks_transitions](https://github.com/caarlos0/turbolinks_transitions)
 
-![](/public/images/animating-page-transitions-in-turbolinks/77a541f6-e264-4b6d-97a1-508dc406b22a.gif)
+![Gif showing an example app with turbolinks-transitions.](/public/images/animating-page-transitions-in-turbolinks/77a541f6-e264-4b6d-97a1-508dc406b22a.gif)
 
 Just a cool animated gif with the example!
 
@@ -30,6 +32,6 @@ I'll be glad to hear your suggestions and merge your pull-requests! Feel free to
 
 See you soon.
 
-<!--more-->
+---
 
 > PS: the example above is running locally, so, maybe you will not see it at first, but, just look a little closer and you shall see a little fade while switching pages :)

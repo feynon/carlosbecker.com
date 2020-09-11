@@ -1,5 +1,7 @@
 DirectoryPath: "site"
-IgnoreURLs: []
+IgnoreURLs:
+  - m.carlosbecker.com
+  - amzn.to
 IgnoreDirs: []
 IgnoreDirectoryMissingTrailingSlash: true
 IgnoreAltMissing: true

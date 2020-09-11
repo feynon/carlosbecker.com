@@ -8,6 +8,8 @@ city: Joinville
 
 Earlier this year, the new version of the Java Programming Language was released. Finally, it enters in the field of the "cool peeps" with some features it should have since years ago, like Lambdas.
 
+<!--more-->
+
 > "Java developers are now Hipsters again!"
 > 
 > — Seen somewhere in the wild internet.
@@ -24,13 +26,13 @@ Well, this version surely have a lot of cool new features, so, I would like to p
 
 This is really awesome. A lot of languages have this feature for years now, and for years I've been talking about how Java should have this. Now, finally, we have:
 
-```c
+```java
 Runnable runnable = () -> System.out.println("Run forrest, run!");
 ```
 
 Even if the implementation "behind the scenes" is not quite the best, in my humble opinion it is better than the interfaces with all that weird inner classes that we were using before:
 
-```c
+```java
 Runnable runnable = new Runnable() {
   @Override
   public void run() {
@@ -43,7 +45,7 @@ Runnable runnable = new Runnable() {
 
 I have to admit, this is awesome! We can do all sort of things with a DSL that is actually enjoyable to use:
 
-```c
+```java
 Map<String, String> hash = new HashMap<>();
 hash.entrySet().stream()
     .map(entry -> entry.getValue())
@@ -66,7 +68,7 @@ I just can't wait for Java 8 and the Money API! :moneybag:
 
 I still can't believe that it take so long...
 
-```c
+```java
 System.out.println(String.join(". ", "FINALLY", "String", "joining"));
 // FINALLY. String. joining
 ```
@@ -75,7 +77,7 @@ System.out.println(String.join(". ", "FINALLY", "String", "joining"));
 
 I posted about this in my Facebook timeline and it ends up becoming a little noisy. Anyway, I would really prefer a [ruby-ish approach]({{< ref ruby-nil.md >}}) to this problem, but, well, this is better than nothing. I have used it in some `filter` calls like this, for example:
 
-```c
+```java
 List<String> names = new ArrayList<>();
 names.stream()
     .filter(entry -> entry.startsWith("C"))

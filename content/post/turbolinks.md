@@ -8,6 +8,8 @@ city: Marechal Cândido Rondon
 
 I think that [turbolinks](https://github.com/rails/turbolinks) is great: it mades it easy to add [AJAX PushState](https://www.google.com.br/search?q=AJAX+PushState) to your [Rails](http://rubyonrails.org/) Applications. The only problem with that is that we can't use it **any** WEB application, because it's a Ruby Gem. So I did some ugly-but-easy hacks and add it to this very site. I will describe the steps above.
 
+<!--more-->
+
 ### First things first
 
 - This site is [OpenSource](https://github.com/caarlos0/caarlos0.github.com.git).
@@ -22,7 +24,7 @@ Well, turbolinks is a rubygem, but it has a lot of dependencies, and Jekyll don'
 
 So, to get the pure turbolinks file, I used grunt-curl and compiled it to javascript using grunt-contrib-coffee:
 
-```
+```javascript
 curl: {
   turbolinks: {
     src: 'https://raw.github.com/rails/turbolinks/master/lib/assets/javascripts/turbolinks.js.coffee',
@@ -60,7 +62,7 @@ As you can see, I get always the last file from trunk and compile to plain old J
 
 For some reason I'm now quite sure, turbolinks mess up with this kind of style declaration (which I use in the image headers). The solution I've found is kinda weird, but it works:
 
-```
+```javascript
 var reloadImages = function() {
   var styles, style, url, _i, _len, _el;
   styles = Array.prototype.slice.call(
@@ -83,7 +85,7 @@ $(document).on("page:change", function() {
 
 The twitter button adds a script to the head, which turbolinks doesn't replace, so, it gets buggy. To fix that I changed a little the default button markup:
 
-```
+```html
 <a  href="https://twitter.com/share" class="twitter-share-button"
 data-lang="en" data-size="large"
 data-url="{{ site.production_url }}{{ page.url }}"
@@ -105,7 +107,7 @@ data-text="{{ page.title }}">
 
 And add something at the page change event:
 
-```
+```javascript
 var twttr;
 $(document).on("page:change", function() {
   if (twttr) {
@@ -120,7 +122,7 @@ It was the best solution I've found.
 
 I changed the Disqus scripts to only load the commends when the user reach the bottom of the page:
 
-```
+```html
 <div id="disqus_thread">
   Loading Comments...
 </div>
@@ -150,7 +152,7 @@ I changed the Disqus scripts to only load the commends when the user reach the b
 
 But it causes me some trouble with Turbolinks. To fix that, I simply did:
 
-```
+```javascript
 $(document).on("page:fetch", function() {
   window.onscroll = void 0;
 });
@@ -160,7 +162,7 @@ And it worked!
 
 I also decided to add nprogress, a lib that provides the loading bar medium-style (and youtube-style). I had to add it to my `bower.json`, add the import in my less file (with a `(less)` prefix, so it imports it as a less file) and mix it up in my js. I also had to bind the events to nprogress, like this:
 
-```
+```javascript
 $(document).on("page:fetch", function() {
   NProgress.start();
 });

@@ -18,7 +18,7 @@ I considered a couple of different things, like creating a `CronJob` and another
 
 After a some minutes thinking about running an `etcd` backend and all that, I though "well maybe Kubernetes has something for that already".
 
-And then I found the [coordination.k8s.io](http://coordination.k8s.io/) API, and the [leaderelection package in the Go SDK](https://pkg.go.dev/k8s.io/client-go/tools/leaderelection).
+And then I found the `coordination.k8s.io` API, and the [leader election package in the Go SDK](https://pkg.go.dev/k8s.io/client-go/tools/leaderelection).
 
 ## Leader Election
 

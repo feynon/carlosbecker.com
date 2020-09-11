@@ -1,17 +1,16 @@
-OS=$(shell uname -s)
 .DEFAULT_GOAL := run
 .SILENT: # silence!!
 
 export PATH := ./bin:$(PATH)
 
+clean:
+	rm -rf ./public || true
+	rm -rf content/post/* static/public/images/* || true
+
 setup:
 	go mod tidy
 	mkdir -p bin
-ifeq ($(OS), Darwin)
-	brew install hugo || brew upgrade hugo
-else
 	curl -sL https://install.goreleaser.com/github.com/gohugoio/hugo.sh | bash
-endif
 	curl -sL https://install.goreleaser.com/github.com/ValeLint/vale.sh | bash
 	curl -sL https://htmltest.wjdp.uk | bash
 	chmod +x ./bin/*
@@ -19,12 +18,10 @@ endif
 run:
 	hugo server --watch --buildFuture --cleanDestinationDir
 
-ci:
-	# TODO: eventually check htmls as well
-	$$(which vale) --glob='**/*.md' .
-	rm -rf ./public || true
+ci: refresh
 	hugo
-	$$(which htmltest) -c .htmltest.yaml ./public
+	vale --glob='**/*.md' .
+	htmltest -c .htmltest.yaml ./public
 
 avatar:
 	wget -O static/avatar.jpg https://github.com/caarlos0.png
@@ -37,6 +34,5 @@ avatar:
 		-delete 0 -alpha off -colors 256 static/img/favicon.ico
 	convert -resize x120 static/avatar.jpg static/img/apple-touch-icon.png
 
-refresh:
-	rm -rf content/post/* static/public/images/*
+refresh: clean avatar
 	go run cmd/notion/main.go

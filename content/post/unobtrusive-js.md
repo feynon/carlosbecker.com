@@ -12,19 +12,19 @@ One of the principles of Unobtrusive JS is the *"separation of functionality (th
 
 ### A small example:
 
-```
+```html
 <a href="#" onclick="SomeObj.someAction(2)">Do some action on Obj 2</a>
 ```
 
 ### better:
 
-```
+```html
 <a href="#" class="someaction" data-id="2">Do some action on Obj 2</a>
 ```
 
 And in our JS file:
 
-```
+```javascript
 $(
   (function() {
     $(document).on("click", ".someaction", function() {
@@ -42,7 +42,7 @@ A pretty common mistake (I think) occurs while adding some charts to a page ( ge
 
 ### A bad example with Rails, will be something like:
 
-```
+```html
 <script type="text/javascript">
 Morris.Donut({
   element: "my-chart-placeholder",
@@ -60,13 +60,13 @@ Pretty tricky, but, you can do it better.
 
 Use data attributes!
 
-```
+```html
 <div id="my-chart-placeholder" data-chart="<%= ModelController.chart_data.to_json %>">
 </div>
 ```
 
 > dashboard.js
-```
+```javascript
 $(
   (function() {
     var id = "my-chart-placeholder";
