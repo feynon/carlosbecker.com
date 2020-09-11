@@ -5,6 +5,7 @@ OS=$(shell uname -s)
 export PATH := ./bin:$(PATH)
 
 setup:
+	go mod tidy
 	mkdir -p bin
 ifeq ($(OS), Darwin)
 	brew install hugo || brew upgrade hugo
@@ -22,10 +23,8 @@ ci:
 	# TODO: eventually check htmls as well
 	$$(which vale) --glob='**/*.md' .
 	rm -rf ./public || true
-	hugo server -d ./public >/dev/null &
-	sleep 2
-	$$(which htmltest) -s ./public
-	pkill hugo
+	hugo
+	$$(which htmltest) -c .htmltest.yaml ./public
 
 avatar:
 	wget -O static/avatar.jpg https://github.com/caarlos0.png

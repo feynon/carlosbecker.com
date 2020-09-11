@@ -1,0 +1,8 @@
+DirectoryPath: "site"
+IgnoreURLs: []
+IgnoreDirs: []
+IgnoreDirectoryMissingTrailingSlash: true
+IgnoreAltMissing: true
+HTTPHeaders:
+  "Range": "bytes=0-10"
+  "Accept": "*/*"
