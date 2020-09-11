@@ -16,7 +16,7 @@ Anyway, let's get into it!
 
 The most cleanest way I found to do it is the following:
 
-```shell
+```sh
 git diff --quiet HEAD $REF -- $DIR || echo changed
 ```
 
@@ -27,13 +27,13 @@ At first I though it was confusing, but it makes sense if you think
 So, let's say you want to check if your current branch has changes in the
 folder `foo` when compared to `master`:
 
-```shell
+```sh
 git diff --quiet HEAD master -- foo || echo changed
 ```
 
 You can also do that comparing with the previous tag, for example:
 
-```shell
+```sh
 git diff --quiet HEAD "$(git describe --tags --abbrev=0 HEAD)" -- foo || echo changed
 ```
 

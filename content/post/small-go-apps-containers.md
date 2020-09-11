@@ -36,7 +36,7 @@ func main() {
 
 If we compile this file, the binary will have 5.5MB:
 
-```shell
+```sh
 $ go build
 $ du -h example
 5.5M	example
@@ -54,7 +54,7 @@ We could probably use `kiasaki/alpine-golang` but, seems like it still bundling 
 
 Using my image, the `Dockerfile` may look like this:
 
-```docker
+```dockerfile
 FROM caarlos0/alpine-go
 WORKDIR /gopath/src/app
 ADD . /gopath/src/app/
@@ -64,7 +64,7 @@ ENTRYPOINT ["/gopath/bin/app"]
 
 Now let's build it:
 
-```shell
+```sh
 $ docker build -t caarlos0/example-small .
 # ...
 $ docker images
@@ -88,7 +88,7 @@ To fix that, instead of inheriting from `caarlos0/alpine-go`, we'll have to inhe
 
 So, we might end up with something like this:
 
-```docker
+```dockerfile
 FROM alpine:3.2
 
 ENV GOROOT=/usr/lib/go \
@@ -111,7 +111,7 @@ ENTRYPOINT ["/gopath/bin/app"]
 
 And, vòilá:
 
-```shell
+```sh
 $ docker images
 REPOSITORY                 TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
 example-smaller            latest              6c4f2066e02e        9 seconds ago       11.43 MB
@@ -138,7 +138,7 @@ This two actions might have no effect in this particular example, but I decided 
 
 You can also, of course, compile your app outside the container and just `ADD` the binary to it. To do that you need to pay attention and compile it for the same `ARCH` and `OS`, like, and, of course, have the right Go installed:
 
-```shell
+```sh
 $ GOARCH=i386 GOOS=linux go build
 ```
 

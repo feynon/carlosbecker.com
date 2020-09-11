@@ -101,7 +101,7 @@ For example, imagine you have a simple project, more or less like this:
 
 Your `Dockerfile` may look like:
 
-```docker
+```dockerfile
 FROM scratch
 ADD foo /usr/bin/foo
 ADD config/foo.conf /etc/foo.conf
@@ -110,7 +110,7 @@ ADD config/foo.conf /etc/foo.conf
 So, as a developer, you would `go build` your project and then
 simply `docker build`:
 
-```shell
+```sh
 go build -o foo
 docker build -t caarlos0/goreleaser-docker-test .
 ```

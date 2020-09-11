@@ -14,7 +14,7 @@ The easier way to create a public helm repository is to just upload your artifac
 
 I usually use a script like the following to do that:
 
-```shell
+```sh
 #!/bin/sh
 set -e
 
@@ -37,7 +37,7 @@ This will download the previous releases to a `upstream` folder (needed to recre
 
 If the bucket is public, you can just:
 
-```shell
+```sh
 helm repo add test https://my-charts.storage.googleapis.com/
 helm repo update test
 helm search test
@@ -53,7 +53,7 @@ We created [storage-auth-proxy](https://github.com/totvslabs/storage-auth-proxy)
 
 You can define several `user:password` combos, point to a bucket, and that's it:
 
-```shell
+```sh
 ./storage-auth-proxy \
 	-listen 0.0.0.0:8080 \
 	-bucket gs://my-private-charts \
@@ -63,14 +63,14 @@ You can define several `user:password` combos, point to a bucket, and that's it:
 
 You can then expose the service (e.g. `helm.mycompany.com`) and change our script a bit:
 
-```shell
+```sh
 # change the URL
 helm repo index upstream/ --url "https://helm.mycompany.com/"
 ```
 
 And then, finally, just use the repository and use it:
 
-```shell
+```sh
 helm repo add mycompany https://helm.mycompany.com \
 	--username carlos \
 	--password secret

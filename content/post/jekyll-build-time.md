@@ -8,6 +8,8 @@ city: Joinville
 
 I've been using Jekyll on my blog since 2012. It is great! But, lately, its slow build times started to bother me.
 
+<!--more-->
+
 I consider moving to [Hugo](https://gohugo.io/), but that seemed like a lot of work, and I didn't know what the real problem was. 
 
 In this post I'll show how I improved my Jekyll blog build time in about **75%**.
@@ -20,7 +22,7 @@ Let's see how much time it takes right now:
 
 ```
 Filename                                                  | Count |    Bytes |  Time
-<!--more-->-------------------------------------------------------+-------+----------+------
+----------------------------------------------------------+-------+----------+------
 _layouts/default.html                                     |   117 | 3155.23K | 9.095
 _includes/head.html                                       |   118 | 2242.11K | 9.025
 _layouts/compress.html                                    |   117 | 3094.18K | 0.610

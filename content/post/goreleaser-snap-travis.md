@@ -88,20 +88,20 @@ deploy:
 
 Now, we need to do an export login on snapcraft:
 
-```shell
+```sh
 snapcraft export-login snap.login
 ```
 
 This will create a `snap.login` file. Make sure to add it to the `.gitignore`:
 
-```shell
+```sh
 echo snap.login >> .gitignore
 ```
 
 Now, we need to somehow add that file to Travis. The way we do that is to use
 the [encrypt file](https://docs.travis-ci.com/user/encrypting-files/) Travis' feature:
 
-```shell
+```sh
 travis encrypt-file snap.login --add
 ```
 
@@ -154,7 +154,7 @@ Now you can just do a `git tag v1.2.3; git push --tags`, and [TravisCI](https://
 If you are creating a new snap, you will also need to register the snap
 first:
 
-```shell
+```sh
 snapcraft register ${APP_NAME}
 ```
 
@@ -168,7 +168,7 @@ to the [Snapcraft store](https://snapcraft.io/goreleaser) by looking into the [b
 
 That means you can now install [GoReleaser](https://goreleaser.com/) on Linux using something like:
 
-```shell
+```sh
 snap install goreleaser --classic
 ```
 

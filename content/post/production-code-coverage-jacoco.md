@@ -68,13 +68,13 @@ But running JaCoCo is only part of the problem. We also need to gather the binar
 
 The first step is to get the report from the server. The most straightforward way to do that is to use `scp` and that was what I did.
 
-```shell
+```sh
 scp theserver:/storage/environment/contaazul/jacoco.exec .
 ```
 
 Then, I downloaded and extracted JaCoCo to my `/tmp` folder:
 
-```shell
+```sh
 $ wget https://repo1.maven.org/maven2/org/jacoco/jacoco/0.7.9/jacoco-0.7.9.zip -O /tmp/jacoco.zip
 $ unzip /tmp/jacoco.zip -d /tmp/jacoco
 ```
@@ -105,7 +105,7 @@ With all that in place, I wrote a very simple Ant task to generate the HTML repo
 
 Then, fire `ant` up and open the report in your web browser:
 
-```shell
+```sh
 $ ant
 $ open report/index.html
 ```

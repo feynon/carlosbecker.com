@@ -16,7 +16,7 @@ The idea is to have a "scale-to-zero" approach, with the max number of nodes bei
 
 Buildkite has a pretty nice CLI which allows us to do start the agent with something like:
 
-```shell
+```sh
 buildkite-agent-entrypoint start \
 	--disconnect-after-job \
 	--disconnect-after-idle-timeout=50
@@ -49,8 +49,8 @@ containers:
   - |
     trap 'touch /usr/share/pod/done' EXIT
     buildkite-agent-entrypoint start \
-			--disconnect-after-job \
-			--disconnect-after-idle-timeout=50
+      --disconnect-after-job \
+      --disconnect-after-idle-timeout=50
 # ...
   volumeMounts:
   - mountPath: /usr/share/pod

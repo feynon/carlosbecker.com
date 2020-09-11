@@ -87,7 +87,7 @@ But, the nicest thing I played with until now surely is `goroutines`.
 
 A `goroutine` is basically a lightweight thread of execution. I used it to support a list of bundles coming from `STDIN` (like Antigen does):
 
-```shell
+```sh
 $ antibody apply < bundles.txt
 ```
 

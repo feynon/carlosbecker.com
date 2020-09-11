@@ -20,7 +20,7 @@ Besides, he only needs one table.
 
 So, I dumped that one table in the form of inserts. `pg_dump`, with some parameters, can easily do that:
 
-```shell
+```sh
 $ pg_dump \
   -h localhost \
   -p 5432 \
@@ -33,7 +33,7 @@ $ pg_dump \
 
 So, I just had to send him this `table.sql` file somehow, and he had to execute that SQL file in his database, which can be easily done with the `pg` command:
 
-```shell
+```sh
 $ psql \
   -h localhost \
   -p 5432 \

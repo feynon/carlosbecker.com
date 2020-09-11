@@ -14,7 +14,7 @@ So, I created a snipped of pure Liquid code to fix that.
 
 So, the first thing we will want to do is get the word count. That's pretty, actually:
 
-```
+```ruby
 {% assign words = content | number_of_words %}
 ```
 
@@ -22,7 +22,7 @@ Now, we need to divide this number with something. This something is called *Wor
 
 According to [Wikipedia](http://en.wikipedia.org/wiki/Words_per_minute), an average person  can read 180 words per minute in a computer monitor. Now it became really easy to do the rest:
 
-```
+```ruby
 {{ words | divided_by:180 }} mins
 ```
 
@@ -32,7 +32,7 @@ To fix that, we have to check if it has less than 360 words, because any number 
 
 That said, the solution is quite simple:
 
-```
+```ruby
 {% raw %}
 {% if words < 360 %}
   1 min
@@ -43,7 +43,7 @@ That said, the solution is quite simple:
 
 So, to keep it organized, I put all this in a `read_time.html` in my `_includes` folder:
 
-```
+```ruby
 {% raw %}
 <span class="reading-time" title="Estimated read time">
   {% assign words = content | number_of_words %}
@@ -59,7 +59,7 @@ So, to keep it organized, I put all this in a `read_time.html` in my `_includes`
 
 And then I just `include` it in my `post` layout:
 
-```
+```ruby
 {% include read_time.html %}
 ```
 

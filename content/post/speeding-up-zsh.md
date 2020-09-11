@@ -14,7 +14,7 @@ I was never really happy with the shell load time, though. Most of it was spent 
 
 Today, I decided to go and figure out why. The first step was to gather data on why it was so slow:
 
-```shell
+```sh
 for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
   1.11 real         0.48 user         0.57 sys
   0.82 real         0.47 user         0.42 sys
@@ -50,7 +50,7 @@ I did the same with `antibody` and `pyenv` and remove some unneeded `if` stateme
 
 Then, I measured it again:
 
-```shell
+```sh
 for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
   0.73 real         0.43 user         0.35 sys
   0.72 real         0.42 user         0.34 sys
@@ -77,7 +77,7 @@ It turn out I had a lot of them. I fixed them by doing stuff like:
 
 And, measuring again:
 
-```shell
+```sh
 for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
   0.43 real         0.22 user         0.25 sys
   0.42 real         0.22 user         0.24 sys
@@ -99,7 +99,7 @@ I looked for more stuff like this, and end up finding one more call to `rbenv` t
 
 Fixed those issues and measuring again gave me this numbers:
 
-```shell
+```sh
 for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
   0.78 real         0.14 user         0.14 sys
   0.26 real         0.14 user         0.13 sys
@@ -131,7 +131,7 @@ I found a [hack on a gist](https://gist.github.com/ctechols/ca1035271ad134841284
 
 And, measuring again:
 
-```shell
+```sh
 for i in $(seq 1 10); do /usr/bin/time zsh -i -c exit; done
   0.28 real         0.13 user         0.14 sys
   0.26 real         0.12 user         0.14 sys

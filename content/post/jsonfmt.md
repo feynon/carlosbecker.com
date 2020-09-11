@@ -137,19 +137,19 @@ You can also install it using several methods:
 
 **homebrew**:
 
-```shell
+```sh
 brew install caarlos0/tap/jsonfmt
 ```
 
 **snapcraft**:
 
-```shell
+```sh
 snap install jsonfmt
 ```
 
 **docker**:
 
-```shell
+```sh
 docker run -v $PWD:/data --workdir /data caarlos0/jsonfmt -h
 ```
 

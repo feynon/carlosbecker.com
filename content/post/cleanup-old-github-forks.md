@@ -33,13 +33,13 @@ Anyway, it does all the checks mentioned above, plus, you can customize the inac
 
 You can install it On macOS:
 
-```shell
+```sh
 $ brew install fork-cleaner
 ```
 
 or on Linux:
 
-```shell
+```sh
 $ snap install fork-cleaner
 ```
 
@@ -51,7 +51,7 @@ You can then either export it as the `GITHUB_TOKEN` environment variable or usin
 
 Then just run `fork-cleaner`:
 
-```shell
+```sh
 $ fork-cleaner
 3 forks to delete:
  --> https://github.com/caarlos0/coinmarketcap-exporter

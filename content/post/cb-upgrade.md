@@ -108,7 +108,7 @@ If you are using Docker 4 Mac, I recommend increasing the CPU limits:
 
 Once that's done, fire the machines up:
 
-```shell
+```sh
 docker-compose up
 ```
 
@@ -116,7 +116,7 @@ docker-compose up
 
 Initialize the Couchbase `4.5.x` cluster:
 
-```shell
+```sh
 docker exec cb_cb1_1 couchbase-cli cluster-init \
   --cluster-username=adm \
   --cluster-password=secret \
@@ -128,7 +128,7 @@ docker exec cb_cb1_1 couchbase-cli cluster-init \
 
 Add the other nodes and rebalance:
 
-```shell
+```sh
 docker exec cb_cb1_1 couchbase-cli rebalance \
   -c localhost -u adm -p secret \
   --server-add=172.21.0.11 \
@@ -143,7 +143,7 @@ docker exec cb_cb1_1 couchbase-cli server-list \
 
 Create a bucket and insert some data:
 
-```shell
+```sh
 docker exec cb_cb1_1 couchbase-cli bucket-create \
   -c localhost -u adm -p secret \
   --bucket=customer \
@@ -167,7 +167,7 @@ Couchbase Console.
 
 Let's do a single node swap rebalance first to see what happens:
 
-```shell
+```sh
 docker exec cb_cb1_1 couchbase-cli rebalance \
   -c localhost -u adm -p secret \
   --server-remove=172.21.0.12 \
@@ -194,7 +194,7 @@ nodes are on Couchbase 5.1, you can't add old version nodes anymore.
 
 Let's finish the upgrade by swap rebalancing the last nodes:
 
-```shell
+```sh
 docker exec cb_cb4_1 couchbase-cli server-add \
   -c localhost -u adm -p secret \
   --server-add=172.21.0.21 \
@@ -226,7 +226,7 @@ The compatibility warning should go away as well:
 
 Kill all containers and remove them.
 
-```shell
+```sh
 docker-compose kill
 yes | docker-compose rm
 ```

@@ -183,8 +183,8 @@ And that should be it.
 
 Deploying all that, you can see the lease being created and changing over time:
 
-```go
-λ k describe lease
+```bash
+$ kubectl describe lease
 Name:         my-lock
 Namespace:    default
 Labels:       <none>
@@ -213,20 +213,20 @@ You can find a complete working example on [this GitHub Repository](https://gith
 
 You can apply it with:
 
-```shell
-kubectl apply -f kube/
+```sh
+$ kubectl apply -f kube/
 ```
 
 And then watch the pods logs:
 
-```shell
-stern leaderz
+```sh
+$ stern leaderz
 ```
 
 And see the lease:
 
-```shell
-kubectl describe lease my-lock
+```sh
+$ kubectl describe lease my-lock
 ```
 
 You can then kill pods and watch the lease eventually be assigned to another pod.

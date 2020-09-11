@@ -128,7 +128,7 @@ func main() {
 	log.Print("server exit properly")
 }
 ```
-```docker
+```dockerfile
 # Dockerfile
 FROM golang:alpine as build
 WORKDIR /src
@@ -142,7 +142,7 @@ ENTRYPOINT ["./server"]
 
 And then just run:
 
-```shell
+```sh
 docker build -t test .
 ```
 
@@ -150,13 +150,13 @@ docker build -t test .
 
 We can deploy our testing image with
 
-```shell
+```sh
 kubectl apply -f deploy.yaml
 ```
 
 And forward it to our local machine:
 
-```shell
+```sh
 kubectl port-forward `kubectl get po -l app=test -oname` 8080:8080
 ```
 
@@ -166,7 +166,7 @@ From now on, we'll need a couple of terminals.
 
 Simulate normal requests:
 
-```shell
+```sh
 while true; do 
 	curl localhost:8080/fake
 	sleep 1
@@ -177,7 +177,7 @@ done
 
 Simulate a long living request:
 
-```shell
+```sh
 curl localhost:8080/slow\?sleep=30m
 ```
 
@@ -185,7 +185,7 @@ curl localhost:8080/slow\?sleep=30m
 
 Watch the pod's events:
 
-```shell
+```sh
 while true; do 
 	kubectl describe -l app=test
 	sleep 1
@@ -196,7 +196,7 @@ done
 
 Watch the pods logs:
 
-```shell
+```sh
 kubectl logs -f -l app=test
 ```
 
@@ -204,7 +204,7 @@ kubectl logs -f -l app=test
 
 Delete the pod:
 
-```shell
+```sh
 kubectl delete po -l app=test
 ```
 
@@ -212,7 +212,7 @@ kubectl delete po -l app=test
 
 As soon as we delete the pod in **Terminal #5**, our describe on **Terminal #3** will show something like this:
 
-```shell
+```sh
 Normal  Killing    5s    kubelet, node-12108603-9g16  Stopping container test
 ```
 
@@ -220,7 +220,7 @@ This will trigger our `preStop` hook, which is just a 8 seconds sleep.
 
 After some time, we see more events:
 
-```shell
+```sh
 Warning  Unhealthy  8s    kubelet, node-12108603-9g16  Readiness probe failed: Get http://172.16.6.7:8080/ready: dial tcp 172.16.6.7:8080: connect: connection refused
 Warning  Unhealthy  5s    kubelet, node-12108603-9g16  Liveness probe failed: Get http://172.16.6.7:8080/live: dial tcp 172.16.6.7:8080: connect: connection refused
 ```
@@ -231,7 +231,7 @@ After another ~10s (`terminationGracePeriodSeconds`'s 18s - `preStop` hook's 8s)
 
 We can now run this scenario again, but this time, have the slow request with a smaller time (e.g. `15s`), and the pod exit, and we'll see in its logs that it `exit 0`:
 
-```shell
+```sh
 2020/07/30 18:47:03 server stop requested
 2020/07/30 18:47:03 server exit properly
 ```

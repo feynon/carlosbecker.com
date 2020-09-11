@@ -14,7 +14,7 @@ I recently fall into a trap using Traefik as the ingress controller in one clust
 
 We got the architecture like this:
 
-```shell
+```sh
 Cloudflare -> Traefik LoadBalancer -> Traefik Pods -> App Pods
 ```
 

@@ -10,7 +10,7 @@ Yesterday, I wrote a [small article]({{< ref guice-and-junit.md >}}) talking abo
 
 So, I dont push it to maven central yet, so, you will need to do some work to made it work. Yep, you will need to build and install it to your local repository.
 
-```shell
+```sh
 $ git clone git://github.com/caarlos0/gunit.git
 $ cd gunit
 $ mvn install

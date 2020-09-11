@@ -72,9 +72,7 @@ If everything goes according to the plan, this should happen by the June.
 
 I also plan to finally tackle the problem of generating the `.sh` files, which today is [GoDownloader](https://github.com/goreleaser/godownloader)'s job. If you have ideas about this, I invite you to participate on the [discussion](https://www.notion.so/caarlos0/8a13b651f9ff49e9b0f93f21e24563e5?v=82b7951324d84ebfa81295134ee82e48).
 
-I have in the back of my mind an itch regarding the documentation as
-well. I wanted it to be searchable, maybe add a config generator as
-well... not sure yet (help/ideas appreciated here as well).
+I have in the back of my mind an itch regarding the documentation as well. I wanted it to be searchable, maybe add a config generator as well... not sure yet (help/ideas appreciated here as well).
 
 From there, the idea is to keep `v1` stable (maybe adding small features) and start thinking about `v2`, which, at this point is too fresh to have any ideas about how it should look like.
 

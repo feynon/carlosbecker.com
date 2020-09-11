@@ -22,7 +22,7 @@ The first step is to find them. I had some of them in my dotfiles project, as yo
 
 So, using `grep`, I created the [nonascii function](https://github.com/caarlos0/dotfiles/commit/da1bfe4d895aad8efc9ba79cac46e2b545514576): 
 
-```shell
+```sh
 #!/bin/bash
 nonascii() {
  LANG=C grep --color=always '[^ -~]\+';

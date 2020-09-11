@@ -10,7 +10,7 @@ First of all, if you haven't done it yet, read [Getting started with GWT-Bootstr
 
 ## Create the GWT-Project
 
-```shell
+```sh
 $ mvn archetype:generate \
    -DarchetypeRepository=repo1.maven.org \
    -DarchetypeGroupId=org.codehaus.mojo \

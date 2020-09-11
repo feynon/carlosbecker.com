@@ -24,7 +24,7 @@ To show hot it works, let's do a little example.
 
 First, clone the repository:
 
-```shell
+```sh
 $ git clone https://github.com/caarlos0/persistence-base sample
 ```
 
@@ -111,7 +111,7 @@ We have to add classes, configure the database and etc in the `src/main/resource
 
 Now, we have to create the database in our MySQL:
 
-```shell
+```sh
 $ mysqladmin -u root -p create foodb
 ```
 
@@ -134,7 +134,7 @@ public class App {
 
 Run the tests with
 
-```shell
+```sh
 $ mvn exec:java \
   -Dexec.mainClass="com.github.caarlos0.App" \
   -Dexec.classpathScope=runtime

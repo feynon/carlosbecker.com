@@ -22,7 +22,7 @@ So, I'll share with you guys my solutions to the problems proposed by the book.
 
 Solution:
 
-```
+```erlang
 list_length([]) -> 0;
 list_length(String) ->
   [_ | Tail] = String,
@@ -37,7 +37,7 @@ Just a simple pattern matching and a tail recursion in list length, and in `coun
 ### Problem 2
 
 > Write a function that uses recursion to count to ten.
-```
+```erlang
 count_until(Val, Max) when Val < Max ->
   io:fwrite("~w~n", [Val]),
   count_until(Val + 1, Max);
@@ -69,7 +69,7 @@ print_msg({error, Message}) ->
 
 Solution with a simple list comprehension:
 
-```
+```erlang
 lang(Tuples, Key) ->
   [TupleValue || {TupleKey, TupleValue} <- Tuples, (Key == TupleKey)].
 ```
@@ -80,7 +80,7 @@ lang(Tuples, Key) ->
 
 Pretty easy, huh? Solution:
 
-```
+```erlang
 full_price(List) ->
   [{Name, Price*Quantity} || {Name, Quantity, Price} <- List].
 ```
@@ -101,7 +101,7 @@ Well, day 3 was pretty big. We will now work with multi concurrency.
 
 That is a more complex example, so I'll put the [entire file](https://github.com/caarlos0/erlang-playground/blob/master/day3_examples_exs/translate_service.erl):
 
-```
+```erlang
 -module(translate_service).
 -export([loop/0, translate/2, watch/0]).
 
@@ -158,7 +158,7 @@ FYI: The original [translate_service](https://github.com/caarlos0/erlang-playgro
 
 That's just like the example above:
 
-```
+```erlang
 -module(doctor).
 -export([loop/0, watch/0]).
 

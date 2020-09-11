@@ -109,7 +109,7 @@ One of the services I deployed uses Sendgrid to send e-mails. It's a Rails app, 
 
 It turns out GCE blocks the port `25`. We can confirm that by using telnet, for example:
 
-```shell
+```sh
 $ telnet smtp.sendgrid.net 25
 Trying 108.168.190.110...
 Connected to smtp.sendgrid.net.
@@ -129,7 +129,7 @@ Trying 108.168.190.109...
 
 Lucky for us, Sendgrid also replies on `2525`, which is not blocked by GCE:
 
-```shell
+```sh
 root@app-620440047-d4tg5:/# telnet smtp.sendgrid.net 2525
 Trying 108.168.190.110...
 Connected to smtp.sendgrid.net.
@@ -175,7 +175,7 @@ To be honest, I didn't like this very much, because it clutters my deployment de
 
 Since they are small apps with very few people working on them, I'm deploying with a simple shell script:
 
-```shell
+```sh
 #!/bin/sh
 set -xeo pipefail
 

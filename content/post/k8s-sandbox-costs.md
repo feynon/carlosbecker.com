@@ -72,7 +72,7 @@ During the day it is common that someone deploys a service to test something, an
 
 To improve that, we wrote the following bash script, and put it in a crontab every 10 minutes:
 
-```shell
+```sh
 #!/bin/bash
 set -eo pipefail
 

@@ -104,10 +104,10 @@ screen for each message received.
 
 So, now we can just start both:
 
-```shell
+```sh
 $ ./nats-streaming-server
 ```
-```shell
+```sh
 $ go run main.go localhost:4222
 ```
 
@@ -203,13 +203,13 @@ Since we are running all nodes on the same machine, notice that the
 
 Once that's done, we can start the 3 servers:
 
-```shell
+```sh
 $ ./nats-streaming-server -c a.conf
 ```
-```shell
+```sh
 $ ./nats-streaming-server -c b.conf
 ```
-```shell
+```sh
 $ ./nats-streaming-server -c c.conf
 ```
 
@@ -222,7 +222,7 @@ Once all of them are up, you should see logs like the following on each of them:
 
 Now, we can connect start our client again:
 
-```shell
+```sh
 $ go run main.go nats://localhost:4221 nats://localhost:4222 nats://localhost:4223
 ```
 

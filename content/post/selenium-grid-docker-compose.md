@@ -88,7 +88,7 @@ In order to make it easier for you folks to put all this to work (save you a bun
 
 To test that, you can start a fresh linux machine (or not, your call) and hit:
 
-```shell
+```sh
 $ git clone https://github.com/caarlos0/selenium-grid-on-docker-example.git grid && \
   cd grid && sudo ./install.sh
 ```
@@ -97,13 +97,13 @@ This will download the scripts and install docker and docker compose. When you i
 
 You should really do that. I help you, it's something like this:
 
-```shell
+```sh
 $ sudo usermod -aG docker your-username
 ```
 
 Now, let's put it to run:
 
-```shell
+```sh
 $ ./run.sh
 ```
 

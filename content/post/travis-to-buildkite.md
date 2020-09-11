@@ -88,7 +88,7 @@ But none of those were true, so I automated some steps of the process.
 
 First of all, I cloned all repositories with the help of [clone-org](http://github.com/caarlos0/clone-org):
 
-```shell
+```sh
 $ clone-org --org ContaAzul --destination /tmp/ca
 ```
 
@@ -98,14 +98,14 @@ After that, I created some template files for Java Buildkite builds. Since most 
 
 With all that in place, I wrote an "one-liner" and a helper function that would do most of the work for me:
 
-```shell
+```sh
 # helper function
 setup_buildkite() {
   cd ~/Code/github-buildkite-wire &&
     ./setup-pipeline.sh ContaAzul "$(basename "$1")"
 }
 ```
-```shell
+```sh
 # the one liner
 $ find . -depth 1 -type d | while read -r folder; do
   cd "$folder"

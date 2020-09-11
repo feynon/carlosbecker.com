@@ -16,7 +16,7 @@ You might be asking something like *"but doesn't it changes in ..."* **NO**, it 
 
 I could literally just stop writing here, but I will be kind and give you some examples.
 
-```
+```javascript
 var global, local;
 
 // the context will change inside the test() function declaration
@@ -38,7 +38,7 @@ console.log(global); // 100
 
 We can also encapsulate variables with something like this:
 
-```
+```javascript
 var global = 100;
 
 var testFn = function() {
@@ -83,7 +83,7 @@ console.log(test.getLocal()); // 110
 
 The context **only** changes inside functions.
 
-```
+```javascript
 var obj1 = {
   a: {
     b: {

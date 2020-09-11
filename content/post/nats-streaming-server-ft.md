@@ -89,16 +89,16 @@ Note that each config listens on different ports:
 
 And then you can just start each node pointing to the specific config file:
 
-```shell
+```sh
 $ ./nats-streaming-server -c a.conf
 ```
-```shell
+```sh
 $ ./nats-streaming-server -c b.conf
 ```
 
 We can then run our client from the [previous post]({{< ref nats-streaming-server-cluster.md >}}) to test it:
 
-```shell
+```sh
 $ go run main.go nats://localhost:4221 nats://localhost:4222
 ```
 

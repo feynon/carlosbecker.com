@@ -299,7 +299,10 @@ func toLang(s string) string {
 	if s == "Plain Text" {
 		return ""
 	}
-	return strings.ToLower(s)
+	return strings.NewReplacer(
+		"shell", "sh", // less diffs
+		"docker", "dockerfile", // less diffs
+	).Replace(strings.ToLower(s))
 }
 
 var postURLRegex = regexp.MustCompile(`\(https://carlosbecker.com/posts/(.+)/\)`)
