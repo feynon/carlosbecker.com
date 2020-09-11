@@ -14,17 +14,30 @@ import (
 
 	_ "github.com/joho/godotenv/autoload" // load .env
 
+	"github.com/caarlos0/env/v6"
 	"github.com/kjk/notionapi"
 	"github.com/kjk/notionapi/tomarkdown"
 	"golang.org/x/sync/errgroup"
 )
 
-func main() {
-	client := &notionapi.Client{}
-	client.AuthToken = os.Getenv("NOTION_TOKEN")
+type Config struct {
+	Token          string `env:"NOTION_TOKEN,required"`
+	BlogColID      string `env:"BLOG_COLLECTION_ID,required"`
+	BlogColViewID  string `env:"BLOG_COLLECTION_VIEW_ID,required"`
+	OtherColID     string `env:"OTHER_COLLECTION_ID,required"`
+	OtherColViewID string `env:"OTHER_COLLECTION_VIEW_ID,required"`
+}
 
-	colID := os.Getenv("BLOG_COLLECTION_ID")
-	index, err := queryCollection(client, colID, os.Getenv("BLOG_COLLECTION_VIEW_ID"))
+func main() {
+	var config Config
+	if err := env.Parse(&config); err != nil {
+		log.Fatalln(err)
+	}
+
+	client := &notionapi.Client{}
+	client.AuthToken = config.Token
+
+	index, err := queryCollection(client, config.BlogColID, config.BlogColViewID)
 	if err != nil {
 		log.Fatalln("failed to query blog index", err)
 	}
@@ -37,11 +50,11 @@ func main() {
 			total--
 			continue
 		}
-		if k == colID {
+		if k == config.BlogColID {
 			total--
 			continue
 		}
-		if v.Block.ParentID != colID {
+		if v.Block.ParentID != config.BlogColID {
 			total--
 			continue
 		}
@@ -98,8 +111,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	colID = os.Getenv("OTHER_COLLECTION_ID")
-	index, err = queryCollection(client, colID, os.Getenv("OTHER_COLLECTION_VIEW_ID"))
+	index, err = queryCollection(client, config.OtherColID, config.OtherColViewID)
 	if err != nil {
 		log.Fatalln("failed to query other pages index", err)
 	}
@@ -111,11 +123,11 @@ func main() {
 			total--
 			continue
 		}
-		if k == colID {
+		if k == config.OtherColID {
 			total--
 			continue
 		}
-		if v.Block.ParentID != colID {
+		if v.Block.ParentID != config.OtherColID {
 			total--
 			continue
 		}
