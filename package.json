@@ -1,6 +1,0 @@
-{
-  "scripts": {
-    "build": "git submodule update --init && hugo --enableGitInfo"
-  }
-}
-
