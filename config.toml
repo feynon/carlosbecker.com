@@ -2,17 +2,18 @@ baseurl = "https://carlosbecker.com/"
 languageCode = "en-us"
 title = "Carlos Alexandro Becker"
 theme = "paper"
-disqusShortname = "caarlos0blog"
 googleAnalytics = "UA-50435491-1"
 paginate = 5
 
 disableAliases = true
 
-pygmentsCodeFences = true
-pygmentsStyle = "dracula"
-
-[taxonomies]
-	tag = "tags"
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    style = "dracula"
+    noClasses = true
+    tabWidth = 2
 
 [related]
 	threshold = 80
@@ -22,10 +23,6 @@ pygmentsStyle = "dracula"
 	[[related.indices]]
 		name = "keywords"
 		weight = 10
-
-	[[related.indices]]
-		name = "tags"
-		weight = 100
 
 [permalinks]
 	post = "/posts/:slug"
@@ -61,22 +58,4 @@ pygmentsStyle = "dracula"
 		url = "/about/"
 
 [outputs]
-home = [ "HTML", "RSS", "REDIR", "HEADERS" ]
-
-[mediaTypes]
-	[mediaTypes."text/netlify"]
-		suffixes = []
-		delimiter = ""
-
-[outputFormats]
-	[outputFormats.REDIR]
-		mediatype = "text/netlify"
-		baseName = "_redirects"
-		isPlainText = true
-		notAlternative = true
-
-	[outputFormats.HEADERS]
-		mediatype = "text/netlify"
-		baseName = "_headers"
-		isPlainText = true
-		notAlternative = true
+home = [ "HTML", "RSS" ]

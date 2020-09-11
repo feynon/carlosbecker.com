@@ -1,8 +1,0 @@
-language: go
-install: make setup
-script: make ci
-cache:
-  directories:
-  - tmp/.htmltest
-notifications:
-  email: false

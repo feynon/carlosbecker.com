@@ -1,35 +1,14 @@
 ---
 title: "About"
-comments: false
 type: page
-aliases:
-- /contact/
 ---
 
-Carlos is a software developer based in Joinville, Brazil.
-He currently works as a
-[Site Realibily Engineer](https://landing.google.com/sre/interview/ben-treynor/)
-for [TOTVS Labs](https://totvslabs.com).
+Carlos is a software developer based in Joinville, Brazil, currently working remotely as a [Site Reliability Engineer](https://landing.google.com/sre/interview/ben-treynor/) for [TOTVS Labs](https://totvslabs.com/).
 
-While not working on his daily job, he's [blogging](https://carlosbecker.com),
-hacking on [open source](https://github.com/caarlos0),
-making songs sound worse on his guitars,
-[reading books](https://goodreads.com/caarlos0),
-lifting weights, playing some XBox and learning new things.
+While not working on his daily job, he may be hacking on [open source](https://github.com/caarlos0), [reading books](https://goodreads.com/caarlos0), lifting weights or playing some FPS.
 
-Carlos is interested cool things like programming languages, containers,
-distributed systems and in not so cool things (by standard measurements)
-like philosophy, economics and ethics.
+Carlos is interested in programming languages, containers, distributed systems, monitoring and software in general. Feel free to shoot him an [email](mailto:root@carlosbecker.dev?subject=Consultancy) if you need help with any of that. 🙂
 
-![Carine and I](/public/images/BVkAmf_FoQh.jpg)
+He lives with Carine (his wife), and Zakk (a chinchilla), in [Joinville - SC, Brazil](http://goo.gl/maps/9tvI4).
 
-He's married to the [beautiful girl](http://twitter.com/carinemeyer) in the
-photo and lives with her and their Chinchila, Zakk,
-in [Joinville - SC, Brazil](http://goo.gl/maps/9tvI4).
-
-![Us and Zakk](/public/images/xAxDpgKG5H.jpg)
-
----
-
-Want to hire him? Need consulting? Want to chat about something? Shoot him an
-[email](mailto:contact@carlosbecker.com).
+![Me, Carine and Zakk](/public/images/about/e4991c03-742f-440c-ab12-a9e965f2685c.png)
