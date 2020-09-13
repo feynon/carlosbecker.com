@@ -1,7 +1,7 @@
 baseurl = "https://carlosbecker.com/"
 languageCode = "en-us"
 title = "Carlos Alexandro Becker"
-theme = "paper"
+theme = "codex"
 googleAnalytics = "UA-50435491-1"
 paginate = 5
 
@@ -42,20 +42,32 @@ disableAliases = true
 	description = "Thoughts, rants and discoveries on software development and related stuff."
 	keywords = "software development, software, golang, devops, go, sre, site reliability engineering"
 	avatar = "avatar.jpg"
+	twitter = "https://twitter.com/caarlos0"
+	github = "https://github.com/caarlos0"
+	email = "mailto:carlos@carlosbecker.dev?subject=Hi!"
+	linkedin = "https://www.linkedin.com/in/caarlos0/"
 
 [menu]
 	[[menu.main]]
-		identifier = "archive"
-		name = "Archive"
-		url = "/archive/"
+		identifier = "home"
+		name = "Home"
+		url = "/"
+		weight = 10
+	[[menu.main]]
+		identifier = "posts"
+		name = "Posts"
+		url = "/posts/"
+		weight = 20
 	[[menu.main]]
 		identifier = "talks"
 		name = "Talks"
 		url = "/talks/"
+		weight = 30
 	[[menu.main]]
 		identifier = "about"
 		name = "About"
 		url = "/about/"
+		weight = 40
 
 [outputs]
 home = [ "HTML", "RSS" ]

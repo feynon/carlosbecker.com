@@ -22,9 +22,7 @@ are in portuguese.
 
 > Oct 20, 2018
 
-I shared again my experiences coding GoReleaser, this time, more about
-community and less about Go itself. Slides are more or less the same, but
-here they are anyway:
+I shared again my experiences coding GoReleaser, this time, more about community and less about Go itself. Slides are more or less the same, but here they are anyway:
 
 [See slides](https://speakerdeck.com/caarlos0/goreleaser-lessons-learned-hacktoberfest).
 
@@ -32,8 +30,7 @@ here they are anyway:
 
 > Sep 29, 2018
 
-My first ever talk at a GopherCon. I shared my experiences coding GoReleaser,
-more or less related to [this post]({{< ref goreleaser-lessons-learned.md >}}).
+My first ever talk at a GopherCon. I shared my experiences coding GoReleaser, more or less related to [this post]({{< ref goreleaser-lessons-learned.md >}}).
 
 [See slides](https://speakerdeck.com/caarlos0/goreleaser-lessons-learned).
 
@@ -41,8 +38,7 @@ more or less related to [this post]({{< ref goreleaser-lessons-learned.md >}}).
 
 > Feb 27, 2018
 
-It was the Go 1.10 Release party - my talk was about what changed in
-Go 1.10.
+It was the Go 1.10 Release party - my talk was about what changed in Go 1.10.
 
 [See slides](https://speakerdeck.com/caarlos0/go-1-dot-10-release-party-at-joinville-go-meetup).
 
@@ -52,8 +48,7 @@ Go 1.10.
 
 > Nov 25, 2017
 
-I spoke about how we migrate our monitoring infrastructure to Prometheus &
-Friends, what we got out of it and how it is working for us right now.
+I spoke about how we migrate our monitoring infrastructure to Prometheus & Friends, what we got out of it and how it is working for us right now.
 
 [See slides](https://speakerdeck.com/caarlos0/monitoring-at-contaazul).
 
@@ -61,8 +56,7 @@ Friends, what we got out of it and how it is working for us right now.
 
 > Nov 21, 2017
 
-I showed how to build and release binaries in Go, including cross-compiling,
-Docker images, linux packages and homebrew, featuring GoReleaser on the end.
+I showed how to build and release binaries in Go, including cross-compiling, Docker images, linux packages and homebrew, featuring GoReleaser on the end.
 
 [See slides](https://speakerdeck.com/caarlos0/building-and-releasing-golang-binaries).
 

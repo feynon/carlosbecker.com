@@ -5,12 +5,11 @@ export PATH := ./bin:$(PATH)
 
 clean:
 	rm -rf ./public || true
-	rm -rf content/post/* static/public/images/* || true
+	rm -rf content/posts/* static/public/images/* || true
 
 setup:
 	go mod tidy
 	mkdir -p bin
-	curl -sL https://install.goreleaser.com/github.com/gohugoio/hugo.sh | bash
 	curl -sL https://install.goreleaser.com/github.com/ValeLint/vale.sh | bash
 	curl -sL https://htmltest.wjdp.uk | bash
 	chmod +x ./bin/*
@@ -31,8 +30,8 @@ avatar:
 		\( -clone 0 -resize 32x32 \) \
 		\( -clone 0 -resize 48x48 \) \
 		\( -clone 0 -resize 64x64 \) \
-		-delete 0 -alpha off -colors 256 static/img/favicon.ico
-	convert -resize x120 static/avatar.jpg static/img/apple-touch-icon.png
+		-delete 0 -alpha off -colors 256 static/favicon.ico
+	convert -resize x120 static/avatar.jpg static/apple-touch-icon.png
 
 refresh: clean avatar
 	go run cmd/notion/main.go

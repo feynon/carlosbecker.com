@@ -77,15 +77,16 @@ func main() {
 				},
 				func(page *notionapi.Page) string {
 					slug := toString(page.Root().Prop("properties.S6_\""))
-					return fmt.Sprintf("content/post/%s.md", strings.ReplaceAll(slug, "/", ""))
+					return fmt.Sprintf("content/posts/%s.md", strings.ReplaceAll(slug, "/", ""))
 				},
 				func(page *notionapi.Page) string {
 					slug := toString(page.Root().Prop("properties.S6_\""))
 					date := toDateString(page.Root().Prop("properties.a`af"))
 					draft := !toBool(page.Root().Prop("properties.la`A"))
 					city := toString(page.Root().Prop("properties.%]Hm"))
+					tags := toList(page.Root().Prop("properties.h|dn"))
 					title := page.Root().Title
-					return blogHeader(title, date, draft, slug, city)
+					return blogHeader(title, date, draft, slug, city, tags)
 				},
 				func(page *notionapi.Page) bool {
 					return !toBool(page.Root().Prop("properties.la`A"))
@@ -342,14 +343,16 @@ func buildMarkdown(header string, content []byte) []byte {
 	)
 }
 
-func blogHeader(title, date string, draft bool, slug, city string) string {
+func blogHeader(title, date string, draft bool, slug, city string, tags []string) string {
 	return fmt.Sprintf(`---
 title: "%s"
 date: %s
 draft: %v
 slug: %s
 city: %s
----`, title, date, draft, slug, city)
+toc: true
+tags: [%s]
+---`, title, date, draft, slug, city, strings.Join(tags, ", "))
 }
 
 func pageHeader(title string) string {
@@ -369,6 +372,13 @@ func toString(v interface{}, ok bool) string {
 	}
 
 	return v.([]interface{})[0].([]interface{})[0].(string)
+}
+
+func toList(v interface{}, ok bool) []string {
+	if !ok {
+		return []string{}
+	}
+	return strings.Split(toString(v, ok), ",")
 }
 
 func toDateString(v interface{}, ok bool) string {
