@@ -33,5 +33,8 @@ avatar:
 		-delete 0 -alpha off -colors 256 static/favicon.ico
 	convert -resize x120 static/avatar.jpg static/apple-touch-icon.png
 
+og:
+	wget -O static/og-image.png "https://og.caarlos0.dev/Carlos%20Becker%20%7C%20**caarlos0**.png?theme=light&md=1&fontSize=100px&images=https://github.com/caarlos0.png"
+
 refresh: clean
 	go run cmd/notion/main.go
