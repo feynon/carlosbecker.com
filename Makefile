@@ -5,7 +5,7 @@ export PATH := ./bin:$(PATH)
 
 clean:
 	rm -rf ./public || true
-	rm -rf content/post/* static/public/images/* || true
+	rm -rf content/posts/* static/public/images/* || true
 
 setup:
 	go mod tidy
