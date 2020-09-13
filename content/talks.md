@@ -30,7 +30,7 @@ I shared again my experiences coding GoReleaser, this time, more about community
 
 > Sep 29, 2018
 
-My first ever talk at a GopherCon. I shared my experiences coding GoReleaser, more or less related to [this post]({{< ref goreleaser-lessons-learned.md >}}).
+My first ever talk at a GopherCon. I shared my experiences coding GoReleaser, more or less related to [this post]({{< ref "goreleaser-lessons-learned.md" >}}).
 
 [See slides](https://speakerdeck.com/caarlos0/goreleaser-lessons-learned).
 

@@ -29,7 +29,7 @@ I hope you enjoy it.
 
 ---
 
-After my talk was approved, I wrote a [blog post]({{< ref goreleaser-lessons-learned.md >}}) with the intent of using it as a "template" for the talk itself. I had never done a talk in that way, but I did enjoy doing it that way.
+After my talk was approved, I wrote a [blog post]({{< ref "goreleaser-lessons-learned.md" >}}) with the intent of using it as a "template" for the talk itself. I had never done a talk in that way, but I did enjoy doing it that way.
 
 The good thing about it is that you can write as much as you like, ask for feedback and see what people are more interested in, so you can maybe not talk about something people don't like.
 

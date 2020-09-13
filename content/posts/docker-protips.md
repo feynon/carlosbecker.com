@@ -8,7 +8,7 @@ toc: true
 tags: [docker]
 ---
 
-Like my old post [on git]({{< ref git-protips.md >}}), this is somewhat a collection of useful Docker commands/tricks/whatever.
+Like my old post [on git]({{< ref "git-protips.md" >}}), this is somewhat a collection of useful Docker commands/tricks/whatever.
 
 Feel free to leave yours in the comments!
 

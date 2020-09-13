@@ -8,7 +8,7 @@ toc: true
 tags: [goreleaser]
 ---
 
-When [first announced GoReleaser]({{< ref goreleaser.md >}}) roughly 1 year ago, on January 2017, I never thought it would be somewhat famous.
+When [first announced GoReleaser]({{< ref "goreleaser.md" >}}) roughly 1 year ago, on January 2017, I never thought it would be somewhat famous.
 
 <!--more-->
 

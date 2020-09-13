@@ -18,8 +18,8 @@ things I've learned down the road.
 I already talked about [GoReleaser](http://goreleaser.com/) here a few times, if you feel like reading
 about it first:
 
-- [Announce]({{< ref goreleaser.md >}});
-- [1k users]({{< ref goreleaser-1k-repositories-and-beyond.md >}}).
+- [Announce]({{< ref "goreleaser.md" >}});
+- [1k users]({{< ref "goreleaser-1k-repositories-and-beyond.md" >}}).
 
 I tried to organize things in subtopics, some of them are bigger and may go further into the subject than others.
 

@@ -77,7 +77,7 @@ System.out.println(String.join(". ", "FINALLY", "String", "joining"));
 
 ### 5. Optional
 
-I posted about this in my Facebook timeline and it ends up becoming a little noisy. Anyway, I would really prefer a [ruby-ish approach]({{< ref ruby-nil.md >}}) to this problem, but, well, this is better than nothing. I have used it in some `filter` calls like this, for example:
+I posted about this in my Facebook timeline and it ends up becoming a little noisy. Anyway, I would really prefer a [ruby-ish approach]({{< ref "ruby-nil.md" >}}) to this problem, but, well, this is better than nothing. I have used it in some `filter` calls like this, for example:
 
 ```java
 List<String> names = new ArrayList<>();

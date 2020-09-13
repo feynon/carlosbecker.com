@@ -33,5 +33,5 @@ avatar:
 		-delete 0 -alpha off -colors 256 static/favicon.ico
 	convert -resize x120 static/avatar.jpg static/apple-touch-icon.png
 
-refresh: clean avatar
+refresh: clean
 	go run cmd/notion/main.go

@@ -8,7 +8,7 @@ toc: true
 tags: [ruby-on-rails]
 ---
 
-Somedays ago I wrote about [how to build a simple and non intrusive AJAX status with CoffeeScript in RubyOnRails]({{< ref building-a-simple-and-non-intrusive-ajax-status-with-coffeescript-in-rubyonrails.md >}}). Ok, I decided to use my spin in more projects, so, I just [gemified it](https://rubygems.org/gems/ajaxspin).
+Somedays ago I wrote about [how to build a simple and non intrusive AJAX status with CoffeeScript in RubyOnRails]({{< ref "building-a-simple-and-non-intrusive-ajax-status-with-coffeescript-in-rubyonrails.md" >}}). Ok, I decided to use my spin in more projects, so, I just [gemified it](https://rubygems.org/gems/ajaxspin).
 
 It is really very simple to use and looks nasty =)
 

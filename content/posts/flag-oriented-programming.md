@@ -110,7 +110,7 @@ Coffee.new(:large).make(true, true, true)
 
 I dare you to guess what happens next...
 
-At this point, the code is already a mess. Maybe the developers will attempt to apply some clean code and put the contents of each `if` statement in separated functions... but, is this [good design]({{< ref good-code.md >}}), at all?
+At this point, the code is already a mess. Maybe the developers will attempt to apply some clean code and put the contents of each `if` statement in separated functions... but, is this [good design]({{< ref "good-code.md" >}}), at all?
 
 Of course not. This is imperative, flag-oriented programming.
 

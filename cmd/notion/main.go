@@ -330,7 +330,7 @@ func buildMarkdown(header string, content []byte) []byte {
 		"…", "...",
 	).Replace(ss)
 
-	ss = postURLRegex.ReplaceAllString(ss, "({{< ref $1.md >}})")
+	ss = postURLRegex.ReplaceAllString(ss, `({{< ref "$1.md" >}})`)
 
 	return []byte(
 		strings.Join(

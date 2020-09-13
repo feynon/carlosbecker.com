@@ -10,7 +10,7 @@ tags: [javascript]
 
 > This is article is the second of a series of `n` articles, where `n` could be any given number between `1` and `2` (inclusive).
 
-The first article of this serie was about [Contexts]({{< ref js-context.md >}}). The article itself received much more attention than I thought it will, which leads me to proceed and create the next very basic JavaScript articles.
+The first article of this serie was about [Contexts]({{< ref "js-context.md" >}}). The article itself received much more attention than I thought it will, which leads me to proceed and create the next very basic JavaScript articles.
 
 So let's do this.
 

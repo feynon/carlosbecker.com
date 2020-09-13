@@ -8,7 +8,7 @@ toc: true
 tags: [java, gwt]
 ---
 
-First of all, if you haven't done it yet, read [Getting started with GWT-Bootstrap]({{< ref getting-started-with-gwt-bootstrap.md >}}).
+First of all, if you haven't done it yet, read [Getting started with GWT-Bootstrap]({{< ref "getting-started-with-gwt-bootstrap.md" >}}).
 
 ## Create the GWT-Project
 
@@ -58,7 +58,7 @@ And then, update your project with a `$ mvn clean install`.
 
 ## Configure GWT-Bootstrap
 
-In this point, we have to setup the `*.gwt.xml` file and our `UIBinder` XML file. You can follow [getting started tutorial]({{< ref getting-started-with-gwt-bootstrap.md >}}). to do that in the right way.
+In this point, we have to setup the `*.gwt.xml` file and our `UIBinder` XML file. You can follow [getting started tutorial]({{< ref "getting-started-with-gwt-bootstrap.md" >}}). to do that in the right way.
 
 ## Get a custom Bootstrap Theme
 
