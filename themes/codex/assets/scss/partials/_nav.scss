@@ -29,7 +29,6 @@
 }
 
 .nav__list {
-  text-align: right;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -37,6 +36,7 @@
 
   @media screen and (min-width: $medium) {
     width: auto;
+    text-align: right;
   }
 
   @media screen and (max-width: $medium - 1) {
