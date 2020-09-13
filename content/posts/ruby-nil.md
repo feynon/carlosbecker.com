@@ -5,7 +5,7 @@ draft: false
 slug: ruby-nil
 city: Joinville
 toc: true
-tags: []
+tags: [ruby-on-rails]
 ---
 
 > Following my previous posts with basic Javascript aspects, like context and variable hoisting, I'll try to write some basic concepts of the Ruby language. I decided to start with something that usually confuses new Ruby users (sometimes they don't even know that they are confused, by the way): the Ruby nil object.

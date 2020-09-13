@@ -5,7 +5,7 @@ draft: false
 slug: rails-ajaxspin
 city: Joinville
 toc: true
-tags: []
+tags: [ruby-on-rails]
 ---
 
 Somedays ago I wrote about [how to build a simple and non intrusive AJAX status with CoffeeScript in RubyOnRails]({{< ref building-a-simple-and-non-intrusive-ajax-status-with-coffeescript-in-rubyonrails.md >}}). Ok, I decided to use my spin in more projects, so, I just [gemified it](https://rubygems.org/gems/ajaxspin).

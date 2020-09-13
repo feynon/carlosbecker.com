@@ -5,7 +5,7 @@ draft: false
 slug: alerts
 city: Joinville
 toc: true
-tags: []
+tags: [monitoring]
 ---
 
 As a DevOps/SRE, I spent a reasonable amount of time dealing with metrics and alerts.

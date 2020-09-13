@@ -5,7 +5,7 @@ draft: false
 slug: gke
 city: Joinville
 toc: true
-tags: []
+tags: [kubernetes, google-cloud]
 ---
 
 I've been working with DigitalOcean, Heroku and AWS for some years now.

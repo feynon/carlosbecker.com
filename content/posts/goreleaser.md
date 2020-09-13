@@ -5,7 +5,7 @@ draft: false
 slug: goreleaser
 city: Marechal Cândido Rondon
 toc: true
-tags: []
+tags: [goreleaser, golang]
 ---
 
 I have some apps written in Go, which I deliver as binaries for each platform using GitHub releases. Until now, I was doing it with a very simple [shell script](https://github.com/goreleaser/goreleaser.github.io).

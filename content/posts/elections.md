@@ -5,7 +5,7 @@ draft: false
 slug: elections
 city: Joinville
 toc: true
-tags: []
+tags: [ruby-on-rails]
 ---
 
 > Updated with second round script in Oct 26, 2014.

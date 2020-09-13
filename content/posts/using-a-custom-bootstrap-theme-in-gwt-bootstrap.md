@@ -5,7 +5,7 @@ draft: false
 slug: using-a-custom-bootstrap-theme-in-gwt-bootstrap
 city: Joinville
 toc: true
-tags: []
+tags: [java, gwt]
 ---
 
 First of all, if you haven't done it yet, read [Getting started with GWT-Bootstrap]({{< ref getting-started-with-gwt-bootstrap.md >}}).

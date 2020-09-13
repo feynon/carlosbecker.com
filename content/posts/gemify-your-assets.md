@@ -5,7 +5,7 @@ draft: false
 slug: gemify-your-assets
 city: Joinville
 toc: true
-tags: []
+tags: [ruby-on-rails]
 ---
 
 Rails 3.1 introduced the asset pipeline, which make it easy to include versioned external assets as application dependencies.

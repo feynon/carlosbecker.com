@@ -5,7 +5,7 @@ draft: false
 slug: k8s-sandbox-costs
 city: Joinville
 toc: true
-tags: []
+tags: [kubernetes, amazon-web-services]
 ---
 
 We are running Kubernetes on both sandbox and production for some months now. Our production cluster is still small, with few services running on it, but, most of our sandbox environment is running on a Kubernetes cluster on AWS.

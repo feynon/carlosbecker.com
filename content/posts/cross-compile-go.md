@@ -5,7 +5,7 @@ draft: false
 slug: cross-compile-go
 city: Marechal Cândido Rondon
 toc: true
-tags: []
+tags: [golang]
 ---
 
 `go build` generates a binary for the platform you run it in. So, if I build [antibody](https://github.com/caarlos0/antibody) in a Linux machine - which uses Mach-O, it will not work in OS X - which uses ELF.

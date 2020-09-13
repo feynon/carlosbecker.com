@@ -5,7 +5,7 @@ draft: false
 slug: things-that-make-me-dislike-java
 city: Joinville
 toc: true
-tags: []
+tags: [java]
 ---
 
 So, I just compiled a little list of things that, I believe, make me dislike Java everyday a little more.

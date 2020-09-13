@@ -5,7 +5,7 @@ draft: false
 slug: unobtrusive-js
 city: Joinville
 toc: true
-tags: []
+tags: [javascript]
 ---
 
 ![](/public/images/unobtrusive-js/4aebb97c-0ec2-437e-b6f6-426395e89121.png)

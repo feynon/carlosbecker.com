@@ -5,7 +5,7 @@ draft: false
 slug: jekyll-reading-time-without-plugins
 city: Joinville
 toc: true
-tags: []
+tags: [jekyll, blog]
 ---
 
 Estimated reading time of a post is a feature that became popular, I believe, with Medium.

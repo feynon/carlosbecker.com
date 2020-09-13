@@ -5,7 +5,7 @@ draft: false
 slug: chart-repo-stars
 city: Joinville
 toc: true
-tags: []
+tags: [github]
 ---
 
 I always wanted to know how stargazers of my repos increased over time.

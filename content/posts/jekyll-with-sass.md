@@ -5,7 +5,7 @@ draft: false
 slug: jekyll-with-sass
 city: Marechal Cândido Rondon
 toc: true
-tags: []
+tags: [jekyll, blog]
 ---
 
 I followed [@mdo](http://markdotto.com/) recent article "[Using Sass with Jekyll](http://markdotto.com/2014/09/25/sass-and-jekyll/)", and wanted to point out the results.

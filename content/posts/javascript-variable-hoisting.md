@@ -5,7 +5,7 @@ draft: false
 slug: javascript-variable-hoisting
 city: Joinville
 toc: true
-tags: []
+tags: [javascript]
 ---
 
 > This is article is the second of a series of `n` articles, where `n` could be any given number between `1` and `2` (inclusive).

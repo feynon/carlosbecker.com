@@ -5,7 +5,7 @@ draft: false
 slug: gwt-bootstrap-2040-released
 city: Joinville
 toc: true
-tags: []
+tags: [java, gwt]
 ---
 
 For those wo don't know, [GWT-Bootstrap](http://gwtbootstrap.github.com/) wants to port the [Twitter Bootstrap](http://getboostrap.com/) widgets to GWT compatible and easy to use components/widgets.

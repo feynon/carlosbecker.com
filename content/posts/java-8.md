@@ -5,7 +5,7 @@ draft: false
 slug: java-8
 city: Joinville
 toc: true
-tags: []
+tags: [java]
 ---
 
 Earlier this year, the new version of the Java Programming Language was released. Finally, it enters in the field of the "cool peeps" with some features it should have since years ago, like Lambdas.

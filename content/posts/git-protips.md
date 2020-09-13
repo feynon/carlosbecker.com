@@ -5,7 +5,7 @@ draft: false
 slug: git-protips
 city: Joinville
 toc: true
-tags: []
+tags: [git]
 ---
 
 Git has a lot of features, and I bet that 90% of who use it (including me) doesn't know half of them. Well, maybe, someday, one of those *"unknown features"* can *"save your life"*.

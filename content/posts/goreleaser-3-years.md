@@ -59,7 +59,7 @@ On top of that, GoReleaser now have `5000+` stars, `120+` contributors and `300+
 
 We can see in the stars over time on the following graph that it is [growing pretty steadily](https://starchart.cc/goreleaser/goreleaser):
 
-![](/public/images/goreleaser-3-years/dd76eee7-32f8-487b-b596-eea7e33d1795.svg)
+![](/public/images/goreleaser-3-years/df3aa576-1de0-4b2d-bfba-cac7cbe58e98.png)
 
 Which is nice, I guess. 😌
 

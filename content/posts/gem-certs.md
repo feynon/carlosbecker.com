@@ -5,7 +5,7 @@ draft: false
 slug: gem-certs
 city: Joinville
 toc: true
-tags: []
+tags: [ruby-on-rails]
 ---
 
 Today, once again, my environment start throwing that SSL cert error.

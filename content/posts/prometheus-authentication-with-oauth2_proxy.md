@@ -5,7 +5,7 @@ draft: false
 slug: prometheus-authentication-with-oauth2_proxy
 city: Joinville
 toc: true
-tags: []
+tags: [prometheus]
 ---
 
 I wanted to set up a [prometheus](https://prometheus.io/) machine for me to monitor random stuff, but I was always postpone that because I didn't want to use SSH port-forwarding, firewalls, create a VPC and/or setup an OpenVPN server or anything like that.

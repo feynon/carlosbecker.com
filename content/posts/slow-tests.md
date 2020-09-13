@@ -5,7 +5,7 @@ draft: false
 slug: slow-tests
 city: Joinville
 toc: true
-tags: []
+tags: [java]
 ---
 
 I found that it's pretty hard to have a project with high test coverage and fast build... if the tests are slow, people will feel the need to skip them to speed up the build, and will probably write less tests than they should, afraid that the build will became even slower. You go out for a walk and when  you come back no one is running or writing tests anymore...

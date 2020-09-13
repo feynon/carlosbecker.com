@@ -5,7 +5,7 @@ draft: false
 slug: maven-dependency-hell
 city: Joinville
 toc: true
-tags: []
+tags: [java]
 ---
 
 Every now and then an active java-based project enters in a "dependency hell" state. That usually happens because people keep adding dependencies without checking what comes in transitively nor if that dependency is declared somewhere else already.

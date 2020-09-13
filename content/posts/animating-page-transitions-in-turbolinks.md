@@ -5,7 +5,7 @@ draft: false
 slug: animating-page-transitions-in-turbolinks
 city: Joinville
 toc: true
-tags: []
+tags: [ruby-on-rails]
 ---
 
 Since I've seen the new [Basecamp](http://basecamp.com/), I fall in love with it.

@@ -5,7 +5,7 @@ draft: false
 slug: selenium-grid-docker-compose
 city: Joinville
 toc: true
-tags: []
+tags: [docker, testing]
 ---
 
 At [ContaAzul](http://contaazul.com/), we had 31 Windows machines powering our Selenium tests - one running the grid and 30 more running clients. Needless to say, this is **very** expensive.

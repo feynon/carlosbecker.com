@@ -5,7 +5,7 @@ draft: false
 slug: small-go-apps-containers
 city: Marechal Cândido Rondon
 toc: true
-tags: []
+tags: [golang, docker]
 ---
 
 Or: how to ship your app in a <20Mb container.

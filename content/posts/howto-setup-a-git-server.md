@@ -5,7 +5,7 @@ draft: false
 slug: howto-setup-a-git-server
 city: Joinville
 toc: true
-tags: []
+tags: [git]
 ---
 
 ## Setup

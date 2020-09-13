@@ -5,7 +5,7 @@ draft: false
 slug: speeding-up-zsh
 city: Joinville
 toc: true
-tags: []
+tags: [shell, productivity]
 ---
 
 This is the story on how I speed up my terminal load time.

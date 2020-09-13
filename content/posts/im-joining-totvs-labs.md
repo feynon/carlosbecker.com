@@ -5,7 +5,7 @@ draft: false
 slug: im-joining-totvs-labs
 city: Mountain View
 toc: true
-tags: []
+tags: [life]
 ---
 
 Everything in life eventually comes to an end, including life itself. This is not that kind of post, though.

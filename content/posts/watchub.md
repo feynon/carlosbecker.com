@@ -5,7 +5,7 @@ draft: false
 slug: watchub
 city: Joinville
 toc: true
-tags: []
+tags: [github]
 ---
 
 [Watchub](http://watchub.pw/) is a service that notifies you of people who followed/unfollowed you and starred/unstarred your repositories.

@@ -5,7 +5,7 @@ draft: false
 slug: up-a-jekyll-theme
 city: Joinville
 toc: true
-tags: []
+tags: [jekyll, blog]
 ---
 
 After a while using [Jekyll Bootstrap](http://jekyllbootstrap.com/), I just realized that it was so much bloated. Then, few days ago, I forked the old [Zach Holman's blog](http://zachholman.com/), and started to tweak my own theme based on theirs (that now is [opensource](http://github.com/holman/left)). At first, I like it, but after a while, I just start thinking that it had a "old style" design.

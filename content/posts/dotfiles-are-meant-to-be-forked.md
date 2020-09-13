@@ -5,7 +5,7 @@ draft: false
 slug: dotfiles-are-meant-to-be-forked
 city: Joinville
 toc: true
-tags: []
+tags: [productivity]
 ---
 
 ![](/public/images/dotfiles-are-meant-to-be-forked/16090780-b364-47e0-8052-6c004a9bac20.png)

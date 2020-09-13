@@ -5,7 +5,7 @@ draft: false
 slug: injectmocks
 city: Joinville
 toc: true
-tags: []
+tags: [java]
 ---
 
 > FYI: Like the previous post, this is a really quick tip.

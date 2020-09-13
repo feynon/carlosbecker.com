@@ -5,7 +5,7 @@ draft: false
 slug: persistence-base
 city: Joinville
 toc: true
-tags: []
+tags: [java]
 ---
 
 Some time ago, I [posted here]({{< ref modular-persistence.md >}}) about a simple project that I've done in my post-graduation classes. Since I need it in other projects, and also some friends ended up using it in small projects, I decided to evolve it a little bit.

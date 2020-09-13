@@ -5,7 +5,7 @@ draft: false
 slug: env-structs-golang
 city: Marechal Cândido Rondon
 toc: true
-tags: []
+tags: [golang]
 ---
 
 In Go, it's dead simple to get the value from an environment variable:

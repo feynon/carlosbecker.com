@@ -5,7 +5,7 @@ draft: false
 slug: twitter-drops-ruby-bullshit
 city: Joinville
 toc: true
-tags: []
+tags: [ruby-on-rails, java]
 ---
 
 This post is about the Twitter change from Ruby to Java, some years ago, fact that, sadly, is still being used by some people to say that Ruby sucks and Java is the best language in the world.

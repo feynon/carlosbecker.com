@@ -5,7 +5,7 @@ draft: false
 slug: building-a-simple-and-non-intrusive-ajax-status-with-coffeescript-in-rubyonrails
 city: Joinville
 toc: true
-tags: []
+tags: [ruby-on-rails]
 ---
 
 ## tl;dr

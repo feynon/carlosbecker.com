@@ -5,7 +5,7 @@ draft: false
 slug: rocking-out-with-google-guava
 city: Joinville
 toc: true
-tags: []
+tags: [java]
 ---
 
 According to the [project site on GitHub](https://github.com/google/guava), *The Guava project contains several of Google's core libraries that we rely on in our Java-based projects: collections, caching, primitives support, concurrency libraries, common annotations, string processing, I/O, and so forth.*

@@ -5,7 +5,7 @@ draft: false
 slug: junit-rules
 city: Joinville
 toc: true
-tags: []
+tags: [java]
 ---
 
 Have you ever wrote JUnit tests extending a class that does some before and after work, so you didn't have to repeat that code in various test classes? 

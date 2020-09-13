@@ -5,7 +5,7 @@ draft: false
 slug: up-2
 city: Joinville
 toc: true
-tags: []
+tags: [jekyll, blog]
 ---
 
 So, this is the all-new [UP](http://github.com/caarlos0/up) version. It is more based on my own [blog](https://carlosbecker.com/) in some way, which is a some kind of branch of the theme.

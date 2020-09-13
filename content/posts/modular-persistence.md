@@ -5,7 +5,7 @@ draft: false
 slug: modular-persistence
 city: Joinville
 toc: true
-tags: []
+tags: [java]
 ---
 
 Hi everybody!

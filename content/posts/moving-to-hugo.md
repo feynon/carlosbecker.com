@@ -5,7 +5,7 @@ draft: false
 slug: moving-to-hugo
 city: Joinville
 toc: true
-tags: []
+tags: [blog, hugo]
 ---
 
 After some time, I finally decided to move my blog from [Jekyll](https://jekyllrb.com/) to [Hugo](https://gohugo.io/).

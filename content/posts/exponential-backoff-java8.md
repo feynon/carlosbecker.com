@@ -5,7 +5,7 @@ draft: false
 slug: exponential-backoff-java8
 city: Joinville
 toc: true
-tags: []
+tags: [java]
 ---
 
 > Exponential backoff is an algorithm that uses feedback to multiplicatively decrease the rate of some process, in order to gradually find an acceptable rate. 

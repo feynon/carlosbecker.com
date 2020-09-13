@@ -5,7 +5,7 @@ draft: false
 slug: jekyll-build-time
 city: Joinville
 toc: true
-tags: []
+tags: [blog, jekyll]
 ---
 
 I've been using Jekyll on my blog since 2012. It is great! But, lately, its slow build times started to bother me.

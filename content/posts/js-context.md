@@ -5,7 +5,7 @@ draft: false
 slug: js-context
 city: Joinville
 toc: true
-tags: []
+tags: [javascript]
 ---
 
 People make a lot of confusion about Javascript context mechanism. I don't think it's confusing at all, is just that it's different when compared with other languages we generally use.

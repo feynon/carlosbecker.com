@@ -5,7 +5,7 @@ draft: false
 slug: introducing-jvm
 city: Joinville
 toc: true
-tags: []
+tags: [cli, shell]
 ---
 
 Last years it becomes more and more common to work in different projects running on different versions of Java. There still some running on Java 6, and there are tons already running on Java 8. 

@@ -5,7 +5,7 @@ draft: false
 slug: guice-and-junit
 city: Joinville
 toc: true
-tags: []
+tags: [java, testing]
 ---
 
 First of all: **Do you use Guice as Depency Injection Container in your Apps? If not, why?**

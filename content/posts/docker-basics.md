@@ -5,7 +5,7 @@ draft: false
 slug: docker-basics
 city: Joinville
 toc: true
-tags: []
+tags: [docker]
 ---
 
 Or "what the hell is this Docker thing?"

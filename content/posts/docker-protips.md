@@ -5,7 +5,7 @@ draft: false
 slug: docker-protips
 city: Joinville
 toc: true
-tags: []
+tags: [docker]
 ---
 
 Like my old post [on git]({{< ref git-protips.md >}}), this is somewhat a collection of useful Docker commands/tricks/whatever.

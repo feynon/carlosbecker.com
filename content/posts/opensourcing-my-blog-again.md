@@ -5,7 +5,7 @@ draft: false
 slug: opensourcing-my-blog-again
 city: Joinville
 toc: true
-tags: []
+tags: [blog]
 ---
 
 Once upon a time, my blog was OpenSource. People liked it and forked it tons of times, but they never change some stuff (disqus, analytics).

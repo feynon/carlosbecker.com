@@ -5,7 +5,7 @@ draft: false
 slug: gunit-guice-and-junit-fall-in-love
 city: Joinville
 toc: true
-tags: []
+tags: [java, testing]
 ---
 
 Yesterday, I wrote a [small article]({{< ref guice-and-junit.md >}}) talking about Guice and JUnit, so, this time, I'll just say how to use the small lib that I build (not big deal, one class, one annotation =] )

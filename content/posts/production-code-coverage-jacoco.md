@@ -5,7 +5,7 @@ draft: false
 slug: production-code-coverage-jacoco
 city: Joinville
 toc: true
-tags: []
+tags: [java]
 ---
 
 Microservices is the new fancy way of doing applications. Yet, most companies still have big and old monoliths in production. In fast evolving software of this size, it's usual to have lines of code which are never executed in production. Production code coverage reports can help

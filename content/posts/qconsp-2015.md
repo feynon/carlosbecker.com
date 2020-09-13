@@ -5,7 +5,7 @@ draft: false
 slug: qconsp-2015
 city: São Paulo
 toc: true
-tags: []
+tags: [conferences]
 ---
 
 So, this week I attended to [QCon-SP](http://qconsp.com/).

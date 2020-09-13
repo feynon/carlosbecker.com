@@ -5,7 +5,7 @@ draft: false
 slug: dump-postgres-table-inserts
 city: Joinville
 toc: true
-tags: []
+tags: [cli, shell]
 ---
 
 > FYI: Like the previous post, this is a really quick tip.

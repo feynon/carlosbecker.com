@@ -5,7 +5,7 @@ draft: false
 slug: seven-languages-in-seven-weeks-erlang
 city: Joinville
 toc: true
-tags: []
+tags: [erlang]
 ---
 
 So, I just bought *["Seven Languages in Seven Weeks"](http://amzn.to/17vnhdb)*. I've read the Ruby chapter, not big deal at all, so I slipt it. I also skip Io, Prolog and Scala (for now), and then, fall in Erlang!

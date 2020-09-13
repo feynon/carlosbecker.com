@@ -5,7 +5,7 @@ draft: false
 slug: integrating-minitest-with-shippable
 city: Joinville
 toc: true
-tags: []
+tags: [ruby-on-rails]
 ---
 
 I know, everyone uses Travis. I have nothing against it. But in case you want to test and/or use [Shippable](http://shippable.com/), this might be just the guide for you. I will also show how to setup that nice tabs with the test and coverage reports.

@@ -5,7 +5,7 @@ draft: false
 slug: distributed-locks-redis
 city: Joinville
 toc: true
-tags: []
+tags: [java]
 ---
 
 At [ContaAzul](http://contaazul.com/), we have several old pieces of code that are still running in production. We are committed to gradually re-implement them in better ways.

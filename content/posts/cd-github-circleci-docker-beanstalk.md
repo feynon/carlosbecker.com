@@ -5,7 +5,7 @@ draft: false
 slug: cd-github-circleci-docker-beanstalk
 city: Joinville
 toc: true
-tags: []
+tags: [github, docker]
 ---
 
 This is just a quick overview of how I did it in antibody's homepage.

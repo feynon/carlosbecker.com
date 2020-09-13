@@ -5,7 +5,7 @@ draft: false
 slug: ms-network
 city: Joinville
 toc: true
-tags: []
+tags: [linux]
 ---
 
 I work in a company that have an enterily MS-based network, which means, all that domain login crap and everything that comes with it: outlook, MS Communicator, proxies, monitoring and etc.

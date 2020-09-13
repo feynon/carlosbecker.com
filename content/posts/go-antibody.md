@@ -5,7 +5,7 @@ draft: false
 slug: go-antibody
 city: Marechal Cândido Rondon
 toc: true
-tags: []
+tags: [golang, shell, productivity]
 ---
 
 Learning Go was in my TODO list for a while, and finally I did something about it. This post contains some thoughts about it...

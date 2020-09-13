@@ -5,7 +5,7 @@ draft: false
 slug: lint-shell-scripts
 city: Joinville
 toc: true
-tags: []
+tags: [cli, shell]
 ---
 
 I will start this by quoting the [bashstyle](https://github.com/progrium/bashstyle)'s readme:

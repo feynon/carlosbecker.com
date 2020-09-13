@@ -5,7 +5,7 @@ draft: false
 slug: dont-user-junit-framework
 city: Joinville
 toc: true
-tags: []
+tags: [java]
 ---
 
 Every once in a while I see somewhere a wrong import to the old, deprecated `junit.framework` instead of `org.junit`.

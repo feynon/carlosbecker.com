@@ -5,7 +5,7 @@ draft: false
 slug: mvn-pr-coverage-blammer
 city: Joinville
 toc: true
-tags: []
+tags: [java]
 ---
 
 At the [company I work](http://github.com/ContaAzul) Pull Requests are part of our culture. 

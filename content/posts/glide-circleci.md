@@ -5,7 +5,7 @@ draft: false
 slug: glide-circleci
 city: Joinville
 toc: true
-tags: []
+tags: [golang]
 ---
 
 I've lost a considerable amount of time trying to bind those things together, so I decided to write this quick post about it, so others could also benefit from it.

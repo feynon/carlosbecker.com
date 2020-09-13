@@ -5,7 +5,7 @@ draft: false
 slug: find-non-ascii-chars
 city: Joinville
 toc: true
-tags: []
+tags: [cli, shell]
 ---
 
 > FYI: This is a really quick tip.

@@ -5,7 +5,7 @@ draft: false
 slug: jdk-yosemite
 city: Joinville
 toc: true
-tags: []
+tags: [java, macos]
 ---
 
 For some reason, Oracle blocked the installers to run only on a fixed OSX version range with a nice and explanatory error message. This range doesn't include Yosemite, which makes sense, since nobody running Yosemite will ever want to write some Java. Anyway, here is how to fix it.
