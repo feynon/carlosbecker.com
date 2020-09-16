@@ -22,6 +22,7 @@ List of terms we will use:
 
 - **ES2**: ElasticSearch v2.x.y
 - **ES5**: ElasticSearch v5.x.y
+
 ## Introduction
 
 Let's say you need to do a migration like that, you may come up with three
@@ -326,6 +327,7 @@ curl -s "localhost:9400/customer/_settings?pretty"
 curl -s "localhost:9200/_count?pretty"
 curl -s "localhost:9400/_count?pretty"
 ```
+
 ## Incremental snapshots
 
 So, on a *real* scenario, snapshots would probably take a lot of time (let's

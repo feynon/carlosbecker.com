@@ -88,6 +88,7 @@ b = 2;
 c = 10;
 x = 23432;
 ```
+
 ## Avoiding Variable Hoisting Issues
 
 There is no such thing in JavaScript. You can't prevent the hoisting, what you can - and **should** - do is "manually hoist" your variables. It will make your code far less confusing and will help you and other people that may someday have to maintain it to debug an error or add new features.

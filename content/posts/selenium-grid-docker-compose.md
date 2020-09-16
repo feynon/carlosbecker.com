@@ -83,6 +83,7 @@ It is also important to notice that we pay the Amazon bill in USD, and we pay ar
 Well, **MISSION ACCOMPLISHED**.
 
 > 50% usage because we only use them about 12 hours per day (business hours, give or take).
+
 ## Try it out
 
 In order to make it easier for you folks to put all this to work (save you a bunch of copy-and-paste combos), I created a simple set of shell scripts that can easily put a selenium grid up and running.

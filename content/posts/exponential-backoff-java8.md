@@ -25,6 +25,7 @@ public interface ExponentialBackOffFunction<T> {
 	T execute();
 }
 ```
+
 ### The `ExponentialBackOff` main class:
 
 ```java
@@ -73,6 +74,7 @@ public final class ExponentialBackOff {
 	}
 }
 ```
+
 ### Usage:
 
 ```java

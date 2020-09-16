@@ -147,6 +147,7 @@ And then just run:
 ```sh
 docker build -t test .
 ```
+
 ## Testing
 
 We can deploy our testing image with
@@ -173,6 +174,7 @@ while true; do
 	sleep 1
 done
 ```
+
 ### Terminal #2
 
 Simulate a long living request:
@@ -180,6 +182,7 @@ Simulate a long living request:
 ```sh
 curl localhost:8080/slow\?sleep=30m
 ```
+
 ### Terminal #3
 
 Watch the pod's events:
@@ -190,6 +193,7 @@ while true; do
 	sleep 1
 done
 ```
+
 ### Terminal #4
 
 Watch the pods logs:
@@ -197,6 +201,7 @@ Watch the pods logs:
 ```sh
 kubectl logs -f -l app=test
 ```
+
 ### Terminal #5
 
 Delete the pod:
@@ -204,6 +209,7 @@ Delete the pod:
 ```sh
 kubectl delete po -l app=test
 ```
+
 ## What happens
 
 As soon as we delete the pod in **Terminal #5**, our describe on **Terminal #3** will show something like this:

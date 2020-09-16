@@ -45,6 +45,7 @@ $ rm -rf lib/somelibrary
 ```
 
 > **Heads up**: Don't forget to change the `lib/someligrary.rb` and `somelibrary.gemspec` files!
+
 ### 2. As I said in item 1, change the `somelibrary.gemspec` file...
 
 Remove the references to `version.rb`, put a static version, replace the TODO's by your own texts.
@@ -59,6 +60,7 @@ module Somelibrary
     end
 end
 ```
+
 ## 2. Create the `vendor/assets` folder
 
 That's easy!
@@ -66,6 +68,7 @@ That's easy!
 ```
 $ mkdir -p vendor/assets/{javascripts,stylesheets}
 ```
+
 ## 3. Copy the assets to the folders
 
 Even easier, just copy the respective `js` and `css` files to `javascripts` and `stylesheets` folders, respectively.

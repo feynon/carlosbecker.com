@@ -17,6 +17,7 @@ I particurarly hate to use MS Windows anytime, even more for work. So, I install
 This was the trickiest: I needed an "GOD-mode certificate", you should ask the domain admins for something like it. After that, the setup was pretty easy:
 
 ![](/public/images/ms-network/cdaf2ee3-24a4-4c9b-ad5b-c28aa977c11d.png)
+
 ## Proxy
 
 You can either set the proxy direct on Network Proxy Setup and give the password ten thousand times a day or use CNTLM. I strongly suggest you to use CNTLM.
@@ -44,6 +45,7 @@ The only trick I could give you here is about new message composing: Outlook cre
 To change it, go to your account settings, and change the "Automatically quote the original message when replaying Then," to *"start my reply above the quote"* in the "Compositing & Addressing" tab:
 
 ![](/public/images/ms-network/d7dcf823-9741-4f28-bc70-1675d9f68c6d.png)
+
 ## Lync / Communicator
 
 For this -crapy- thing we have a web version available (as well as email), but you can also setup this (if you have luck) in pidgin, using pidgin-sipe (you can get all the needed packages from apt). You can follow this (link is now offline) tutorial, skipping the installation (use apt).

@@ -152,6 +152,7 @@ When writing [nfpm](https://github.com/goreleaser/nfpm), I've also learned:
 > could go wrong and I didn't need all its features either. If you need to
 > package your software in a lot of formats using a single tool,
 > fpm for the win!
+
 ## Documentation is hard
 
 I've learned that it is very hard to get just the exact amount of documentation so it doesn't suck.

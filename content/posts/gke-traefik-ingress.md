@@ -62,6 +62,7 @@ From there it is straightforward to figure out what can happen:
 - Node is preempted
 - Request is terminated mid way (we have some slow requests for several reasons)
 - Cloudflare doesn't know what the hell happened, and they have a status code for it: 520
+
 ## Fixing things
 
 So, what we need, ideally, is to have only the nodes that are actually running Traefik to be "green" on the load balancer, all others must fail the healthchecks.

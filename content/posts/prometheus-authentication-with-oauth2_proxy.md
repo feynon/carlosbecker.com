@@ -52,6 +52,7 @@ The important parts are:
 
 - listen on `127.0.0.1:9090` - so it won't be exposed to the world;
 - the `web.external-url` with the final URL: this is required for external links to work properly.
+
 ## AlertManager
 
 We will also need [alertmanager](https://prometheus.io/docs/alerting/alertmanager/) to route the alerts, right? Let's do it:
@@ -195,6 +196,7 @@ The important things here are:
 - `email-domain` could be an additional email domain filter - for me the org filter is enough;
 - `set-xauthrequest` is set to true se we can pass through the user and email headers - grafana uses this header to auto-create an user and log it in;
 - `cookie-secure` is set ot false due the lack of https. I'll manage to add [let's encrypt](https://letsencrypt.org/) anoother and will create a new post.
+
 ## nginx
 
 **Finally**, the last part: [nginx](https://www.nginx.com/)!

@@ -86,6 +86,7 @@ public class BlahTest {
 	// ...
 }
 ```
+
 ### Temporary Folder
 
 Have you ever needed to do some test that uses `File` and/or needed a temporary file/folder? `TemporaryFolder` to the rescue:
@@ -102,6 +103,7 @@ public class BlahTest {
 	}
 }
 ```
+
 ### Expected Exceptions
 
 Ever needed more control on exceptions? Try the `ExpectedException` rule:
@@ -119,6 +121,7 @@ public class BlahTest {
 	}
 }
 ```
+
 ## Custom Rules
 
 That's neat, but... what if you need something else... something more "custom"?
@@ -161,6 +164,7 @@ public class BlahTest {
 	}
 }
 ```
+
 ### External Resources
 
 Returning to the example of this post's first paragraph, you can also have custom external resources rules by extending the `ExternalResource` class:

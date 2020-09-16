@@ -147,6 +147,7 @@ deploy:
   on:
     tags: true
 ```
+
 ## Wrapping up
 
 Now you can just do a `git tag v1.2.3; git push --tags`, and [TravisCI](https://travis-ci.org/goreleaser/goreleaser) will

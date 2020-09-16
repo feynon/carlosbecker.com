@@ -20,6 +20,7 @@ There are 2 ways to get the jar:
 
 - [Maven](https://github.com/gwtbootstrap/gwt-bootstrap/wiki/Using-GWT-Bootstrap-Maven-Repository)
 - [Downloading the jar by hand and put it in you app classpath](https://github.com/gwtbootstrap/gwt-bootstrap/downloads)
+
 ## Configuring you module
 
 You will have to configure your *App.gwt.xml* file to *inherit* the GWT-Bootstrap widget library. You can do it like this:
@@ -27,6 +28,7 @@ You will have to configure your *App.gwt.xml* file to *inherit* the GWT-Bootstra
 ```xml
 <inherits name="com.github.gwtbootstrap.Bootstrap"/>
 ```
+
 ## UiBinder usage
 
 Assuming that you're using UIBinder, add the following namespace to the `<ui:UIBinder>` element:
@@ -40,6 +42,7 @@ Then you can easily use the `b` namespace in your widget design, like `Heading`:
 ```xml
 <b:heading size="2">Hello World GWT-Bootstrap</b:heading>
 ```
+
 ## Datepicker
 
 We also have the [bootstrap datepicker](https://github.com/eternicode/bootstrap-datepicker) ported into GWT-Bootstrap, but, in a different module and namespace.
@@ -61,6 +64,7 @@ Then, just use the widget like this:
 ```xml
 <b2:DateBox format="dd/mm/yyyy" autoClose="true" />
 ```
+
 ## Pros and Cons
 
 ### Pros
@@ -69,6 +73,7 @@ Then, just use the widget like this:
 - Themeable
 - Almost all widgets ported
 - Active forum and development
+
 ### Cons
 
 - Doesn't support `less` files ([#29](https://github.com/gwtbootstrap/gwt-bootstrap/issues/29))

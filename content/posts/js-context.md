@@ -80,6 +80,7 @@ console.log(test.getLocal()); // 10
 console.log(test.inc()); // called inc
 console.log(test.getLocal()); // 110
 ```
+
 ## Just like I said before...
 
 The context **only** changes inside functions.

@@ -84,6 +84,7 @@ But, of course, everything have a bad side:
 We called this project "*Operation Locker*", which is a very fun [Battlefield 4](https://www.battlefield.com/games/battlefield-4) map:
 
 ![](/public/images/distributed-locks-redis/8b0238db-1025-41da-ad0a-7c88ecb2ffc7.png)
+
 ## Implementation
 
 Our distributed lock API required the implementation of two main interfaces to change its behavior:

@@ -27,6 +27,7 @@ Let's do this.
 ```
 $ git blame path/to/file
 ```
+
 ### See the reference log
 
 This will show the log of your local operations in the git tree, useful to get revision code of a specific action (see next item).
@@ -44,27 +45,32 @@ $ git rev-parse HEAD # last commit
 $ git rev-parse HEAD~5 # 5 commits back from last commit
 $ git rev-parse develop # last commit from develop branch
 ```
+
 ### Revert a specific file to a specific commit
 
 ```
 $ git log path/to/file # to check the revision code
 $ git checkout revision_code path/to/file
 ```
+
 ### Revert a specific file to last commit
 
 ```
 $ git checkout HEAD path/to/file
 ```
+
 ### Revert a specific file to 3 commits back from last
 
 ```
 $ git checkout HEAD~3 path/to/file
 ```
+
 ### Get an old version of some file
 
 ```
 $ git show HEAD~3:path/to/file > path/to/file_3_commits_ago
 ```
+
 ### Shallow clone
 
 According to the docs:
@@ -88,6 +94,7 @@ $ git branch new
 $ git reset --hard HEAD~1 #go back 1 commit, YOU WILL LOST UNCOMMITED CHANGES
 $ git checkout new
 ```
+
 ### Revert your entire tree to the last commit state
 
 by [@luizkowalski](http://github.com/luizkowalski)
@@ -107,6 +114,7 @@ by [@luizkowalski](http://github.com/luizkowalski)
 ```
 $ git clean -df
 ```
+
 ### Stashing
 
 by [@thiagolenz](http://github.com/thiagolenz)
@@ -130,6 +138,7 @@ This will do the merge without creating the "merge commit", acting much like SVN
 ```
 $ git pull --rebase
 ```
+
 ### Aliases
 
 by [@derekstavis](http://github.com/derekstavis)
@@ -145,6 +154,7 @@ $ git config --global alias.s status
 $ git s
 $ git co https://github.com/caarlos0/up
 ```
+
 ### Copy a file from one branch to another
 
 Useful if you want a file that was introduced or modified in other branch. Example:
@@ -154,6 +164,7 @@ $ git checkout gh-pages
 $ git checkout master -- teste.js
 $ git commit -m "Update test.js from master"
 ```
+
 ### Log deleted files
 
 by [@ricardo_walter](https://twitter.com/ricardo_walter)
@@ -163,6 +174,7 @@ Show the commit log with the deleted files for each commit:
 ```
 $ git log --diff-filter=D --summary
 ```
+
 ### Delete a branch
 
 Local:
@@ -179,6 +191,7 @@ by [@ricardo_walter](https://twitter.com/ricardo_walter)
 ```
 $ git push origin :branchname
 ```
+
 ### Undo your last commit
 
 by [@antonini](http://github.com/antonini)
@@ -201,6 +214,7 @@ For example, if you want to remove the `wrongfile.txt`, do:
 $ git rm wrongfile.txt
 $ git commit --amend
 ```
+
 ### Update submodules to last commit
 
 Instead of `cd`ing each module, `checkout master` and `pull`, in git 1.8.2 you can simply do this:
@@ -208,6 +222,7 @@ Instead of `cd`ing each module, `checkout master` and `pull`, in git 1.8.2 you c
 ```
 $ git submodule update --remote --merge
 ```
+
 ### Apply a patch to another file
 
 by [@aureliojargas](http://github.com/aureliojargas)
@@ -218,6 +233,7 @@ This is useful if you have a file in two different repos for whatever reason, or
 $ git diff HEAD^ -- hello.test > /tmp/patch
 $ patch -p1 hi.test /tmp/patch
 ```
+
 ## Troubleshooting
 
 ### Unable to update local ref
