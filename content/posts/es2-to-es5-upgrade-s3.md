@@ -16,14 +16,13 @@ In this post we will explore one of the strategies that can be used to do
 such migration, setting a up a playground environment in which we can learn
 the migration procedures and test things out safely.
 
-# Definition List
+## Definition List
 
 List of terms we will use:
 
 - **ES2**: ElasticSearch v2.x.y
 - **ES5**: ElasticSearch v5.x.y
-
-# Introduction
+## Introduction
 
 Let's say you need to do a migration like that, you may come up with three
 strategies:
@@ -44,7 +43,7 @@ security.
 
 So, without further due, let's get started!
 
-# ES2 Cluster Setup
+## ES2 Cluster Setup
 
 First, we need an ES2 cluster. For testing purposes, we'll create a 4 node
 cluster, one master and three data nodes:
@@ -149,7 +148,7 @@ curl -s "localhost:9200/_cluster/health"
 It will build the image, launch one master and three data nodes talking to that
 master.
 
-# Adding some fake data
+## Adding some fake data
 
 Let's create a `customer` index and add some fake data to it:
 
@@ -178,7 +177,7 @@ done
 
 Once that is done, time to snapshot it!
 
-# Snapshotting ES2
+## Snapshotting ES2
 
 The first thing you need to do is to create a repository, let's call it
 `backups`:
@@ -209,12 +208,12 @@ curl -sXPUT "localhost:9200/_snapshot/backups/snapshot_1?wait_for_completion=tru
 
 Once it is done, you can already restore it on another cluster.
 
-# Check the elasticsearch-migration plugin
+## Check the elasticsearch-migration plugin
 
 You can explore the migration plugin by going to
 its URL.
 
-# Setup an ES5 cluster
+## Setup an ES5 cluster
 
 We'll create another 4-node cluster using docker-compose, this time running
 ES5:
@@ -292,7 +291,7 @@ curl -s "localhost:9400/_cluster/health"
 
 We should now have one master and three data nodes running ES5 as well!
 
-# Restore ES2 snapshot into ES5
+## Restore ES2 snapshot into ES5
 
 For that, we need to create a repository with the same arguments we used on
 ES2.
@@ -327,8 +326,7 @@ curl -s "localhost:9400/customer/_settings?pretty"
 curl -s "localhost:9200/_count?pretty"
 curl -s "localhost:9400/_count?pretty"
 ```
-
-# Incremental snapshots
+## Incremental snapshots
 
 So, on a *real* scenario, snapshots would probably take a lot of time (let's
 say the cluster have hundreds of terabytes), and your users will still want to
@@ -353,14 +351,14 @@ some time to validate more things and avoid a split brain scenario, and once
 you are confident, finnaly enable everything - from that time on we can't go
 back anymore.
 
-# Timings
+## Timings
 
 I tested the same documents in both Amazon S3 and DigitalOcean Spaces.
 Amazon S3 seemed orders of magnitude faster (70% or so), so I would
 probably recommend you use S3 for production environments - or just measure
 it yourself 🤷‍♂️.
 
-# Conclusion
+## Conclusion
 
 Using this strategy is fairly easy and you can basically abort it at any time
 if you find bugs in your app, for example.
@@ -369,10 +367,10 @@ I hope that the receipts for the test environment serve you well and that you
 can also use them to practice in a safe environment before working on "real"
 environments.
 
-# Next steps
+## Next steps
 
 On the next posts we will explore the rack awareness strategy.
 
-# Links
+## Links
 
 - [ElasticSearch documentation](https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-snapshots.html)

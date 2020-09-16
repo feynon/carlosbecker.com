@@ -37,7 +37,6 @@ You can also start it up in watch mode with:
 ```
 $ foreman start -f Procfile.dev
 ```
-
 ### Update
 
 To update your previous UP-baked blog, the easiest way is to backup your `_posts` folder and override everything else. If you don't want to do that, you will have to hack around the changes and do it by hand.

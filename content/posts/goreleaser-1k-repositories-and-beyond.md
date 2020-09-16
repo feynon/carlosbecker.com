@@ -104,7 +104,6 @@ We had pull requests from almost 50 different contributors so far!
 - [goreleaser/godownloader contributors](https://github.com/goreleaser/godownloader/graphs/contributors)
 - [goreleaser/nfpm contributors](https://github.com/goreleaser/nfpm/graphs/contributors)
 - [goreleaser/archive contributors](https://github.com/goreleaser/archive/graphs/contributors)
-
 ## Another 1000
 
 It has been a great gig so far. I can't wait to see what else we will accomplish!

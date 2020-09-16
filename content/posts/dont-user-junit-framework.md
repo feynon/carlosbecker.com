@@ -23,7 +23,6 @@ for file in $(git grep --break --heading "import junit." | grep java); do
   rm -rf $file.bak
 done
 ```
-
 ### 2. Don't accept it in new code
 
 The second step is basically to break the build whenever someone try to use those old imports. 

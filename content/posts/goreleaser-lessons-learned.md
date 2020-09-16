@@ -25,7 +25,7 @@ I tried to organize things in subtopics, some of them are bigger and may go furt
 
 Without further due, let's get started!
 
-# Naming things is hard
+## Naming things is hard
 
 > There are only two hard things in Computer Science: cache invalidation and
 > naming things.
@@ -44,7 +44,7 @@ I still think the name is OK though, after all, it is easy to write and it tells
 
 Maybe I'm just real bad at naming things. 🤷‍♂️
 
-# The internal context package
+## The internal context package
 
 At first glance, it seemed like a good idea. I needed to transport the "context" of the release through the pipeline, and also needed the features of the "regular" `context` package (like cancellation). So I created an internal `context` package, which holds all the data I need plus a `context.Context`
 instance, so I can use them interchangeably. 
@@ -55,7 +55,7 @@ The bad thing about it is that it can be confusing for new contributors, as most
 
 I'm not sure that was a good idea, but it is confusing. Maybe I could at least rename the package - but that would require renaming things in a lot of files, so I keep postponing it.
 
-# Tests using the same fake data
+## Tests using the same fake data
 
 [GoReleaser](http://goreleaser.com/) can do a lot of things. Because of that, it also has a lot of tests, and some of them can be complex.
 
@@ -121,7 +121,7 @@ Now I can wrap several complex tests with no repeated code.
 
 Of course, besides error handling, you can use that for other purposes.
 
-# Dependencies on 3rd parties and weird environments
+## Dependencies on 3rd parties and weird environments
 
 This was the main reason I decided to write [nfpm](https://github.com/goreleaser/nfpm). I was using [fpm](https://github.com/jordansissel/fpm), which is good, but **people will have weird environments**. Random versions of things - or just very old versions of things, weird `PATH` setups and a whole lot of things you were not expecting.
 
@@ -152,8 +152,7 @@ When writing [nfpm](https://github.com/goreleaser/nfpm), I've also learned:
 > could go wrong and I didn't need all its features either. If you need to
 > package your software in a lot of formats using a single tool,
 > fpm for the win!
-
-# Documentation is hard
+## Documentation is hard
 
 I've learned that it is very hard to get just the exact amount of documentation so it doesn't suck.
 
@@ -169,7 +168,7 @@ But, just as most commented config files out there, most people won't read them.
 
 I still don't know the right/best way of doing this, just learned one more non-optimal way. If you do, I would love to chat about it though!
 
-# Monorepo or not?
+## Monorepo or not?
 
 In the beginning, I split the [archive](https://github.com/goreleaser/archive) package into another repo, because I though it would be useful to other people as well.
 
@@ -197,7 +196,7 @@ I think the real issue is that I forced myself to split things too early.
 Maybe [nfpm](https://github.com/goreleaser/nfpm) and [godownloader](https://github.com/goreleaser/godownloader) are less wrong, but [archive](https://github.com/goreleaser/archive) for sure was a
 mistake. Premature optimization... of sorts.
 
-# Data structures and relationships
+## Data structures and relationships
 
 Someone way smarter than me once said:
 
@@ -239,7 +238,7 @@ I'm still not sure that current form is the best solution, but for sure is bette
 
 To summarize, I've learned, in the hard way, that bad decisions on the data structures lead to bad decisions on the interactions between them, which lead to bad design in general.
 
-# Yes is forever
+## Yes is forever
 
 It is not easy to be the product owner and the developer at the same time.
 
@@ -278,7 +277,7 @@ One thing that I've learned and that I think helps: open an issue first, ask if 
 
 If the maintainer says no but you still really do want that feature, keep a fork. Everybody wins. 🙂
 
-# Announce breaking changes to your users is hard
+## Announce breaking changes to your users is hard
 
 Technically, [GoReleaser](http://goreleaser.com/) is still not v1, so it should mean that I could just break stuff... of course, I don't want to do that. I want the transitions to be as easy and painless as they can be.
 
@@ -290,7 +289,7 @@ I've also learned it is hard to find if someone is using that thing you want to 
 
 I've learned that I just don't know how to handle those things on GoReleaser because people may not even read the log unless it fails (e.g. running on the CI).
 
-# No one owes anyone anything
+## No one owes anyone anything
 
 We (people) usually don't read terms, licenses and etc because it is boring. 
 
@@ -307,7 +306,7 @@ I think I've learned things on both sides of the coin:
 
 Or, as I like to say, **no one owes anyone anything**.
 
-# Slack is not the best place to ask questions
+## Slack is not the best place to ask questions
 
 In the issue template, I ask people to ask questions on Slack. I think that is not optimal, as most people will try to search for they problem on Google, and Google does not index Slack conversations.
 
@@ -315,7 +314,7 @@ I've learned that probably the best place for questions on rather small communit
 
 On GoReleaser's case that seems overkill.
 
-# Famous last words
+## Famous last words
 
 I could probably write about more things, for sure. Some topics were still really hard for me to externalize in words in a form that makes sense, so I end up removing them... at least for now.
 

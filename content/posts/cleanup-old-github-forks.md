@@ -44,7 +44,6 @@ or on Linux:
 ```sh
 $ snap install fork-cleaner
 ```
-
 ### Usage
 
 You'll need a GitHub token with the `repo` scope, you can create one in the [settings page](https://github.com/settings/tokens/new).

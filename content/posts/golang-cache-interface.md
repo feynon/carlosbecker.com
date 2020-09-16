@@ -57,7 +57,6 @@ But this comes with a couple of problems:
 - cache is global;
 - the client now has a hard dependency on the cache;
 - can't test the caching logic separately.
-
 ## Interfaces to the rescue
 
 One way to solve all those problems is to create an interface and decorate

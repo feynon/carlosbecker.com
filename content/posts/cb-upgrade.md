@@ -223,7 +223,6 @@ without any downtimes!
 The compatibility warning should go away as well:
 
 ![](/public/images/cb-upgrade/2aba0b3d-8b3d-4ab3-9858-14c783f626cf.png)
-
 ### Cleanup
 
 Kill all containers and remove them.
@@ -232,7 +231,6 @@ Kill all containers and remove them.
 docker-compose kill
 yes | docker-compose rm
 ```
-
 ## How about production
 
 Well, the general idea is the same:

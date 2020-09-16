@@ -124,7 +124,6 @@ You may be wondering about the costs for this. Let's compare our cluster solutio
 **total**: $ 464.46 / month*
 
 > *: prices based on us-west-2
-
 ## Conclusion
 
 The fault tolerant mode give us nearly the same performance as the single node approach, fault tolerance and costs almost $ 200 / month less than the cluster strategy.

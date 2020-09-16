@@ -22,7 +22,6 @@ Install everything:
 ```
 $ apt-get install git ssh gitolite git-daemon-run
 ```
-
 ## Generate a SSH key pair
 
 The server needs a public/private key pair. So, you will need to generate it:
@@ -36,14 +35,12 @@ Now, will copy it to `/tmp` folder, we will need it there later.
 ```
 $ cp ~/.ssh/id_rsa.pub /tmp/local.pub
 ```
-
 ## Setup your git profile
 
 ```
 $ git config --global user.name "Your Name"
 $ git config --global user.email your@email.com
 ```
-
 ## Creating the `git` user:
 
 ```
@@ -94,7 +91,6 @@ Now, you will be able to clone the `foo` repo from the configured machines, wich
 ```
 $ git clone git@SERVER:foo.git
 ```
-
 ## Final thoughts
 
 In this tutorial, I used a `ubuntu-12.10-beta2` box, but I believe that it works with older versions too.

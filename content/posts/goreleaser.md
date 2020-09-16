@@ -16,7 +16,7 @@ I could, of course, change the formulas by hand, but I'm lazy and that seems jus
 
 So, time to my shell script to evolve!
 
-### goreleaser
+## GoReleaser
 
 I wanted a tool that:
 
@@ -64,8 +64,7 @@ It is so easy that I'm already using it in all my suitable Go projects:
 - [KarmaHub](https://github.com/caarlos0/karmahub) - Compares the amount of issues and pull requests you created with the amount of comments and code reviews you did
 - [OrgStats](https://github.com/caarlos0/org-stats) - Get the contributor stats summary from all repos of any given organization
 - [TorrentWatcher](https://github.com/caarlos0/twatcher) - Automagically download torrent files to ~/Downloads
-
-### Roadmap
+## Roadmap
 
 The roadmap is pretty much what you [find in the issues](https://github.com/goreleaser/releaser/issues), but, IMO, the highlights are:
 
@@ -75,7 +74,7 @@ The roadmap is pretty much what you [find in the issues](https://github.com/gore
 
 I believe those features will enable GoReleaser to be even more useful!
 
-### Community Feedback
+## Community Feedback
 
 I was very glad to see the results of GoReleaser!
 

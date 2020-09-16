@@ -42,7 +42,6 @@ Runnable runnable = new Runnable() {
   }
 };
 ```
-
 ### 2. The Stream collection types
 
 I have to admit, this is awesome! We can do all sort of things with a DSL that is actually enjoyable to use:
@@ -74,7 +73,6 @@ I still can't believe that it take so long...
 System.out.println(String.join(". ", "FINALLY", "String", "joining"));
 // FINALLY. String. joining
 ```
-
 ### 5. Optional
 
 I posted about this in my Facebook timeline and it ends up becoming a little noisy. Anyway, I would really prefer a [ruby-ish approach]({{< ref "ruby-nil.md" >}}) to this problem, but, well, this is better than nothing. I have used it in some `filter` calls like this, for example:
@@ -86,7 +84,6 @@ names.stream()
     .findFirst() // returns an optional
     .get(); // tries to get its value (might throw NoSuchElementException)
 ```
-
 ## Working with it in the wild
 
 Update all the things! That's it.

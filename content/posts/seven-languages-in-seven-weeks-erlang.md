@@ -62,7 +62,6 @@ print_msg(success) -> io:fwrite("Success~n");
 print_msg({error, Message}) ->
   io:fwrite("sir... we got an error: ~s~n", [Message]).
 ```
-
 ## Day 2
 
 ### Problem 1
@@ -75,7 +74,6 @@ Solution with a simple list comprehension:
 lang(Tuples, Key) ->
   [TupleValue || {TupleKey, TupleValue} <- Tuples, (Key == TupleKey)].
 ```
-
 ### Problem 2
 
 > Consider a shopping list that looks like `[{item quantity price}, ...]`. Write a list comprehension that build a list of items of the form `[{item total_price}, ...]`, where `total_price` is `quantity` times `price`.
@@ -86,7 +84,6 @@ Pretty easy, huh? Solution:
 full_price(List) ->
   [{Name, Price*Quantity} || {Name, Quantity, Price} <- List].
 ```
-
 ### Problem 3
 
 I was pretty lazy, it looks big, I don't want to do it.
@@ -96,7 +93,6 @@ I was pretty lazy, it looks big, I don't want to do it.
 Well, day 3 was pretty big. We will now work with multi concurrency.
 
 ![](/public/images/seven-languages-in-seven-weeks-erlang/3976f7fc-ec94-4569-b8a8-ca1311a6c5eb.gif)
-
 ### Problem 1
 
 > Monitor the translate_service and restart if should it die.
@@ -202,7 +198,6 @@ end.
 % revolver ! 2.
 % revolver ! 3.
 ```
-
 ## Done
 
 That's all for now folks. Yeah, I know that there is some problems missing, obviously, even these I made should had errors. But, well, it works. As I starting to learn erlang now, It's pretty normal made mistakes. The thing is: **LEARN WITH THEM**.

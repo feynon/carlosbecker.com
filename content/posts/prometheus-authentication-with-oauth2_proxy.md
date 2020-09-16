@@ -18,7 +18,7 @@ Looking into some random GitLab wiki (I don't remember which one specifically), 
 
 Since this is a simple setup, I used [docker-compose](https://docs.docker.com/compose/) and [rsync](https://linux.die.net/man/1/rsync) to set up all the environment.
 
-# Idea
+## Idea
 
 The general idea is quite simple:
 
@@ -31,7 +31,7 @@ The general idea is quite simple:
 
 So, let's get this thing started!
 
-# Prometheus
+## Prometheus
 
 First one is [prometheus](https://prometheus.io/) itself:
 
@@ -52,8 +52,7 @@ The important parts are:
 
 - listen on `127.0.0.1:9090` - so it won't be exposed to the world;
 - the `web.external-url` with the final URL: this is required for external links to work properly.
-
-# AlertManager
+## AlertManager
 
 We will also need [alertmanager](https://prometheus.io/docs/alerting/alertmanager/) to route the alerts, right? Let's do it:
 
@@ -95,7 +94,7 @@ scrape_configs:
 
 Note that we change the `path_prefix` in the `alerting` section and also the `metrics_path` in the `scrape_configs` section.
 
-# Grafana
+## Grafana
 
 Everyone likes dashboards, and [grafana](https://grafana.com/) is DOPE for doing that. Let's add it as well:
 
@@ -155,7 +154,7 @@ Those sections tell [grafana](https://grafana.com/) to auto-create an user when 
 
 This way we don't need to login on both [oauth2_proxy](https://github.com/bitly/oauth2_proxy) **and** [grafana](https://grafana.com/): You log in within [oauth2_proxy](https://github.com/bitly/oauth2_proxy) and everything just works!
 
-# oauth2_proxy
+## oauth2_proxy
 
 Finally, let's require authentication using [oauth2_proxy](https://github.com/bitly/oauth2_proxy). I'm using GitHub for that, so, the first thing I did was to [create a new GitHub app](https://github.com/settings/developers). You can find the details on the [oauth2_proxy README](https://github.com/bitly/oauth2_proxy#github-auth-provider).
 
@@ -196,8 +195,7 @@ The important things here are:
 - `email-domain` could be an additional email domain filter - for me the org filter is enough;
 - `set-xauthrequest` is set to true se we can pass through the user and email headers - grafana uses this header to auto-create an user and log it in;
 - `cookie-secure` is set ot false due the lack of https. I'll manage to add [let's encrypt](https://letsencrypt.org/) anoother and will create a new post.
-
-# nginx
+## nginx
 
 **Finally**, the last part: [nginx](https://www.nginx.com/)!
 
@@ -294,7 +292,7 @@ Yeah, this one is pretty simple! Now we finally expose one service - on the port
 
 [nginx](https://www.nginx.com/) will be the only thing facing the internet for real, and it will route traffic to the right places.
 
-# Closing
+## Closing
 
 So that's it! I'm running this on [http://m.carlosbecker.com](http://m.carlosbecker.com/) - which, given that everything is working as expected, you won't be able to access, and it is working great.
 

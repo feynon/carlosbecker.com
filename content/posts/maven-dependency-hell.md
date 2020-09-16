@@ -39,7 +39,6 @@ This will take a while and may warn you about a lot of depedency errors.
 You will be able to remove dependencies that are not used anymore and add dependencies that are directly used.
 
 > **Beware**: This might show some false-positives.
-
 ## Bring the big guns
 
 ### 1. multiple versions of the same depedency

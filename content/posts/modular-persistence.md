@@ -29,7 +29,6 @@ First, clone the repository:
 ```sh
 $ git clone https://github.com/caarlos0/persistence-base sample
 ```
-
 ### Do your hacks
 
 Then, open the project in your preferred IDE, then, open the `pom.xml` file and change the project name to "sample". Save.
@@ -108,7 +107,6 @@ We have to add classes, configure the database and etc in the `src/main/resource
   </persistence-unit>
 </persistence>
 ```
-
 ### Create the database
 
 Now, we have to create the database in our MySQL:
@@ -116,7 +114,6 @@ Now, we have to create the database in our MySQL:
 ```sh
 $ mysqladmin -u root -p create foodb
 ```
-
 ### Test it
 
 Now, let's write a test. Open `src/main/java/com/github/caarlos0/App.java` and do some code.

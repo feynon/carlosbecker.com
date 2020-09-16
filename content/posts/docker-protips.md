@@ -40,14 +40,12 @@ $ docker rmi -f $(docker images -q)
 ```
 - `images -q` will output the `IMAGE_ID` of all known images;
 - `rmi -f` will force delete all the given images.
-
 ### Delete unused images
 
 ```
 $ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock bobrik/image-cleaner
 ```
 - [Read more](https://github.com/bobrik/docker-image-cleaner)
-
 ### Kitematic
 
 If you use a Mac, managing `boot2docker` by hand can be a little "boring", you can use [Kitematic](https://kitematic.com/) for that.

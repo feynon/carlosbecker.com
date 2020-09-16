@@ -13,7 +13,6 @@ Sometimes people ask me what my setup looks like for remote work. I decided to t
 <!--more-->
 
 > **PS**: I will try to keep this up to date, but I won't promise anything. 😌
-
 ## How it looks like
 
 ![My setup 😌](/public/images/setup/d8b10ca9-4d7b-48da-aab3-ab174d862cdf.png)

@@ -43,7 +43,6 @@ Now, lets add the `GWT-Bootstrap` dependency to the `pom.xml` file:
   </repository>
 </repositories>
 ```
-
 ### And the dependency itself:
 
 ```xml
@@ -110,7 +109,6 @@ $ tree
 |   `-- test
 `-- target
 ```
-
 ## Create our example
 
 Now, lets create a UIBinder class to made our amazing test widget! Create a new UiBinder class/xml combo called `ExampleUiBinder`, with the following content:
@@ -163,7 +161,6 @@ public class ExampleUiBinder extends Composite {
 At this point, if everything is OK, we will get a window like this:
 
 ![](/public/images/using-a-custom-bootstrap-theme-in-gwt-bootstrap/e0639978-f394-4e1f-be9c-4371150bd951.png)
-
 ## Hacking
 
 Right now, we will have to write our own `Resources` and `Configuration` classes. I'll advise you that it's a boring thing to do, but the result could be really awesome. So, let's go.
@@ -178,7 +175,6 @@ src/main/java/com/github/caarlos0/
 |-- server
 `-- shared
 ```
-
 ### Creating the needed files
 
 Assuming that we will only change the CSS file, inside your `resources` file, create a `css` folder, and paste the `bootstrap.min.css` file downloaded before inside it. Yes, the file name **must** be `bootstrap.min.css`.
@@ -198,7 +194,6 @@ public interface ExampleResources extends Resources {
   TextResource bootstrapCss();
 }
 ```
-
 ### ExampleConfigurator.java
 
 ```java
@@ -266,7 +261,6 @@ Now, we have to do a little hack in our `*.gwt.xml`. We will need to replace `co
 That's it :)
 
 ![](/public/images/using-a-custom-bootstrap-theme-in-gwt-bootstrap/b67ca540-e6e9-4f32-828b-7e7a4f45fc67.png)
-
 ## Considerations
 
 Sometimes GWT caches everything, and seems like it doesn't work. In this cases, do the following:

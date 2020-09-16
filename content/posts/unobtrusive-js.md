@@ -17,7 +17,6 @@ One of the principles of Unobtrusive JS is the *"separation of functionality (th
 ```html
 <a href="#" onclick="SomeObj.someAction(2)">Do some action on Obj 2</a>
 ```
-
 ### better:
 
 ```html

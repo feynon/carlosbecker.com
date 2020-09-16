@@ -195,7 +195,6 @@ Some of the strategies I explained here can be safely used in production cluster
 1. You won't want to shut down all pods of a given service in production, so, instead of downscaling to zero pods, you may want to use [Horizontal Pod Autoscalers](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/) to autoscale horizontally based on CPU usage;
 2. It is probably not desirable nor safe to have a single node running in production, so I would not force the nodes downscale to that value. You may not have seasonal usage in production as we do in sandbox;
 3. Spot instances can be risky: you may loose the instances and end up with 0 nodes in your cluster. You can overcome that by having a mix of spot and on demand nodes instance groups, or by setting a very high bid and putting some alert in place. Beware.
-
 ## Final thoughts and results
 
 With all those changes in place, we are now spending around $7/day on our cluster on business days.
