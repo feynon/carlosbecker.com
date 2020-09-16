@@ -15,7 +15,7 @@ import (
 	_ "github.com/joho/godotenv/autoload" // load .env
 
 	"github.com/caarlos0/env/v6"
-	"github.com/kjk/notionapi"
+	notion "github.com/kjk/notionapi"
 	"github.com/kjk/notionapi/tomarkdown"
 	"golang.org/x/sync/errgroup"
 )
@@ -34,7 +34,7 @@ func main() {
 		log.Fatalln(err)
 	}
 
-	client := &notionapi.Client{}
+	client := &notion.Client{}
 	client.AuthToken = config.Token
 
 	index, err := queryCollection(client, config.BlogColID, config.BlogColViewID)
@@ -72,14 +72,14 @@ func main() {
 				func(t string) {
 					log.Println("[", atomic.AddInt64(&done, 1), "/", total, "]", t)
 				},
-				func(page *notionapi.Page) string {
+				func(page *notion.Page) string {
 					return toString(page.Root().Prop("properties.S6_\""))
 				},
-				func(page *notionapi.Page) string {
+				func(page *notion.Page) string {
 					slug := toString(page.Root().Prop("properties.S6_\""))
 					return fmt.Sprintf("content/posts/%s.md", strings.ReplaceAll(slug, "/", ""))
 				},
-				func(page *notionapi.Page) string {
+				func(page *notion.Page) string {
 					slug := toString(page.Root().Prop("properties.S6_\""))
 					date := toDateString(page.Root().Prop("properties.a`af"))
 					draft := !toBool(page.Root().Prop("properties.la`A"))
@@ -88,10 +88,10 @@ func main() {
 					title := page.Root().Title
 					return blogHeader(title, date, draft, slug, city, tags)
 				},
-				func(page *notionapi.Page) bool {
+				func(page *notion.Page) bool {
 					return !toBool(page.Root().Prop("properties.la`A"))
 				},
-				func(page *notionapi.Page) error {
+				func(page *notion.Page) error {
 					if toString(page.Root().Prop("properties.S6_\"")) == "" {
 						return errors.New("missing slug")
 					}
@@ -146,20 +146,20 @@ func main() {
 				func(t string) {
 					log.Println("[", atomic.AddInt64(&done, 1), "/", total, "]", t)
 				},
-				func(page *notionapi.Page) string {
+				func(page *notion.Page) string {
 					return toString(page.Root().Prop("properties.7F2|"))
 				},
-				func(page *notionapi.Page) string {
+				func(page *notion.Page) string {
 					slug := toString(page.Root().Prop("properties.7F2|"))
 					return fmt.Sprintf("content/%s.md", strings.ReplaceAll(slug, "/", ""))
 				},
-				func(page *notionapi.Page) string {
+				func(page *notion.Page) string {
 					return pageHeader(page.Root().Title)
 				},
-				func(page *notionapi.Page) bool {
+				func(page *notion.Page) bool {
 					return false
 				},
-				func(page *notionapi.Page) error {
+				func(page *notion.Page) error {
 					if toString(page.Root().Prop("properties.7F2|")) == "" {
 						return errors.New("missing slug")
 					}
@@ -178,10 +178,10 @@ func main() {
 	}
 }
 
-func queryCollection(client *notionapi.Client, colID, colViewID string) (*notionapi.QueryCollectionResponse, error) {
+func queryCollection(client *notion.Client, colID, colViewID string) (*notion.QueryCollectionResponse, error) {
 	log.Println("Querying collection", colID)
-	return client.QueryCollection(colID, colViewID, &notionapi.Query{
-		Aggregate: []*notionapi.AggregateQuery{
+	return client.QueryCollection(colID, colViewID, &notion.Query{
+		Aggregate: []*notion.AggregateQuery{
 			{
 				AggregationType: "count",
 				ID:              "count",
@@ -191,14 +191,14 @@ func queryCollection(client *notionapi.Client, colID, colViewID string) (*notion
 			},
 		},
 		FilterOperator: "and",
-		Sort: []*notionapi.QuerySort{
+		Sort: []*notion.QuerySort{
 			{
 				Direction: "descending",
 				Property:  "a`af",
 			},
 		},
-	}, &notionapi.User{
-		Locale:   "en",
+	}, &notion.User{
+		Locale:   "en-US",
 		TimeZone: "America/Sao_Paulo",
 	})
 }
@@ -206,18 +206,18 @@ func queryCollection(client *notionapi.Client, colID, colViewID string) (*notion
 var tweetExp = regexp.MustCompile(`^https://twitter.com/.*/status/(\d+).*$`)
 
 func renderPage(
-	client *notionapi.Client,
+	client *notion.Client,
 	k string,
 	logger func(t string),
-	slugProvider func(p *notionapi.Page) string,
-	filenameProvider func(p *notionapi.Page) string,
-	headerProvider func(p *notionapi.Page) string,
-	pageSkipper func(p *notionapi.Page) bool,
-	pageValidator func(p *notionapi.Page) error,
+	slugProvider func(p *notion.Page) string,
+	filenameProvider func(p *notion.Page) string,
+	headerProvider func(p *notion.Page) string,
+	pageSkipper func(p *notion.Page) bool,
+	pageValidator func(p *notion.Page) error,
 ) error {
 	page, err := client.DownloadPage(k)
 	if err != nil {
-		return err
+		return fmt.Errorf("failed to download page %s: %w", k, err)
 	}
 
 	if pageSkipper(page) {
@@ -226,7 +226,7 @@ func renderPage(
 	}
 
 	if err := pageValidator(page); err != nil {
-		return err
+		return fmt.Errorf("invalid page %s ('%s'): %w", k, page.Root().Title, err)
 	}
 
 	slug := slugProvider(page)
@@ -234,15 +234,34 @@ func renderPage(
 	logger("rendering " + slug)
 
 	converter := tomarkdown.NewConverter(page)
-	converter.RenderBlockOverride = func(block *notionapi.Block) bool {
-		if block.Type == notionapi.BlockCode {
+	h1Fix := 0
+	converter.RenderBlockOverride = func(block *notion.Block) bool {
+		if block.Type == notion.BlockHeader {
+			// if we have a H1 in the content, render it as h2, and make h2
+			// and h3 be rendered as h3 and h4
+			h1Fix = 1
+			converter.RenderHeaderLevel(block, 2)
+			return true
+		}
+
+		if block.Type == notion.BlockSubHeader {
+			converter.RenderHeaderLevel(block, 2+h1Fix)
+			return true
+		}
+
+		if block.Type == notion.BlockSubSubHeader {
+			converter.RenderHeaderLevel(block, 3+h1Fix)
+			return true
+		}
+
+		if block.Type == notion.BlockCode {
 			converter.Printf("```" + toLang(block.CodeLanguage) + "\n")
 			converter.Printf(block.Code + "\n")
 			converter.Printf("```\n")
 			return true
 		}
 
-		if block.Type == notionapi.BlockEmbed {
+		if block.Type == notion.BlockEmbed {
 			if strings.HasPrefix(block.Source, "https://speakerdeck.com/") || strings.HasPrefix(block.Source, "https://slides.com") {
 				converter.Newline()
 				converter.Printf("[See slides](%s).", block.Source)
@@ -252,14 +271,14 @@ func renderPage(
 			log.Println("unhandled embed:", block.Source)
 		}
 
-		if block.Type == notionapi.BlockTweet {
+		if block.Type == notion.BlockTweet {
 			converter.Newline()
 			converter.Printf("{{< tweet %s >}}", tweetExp.FindStringSubmatch(block.Source)[1])
 			converter.Newline()
 			return true
 		}
 
-		if block.Type == notionapi.BlockImage {
+		if block.Type == notion.BlockImage {
 			file, err := client.DownloadFile(block.Source, block.ID)
 			if err != nil {
 				log.Fatalln(err)
@@ -283,20 +302,17 @@ func renderPage(
 		return false
 	}
 
-	if err := ioutil.WriteFile(
+	return ioutil.WriteFile(
 		filenameProvider(page),
 		buildMarkdown(
 			headerProvider(page),
 			converter.ToMarkdown(),
 		),
 		0644,
-	); err != nil {
-		return err
-	}
-	return nil
+	)
 }
 
-func toCaption(block *notionapi.Block) string {
+func toCaption(block *notion.Block) string {
 	if block.GetCaption() == nil {
 		return ""
 	}

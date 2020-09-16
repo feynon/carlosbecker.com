@@ -8,3 +8,5 @@ require (
 	github.com/kjk/notionapi v0.0.0-20200903081654-eafa3ed70a1b
 	golang.org/x/sync v0.0.0-20200625203802-6e8e738ad208
 )
+
+replace github.com/kjk/notionapi => github.com/caarlos0/notionapi v0.0.0-20200916220720-d56e013818ad
