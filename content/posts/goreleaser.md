@@ -27,7 +27,7 @@ I wanted a tool that:
 
 So, I created [goreleaser](https://github.com/goreleaser/releaser)!
 
-{{< figure caption="" src="/public/images/goreleaser/c7e12b7f-5498-4414-a002-94f30a09c211.png" >}}
+{{< figure caption="GoReleaser logo" src="/public/images/goreleaser/c7e12b7f-5498-4414-a002-94f30a09c211.png" >}}
 
 GoReleaser can build and release go binaries in `tar.gz` for several platforms, and can create/update homebrew formulaes. All that by having a simple `goreleaser.yml` in the repository root:
 

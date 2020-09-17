@@ -76,7 +76,7 @@ drinks and etc.
 
 In fact, just did that last week:
 
-{{< figure caption="" src="/public/images/one-month-working-remote/488ce9cb-2dab-4e60-a5cb-9895a3824075.png" >}}
+{{< figure caption="Friends" src="/public/images/one-month-working-remote/488ce9cb-2dab-4e60-a5cb-9895a3824075.png" >}}
 
 I think we all need a beer with friends sometimes. 😬
 
