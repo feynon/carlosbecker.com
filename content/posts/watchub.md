@@ -10,7 +10,7 @@ tags: [github]
 
 [Watchub](http://watchub.pw/) is a service that notifies you of people who followed/unfollowed you and starred/unstarred your repositories.
 
-{{< figure caption="" src="/public/images/watchub/81418df0-4e0b-4a45-aec0-55f93f918605.png" >}}
+{{< figure caption="Watchub home page." src="/public/images/watchub/81418df0-4e0b-4a45-aec0-55f93f918605.png" >}}
 
 It runs every day and sends you an email if something changed.
 

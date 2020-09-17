@@ -106,7 +106,7 @@ networks:
 
 If you are using Docker 4 Mac, I recommend increasing the CPU limits:
 
-{{< figure caption="" src="/public/images/cb-upgrade/33b1abdf-dc37-4857-bf07-b10787fc2270.png" >}}
+{{< figure caption="Docker for Mac settings." src="/public/images/cb-upgrade/33b1abdf-dc37-4857-bf07-b10787fc2270.png" >}}
 
 Once that's done, fire the machines up:
 
@@ -187,7 +187,7 @@ Couchbase Console.
 Since the cluster has nodes with version `4.5.x` and `5.1.x`,
 it will run in "4.5 compatibility mode", which is OK:
 
-{{< figure caption="" src="/public/images/cb-upgrade/59cdd3e6-9575-4c90-83db-223670c57d41.png" >}}
+{{< figure caption="Cluster compatibility mode." src="/public/images/cb-upgrade/59cdd3e6-9575-4c90-83db-223670c57d41.png" >}}
 
 While in that mode, we can add and remove nodes from both versions. Once all
 nodes are on Couchbase 5.1, you can't add old version nodes anymore.
@@ -222,7 +222,7 @@ without any downtimes!
 
 The compatibility warning should go away as well:
 
-{{< figure caption="" src="/public/images/cb-upgrade/2aba0b3d-8b3d-4ab3-9858-14c783f626cf.png" >}}
+{{< figure caption="Couchbase web interface." src="/public/images/cb-upgrade/2aba0b3d-8b3d-4ab3-9858-14c783f626cf.png" >}}
 
 ### Cleanup
 

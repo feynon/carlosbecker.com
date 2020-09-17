@@ -148,7 +148,7 @@ That's why we created [hystrix-to-librato](https://github.com/ContaAzul/hystrix-
 
 It basically reads a Hystrix/Turbine stream and sends the metrics to librato in an infinite loop. Works for us:
 
-{{< figure caption="" src="/public/images/alerts/6d16341a-1fa2-4af1-b8ef-b531171852c7.png" >}}
+{{< figure caption="A Librato dashboard" src="/public/images/alerts/6d16341a-1fa2-4af1-b8ef-b531171852c7.png" >}}
 
 This can also be applied to logs and other relevant information. Keep at least some days of history, so you can find out patterns and solve root causes.
 
@@ -158,7 +158,7 @@ If an alert fires, it should show you other relevant information. Related metric
 
 If that's the case, dashboards usually help:
 
-{{< figure caption="" src="/public/images/alerts/328073e7-680b-4451-8707-fbc608044f07.png" >}}
+{{< figure caption="Another Librato dashboard" src="/public/images/alerts/328073e7-680b-4451-8707-fbc608044f07.png" >}}
 
 Remember that dashboards only work if you know where to look at, and sometimes you don't.
 

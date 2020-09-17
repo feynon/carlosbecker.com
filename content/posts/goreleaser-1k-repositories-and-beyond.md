@@ -18,17 +18,17 @@ It turns out more people had the same problem, and the feedback has been awesome
 
 I'm also happy to announce that my not-very-scientific script recorded that **1000 public GitHub repositories** are using GoReleaser!
 
-{{< figure caption="" src="/public/images/goreleaser-1k-repositories-and-beyond/690a4536-f19a-4ade-b424-d7d746552d64.png" >}}
+{{< figure caption="Number of repositories using GoReleaser over time." src="/public/images/goreleaser-1k-repositories-and-beyond/690a4536-f19a-4ade-b424-d7d746552d64.png" >}}
 
 That is remarkable!
 
 There are also some big and famous repositories using GoReleaser. Here are the top 5 by the number of stars:
 
-{{< figure caption="" src="/public/images/goreleaser-1k-repositories-and-beyond/09045c63-7f07-4162-a017-e27a66324851.png" >}}
+{{< figure caption="Tope 5 repositories using GoReleaser by number of stars." src="/public/images/goreleaser-1k-repositories-and-beyond/09045c63-7f07-4162-a017-e27a66324851.png" >}}
 
 Speaking of stars, GoReleaser has +2,5k stars!
 
-{{< figure caption="" src="/public/images/goreleaser-1k-repositories-and-beyond/8ac808ad-9395-40e5-a4b4-944b16d33471.png" >}}
+{{< figure caption="GoReleaser star count." src="/public/images/goreleaser-1k-repositories-and-beyond/8ac808ad-9395-40e5-a4b4-944b16d33471.png" >}}
 
 Well, since that January, a lot has changed in GoReleaser, let's dive in!
 
@@ -78,7 +78,7 @@ I couldn't let this pass.
 
 My [lovely wife](https://twitter.com/carinemeyer) drew this beautiful new logo for GoReleaser:
 
-{{< figure caption="" src="/public/images/goreleaser-1k-repositories-and-beyond/fb6c70f7-6112-419f-9ca5-724348e77d08.png" >}}
+{{< figure caption="GoReleaser Logo." src="/public/images/goreleaser-1k-repositories-and-beyond/fb6c70f7-6112-419f-9ca5-724348e77d08.png" >}}
 
 It is **awesome**. You can check out other GoReleaser art in the [artwork repository](https://github.com/goreleaser/artwork).
 

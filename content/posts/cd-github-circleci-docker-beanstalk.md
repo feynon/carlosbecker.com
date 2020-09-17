@@ -10,7 +10,7 @@ tags: [github, docker]
 
 This is just a quick overview of how I did it in antibody's homepage.
 
-{{< figure caption="" src="/public/images/cd-github-circleci-docker-beanstalk/068cd2bd-3359-4789-bfaa-751713064751.png" >}}
+{{< figure caption="Antibody&#39;s home page." src="/public/images/cd-github-circleci-docker-beanstalk/068cd2bd-3359-4789-bfaa-751713064751.png" >}}
 
 The site has a very simple `index.html` plus a service that can discover and download the latest
 [antibody](https://github.com/getantibody/antibody) version from GitHub releases. Not sure how relevant this is, but the service is written in Go.
@@ -115,19 +115,19 @@ I tag the image and the deployment with the CircleCI build number, so I can trac
 
 For example, at the time I wrote this, tag `63` was deployed to Elastic Beanstalk:
 
-{{< figure caption="" src="/public/images/cd-github-circleci-docker-beanstalk/276ad772-0e69-4398-9898-f0ad44d3110b.png" >}}
+{{< figure caption="Beanstalk interface." src="/public/images/cd-github-circleci-docker-beanstalk/276ad772-0e69-4398-9898-f0ad44d3110b.png" >}}
 
 Which I know is deploying the Docker image tag `63`:
 
-{{< figure caption="" src="/public/images/cd-github-circleci-docker-beanstalk/baaeadef-41dd-4e33-a1f4-082e648ab1e8.png" >}}
+{{< figure caption="Docker Hub interface." src="/public/images/cd-github-circleci-docker-beanstalk/baaeadef-41dd-4e33-a1f4-082e648ab1e8.png" >}}
 
 Which I know was built in build number `63` in CircleCI:
 
-{{< figure caption="" src="/public/images/cd-github-circleci-docker-beanstalk/1bb8b146-50a7-429f-8b5b-4b0a13f532d1.png" >}}
+{{< figure caption="Circle CI build screen." src="/public/images/cd-github-circleci-docker-beanstalk/1bb8b146-50a7-429f-8b5b-4b0a13f532d1.png" >}}
 
 In which were added the following changes (click the "compare" link on CircleCI):
 
-{{< figure caption="" src="/public/images/cd-github-circleci-docker-beanstalk/80df76ea-d144-4e1f-9c87-77a5059b96ea.png" >}}
+{{< figure caption="GitHub interface." src="/public/images/cd-github-circleci-docker-beanstalk/80df76ea-d144-4e1f-9c87-77a5059b96ea.png" >}}
 
 Isn't that great? You can track down a version deployed in production directly to the source code that was introduced with it. Since the Docker image config is in the repo too, we can also kind of track infrastructure changes!
 
