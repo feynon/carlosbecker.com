@@ -16,7 +16,7 @@ Sometimes people ask me what my setup looks like for remote work. I decided to t
 
 ## How it looks like
 
-![My setup 😌](/public/images/setup/d8b10ca9-4d7b-48da-aab3-ab174d862cdf.png)
+{{< figure caption="My setup 😌" src="/public/images/setup/d8b10ca9-4d7b-48da-aab3-ab174d862cdf.png" >}}
 
 I use the MacBook on clamshell mode (closed) because I don't like to manage
 multiple screens (sue me) and the screen is already big enough. 😌

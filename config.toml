@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Carlos Alexandro Becker"
 theme = "codex"
 googleAnalytics = "UA-50435491-1"
+copyright = "Carlos Alexandro Becker - 2012 - {year}"
 
 disableAliases = true
 

@@ -26,7 +26,7 @@ It is live at [starchart.cc](https://starchart.cc) and the code is OpenSource at
 
 The charts look like this one:
 
-![GoReleaser stargazers over time.](/public/images/chart-repo-stars/3f40643a-8660-4f5b-804d-dc6533416978.png)
+{{< figure caption="GoReleaser stargazers over time." src="/public/images/chart-repo-stars/3f40643a-8660-4f5b-804d-dc6533416978.png" >}}
 
 [GoReleaser](https://github.com/goreleaser) stargazers over time.
 

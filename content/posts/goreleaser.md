@@ -27,7 +27,7 @@ I wanted a tool that:
 
 So, I created [goreleaser](https://github.com/goreleaser/releaser)!
 
-![](/public/images/goreleaser/c7e12b7f-5498-4414-a002-94f30a09c211.png)
+{{< figure caption="" src="/public/images/goreleaser/c7e12b7f-5498-4414-a002-94f30a09c211.png" >}}
 
 GoReleaser can build and release go binaries in `tar.gz` for several platforms, and can create/update homebrew formulaes. All that by having a simple `goreleaser.yml` in the repository root:
 
@@ -52,7 +52,7 @@ after_success:
 
 Which generates release like this on GitHub:
 
-![](/public/images/goreleaser/a02142f9-b5bc-4e0b-95e0-2244d3b2fd43.png)
+{{< figure caption="" src="/public/images/goreleaser/a02142f9-b5bc-4e0b-95e0-2244d3b2fd43.png" >}}
 
 It is so easy that I'm already using it in all my suitable Go projects:
 

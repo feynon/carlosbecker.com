@@ -162,7 +162,7 @@ public class ExampleUiBinder extends Composite {
 
 At this point, if everything is OK, we will get a window like this:
 
-![](/public/images/using-a-custom-bootstrap-theme-in-gwt-bootstrap/e0639978-f394-4e1f-be9c-4371150bd951.png)
+{{< figure caption="" src="/public/images/using-a-custom-bootstrap-theme-in-gwt-bootstrap/e0639978-f394-4e1f-be9c-4371150bd951.png" >}}
 
 ## Hacking
 
@@ -265,7 +265,7 @@ Now, we have to do a little hack in our `*.gwt.xml`. We will need to replace `co
 
 That's it :)
 
-![](/public/images/using-a-custom-bootstrap-theme-in-gwt-bootstrap/b67ca540-e6e9-4f32-828b-7e7a4f45fc67.png)
+{{< figure caption="" src="/public/images/using-a-custom-bootstrap-theme-in-gwt-bootstrap/b67ca540-e6e9-4f32-828b-7e7a4f45fc67.png" >}}
 
 ## Considerations
 

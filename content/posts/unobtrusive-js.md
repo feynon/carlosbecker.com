@@ -8,7 +8,7 @@ toc: true
 tags: [javascript]
 ---
 
-![](/public/images/unobtrusive-js/4aebb97c-0ec2-437e-b6f6-426395e89121.png)
+{{< figure caption="" src="/public/images/unobtrusive-js/4aebb97c-0ec2-437e-b6f6-426395e89121.png" >}}
 
 One of the principles of Unobtrusive JS is the *"separation of functionality (the "behavior layer") from a Web page's structure/content and presentation"*.
 

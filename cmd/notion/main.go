@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	"html"
 	"io/ioutil"
 	"log"
 	"os"
@@ -295,8 +296,8 @@ func renderPage(
 				log.Fatalln(err)
 			}
 			converter.Printf(
-				"![%s](%s)\n",
-				toCaption(block),
+				`{{< figure caption="%s" src="%s" >}}`,
+				html.EscapeString(toCaption(block)),
 				strings.Replace(imgPath, "static/", "/", 1),
 			)
 			return true

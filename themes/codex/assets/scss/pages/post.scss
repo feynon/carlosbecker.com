@@ -48,11 +48,18 @@ $tocBreakpoint: 1024px;
     }
   }
 
-  img {
+  img, figure {
     width: 100%;
     max-width: 500px;
-    margin: 0 auto;
+    margin: $leading auto;
     display: block;
+  }
+
+  figure > figcaption {
+    text-align: center;
+    font-size: 0.8rem;
+    margin-top: ($leading * -1);
+    color: $darkGrey;
   }
 }
 

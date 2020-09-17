@@ -16,7 +16,7 @@ So, I decided to work in my own layout, and then, **[up](https://github.com/caar
 
 It's designed to be an easy layout to modify for your own blog. It was based on [zachholman's](http://zachholman.com/) blog themes: the "old" one, now opensourced as [left](http://github.com/holman/left) and in his actual theme, that's not opensource (I believe), but I steal some ideas anyway. I also took something from [jekyll-bootstrap](https://github.com/plusjade/jekyll-bootstrap), and, of course, I'm using [bootstrap](https://github.com/twitter/bootstrap) as a base for all the thing.
 
-![](/public/images/up-a-jekyll-theme/4d09dbb3-748a-4756-92d6-26b84cf059eb.png)
+{{< figure caption="" src="/public/images/up-a-jekyll-theme/4d09dbb3-748a-4756-92d6-26b84cf059eb.png" >}}
 
 It's fully-responsive (open it in your phone and/or tablet and you will see), with no JS at all (except twitter button, but you can remove it, of course), with a custom bootstrap build, compiled and minified with custom CSS in a very small CSS file (that's why it's really fast). Oh, I almost forgot: it also have an atom feed.
 

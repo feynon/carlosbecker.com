@@ -14,7 +14,7 @@ A quick review of my second ever GopherCon - the first one as a speaker, and my 
 
 At [this year's GopherCon](https://2018.gopherconbr.org/) we had **a lot** of great talks, some even from international speakers from Google and Cloudflare!
 
-![A Gopher](/public/images/gobr-18/208a8430-47a9-461a-b6f7-d603bdcbdbcf.png)
+{{< figure caption="A Gopher" src="/public/images/gobr-18/208a8430-47a9-461a-b6f7-d603bdcbdbcf.png" >}}
 
 I'm not good at public speaking. I'm aware it is a skill and thus can be learned, and I'm learning.
 
@@ -41,11 +41,11 @@ I took around ~50min to go through everything during the practices, and I had 40
 
 Fast forward to the day before my presentation, we had free beer sponsored by [Elastic](https://www.elastic.co/). I didn't want to speak with a hangover, so I drink just 3 beers or so. That was a bummer, I like beer, but at least I was feeling good in the morning and had a good night of sleep.
 
-![Our lunch break view...](/public/images/gobr-18/4dd19bd0-ffcb-47b4-b9d1-4106cc08304e.png)
+{{< figure caption="Our lunch break view..." src="/public/images/gobr-18/4dd19bd0-ffcb-47b4-b9d1-4106cc08304e.png" >}}
 
 On the next day, the keynote was a mind-blowing, existential crisis-inducing talk by Rodolpho Eckhardt. The talk was so good I was embarassed to do mine afterwards. But, yeah, too late to run.
 
-![Slides are up... let's go!](/public/images/gobr-18/014b0106-0e59-407f-a72c-a65ac8c2ee8e.png)
+{{< figure caption="Slides are up... let's go!" src="/public/images/gobr-18/014b0106-0e59-407f-a72c-a65ac8c2ee8e.png" >}}
 
 10 minutes I was on stage, and I had a job to do. I was really nervous and forgot some of the good jokes I had planned. It was not a stand-up comedy show so it is a-OK. The jokes were supposed to help me "break the ice" though, and since I forgot them, the ice was still there, which makes things a little harder.
 
@@ -57,7 +57,7 @@ When I realized I had past half my slides in 10 minutes it was already too late,
 
 Another thing that I always get wrong is the timing to drink water. I was nervous and spoke too fast, so I was very thirsty, and I can never find the timing to take a sip of water without being weird. How do you folks even do that so smoothly? I also forgot to leave the bottle open, so when I wanted to take a sip, the bottle was closed and I only had one free hand... I tried to open it single-handed, failed miserably and I am pretty sure everyone noticed that. Nobody laughed at me - thanks everyone! 🚀
 
-![Organizers and speakers...](/public/images/gobr-18/a7dd5d27-78b2-40ed-8ef1-e48bfdc29a50.png)
+{{< figure caption="Organizers and speakers..." src="/public/images/gobr-18/a7dd5d27-78b2-40ed-8ef1-e48bfdc29a50.png" >}}
 
 On the bright side, there were a lot of interesting questions after the talk, and even suggestions to some issues I raised. All the stickers were delivered (which is **great**), some of which are even going to Italy! Awesome!
 

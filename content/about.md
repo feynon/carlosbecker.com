@@ -11,4 +11,4 @@ Carlos is interested in programming languages, containers, distributed systems, 
 
 He lives with Carine (his wife), and Zakk (a chinchilla), in [Joinville - SC, Brazil](http://goo.gl/maps/9tvI4).
 
-![Me, Carine and Zakk](/public/images/about/e4991c03-742f-440c-ab12-a9e965f2685c.png)
+{{< figure caption="Me, Carine and Zakk" src="/public/images/about/e4991c03-742f-440c-ab12-a9e965f2685c.png" >}}

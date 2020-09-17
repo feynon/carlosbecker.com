@@ -172,7 +172,7 @@ We decided to try to spend even less, so we looked into the spot market.
 
 We had a really good surprise looking into the `r3.large` instance price history:
 
-![](/public/images/k8s-sandbox-costs/8f060035-d9ba-4091-8983-def61e7c1020.png)
+{{< figure caption="" src="/public/images/k8s-sandbox-costs/8f060035-d9ba-4091-8983-def61e7c1020.png" >}}
 
 Almost 80% cheaper!
 
@@ -202,7 +202,7 @@ With all those changes in place, we are now spending around $7/day on our cluste
 
 **Brotip™**: Add `KubernetesCluster` as a cost allocation tag in your AWS account, so you can generate useful reports like this one:
 
-![](/public/images/k8s-sandbox-costs/ed9994d0-d746-44c8-93ef-3e6237348e36.png)
+{{< figure caption="" src="/public/images/k8s-sandbox-costs/ed9994d0-d746-44c8-93ef-3e6237348e36.png" >}}
 
 As you can see, I only realized that after some time, so, I don't have the precise daily costs before all these changes, but I estimate that we were spending at least $30/day, ~70% more than we are now.
 

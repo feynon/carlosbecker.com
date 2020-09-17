@@ -12,7 +12,7 @@ So, I just bought *["Seven Languages in Seven Weeks"](http://amzn.to/17vnhdb)*. 
 
 I'll explain it better another day, but, as you may know, Erlang is a concurrency language, that used to turn difficult thing easy and easy things difficult. There is a price to be paid for solve the world first problems.
 
-![](/public/images/seven-languages-in-seven-weeks-erlang/e5a7c888-be2e-4d2d-ba3d-00222a37437a.png)
+{{< figure caption="" src="/public/images/seven-languages-in-seven-weeks-erlang/e5a7c888-be2e-4d2d-ba3d-00222a37437a.png" >}}
 
 So, I'll share with you guys my solutions to the problems proposed by the book.
 
@@ -95,7 +95,7 @@ I was pretty lazy, it looks big, I don't want to do it.
 
 Well, day 3 was pretty big. We will now work with multi concurrency.
 
-![](/public/images/seven-languages-in-seven-weeks-erlang/3976f7fc-ec94-4569-b8a8-ca1311a6c5eb.gif)
+{{< figure caption="" src="/public/images/seven-languages-in-seven-weeks-erlang/3976f7fc-ec94-4569-b8a8-ca1311a6c5eb.gif" >}}
 
 ### Problem 1
 

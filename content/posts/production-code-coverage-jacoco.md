@@ -114,7 +114,7 @@ $ open report/index.html
 
 You should see a report like this (this is a fake one):
 
-![](/public/images/production-code-coverage-jacoco/ef7cbae0-80b1-4187-8829-38332d6cb183.png)
+{{< figure caption="" src="/public/images/production-code-coverage-jacoco/ef7cbae0-80b1-4187-8829-38332d6cb183.png" >}}
 
 ProTip™: if the Ant task fails, try to run it with `-v` for a more verbose output.
 

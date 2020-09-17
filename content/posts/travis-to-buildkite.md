@@ -46,15 +46,15 @@ After a week, I was sold. I'm not the only user though, so I asked the team to r
 
 Classify, from 0 to 10, your satisfaction with Travis:
 
-![](/public/images/travis-to-buildkite/7d7a1f9f-6bab-4123-be43-91dae89285c4.png)
+{{< figure caption="" src="/public/images/travis-to-buildkite/7d7a1f9f-6bab-4123-be43-91dae89285c4.png" >}}
 
 Classify, from 0 to 10, your satisfaction with Buildkite:
 
-![](/public/images/travis-to-buildkite/a657dd08-dbc3-4e9d-b623-44c88e042b21.png)
+{{< figure caption="" src="/public/images/travis-to-buildkite/a657dd08-dbc3-4e9d-b623-44c88e042b21.png" >}}
 
 How would you feel if we fully migrate to Buildkite?
 
-![](/public/images/travis-to-buildkite/627731b3-d7b1-4cff-a810-3b081bf248b0.png)
+{{< figure caption="" src="/public/images/travis-to-buildkite/627731b3-d7b1-4cff-a810-3b081bf248b0.png" >}}
 
 All the scores were good:
 

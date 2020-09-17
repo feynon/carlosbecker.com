@@ -10,7 +10,7 @@ tags: [jekyll, blog]
 
 So, this is the all-new [UP](http://github.com/caarlos0/up) version. It is more based on my own [blog](https://carlosbecker.com/) in some way, which is a some kind of branch of the theme.
 
-![](/public/images/up-2/7e58d31e-4f3d-4a4c-b2d3-56face03b8a7.png)
+{{< figure caption="" src="/public/images/up-2/7e58d31e-4f3d-4a4c-b2d3-56face03b8a7.png" >}}
 
 The biggest changes are:
 

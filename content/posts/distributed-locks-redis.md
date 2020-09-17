@@ -32,7 +32,7 @@ At the time, we also decided to use [Hazelcast](https://hazelcast.com/) for the 
 
 The architecture was something like this:
 
-![](/public/images/distributed-locks-redis/e79e7b71-306c-4609-8e46-45b95c7ff3d2.png)
+{{< figure caption="" src="/public/images/distributed-locks-redis/e79e7b71-306c-4609-8e46-45b95c7ff3d2.png" >}}
 
 Basically, when one of those scheduled tasks servers (let's call them *jobs*) went up, it also starts a Hazelcast node and register itself in a database table.
 
@@ -68,7 +68,7 @@ The core ideas were to:
 
 tl;dr, this:
 
-![](/public/images/distributed-locks-redis/374daffd-ff12-4808-adca-c0e3560696da.png)
+{{< figure caption="" src="/public/images/distributed-locks-redis/374daffd-ff12-4808-adca-c0e3560696da.png" >}}
 
 The reasons behind this decision were:
 
@@ -83,7 +83,7 @@ But, of course, everything have a bad side:
 
 We called this project "*Operation Locker*", which is a very fun [Battlefield 4](https://www.battlefield.com/games/battlefield-4) map:
 
-![](/public/images/distributed-locks-redis/8b0238db-1025-41da-ad0a-7c88ecb2ffc7.png)
+{{< figure caption="" src="/public/images/distributed-locks-redis/8b0238db-1025-41da-ad0a-7c88ecb2ffc7.png" >}}
 
 ## Implementation
 
