@@ -238,35 +238,28 @@ func renderPage(
 	converter := tomarkdown.NewConverter(page)
 	h1Fix := 0
 	converter.RenderBlockOverride = func(block *notion.Block) bool {
-		if block.Type == notion.BlockHeader {
+		switch block.Type {
+		case notion.BlockHeader:
 			// if we have a H1 in the content, render it as h2, and make h2
 			// and h3 be rendered as h3 and h4
 			h1Fix = 1
 			converter.Newline()
 			converter.RenderHeaderLevel(block, 2)
 			return true
-		}
-
-		if block.Type == notion.BlockSubHeader {
+		case notion.BlockSubHeader:
 			converter.Newline()
 			converter.RenderHeaderLevel(block, 2+h1Fix)
 			return true
-		}
-
-		if block.Type == notion.BlockSubSubHeader {
+		case notion.BlockSubSubHeader:
 			converter.Newline()
 			converter.RenderHeaderLevel(block, 3+h1Fix)
 			return true
-		}
-
-		if block.Type == notion.BlockCode {
+		case notion.BlockCode:
 			converter.Printf("```" + toLang(block.CodeLanguage) + "\n")
 			converter.Printf(block.Code + "\n")
 			converter.Printf("```\n")
 			return true
-		}
-
-		if block.Type == notion.BlockEmbed {
+		case notion.BlockEmbed:
 			if strings.HasPrefix(block.Source, "https://speakerdeck.com/") || strings.HasPrefix(block.Source, "https://slides.com") {
 				converter.Newline()
 				converter.Printf("[See slides](%s).", block.Source)
@@ -274,16 +267,12 @@ func renderPage(
 				return true
 			}
 			ctx.WithField("src", block.Source).Warn("unhandled embed")
-		}
-
-		if block.Type == notion.BlockTweet {
+		case notion.BlockTweet:
 			converter.Newline()
 			converter.Printf("{{< tweet %s >}}", tweetExp.FindStringSubmatch(block.Source)[1])
 			converter.Newline()
 			return true
-		}
-
-		if block.Type == notion.BlockVideo {
+		case notion.BlockVideo:
 			if strings.HasPrefix(block.Source, "https://youtube.com") {
 				converter.Newline()
 				converter.Printf("{{< youtube %s >}}", youtubeExp.FindStringSubmatch(block.Source)[1])
@@ -296,9 +285,7 @@ func renderPage(
 				return true
 			}
 			ctx.WithField("src", block.Source).Warn("unhandled video")
-		}
-
-		if block.Type == notion.BlockImage {
+		case notion.BlockImage:
 			file, err := client.DownloadFile(block.Source, block.ID)
 			if err != nil {
 				ctx.WithError(err).WithField("src", block.Source).Fatal("couldn't download file")
@@ -319,16 +306,12 @@ func renderPage(
 			)
 			return true
 		}
-
 		return false
 	}
 
 	return ioutil.WriteFile(
 		filenameProvider(page),
-		buildMarkdown(
-			headerProvider(page),
-			converter.ToMarkdown(),
-		),
+		buildMarkdown(headerProvider(page), converter.ToMarkdown()),
 		0644,
 	)
 }
@@ -369,15 +352,7 @@ func buildMarkdown(header string, content []byte) []byte {
 
 	ss = postURLRegex.ReplaceAllString(ss, `({{< ref "$1.md" >}})`)
 
-	return []byte(
-		strings.Join(
-			append(
-				[]string{header},
-				strings.Split(ss, "\n")[1:]...,
-			),
-			"\n",
-		) + "\n",
-	)
+	return []byte(strings.Join(append([]string{header}, strings.Split(ss, "\n")[1:]...), "\n") + "\n")
 }
 
 func blogHeader(title, date string, draft bool, slug, city string, tags []string) string {
