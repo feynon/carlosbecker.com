@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"html"
 	"io/ioutil"
-	"log"
 	"os"
 	"path"
 	"path/filepath"
@@ -13,6 +12,8 @@ import (
 	"strings"
 	"sync/atomic"
 
+	"github.com/apex/log"
+	"github.com/apex/log/handlers/cli"
 	_ "github.com/joho/godotenv/autoload" // load .env
 
 	"github.com/caarlos0/env/v6"
@@ -29,10 +30,14 @@ type Config struct {
 	OtherColViewID string `env:"OTHER_COLLECTION_VIEW_ID,required"`
 }
 
+func init() {
+	log.SetHandler(cli.Default)
+}
+
 func main() {
 	var config Config
 	if err := env.Parse(&config); err != nil {
-		log.Fatalln(err)
+		log.WithError(err).Fatal("invalid config")
 	}
 
 	client := &notion.Client{}
@@ -40,39 +45,24 @@ func main() {
 
 	index, err := queryCollection(client, config.BlogColID, config.BlogColViewID)
 	if err != nil {
-		log.Fatalln("failed to query blog index", err)
+		log.WithError(err).Fatal("failed to query blog index")
 	}
 
 	g := New(10)
-	total := len(index.RecordMap.Blocks)
+	total := len(index)
 	var done int64
-	for k, v := range index.RecordMap.Blocks {
-		if v == nil {
-			total--
-			continue
-		}
-		if k == config.BlogColID {
-			total--
-			continue
-		}
-		if v.Block.ParentID != config.BlogColID {
-			total--
-			continue
-		}
-		if v.Block.Type != "page" {
-			total--
-			log.Println("not a page:", k, v.Block.Type)
-			continue
-		}
 
+	var progressFn = func() string {
+		return fmt.Sprintf("%d/%d", atomic.AddInt64(&done, 1), total)
+	}
+
+	for _, k := range index {
 		k := k
 		g.Go(func() error {
 			return renderPage(
 				client,
 				k,
-				func(t string) {
-					log.Println("[", atomic.AddInt64(&done, 1), "/", total, "]", t)
-				},
+				progressFn,
 				func(page *notion.Page) string {
 					return toString(page.Root().Prop("properties.S6_\""))
 				},
@@ -110,43 +100,23 @@ func main() {
 	}
 
 	if err := g.Wait(); err != nil {
-		log.Fatalln(err)
+		log.WithError(err).Fatal("failed to build blog files")
 	}
 
 	index, err = queryCollection(client, config.OtherColID, config.OtherColViewID)
 	if err != nil {
-		log.Fatalln("failed to query other pages index", err)
+		log.WithError(err).Fatal("failed to query other pages index")
 	}
 
-	total = len(index.RecordMap.Blocks)
+	total = len(index)
 	done = 0
-	for k, v := range index.RecordMap.Blocks {
-		if v == nil {
-			total--
-			continue
-		}
-		if k == config.OtherColID {
-			total--
-			continue
-		}
-		if v.Block.ParentID != config.OtherColID {
-			total--
-			continue
-		}
-		if v.Block.Type != "page" {
-			total--
-			log.Println("not a page:", k, v.Block.Type)
-			continue
-		}
-
+	for _, k := range index {
 		k := k
 		g.Go(func() error {
 			return renderPage(
 				client,
 				k,
-				func(t string) {
-					log.Println("[", atomic.AddInt64(&done, 1), "/", total, "]", t)
-				},
+				progressFn,
 				func(page *notion.Page) string {
 					return toString(page.Root().Prop("properties.7F2|"))
 				},
@@ -175,13 +145,13 @@ func main() {
 	}
 
 	if err := g.Wait(); err != nil {
-		log.Fatalln(err)
+		log.WithError(err).Fatal("failed to build other files")
 	}
 }
 
-func queryCollection(client *notion.Client, colID, colViewID string) (*notion.QueryCollectionResponse, error) {
-	log.Println("Querying collection", colID)
-	return client.QueryCollection(colID, colViewID, &notion.Query{
+func queryCollection(client *notion.Client, colID, colViewID string) ([]string, error) {
+	log.WithField("collection", colID).Info("querying")
+	resp, err := client.QueryCollection(colID, colViewID, &notion.Query{
 		Aggregate: []*notion.AggregateQuery{
 			{
 				AggregationType: "count",
@@ -202,27 +172,56 @@ func queryCollection(client *notion.Client, colID, colViewID string) (*notion.Qu
 		Locale:   "en-US",
 		TimeZone: "America/Sao_Paulo",
 	})
+	if err != nil {
+		return []string{}, err
+	}
+
+	var blocks []string
+	for k, v := range resp.RecordMap.Blocks {
+		if v == nil {
+			continue
+		}
+		if k == colID {
+			continue
+		}
+		if v.Block.ParentID != colID {
+			continue
+		}
+		if v.Block.Type != "page" {
+			log.WithField("id", k).WithField("type", v.Block.Type).Warn("not a page")
+			continue
+		}
+		blocks = append(blocks, k)
+	}
+
+	return blocks, nil
 }
 
 var tweetExp = regexp.MustCompile(`^https://twitter.com/.*/status/(\d+).*$`)
+var youtubeExp = regexp.MustCompile(`https://www.youtube.com/watch?v=(.+)&.*`)
+var youtubeShortExp = regexp.MustCompile(`https://youtu.be/(.+)`)
 
 func renderPage(
 	client *notion.Client,
 	k string,
-	logger func(t string),
+	progressProvider func() string,
 	slugProvider func(p *notion.Page) string,
 	filenameProvider func(p *notion.Page) string,
 	headerProvider func(p *notion.Page) string,
 	pageSkipper func(p *notion.Page) bool,
 	pageValidator func(p *notion.Page) error,
 ) error {
+	var ctx = log.WithField("page", progressProvider())
+
 	page, err := client.DownloadPage(k)
 	if err != nil {
 		return fmt.Errorf("failed to download page %s: %w", k, err)
 	}
 
+	ctx = ctx.WithField("title", page.Root().Title)
+
 	if pageSkipper(page) {
-		logger("skipping " + page.Root().Title)
+		ctx.Warn("skipping")
 		return nil
 	}
 
@@ -232,7 +231,7 @@ func renderPage(
 
 	slug := slugProvider(page)
 
-	logger("rendering " + slug)
+	ctx.Info("rendering")
 
 	converter := tomarkdown.NewConverter(page)
 	h1Fix := 0
@@ -272,7 +271,7 @@ func renderPage(
 				converter.Newline()
 				return true
 			}
-			log.Println("unhandled embed:", block.Source)
+			ctx.WithField("src", block.Source).Warn("unhandled embed")
 		}
 
 		if block.Type == notion.BlockTweet {
@@ -282,18 +281,34 @@ func renderPage(
 			return true
 		}
 
+		if block.Type == notion.BlockVideo {
+			if strings.HasPrefix(block.Source, "https://youtube.com") {
+				converter.Newline()
+				converter.Printf("{{< youtube %s >}}", youtubeExp.FindStringSubmatch(block.Source)[1])
+				converter.Newline()
+				return true
+			} else if strings.HasPrefix(block.Source, "https://youtu.be") {
+				converter.Newline()
+				converter.Printf("{{< youtube %s >}}", youtubeShortExp.FindStringSubmatch(block.Source)[1])
+				converter.Newline()
+				return true
+			}
+			ctx.WithField("src", block.Source).Warn("unhandled video")
+		}
+
 		if block.Type == notion.BlockImage {
 			file, err := client.DownloadFile(block.Source, block.ID)
 			if err != nil {
-				log.Fatalln(err)
+				ctx.WithError(err).WithField("src", block.Source).Fatal("couldn't download file")
 			}
 			imgPath := fmt.Sprintf("static/public/images/%s/%s%s", slug, block.ID, path.Ext(block.Source))
-			log.Println("downloading image", imgPath)
+			imgCtx := ctx.WithField("path", imgPath).WithField("src", block.Source)
+			imgCtx.Debug("downloading image")
 			if err := os.MkdirAll(filepath.Dir(imgPath), 0750); err != nil {
-				log.Fatalln(err)
+				imgCtx.WithError(err).Fatal("couldn't create dirs for file")
 			}
 			if err := ioutil.WriteFile(imgPath, file.Data, 0644); err != nil {
-				log.Fatalln(err)
+				imgCtx.WithError(err).Fatal("couldn't write file")
 			}
 			converter.Printf(
 				`{{< figure caption="%s" src="%s" >}}`,
