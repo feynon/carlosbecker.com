@@ -55,6 +55,12 @@ $tocBreakpoint: 1024px;
     display: block;
   }
 
+  iframe {
+    width: 100%;
+    margin: $leading auto;
+    display: block;
+  }
+
   figure > figcaption {
     text-align: center;
     font-size: 0.8rem;
