@@ -35,7 +35,7 @@ It is very important to note that the containers are stateless, meaning, they do
 
 I will assume that you are familiar with the "default" virtualization softwares, like, let's say, VirtualBox. This is how they work:
 
-{{< figure caption="" src="/public/images/docker-basics/f468d0d9-51d2-40ce-bb5f-0defd407c955.png" >}}
+{{< figure caption="How a Hypervisor works" src="/public/images/docker-basics/f468d0d9-51d2-40ce-bb5f-0defd407c955.png" >}}
 
 Basically, each new VM you need to run will run isolated and load up the entire "guest" OS, using the "host" hardware through the "Hypervisor".
 
@@ -43,7 +43,7 @@ This all may sound nice in some cases, but this strategy uses a lot of resources
 
 Docker, in the other hand, doesn't have a Hypervisor. Instead, it does an operating-system-level virtualization, which is a server virtualization method where the kernel of an operating system allows for multiple isolated user space instances, instead of just one.
 
-{{< figure caption="" src="/public/images/docker-basics/13400398-9f3b-4d77-a473-f0f7f83829ea.png" >}}
+{{< figure caption="How docker works" src="/public/images/docker-basics/13400398-9f3b-4d77-a473-f0f7f83829ea.png" >}}
 
 LXC, which was used as default by Docker until version [0.9](https://blog.docker.com/2014/03/docker-0-9-introducing-execution-drivers-and-libcontainer/)), is nothing new. The first commit was made in [Aug 6, 2008](https://github.com/lxc/lxc/commit/5e97c3fcce787a5bc0f8ceef43aa3e05195b480a).
 

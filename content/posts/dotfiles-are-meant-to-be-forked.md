@@ -8,13 +8,13 @@ toc: true
 tags: [productivity]
 ---
 
-{{< figure caption="" src="/public/images/dotfiles-are-meant-to-be-forked/16090780-b364-47e0-8052-6c004a9bac20.png" >}}
+{{< figure caption="My desktop" src="/public/images/dotfiles-are-meant-to-be-forked/16090780-b364-47e0-8052-6c004a9bac20.png" >}}
 
 Well, it has been a while since I replaced my old (but gold) bash by the great zsh.
 
 Anyway, I have my personal computer and my job computer, and, like almost every developer, I create aliases and scripts for everything I have to do repeatedly.
 
-{{< figure caption="" src="/public/images/dotfiles-are-meant-to-be-forked/3c1791a6-8f8c-4ba0-b1b9-fbb2a33ab316.png" >}}
+{{< figure caption="Automate all the things!" src="/public/images/dotfiles-are-meant-to-be-forked/3c1791a6-8f8c-4ba0-b1b9-fbb2a33ab316.png" >}}
 
 Well... you can imagine.. my `.bashrc` had about 300 lines. It was really big. Almost impossible to share with others, full of personal data, full of my machine specific data, bloated with old things I left behind... well, it was a real mess.
 

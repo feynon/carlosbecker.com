@@ -66,9 +66,7 @@ The cable arrived, I tried it in and it solved all my problems:
 
 The only problem was this:
 
-[IMG_6338-60d2a4e9-3fad-4b12-be3c-0098b7a82a09.mov](IMG_6338-60d2a4e9-3fad-4b12-be3c-0098b7a82a09.mov)
-
-Flickering much?
+{{< youtube sTw-ny5Q2Io >}}
 
 Looking around on the internet, I found [this post](https://hackintosher.com/blog/bad-hdmi-dp-cable-can-ruin-4k-hackintosh-flickering/) of someone saying they had the same issues - but on a Hackintosh. The cable is from another brand but looks **exactly the same** as mine. Probably from China, probably lying about their bandwidth... which would be a surprise to a grand total of 0 people.
 

@@ -13,7 +13,7 @@ things I've learned down the road.
 
 <!--more-->
 
-{{< figure caption="" src="/public/images/goreleaser-lessons-learned/acb45b15-0cab-45b5-8849-fa39ba318fae.png" >}}
+{{< figure caption="GoReleaser logo" src="/public/images/goreleaser-lessons-learned/acb45b15-0cab-45b5-8849-fa39ba318fae.png" >}}
 
 I already talked about [GoReleaser](http://goreleaser.com/) here a few times, if you feel like reading
 about it first:
@@ -255,7 +255,7 @@ I have been trying to follow what Solomon Hykes once said:
 
 Some things are, like, just... cute... you will regret adding those. Other people also learned adding things because it's kind of cool may not be a very good idea:
 
-[https://youtu.be/M3BM9TB-8yA](https://youtu.be/M3BM9TB-8yA)
+{{< youtube M3BM9TB-8yA >}}
 
 The entire talk is great, but the point I refer to is at 14:38.
 
