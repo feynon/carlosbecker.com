@@ -45,7 +45,7 @@ Fast forward to the day before my presentation, we had free beer sponsored by [E
 
 On the next day, the keynote was a mind-blowing, existential crisis-inducing talk by Rodolpho Eckhardt. The talk was so good I was embarassed to do mine afterwards. But, yeah, too late to run.
 
-{{< figure caption="Slides are up... let's go!" src="/public/images/gobr-18/014b0106-0e59-407f-a72c-a65ac8c2ee8e.png" >}}
+{{< figure caption="Slides are up... let&#39;s go!" src="/public/images/gobr-18/014b0106-0e59-407f-a72c-a65ac8c2ee8e.png" >}}
 
 10 minutes I was on stage, and I had a job to do. I was really nervous and forgot some of the good jokes I had planned. It was not a stand-up comedy show so it is a-OK. The jokes were supposed to help me "break the ice" though, and since I forgot them, the ice was still there, which makes things a little harder.
 

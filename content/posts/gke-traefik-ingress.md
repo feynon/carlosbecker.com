@@ -50,7 +50,7 @@ That is handled by `kube-proxy` and `iptables`:
 
 That, plus the following screenshot made clicked me:
 
-{{< figure caption="One of our load balancers showing all nodes as "green", even the ones with no Traefik pods running..." src="/public/images/gke-traefik-ingress/ae0eb9a1-30a7-429b-978a-fdca08ac0b6f.png" >}}
+{{< figure caption="One of our load balancers showing all nodes as &#34;green&#34;, even the ones with no Traefik pods running..." src="/public/images/gke-traefik-ingress/ae0eb9a1-30a7-429b-978a-fdca08ac0b6f.png" >}}
 
 Even though we had Traefik running only on non-preemptible nodes, all nodes, including the preemtible ones, were receiving traffic from the load balancer.
 
