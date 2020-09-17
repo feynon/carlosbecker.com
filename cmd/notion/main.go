@@ -14,6 +14,7 @@ import (
 
 	"github.com/apex/log"
 	"github.com/apex/log/handlers/cli"
+	"github.com/fatih/color"
 	_ "github.com/joho/godotenv/autoload" // load .env
 
 	"github.com/caarlos0/env/v6"
@@ -32,6 +33,7 @@ type Config struct {
 
 func init() {
 	log.SetHandler(cli.Default)
+	color.NoColor = false
 }
 
 func main() {
