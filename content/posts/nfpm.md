@@ -5,7 +5,7 @@ draft: false
 slug: nfpm
 city: Joinville
 toc: true
-tags: [goreleaser, linux]
+tags: [goreleaser, linux, ci-cd, golang]
 ---
 
 I've been working on [GoReleaser](https://goreleaser.com/) for more than a year now, and one of the things that was bothering me the most was [fpm](https://github.com/jordansissel/fpm).

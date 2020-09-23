@@ -5,7 +5,7 @@ draft: false
 slug: packer-goss
 city: Joinville
 toc: true
-tags: [packer]
+tags: [packer, ci-cd]
 ---
 
 Ever wanted to validate your [Packer](https://packer.io/) image with [Goss](http://goss.rocks/)? Well, you can!

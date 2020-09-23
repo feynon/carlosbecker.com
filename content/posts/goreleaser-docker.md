@@ -5,7 +5,7 @@ draft: false
 slug: goreleaser-docker
 city: Joinville
 toc: true
-tags: [docker]
+tags: [docker, goreleaser, golang, ci-cd]
 ---
 
 The next [GoReleaser](https://goreleaser.com/) version will have a more flexible [Docker](https://docker.io/) configuration

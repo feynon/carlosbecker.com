@@ -5,7 +5,7 @@ draft: false
 slug: good-code
 city: Marechal Cândido Rondon
 toc: true
-tags: []
+tags: [software-engineering]
 ---
 
 I've been wanting to write this for a long time, just to clarify my thoughts on the subject. Now, on vacations, I took a couple of days and finally did it. This is a personal opinion based on my personal experience and tons of books I have read, and I am not, by any means, the supreme holder of the true, so you will probably disagree with me at some point.

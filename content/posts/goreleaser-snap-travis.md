@@ -5,7 +5,7 @@ draft: false
 slug: goreleaser-snap-travis/
 city: Joinville
 toc: true
-tags: [goreleaser]
+tags: [goreleaser, golang, ci-cd]
 ---
 
 [GoReleaser](https://goreleaser.com/) was able to build [snap](https://snapcraft.io/goreleaser) packages for a long time, but it wasn't able to push them until today. Let's see how to wrap to your [TravisCI](https://travis-ci.org/goreleaser/goreleaser) build!

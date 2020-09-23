@@ -5,7 +5,7 @@ draft: false
 slug: flag-oriented-programming
 city: Joinville
 toc: true
-tags: []
+tags: [software-engineering]
 ---
 
 `booleans`, am I right? What a wonderful piece of technology! They help us solve so many problems...

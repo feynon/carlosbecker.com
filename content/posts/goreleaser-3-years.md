@@ -5,7 +5,7 @@ draft: false
 slug: goreleaser-3-years
 city: Joinville
 toc: true
-tags: [goreleaser]
+tags: [goreleaser, golang, ci-cd]
 ---
 
 [GoReleaser](https://goreleaser.com/)'s journey begins in December 21, 2016: the day I made its [very first commit](https://github.com/goreleaser/goreleaser/commit/8b63e6555be45234c4c2a69576ca2ddab705302c). It has been a long road since then.

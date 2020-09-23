@@ -5,7 +5,7 @@ draft: false
 slug: git-changed
 city: Joinville
 toc: true
-tags: [git]
+tags: [git, ci-cd]
 ---
 
 Often I need to "do X only if files on some folder changed" or whatever. I

@@ -5,7 +5,7 @@ draft: false
 slug: travis-to-buildkite
 city: Joinville
 toc: true
-tags: []
+tags: [ci-cd]
 ---
 
 At [ContaAzul](http://contaazul.com/), we use the CI infrastructure **a lot**. We open several pull requests in several projects every day, and we block the merge until the build pass. We consider our `master` branches are sacred, and we can't afford too much waiting to change them.

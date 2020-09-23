@@ -5,7 +5,7 @@ draft: false
 slug: effective-developer
 city: Joinville
 toc: true
-tags: []
+tags: [software-engineering]
 ---
 
 Over the years I read several articles on how to be effective, and how the 10x engineer thing is or is not a lie and all that.

@@ -5,7 +5,7 @@ draft: false
 slug: goreleaser-libs
 city: Joinville
 toc: true
-tags: [goreleaser]
+tags: [goreleaser, ci-cd, golang]
 ---
 
 What if I told you you can now automate the release of your libraries as well?

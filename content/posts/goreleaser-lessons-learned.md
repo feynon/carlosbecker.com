@@ -5,7 +5,7 @@ draft: false
 slug: goreleaser-lessons-learned
 city: Joinville
 toc: true
-tags: [goreleaser]
+tags: [goreleaser, golang, ci-cd, software-engineering]
 ---
 
 I've started [GoReleaser](http://goreleaser.com/) almost 2 years ago. This is a summary of (some)
