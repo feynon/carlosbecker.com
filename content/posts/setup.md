@@ -31,15 +31,11 @@ Its more than enough for a couple of years I think.
 
 ## Keyboard / Mouse
 
-Mouse is a [Logitech MX Master 3](https://www.amazon.com/Logitech-Master-Advanced-Wireless-Mouse/dp/B07XC2FWD1/ref=sr_1_1?dchild=1&keywords=mx+master+3&qid=1600798679&refinements=p_89%3ALogitech%2Cp_n_condition-type%3A6461716011&rnid=6461714011&sr=8-1) and the keyboard is a [Logitech MX Keys](https://www.amazon.com/Logitech-Advanced-Wireless-Illuminated-Keyboard/dp/B07XD3VS62/ref=sr_1_3?dchild=1&keywords=mx+keys&qid=1600798730&sr=8-3).
+Mouse is a [Logitech MX Master 3](https://amzn.to/3kMRMJj) and the keyboard is a [Logitech MX Keys](https://amzn.to/3i43b5U).
 
 ## Display
 
-Recently changed to a [Dell U2718Q](https://amzn.to/3aNRbDb), 27", 4K, IPS. 
-
-And it is **awesome**. 🤩
-
-Before that I used a [LG 23PM55](https://www.lg.com/za/monitors/lg-23MP55HQ), 23", IPS. Not nearly as cool as the current one.
+Recently changed to a [Dell U2718Q](https://amzn.to/3aNRbDb), 27", 4K, IPS - and it is **awesome**. 🤩
 
 ## Headphones
 
@@ -60,4 +56,5 @@ Before that, I had the AirPods 1st generation, but I accidentally washed them - 
 
 ## Retired hardware
 
-I used to use a [Magic Keyboard 2](https://amzn.to/3aYGP3x) and a [Magic Trackpad 2](https://amzn.to/2t5phRU), retired in favor of the Logitech MX Master 3 and MX Keys.
+- [Magic Keyboard 2](https://amzn.to/3aYGP3x) and a [Magic Trackpad 2](https://amzn.to/2t5phRU), retired in favor of the Logitech MX Master 3 and MX Keys.
+-  [LG 23PM55](https://www.lg.com/za/monitors/lg-23MP55HQ), 23", IPS, retired in favor of the Dell U2718Q
