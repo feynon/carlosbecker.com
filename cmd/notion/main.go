@@ -177,6 +177,9 @@ func queryCollection(client *notion.Client, colID, colViewID string) ([]string, 
 	if err != nil {
 		return []string{}, err
 	}
+	if resp.Result.Total == 0 {
+		return []string{}, fmt.Errorf("no results querying collection")
+	}
 
 	var blocks []string
 	for k, v := range resp.RecordMap.Blocks {
