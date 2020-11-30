@@ -1,12 +1,11 @@
 ---
 title: "Making Python respect Docker memory limits"
-slug: python-docker-limits
-city: Cascavel
 date: 2020-11-20
-toc: true
 draft: false
 slug: python-docker-limits
-tags: [docker, kubernetes, python]
+city: Cascavel
+toc: true
+tags: [docker, python, kubernetes]
 ---
 
 If you run Python inside containers, chances are you have seen Linux's OOMKiller working at least a couple of times.
@@ -33,7 +32,7 @@ if os.path.isfile('/sys/fs/cgroup/memory/memory.limit_in_bytes'):
         mem = int(limit.read())
         resource.setrlimit(resource.RLIMIT_AS, (mem, mem))
 
-x = bytearray(900*1024*1024) # allocate 900mb
+x = bytearray(900*1024*1024) # allocate 900mb 
 
 print('ok')
 time.sleep(20)
@@ -41,7 +40,7 @@ time.sleep(20)
 
 Save it as `mem.py`, and lets run some tests:
 
-```bash
+```sh
 $ docker run \
   --rm \
   -m 1G \
@@ -57,13 +56,13 @@ This should work with or without setting the `RLIMIT_AS`.
 Now, let's try to change:
 
 ```diff
--x = bytearray(900*1024*1024) # allocate 900mb
+-x = bytearray(900*1024*1024) # allocate 900mb 
 +x = bytearray(4000*1024*1024) # allocate 4000mb
 ```
 
 And we'll see:
 
-```bash
+```sh
 $ docker run --rm -m 1G -v $PWD:/tmp python:rc-alpine python /tmp/mem.py
 Traceback (most recent call last):
   File "/tmp/mem.py", line 10, in <module>
@@ -73,7 +72,7 @@ MemoryError
 
 OK, but what if we don't set `RLIMIT_AS`? Lets test:
 
-```bash
+```sh
 docker run \
   --rm \
   -m 1G \
@@ -88,7 +87,7 @@ I think most of the time you'll rather have a `MemoryError` instead of a `SIGKIL
 
 ## -XX:+UseContainerSupport
 
-I think Python should probably copy something from Java, and either make this the default behavior or hide it behind a flag.
+I think Python should probably copy something from Java, and either make this the default behavior or hide it behind a flag. 
 
 In my perception, most people would expect this to be the default... as well as a lot of other tools (`top` for example, but that's a matter for another post).
 
