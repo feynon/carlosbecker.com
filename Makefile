@@ -10,7 +10,6 @@ clean:
 setup:
 	go mod tidy
 	mkdir -p bin
-	curl -sL https://install.goreleaser.com/github.com/ValeLint/vale.sh | bash
 	curl -sL https://htmltest.wjdp.uk | bash
 	chmod +x ./bin/*
 
@@ -19,7 +18,6 @@ run:
 
 ci: refresh
 	hugo
-	vale --glob='**/*.md' .
 	htmltest -c .htmltest.yaml ./public
 
 avatar:
