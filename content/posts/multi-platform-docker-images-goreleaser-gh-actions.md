@@ -146,6 +146,8 @@ on:
 jobs:
   goreleaser:
     runs-on: ubuntu-latest
+    env:
+      DOCKER_CLI_EXPERIMENTAL: "enabled"
     steps:
       -
         name: Checkout
@@ -153,8 +155,14 @@ jobs:
         with:
           fetch-depth: 0
       -
-        name: Allow arm Docker builds
+        name: Allow arm Docker builds # https://github.com/linuxkit/linuxkit/tree/master/pkg/binfmt
         run: sudo docker run --privileged linuxkit/binfmt:v0.8
+      -
+        name: Docker Login
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          echo "${GITHUB_TOKEN}" | docker login ghcr.io --username $GITHUB_ACTOR --password-stdin
       -
         name: Set up Go
         uses: actions/setup-go@v2
@@ -163,11 +171,17 @@ jobs:
       -
         name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           version: latest
           args: release --rm-dist
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+      -
+        name: Clear
+        if: always()
+        run: |
+          rm -f ${HOME}/.docker/config.json
 ```
 
 ### Important things to notice
@@ -203,4 +217,90 @@ It works! 🎉
 
 That's it! I hope this is useful somehow.
 
-Don't forget to check out [GoReleaser's documentation](https://goreleaser.com) for more details.
+Don't forget to check out [GoReleaser's documentation](https://goreleaser.com) for more details. Also make sure to take a look at [Docker's manifest documentation](https://docs.docker.com/engine/reference/commandline/manifest/).
+
+name: goreleaser
+
+on:
+
+pull_request:
+
+push:
+
+jobs:
+
+goreleaser:
+
+runs-on: ubuntu-latest
+
+env:
+
+DOCKER_CLI_EXPERIMENTAL: "enabled"
+
+steps:
+
+-
+
+name: Checkout
+
+uses: actions/checkout@v2
+
+with:
+
+fetch-depth: 0
+
+-
+
+name: Allow arm Docker builds # https://github.com/linuxkit/linuxkit/tree/master/pkg/binfmt
+
+run: sudo docker run --privileged linuxkit/binfmt:v0.8
+
+-
+
+name: Docker Login
+
+env:
+
+GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+
+run: |
+
+echo "${GITHUB_TOKEN}" | docker login ghcr.io --username $GITHUB_ACTOR --password-stdin
+
+-
+
+name: Set up Go
+
+uses: actions/setup-go@v2
+
+with:
+
+go-version: 1.15
+
+-
+
+name: Run GoReleaser
+
+uses: goreleaser/goreleaser-action@v2
+
+if: startsWith(github.ref, 'refs/tags/')
+
+with:
+
+version: latest
+
+args: release --rm-dist
+
+env:
+
+GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+
+-
+
+name: Clear
+
+if: always()
+
+run: |
+
+rm -f ${HOME}/.docker/config.json
