@@ -16,7 +16,7 @@ In this guide we'll explore how to use it with [GitHub Actions](https://github.c
 
 I created an example project showing with all the code needed for everything to work. You can check it out [here](https://github.com/caarlos0/goreleaser-docker-manifest-actions-example).
 
-### A simple `main.go`
+## A simple `main.go`
 
 For our example, we'll have a very simple `main.go` file:
 
@@ -123,7 +123,7 @@ docker_manifests:
 
 > You can check more options for [builds](https://goreleaser.com/customization/build), [docker](https://goreleaser.com/customization/docker) and [docker manifests](https://goreleaser.com/customization/docker_manifest) on [GoReleaser's website](https://goreleaser.com).
 > 
-> The labels added to the images are optional, but in the specific case of `ghcr.io`, it allows GitHub to know which image is built from which repository.
+> The labels added to the images are optional, but in the specific case of `ghcr.io`, they allows GitHub to know which image is built from which repository and other metadata.
 
 We can now verify this locally with:
 
@@ -133,7 +133,7 @@ goreleaser release --snapshot --rm-dist
 
 GoReleaser will use defaults for a lot of things, you can check the full config (with the defaults) in at `dist/config.yaml`.
 
-## GitHub Actions
+### GitHub Actions
 
 Here we pretty much copy what's already in [GitHub Actions](https://goreleaser.com/ci/actions/) section in the [GoReleaser's website](https://goreleaser.com/):
 
@@ -161,10 +161,11 @@ jobs:
         run: sudo docker run --privileged linuxkit/binfmt:v0.8
       -
         name: Docker Login
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-        run: |
-          echo "${GITHUB_TOKEN}" | docker login ghcr.io --username $GITHUB_ACTOR --password-stdin
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GH_PAT }}
       -
         name: Set up Go
         uses: actions/setup-go@v2
@@ -220,3 +221,7 @@ It works! 🎉
 That's it! I hope this is useful somehow.
 
 Don't forget to check out [GoReleaser's documentation](https://goreleaser.com) for more details. Also make sure to take a look at [Docker's manifest documentation](https://docs.docker.com/engine/reference/commandline/manifest/).
+
+## Special Thanks
+
+- [@CrazyMax](https://crazymax.dev) for the review;
