@@ -122,6 +122,8 @@ docker_manifests:
 ```
 
 > You can check more options for [builds](https://goreleaser.com/customization/build), [docker](https://goreleaser.com/customization/docker) and [docker manifests](https://goreleaser.com/customization/docker_manifest) on [GoReleaser's website](https://goreleaser.com).
+> 
+> The labels added to the images are optional, but in the specific case of `ghcr.io`, it allows GitHub to know which image is built from which repository.
 
 We can now verify this locally with:
 
@@ -188,7 +190,7 @@ jobs:
 
 - We need to set `DOCKER_CLI_EXPERIMENTAL=enabled` for the `docker manifest` command to work;
 - We need to use `linuxkit/binfmt` to allow the GitHub Actions worker to create Docker images other than `linux/amd64`. More info [here](https://github.com/linuxkit/linuxkit/tree/master/pkg/binfmt);
-- We need to login into the GitHub Container Registry with a Personal Access Token, since the default `GITHUB_TOKEN` does not have enough permissions.
+- We need to login into the GitHub Container Registry with a Personal Access Token (PAT), since the default `GITHUB_TOKEN` does not have enough permissions.
 
 And that's pretty much it!
 
@@ -218,89 +220,3 @@ It works! 🎉
 That's it! I hope this is useful somehow.
 
 Don't forget to check out [GoReleaser's documentation](https://goreleaser.com) for more details. Also make sure to take a look at [Docker's manifest documentation](https://docs.docker.com/engine/reference/commandline/manifest/).
-
-name: goreleaser
-
-on:
-
-pull_request:
-
-push:
-
-jobs:
-
-goreleaser:
-
-runs-on: ubuntu-latest
-
-env:
-
-DOCKER_CLI_EXPERIMENTAL: "enabled"
-
-steps:
-
--
-
-name: Checkout
-
-uses: actions/checkout@v2
-
-with:
-
-fetch-depth: 0
-
--
-
-name: Allow arm Docker builds # https://github.com/linuxkit/linuxkit/tree/master/pkg/binfmt
-
-run: sudo docker run --privileged linuxkit/binfmt:v0.8
-
--
-
-name: Docker Login
-
-env:
-
-GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-
-run: |
-
-echo "${GITHUB_TOKEN}" | docker login ghcr.io --username $GITHUB_ACTOR --password-stdin
-
--
-
-name: Set up Go
-
-uses: actions/setup-go@v2
-
-with:
-
-go-version: 1.15
-
--
-
-name: Run GoReleaser
-
-uses: goreleaser/goreleaser-action@v2
-
-if: startsWith(github.ref, 'refs/tags/')
-
-with:
-
-version: latest
-
-args: release --rm-dist
-
-env:
-
-GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-
--
-
-name: Clear
-
-if: always()
-
-run: |
-
-rm -f ${HOME}/.docker/config.json

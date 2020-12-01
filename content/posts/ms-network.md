@@ -14,7 +14,7 @@ I particurarly hate to use MS Windows anytime, even more for work. So, I install
 
 ## Network
 
-This was the trickiest: I needed an "GOD-mode certificate", you should ask the domain admins for something like it. After that, the setup was pretty easy:
+This was the trickiest: I needed a "GOD-mode certificate", you should ask the domain admins for something like it. After that, the setup was pretty easy:
 
 {{< figure caption="" src="/public/images/ms-network/cdaf2ee3-24a4-4c9b-ad5b-c28aa977c11d.png" >}}
 
