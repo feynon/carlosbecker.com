@@ -239,23 +239,19 @@ func renderPage(
 	ctx.Info("rendering")
 
 	converter := tomarkdown.NewConverter(page)
-	h1Fix := 0
 	converter.RenderBlockOverride = func(block *notion.Block) bool {
 		switch block.Type {
 		case notion.BlockHeader:
-			// if we have a H1 in the content, render it as h2, and make h2
-			// and h3 be rendered as h3 and h4
-			h1Fix = 1
 			converter.Newline()
 			converter.RenderHeaderLevel(block, 2)
 			return true
 		case notion.BlockSubHeader:
 			converter.Newline()
-			converter.RenderHeaderLevel(block, 2+h1Fix)
+			converter.RenderHeaderLevel(block, 3)
 			return true
 		case notion.BlockSubSubHeader:
 			converter.Newline()
-			converter.RenderHeaderLevel(block, 3+h1Fix)
+			converter.RenderHeaderLevel(block, 4)
 			return true
 		case notion.BlockCode:
 			converter.Printf("```" + toLang(block.CodeLanguage) + "\n")
