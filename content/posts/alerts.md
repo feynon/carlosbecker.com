@@ -138,13 +138,13 @@ That being said, this is particularly hard to follow.
 
 We did disable some alerts and never looked back, but, most of them are still there. You may want to try and see what happens.
 
-### Don't miss important information
+## Don't miss important information
 
 Sometimes problems occur and you can't find the root cause. That's common with distributed systems and microservices. Lot's of things can go wrong, and it's hard to find what went wrong when they do.
 
 We use Hystrix for circuit-breaking dependencies. We also use hystrix-dashboard to see what's going on right now. The problem is that we were constantly missing information because the dashboard doesn't store any.
 
-That's why we created [hystrix-to-librato](https://github.com/ContaAzul/hystrix-to-librato).
+That's why we created [hystrix-to-librato](https://github.com/ContaAzul/hystrix-to-librato). 
 
 It basically reads a Hystrix/Turbine stream and sends the metrics to librato in an infinite loop. Works for us:
 
@@ -152,7 +152,7 @@ It basically reads a Hystrix/Turbine stream and sends the metrics to librato in 
 
 This can also be applied to logs and other relevant information. Keep at least some days of history, so you can find out patterns and solve root causes.
 
-### Correlate alerts
+## Correlate alerts
 
 If an alert fires, it should show you other relevant information. Related metrics and other triggered alerts are a good start. But sometimes the tools you use don't do that.
 
@@ -166,7 +166,7 @@ The best approach is to use proper tools for that. There are a few alerting syst
 
 We are not quite doing it yet, but I promise I'll write a post about it when we do. 😉
 
-### Prioritize alerts
+## Prioritize alerts
 
 Let's say is 3 in the morning, you're sleeping and kind of drunk.
 
@@ -182,7 +182,7 @@ This is also hard to do sometimes, and, like the previous item, there are tools 
 
 ## Summing up
 
-Monitoring distributed systems is hard.
+Monitoring distributed systems is hard. 
 
 It isn't simple to put just the right amount of monitoring and alerting.
 
