@@ -16,7 +16,7 @@ In this guide we'll explore how to use it with [GitHub Actions](https://github.c
 
 I created an example project showing with all the code needed for everything to work. You can check it out [here](https://github.com/caarlos0/goreleaser-docker-manifest-actions-example).
 
-## A simple `main.go`
+### A simple `main.go`
 
 For our example, we'll have a very simple `main.go` file:
 
@@ -122,7 +122,7 @@ docker_manifests:
 ```
 
 > You can check more options for [builds](https://goreleaser.com/customization/build), [docker](https://goreleaser.com/customization/docker) and [docker manifests](https://goreleaser.com/customization/docker_manifest) on [GoReleaser's website](https://goreleaser.com).
-> 
+>
 > The labels added to the images are optional, but in the specific case of `ghcr.io`, they allows GitHub to know which image is built from which repository and other metadata.
 
 We can now verify this locally with:
