@@ -31,7 +31,7 @@ So, I wrote a tool for that - in **2016**. Yes, 2 years ago already.
 
 Anyway, it does all the checks mentioned above, plus, you can customize the inactivity time (e.g. `1d` instead of `1m`), blacklist repos and include or not private forks.
 
-### Install
+## Install
 
 You can install it On macOS:
 
@@ -45,7 +45,7 @@ or on Linux:
 $ snap install fork-cleaner
 ```
 
-### Usage
+## Usage
 
 You'll need a GitHub token with the `repo` scope, you can create one in the [settings page](https://github.com/settings/tokens/new).
 

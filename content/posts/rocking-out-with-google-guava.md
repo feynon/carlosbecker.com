@@ -1,5 +1,5 @@
 ---
-title: "Rocking out with Google Guava"
+title: "Quick intro to Google Guava"
 date: 2012-08-08
 draft: false
 slug: rocking-out-with-google-guava

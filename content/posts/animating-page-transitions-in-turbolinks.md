@@ -28,7 +28,7 @@ Use it is pretty simple. Just add the gem and import the JS, and you're ready to
 
 See the complete how to use [here](https://github.com/caarlos0/turbolinks_transitions#usage).
 
-### Contribute
+## Contribute
 
 I'll be glad to hear your suggestions and merge your pull-requests! Feel free to do that.
 

@@ -55,7 +55,7 @@ $ gl-setup /tmp/local.pub
 
 When you run `gl-setup` command, it will open a file in edit mode.. probably with `vim`. We don't need to change anything here right now. Just save and exit (press `ESC` and type `:wq!`).
 
-## Configuring user access and repositories
+### Configuring user access and repositories
 
 Now, go back to the previous user:
 

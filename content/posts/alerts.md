@@ -144,7 +144,7 @@ Sometimes problems occur and you can't find the root cause. That's common with d
 
 We use Hystrix for circuit-breaking dependencies. We also use hystrix-dashboard to see what's going on right now. The problem is that we were constantly missing information because the dashboard doesn't store any.
 
-That's why we created [hystrix-to-librato](https://github.com/ContaAzul/hystrix-to-librato). 
+That's why we created [hystrix-to-librato](https://github.com/ContaAzul/hystrix-to-librato).
 
 It basically reads a Hystrix/Turbine stream and sends the metrics to librato in an infinite loop. Works for us:
 
@@ -182,7 +182,7 @@ This is also hard to do sometimes, and, like the previous item, there are tools 
 
 ## Summing up
 
-Monitoring distributed systems is hard. 
+Monitoring distributed systems is hard.
 
 It isn't simple to put just the right amount of monitoring and alerting.
 

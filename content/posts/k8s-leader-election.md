@@ -181,7 +181,7 @@ spec:
 
 And that should be it.
 
-### Running
+## Running
 
 Deploying all that, you can see the lease being created and changing over time:
 

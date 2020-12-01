@@ -18,17 +18,17 @@ Let's do this.
 
 <!--more-->
 
-### Do not rebase commits that have already been pushed to the remote repository
+## Do not rebase commits that have already been pushed to the remote repository
 
 [Read this](http://git-scm.com/book/en/Git-Branching-Rebasing#The-Perils-of-Rebasing).
 
-### See who and in which commit each line of a file was changed last time
+## See who and in which commit each line of a file was changed last time
 
 ```
 $ git blame path/to/file
 ```
 
-### See the reference log
+## See the reference log
 
 This will show the log of your local operations in the git tree, useful to get revision code of a specific action (see next item).
 
@@ -38,7 +38,7 @@ $ git reflog
 
 **HEADS UP**: `reflog` will only have the logs of actions in your local repository, more specifically, it will log each time the `HEAD` pointer changes, so, if clone a repository right now, the reflog will be empty. Also, the reflog is maintained for 30 days by default.
 
-### Get revision code for anything
+## Get revision code for anything
 
 ```
 $ git rev-parse HEAD # last commit
@@ -46,32 +46,32 @@ $ git rev-parse HEAD~5 # 5 commits back from last commit
 $ git rev-parse develop # last commit from develop branch
 ```
 
-### Revert a specific file to a specific commit
+## Revert a specific file to a specific commit
 
 ```
 $ git log path/to/file # to check the revision code
 $ git checkout revision_code path/to/file
 ```
 
-### Revert a specific file to last commit
+## Revert a specific file to last commit
 
 ```
 $ git checkout HEAD path/to/file
 ```
 
-### Revert a specific file to 3 commits back from last
+## Revert a specific file to 3 commits back from last
 
 ```
 $ git checkout HEAD~3 path/to/file
 ```
 
-### Get an old version of some file
+## Get an old version of some file
 
 ```
 $ git show HEAD~3:path/to/file > path/to/file_3_commits_ago
 ```
 
-### Shallow clone
+## Shallow clone
 
 According to the docs:
 
@@ -85,7 +85,7 @@ $ git clone https://github.com/twitter/bootstrap --depth 1
 
 This can drastically reduce the clone. The bad thing is that you will have NO HISTORY BEFORE THE HEAD WHEN YOU DO THE CLONE.
 
-### Move a recent commit to another branch
+## Move a recent commit to another branch
 
 This is pretty useful when you're working on something, commit, and them realize that it would fit better in another branch (or that you're in the wrong branch)... this is how to move it to another branch.
 
@@ -95,7 +95,7 @@ $ git reset --hard HEAD~1 #go back 1 commit, YOU WILL LOST UNCOMMITED CHANGES
 $ git checkout new
 ```
 
-### Revert your entire tree to the last commit state
+## Revert your entire tree to the last commit state
 
 by [@luizkowalski](http://github.com/luizkowalski)
 
@@ -107,7 +107,7 @@ $ git reset --hard HEAD
 
 You can also specify something like `HEAD~3` to get back 3 commits from HEAD.
 
-### Remove files that have not been added to staging area
+## Remove files that have not been added to staging area
 
 by [@luizkowalski](http://github.com/luizkowalski)
 
@@ -115,7 +115,7 @@ by [@luizkowalski](http://github.com/luizkowalski)
 $ git clean -df
 ```
 
-### Stashing
+## Stashing
 
 by [@thiagolenz](http://github.com/thiagolenz)
 
@@ -129,7 +129,7 @@ $ git stash pop # apply the stash to your current HEAD and remove it from your s
 
 More info can be found [here](http://git-scm.com/book/en/Git-Tools-Stashing).
 
-### Merge acting like it's an unique branch
+## Merge acting like it's an unique branch
 
 by [@thiagolenz](http://github.com/thiagolenz)
 
@@ -139,7 +139,7 @@ This will do the merge without creating the "merge commit", acting much like SVN
 $ git pull --rebase
 ```
 
-### Aliases
+## Aliases
 
 by [@derekstavis](http://github.com/derekstavis)
 
@@ -155,7 +155,7 @@ $ git s
 $ git co https://github.com/caarlos0/up
 ```
 
-### Copy a file from one branch to another
+## Copy a file from one branch to another
 
 Useful if you want a file that was introduced or modified in other branch. Example:
 
@@ -165,7 +165,7 @@ $ git checkout master -- teste.js
 $ git commit -m "Update test.js from master"
 ```
 
-### Log deleted files
+## Log deleted files
 
 by [@ricardo_walter](https://twitter.com/ricardo_walter)
 
@@ -175,7 +175,7 @@ Show the commit log with the deleted files for each commit:
 $ git log --diff-filter=D --summary
 ```
 
-### Delete a branch
+## Delete a branch
 
 Local:
 
@@ -192,7 +192,7 @@ by [@ricardo_walter](https://twitter.com/ricardo_walter)
 $ git push origin :branchname
 ```
 
-### Undo your last commit
+## Undo your last commit
 
 by [@antonini](http://github.com/antonini)
 
@@ -204,7 +204,7 @@ $ git reset --soft HEAD^
 
 Just remember: `HEAD^` is a pointer to the parent of current `HEAD`, so, you can use `HEAD~3` to go 3 commits back, for example. Also, check the `reflog` part of this post.
 
-### Remove a file from the last commit
+## Remove a file from the last commit
 
 PROTIP: Don't do this if you already pushed the commit.
 
@@ -215,7 +215,7 @@ $ git rm wrongfile.txt
 $ git commit --amend
 ```
 
-### Update submodules to last commit
+## Update submodules to last commit
 
 Instead of `cd`ing each module, `checkout master` and `pull`, in git 1.8.2 you can simply do this:
 
@@ -223,7 +223,7 @@ Instead of `cd`ing each module, `checkout master` and `pull`, in git 1.8.2 you c
 $ git submodule update --remote --merge
 ```
 
-### Apply a patch to another file
+## Apply a patch to another file
 
 by [@aureliojargas](http://github.com/aureliojargas)
 

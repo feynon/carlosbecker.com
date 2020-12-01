@@ -88,7 +88,7 @@ Oh, I'm working on having t-shirts and stickers, if anyone is interested!
 
 {{< tweet 983696191564152832 >}}
 
-### OpenCollective
+## OpenCollective
 
 I'm not a big believer in these things but wanted to try it out anyway.
 
@@ -96,7 +96,7 @@ If you use GoReleaser and it saved you some time and/or you liked it, you can no
 
 It is not a big thing but helps to keep the maintainers motivated.
 
-### Contributors
+## Contributors
 
 We had pull requests from almost 50 different contributors so far!
 

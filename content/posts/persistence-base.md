@@ -14,11 +14,11 @@ So, this is just another post (better, I hope) about [that project](https://gith
 
 In this post, I'll use the version **0.0.5** as base, but it should work exactly the same way in currently **0.0.6-SNAPSHOT** version and hopefully in further versions.
 
-### Project creation
+## Project creation
 
 Create a new Maven project and add the following to your `pom.xml`:
 
-```
+```xml
 <dependencies>
     <dependency>
       <groupId>com.github.caarlos0</groupId>
@@ -58,11 +58,11 @@ Nice, you now have almost-all needed dependencies (Guava, EclipseLink, Guice, et
 
 **HEADS UP**: Don't forget to add your database dependency and the `persistence.xml` file.
 
-### Create a model and a DAO
+## Create a model and a DAO
 
 Just for example, I will create a very simple Person model, something like this:
 
-```
+```java
 @Entity
 public class Person extends Bean {
   private static final long serialVersionUID = 1L;
@@ -83,7 +83,7 @@ Notice that, since it extends `Bean`, the model already has an `id` and a `versi
 
 Now, you should be able to bind a `GenericDao` for this Entity. To do that, create some class exteding `AbstractPersistentModule`, like the following:
 
-```
+```java
 public class MainModule extends AbstractPersistentModule {
 
   @Override
@@ -99,7 +99,7 @@ public class MainModule extends AbstractPersistentModule {
 
 Now, in your app main class, you should be able to inject the `GenericDao<Person>`, like the following:
 
-```
+```java
 public class App {
 
   @Inject
@@ -118,7 +118,7 @@ public class App {
 
 You will probably want to create your own `Dao` methods eventually, instead of just use the Generic ones. You can easily achieve this by creating your own `Dao` interface extending `Dao` and the specific `Dao` impl:
 
-```
+```java
 public interface AnimalDao extends Dao<Animal> {
   void somecustomMethod(Animal a);
 }
@@ -138,13 +138,13 @@ public class AnimalDaoImpl extends GenericDao<Animal> implements AnimalDao {
 
 And, of course, you will need to bind it in your module:
 
-```
+```java
 bind(AnimalDao.class).to(AnimalDaoImpl.class);
 ```
 
 After that, you can simply inject it whenever you want (repecting Guice, obviously) with:
 
-```
+```java
 @Inject AnimalDao animalDao;
 ```
 

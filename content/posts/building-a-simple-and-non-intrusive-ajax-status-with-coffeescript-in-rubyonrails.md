@@ -51,7 +51,7 @@ gem 'jquery-rails'
 
 You will also need to import them in you `application.js`.
 
-## events
+### events
 
 We all know that something about events triggered by those APIS:
 
@@ -80,7 +80,7 @@ The spin will shows up in `beforeSend`, and hide in `complete`, but there's anot
 
 To fix the issue about multiple ajax calls for the same type, we can made a dirty hack to store in a hash or something the count of events that should end to spin disapear. Is pretty simple, but I'll let this for you guys :)
 
-## Complete code
+### Complete code
 
 The most "difficult" part of the solution is already explained, so, get the code, read it, and use the comment box if you have any doubts =)
 
@@ -88,7 +88,7 @@ The most "difficult" part of the solution is already explained, so, get the code
 
 `ajax.spin.js.coffee` code:
 
-```
+```coffeescript
 opts = {
   lines: 7, # The number of lines to draw
   length: 6, # The length of each line
@@ -147,7 +147,7 @@ $(document).on 'ajax:complete ajaxComplete page:change', (event) ->
 
 The compiled `ajax.spin.js` file, for those wo don't use CoffeeScript:
 
-```
+```javascript
 (function() {
   var $n, doneState, eventType, lastEvent, loadState, opts;
 

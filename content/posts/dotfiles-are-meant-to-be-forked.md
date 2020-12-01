@@ -34,7 +34,7 @@ So I tweaked, removed, tweaked, cleaned-up, tweaked, etc etc, and there it is, m
 
 They should work with both Linux and OS X (Linux lacks a little automation, tough), and I tweaked it to fit my taste.
 
-## so get it, bro
+## Get it!
 
 [They are available on github](http://github.com/caarlos0/dotfiles)!
 

@@ -32,7 +32,7 @@ Define value for property 'module': : Example
 
 Now, lets add the `GWT-Bootstrap` dependency to the `pom.xml` file:
 
-### Add the repository:
+## Add the repository:
 
 ```xml
 <repositories>
@@ -44,7 +44,7 @@ Now, lets add the `GWT-Bootstrap` dependency to the `pom.xml` file:
 </repositories>
 ```
 
-### And the dependency itself:
+## And the dependency itself:
 
 ```xml
 <dependency>
@@ -115,7 +115,7 @@ $ tree
 
 Now, lets create a UIBinder class to made our amazing test widget! Create a new UiBinder class/xml combo called `ExampleUiBinder`, with the following content:
 
-### ExampleUiBinder.ui.xml:
+## ExampleUiBinder.ui.xml:
 
 ```xml
 <ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
