@@ -16,7 +16,7 @@ Sometimes people ask me what my setup looks like for remote work. I decided to t
 
 ## How it looks like
 
-{{< figure caption="My setup 😌(a little outdated)" src="/public/images/setup/d8b10ca9-4d7b-48da-aab3-ab174d862cdf.png" >}}
+{{< figure caption="My setup. 😌" src="/public/images/setup/446e6162-22a4-446d-b562-834fbd2304ea.png" >}}
 
 I use the MacBook on clamshell mode (closed) because I don't like to manage
 multiple screens (sue me) and the screen is already big enough. 😌
@@ -56,5 +56,11 @@ Before that, I had the AirPods 1st generation, but I accidentally washed them - 
 
 ## Retired hardware
 
-- [Magic Keyboard 2](https://amzn.to/3aYGP3x) and a [Magic Trackpad 2](https://amzn.to/2t5phRU), retired in favor of the Logitech MX Master 3 and MX Keys.
--  [LG 23PM55](https://www.lg.com/za/monitors/lg-23MP55HQ), 23", IPS, retired in favor of the Dell U2718Q
+- [LG 23PM55](https://www.lg.com/za/monitors/lg-23MP55HQ), 23", IPS, retired in favor of the Dell U2718Q;
+- [Magic Keyboard 2](https://amzn.to/3aYGP3x) retired in favor of the Logitech MX Keys;
+- [Magic Trackpad 2](https://amzn.to/2t5phRU) retired in favor of the Logitech MX Master 3;
+
+## Changelog
+
+- 2020-01-29: v1
+- 2020-12-07: updated mouse, keyboard and photo
