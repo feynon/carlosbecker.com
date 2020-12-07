@@ -10,16 +10,12 @@ tags: [hardware]
 
 Sometimes people ask me what my setup looks like for remote work. I decided to try to keep a list of the hardware I'm currently using. Hope you'll find this useful, somehow.
 
-<!--more-->
-
-> **PS**: I will try to keep this up to date, but I won't promise anything. 😌
-
 ## How it looks like
 
 {{< figure caption="My setup. 😌" src="/public/images/setup/446e6162-22a4-446d-b562-834fbd2304ea.png" >}}
 
 I use the MacBook on clamshell mode (closed) because I don't like to manage
-multiple screens (sue me) and the screen is already big enough. 😌
+multiple screens and my screen is already big enough. 😌
 
 ## Machine
 
@@ -27,7 +23,7 @@ Its a [MacBook Pro](https://amzn.to/2GAaGBm) 15", from 2017.
 
 It has a **3.1 GHz** Intel Core i7, **16 GB** of memory and a **2 TB** SSD disk.
 
-Its more than enough for a couple of years I think.
+It is more than enough for a couple of years I think, although I want a mac with a M1 chip now. 😂
 
 ## Keyboard / Mouse
 
@@ -35,7 +31,7 @@ Mouse is a [Logitech MX Master 3](https://amzn.to/3kMRMJj) and the keyboard is a
 
 ## Display
 
-Recently changed to a [Dell U2718Q](https://amzn.to/3aNRbDb), 27", 4K, IPS - and it is **awesome**. 🤩
+[Dell U2718Q](https://amzn.to/3aNRbDb), 27", 4K, IPS - its **awesome**. 🤩
 
 ## Headphones
 
@@ -48,11 +44,12 @@ Before that, I had the AirPods 1st generation, but I accidentally washed them - 
 ## Others
 
 - Generic Headphone stand
+- Generic Laptop stand
 - Corsair gaming mouse pad, similar to [this one](https://amzn.to/313Zmqm)
 - [Cable Matters USB-C → DisplayPort](https://amzn.to/394xZiG) cable ([see this post about why](https://carlosbecker.dev/posts/macos-4k-display))
 - [Webcam Logitech C270](https://amzn.to/2tdcj4O) (I use the mac in clamshell mode)
 
----
+<!--more-->
 
 ## Retired hardware
 
@@ -62,5 +59,7 @@ Before that, I had the AirPods 1st generation, but I accidentally washed them - 
 
 ## Changelog
 
-- 2020-01-29: v1
-- 2020-12-07: updated mouse, keyboard and photo
+- 2020-01-29: First edition
+- 2020-02-05: Updated display
+- 2020-09-22: Updated mouse and Keyboard
+- 2020-12-07: Updated setup photo
