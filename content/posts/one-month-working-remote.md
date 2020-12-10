@@ -67,8 +67,6 @@ But either way, I rarely stop working in the time I should. I'm trying to force 
 
 This I already posted on twitter, but anyway...
 
-{{< tweet 1004448888995090438 >}}
-
 ### Don't forget your friends
 
 It's always nice to chat with my friends and go with them to places to have

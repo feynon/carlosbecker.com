@@ -24,15 +24,17 @@ Also, a real Microservice should be **independent**. Microservices sharing the s
 
 The philosophy behind Microservices is based on Unix [Philosophy](http://en.wikipedia.org/wiki/Unix_philosophy):
 
-{{< tweet 581437478072135681 >}}
+> Make each program do one thing well. To do a new job, build afresh rather than complicate old programs by adding new "features".
 
 Of course you probably won't do that from day-1 in your new startup. You don't even know if it will work, and, Microservices add a little of complexity you might not want to pay now.
 
 About this, two quotes by [@randyshoup](http://twitter.com/randyshoup):
 
-{{< tweet 580780346087763968 >}}
+> "To improve is to change; to be perfect is to change often."
 
-{{< tweet 580819971732803584 >}}
+And
+
+> "If you don't end up regretting your early technology decisions, you probably over-engineered."
 
 There is a lot of cool things that you can do with it right now, and there will probably be more soon, like running desktop softwares inside a Docker container and freezing user space to turn on a Docker container in a "warm" state - which seems nice if you think about JVM JIT, for example.
 

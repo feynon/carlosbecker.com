@@ -270,6 +270,7 @@ func renderPage(
 			converter.Newline()
 			converter.Printf("{{< tweet %s >}}", tweetExp.FindStringSubmatch(block.Source)[1])
 			converter.Newline()
+			ctx.Warn("Tweets might be deleted anytime, consider using something else instead")
 			return true
 		case notion.BlockVideo:
 			if strings.HasPrefix(block.Source, "https://youtube.com") {
