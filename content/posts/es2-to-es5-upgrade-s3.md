@@ -10,7 +10,7 @@ tags: [elasticsearch]
 
 Migrating an ElasticSearch cluster from version 2 to 5 can be challenging, even more if it is a big cluster.
 
-<!--more-->
+---
 
 In this post we will explore one of the strategies that can be used to do
 such migration, setting a up a playground environment in which we can learn

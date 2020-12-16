@@ -43,7 +43,7 @@ If I would make a list, it would look more or less like this:
 - have an API, so I can automate stuff;
 - don't send me useless emails.
 
-<!--more-->
+---
 
 These are my 4 pillars for a product I might love.
 

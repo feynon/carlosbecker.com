@@ -100,7 +100,7 @@ cf2616975b4a: Pull complete
 8c2e06607696: Already exists
 Digest: sha256:38a203e1986cf79639cfb9b2e1d6e773de84002feea2d4eb006b52004ee8502d
 Status: Downloaded newer image for busybox:latest
- <!--more-->> 8c2e06607696
+ ---> 8c2e06607696
 Step 1 : ENTRYPOINT echo Hello World
  ---> Running in b29590127d4f
  ---> 7fa687f18c73

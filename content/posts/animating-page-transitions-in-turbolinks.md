@@ -10,7 +10,7 @@ tags: [ruby-on-rails]
 
 Since I've seen the new [Basecamp](http://basecamp.com/), I fall in love with it.
 
-<!--more-->
+---
 
 It's fast, had sleek animations in page changes and so on.
 

@@ -10,7 +10,7 @@ tags: [kubernetes]
 
 Kubernetes Pod lifecycle does not cover everything just yet.
 
-<!--more-->
+---
 
 I'm working on an app that listens to Buildkite `job.scheduled` webhook and creates a Kubernetes Job to execute it.
 

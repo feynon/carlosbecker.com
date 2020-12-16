@@ -10,7 +10,7 @@ tags: [kubernetes]
 
 I always forget the details about Kubernetes pod shutdown lifecycle is something when I need them, so this is my now made public notes on the subject.
 
-<!--more-->
+---
 
 ## TL;DR
 

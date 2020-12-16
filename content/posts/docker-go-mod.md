@@ -10,7 +10,7 @@ tags: [docker, golang]
 
 Quick tip to improve the docker build speed using go modules.
 
-<!--more-->
+---
 
 Normally, I would do something like this:
 

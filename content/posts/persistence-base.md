@@ -75,7 +75,7 @@ public class Person extends Bean {
 
 Notice that, since it extends `Bean`, the model already has an `id` and a `version` attribute. In current SNAPSHOT, you will also have the `TimestampedBean`, which provides `created_at` and `updated_at` attributes plus the `id` and `version`.
 
-<!--more-->
+---
 
 **HEADS UP:** Don't forget to add the class to `persistence.xml` file!
 

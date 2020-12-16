@@ -16,7 +16,7 @@ Of course, if you have yours tricks/tips (and you probably have), comment above 
 
 Let's do this.
 
-<!--more-->
+---
 
 ## Do not rebase commits that have already been pushed to the remote repository
 

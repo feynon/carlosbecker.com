@@ -49,7 +49,7 @@ Before that, I had the AirPods 1st generation, but I accidentally washed them - 
 - [Cable Matters USB-C → DisplayPort](https://amzn.to/394xZiG) cable ([see this post about why](https://carlosbecker.dev/posts/macos-4k-display))
 - [Webcam Logitech C270](https://amzn.to/2tdcj4O) (I use the mac in clamshell mode)
 
-<!--more-->
+---
 
 ## Retired hardware
 

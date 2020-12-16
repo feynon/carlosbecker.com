@@ -10,7 +10,7 @@ tags: [nats]
 
 I wanted to set up a fault tolerant [nats-streaming-server](https://github.com/nats-io/nats-streaming-server), but couldn't find a "quick" guide on how to do it - so here we are.
 
-<!--more-->
+---
 
 I would also recommend you to read a [previous post]({{< ref "nats-streaming-server-cluster.md" >}}) I wrote about how to do it using the clustering method.
 

@@ -10,7 +10,7 @@ tags: [ruby-on-rails]
 
 I think that [turbolinks](https://github.com/rails/turbolinks) is great: it mades it easy to add [AJAX PushState](https://www.google.com.br/search?q=AJAX+PushState) to your [Rails](http://rubyonrails.org/) Applications. The only problem with that is that we can't use it **any** WEB application, because it's a Ruby Gem. So I did some ugly-but-easy hacks and add it to this very site. I will describe the steps above.
 
-<!--more-->
+---
 
 ### First things first
 

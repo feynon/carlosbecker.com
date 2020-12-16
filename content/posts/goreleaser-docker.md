@@ -11,7 +11,7 @@ tags: [docker, goreleaser, golang, ci-cd]
 The next [GoReleaser](https://goreleaser.com/) version will have a more flexible [Docker](https://docker.io/) configuration
 format. In this post we'll explore it a bit.
 
-<!--more-->
+---
 
 When I first added [Docker](https://docker.io/) support on [GoReleaser](https://goreleaser.com/), I did a couple of
 assumptions - and most of them were wrong.

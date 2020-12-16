@@ -72,7 +72,7 @@ $(document).on 'ajax:complete ajaxComplete page:change', ->
 But we also have another problem: if some user interaction fire multiple ajax calls? In my app, I don't need to worry too much about that for now, because I don't need to do more than one `$.get` (for example) in the same user interaction. I only have some `$.get` (for example) callbacks that call `Turbolinks.visit`, so, imagine something like:
 
 ```
-ajax:beforeSend<!--more-->-----------ajax:complete------------------>
+ajax:beforeSend--------------ajax:complete------------------>
     -------------------page:fetch------------------page:change-->
 ```
 

@@ -10,7 +10,7 @@ tags: [life]
 
 Everything in life eventually comes to an end, including life itself. This is not that kind of post, though.
 
-<!--more-->
+---
 
 After 4 years and a lot of work, I'm leaving [ContaAzul](https://contaazul.com/).
 

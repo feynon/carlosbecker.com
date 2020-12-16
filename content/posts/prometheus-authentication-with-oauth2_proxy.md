@@ -10,7 +10,7 @@ tags: [prometheus]
 
 I wanted to set up a [prometheus](https://prometheus.io/) machine for me to monitor random stuff, but I was always postpone that because I didn't want to use SSH port-forwarding, firewalls, create a VPC and/or setup an OpenVPN server or anything like that.
 
-<!--more-->
+---
 
 I just wanted something simple to maybe authenticate with github and go on.
 

@@ -10,7 +10,7 @@ tags: [goreleaser, golang, ci-cd]
 
 [GoReleaser](https://goreleaser.com/) was able to build [snap](https://snapcraft.io/goreleaser) packages for a long time, but it wasn't able to push them until today. Let's see how to wrap to your [TravisCI](https://travis-ci.org/goreleaser/goreleaser) build!
 
-<!--more-->
+---
 
 Since [v0.28.0](https://github.com/goreleaser/goreleaser/releases/tag/v0.28.0), [GoReleaser](https://goreleaser.com/) can create snapcraft packages and
 upload them to the GitHub release. On [v0.91.0](https://github.com/goreleaser/goreleaser/releases/tag/v0.91.0), we added the support

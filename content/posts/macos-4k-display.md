@@ -10,7 +10,7 @@ tags: [macos]
 
 I recently got a 4K display, and it didn't work as I expected on my MacBook Pro. This is what I tried, what worked and what didn't.
 
-<!--more-->
+---
 
 The display I got is the [Dell U2718Q](https://amzn.to/3aNRbDb). Its a 27", 4K, IPS display. And its pretty good.
 

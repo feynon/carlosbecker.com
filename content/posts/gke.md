@@ -40,7 +40,7 @@ This will create an Elastic LoadBalancer with the given certificate on the port 
 I looked into doing the same thing on GKE, but, as it turns out, GKE uses Ingresses to setup SSL, turning it into a Load Balancer, which seems odd because services also create load balancers. In the end, it turned out to work great:
 
 ```yaml
-<!--more-->
+---
 apiVersion: v1
 kind: Service
 metadata:

@@ -10,7 +10,7 @@ tags: [blog, jekyll]
 
 I've been using Jekyll on my blog since 2012. It is great! But, lately, its slow build times started to bother me.
 
-<!--more-->
+---
 
 I consider moving to [Hugo](https://gohugo.io/), but that seemed like a lot of work, and I didn't know what the real problem was. 
 

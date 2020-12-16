@@ -21,7 +21,7 @@ So, I moved all those files to a `_scss` subfolder, and changed their extensions
 Then, in my `public/css` folder, I created a `styles.scss` like this one:
 
 ```sass
-<!--more-->
+---
 # Needed for jekyll...
 ---
 

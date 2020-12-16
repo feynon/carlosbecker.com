@@ -10,7 +10,7 @@ tags: [github, cli]
 
 I like to keep my GitHub clean. I delete forks I'm not using anymore, move old abandoned repositories to my [graveyard]({{< ref "repositories-graveyard.md" >}}) and etc.
 
-<!--more-->
+---
 
 I don't like to delete things manually though.
 

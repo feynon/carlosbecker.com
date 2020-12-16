@@ -220,7 +220,7 @@ Do you want to be the "Programmer X" in this case? Do you want to be one of the 
 
 I know I don't.
 
-<!--more-->
+---
 
 This is my point of view on this subject, if you disagree, please, comment bellow, let's discuss how to write better code.
 

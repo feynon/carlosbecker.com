@@ -11,7 +11,7 @@ tags: [goreleaser, golang, ci-cd, software-engineering]
 I've started [GoReleaser](http://goreleaser.com/) almost 2 years ago. This is a summary of (some)
 things I've learned down the road.
 
-<!--more-->
+---
 
 {{< figure caption="GoReleaser logo" src="/public/images/goreleaser-lessons-learned/acb45b15-0cab-45b5-8849-fa39ba318fae.png" >}}
 

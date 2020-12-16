@@ -11,7 +11,7 @@ tags: [nats]
 I wanted to set up a high available [nats-streaming-server](https://github.com/nats-io/nats-streaming-server) cluster,
 but couldn't find a "quick" guide on how to do it.
 
-<!--more-->
+---
 
 In this post I'll try to write something that would have helped me earlier.
 

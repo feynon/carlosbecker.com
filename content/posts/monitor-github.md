@@ -11,7 +11,7 @@ tags: [monitoring, prometheus, github]
 I have written some exporters to observe things on GitHub. This is how and
 why.
 
-<!--more-->
+---
 
 We will talk about 2 things:
 

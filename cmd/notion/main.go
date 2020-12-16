@@ -341,14 +341,13 @@ func toLang(s string) string {
 var postURLRegex = regexp.MustCompile(`\(https://carlosbecker.com/posts/(.+)/\)`)
 
 func buildMarkdown(header string, content []byte) []byte {
-	ss := strings.Replace(string(content), "---", "<!--more-->", 1) // replaces the first divider with the more thing for hugo
-	ss = strings.NewReplacer(
+	var ss = strings.NewReplacer(
 		"“", "\"",
 		"”", "\"",
 		"’", "'",
 		"‘", "'",
 		"…", "...",
-	).Replace(ss)
+	).Replace(string(content))
 
 	ss = postURLRegex.ReplaceAllString(ss, `({{< ref "$1.md" >}})`)
 

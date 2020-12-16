@@ -10,7 +10,7 @@ tags: [kubernetes, google-cloud]
 
 I recently fall into a trap using Traefik as the ingress controller in one cluster. I decided to write about it so maybe it helps someone.
 
-<!--more-->
+---
 
 ## Context
 

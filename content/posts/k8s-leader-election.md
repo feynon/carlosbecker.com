@@ -10,7 +10,7 @@ tags: [kubernetes]
 
 Ever needed a simple leader election mechanism on something that will run on a Kubernetes cluster? There's an easy way to do that!
 
-<!--more-->
+---
 
 A couple of days ago I was working on an app that needed to do some work from time to time, but only in a single replica.
 

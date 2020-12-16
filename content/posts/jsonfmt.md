@@ -14,7 +14,7 @@ I like everything to be preperly formatted. The choice of format itself does not
 
 This project did not (although it was surprisingly not that bad).
 
-<!--more-->
+---
 
 So, I decided to properly format all files. The first thing that came to mind
 was [Prettier](https://prettier.io/), but, since I wanted to add it to the CI as well,

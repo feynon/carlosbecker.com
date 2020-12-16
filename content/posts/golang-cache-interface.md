@@ -10,7 +10,7 @@ tags: [golang]
 
 Caching things can be hard to do and hard to test. In this post I'll demonstrate a convenient way of doing that using interfaces.
 
-<!--more-->
+---
 
 ## The problem
 

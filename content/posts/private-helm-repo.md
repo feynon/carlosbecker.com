@@ -10,7 +10,7 @@ tags: [kubernetes, helm]
 
 Can we have a private Helm repository using GCS as backend? Yes we can!
 
-<!--more-->
+---
 
 The easier way to create a public helm repository is to just upload your artifacts to a bucket somewhere. 
 

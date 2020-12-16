@@ -52,6 +52,6 @@ $ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock bobrik/image-clea
 
 If you use a Mac, managing `boot2docker` by hand can be a little "boring", you can use [Kitematic](https://kitematic.com/) for that.
 
-<!--more-->
+---
 
 ***Let's make this list bigger! Have your own tip/trick? Something I forgot to add? Share it with us!***

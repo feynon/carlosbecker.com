@@ -10,7 +10,7 @@ tags: [goreleaser, ci-cd, golang]
 
 What if I told you you can now automate the release of your libraries as well?
 
-<!--more-->
+---
 
 I think some of you are used to just run `goreleaser` and have your binaries compiled, archived, packaged and published... but the experience was not that great regarding libraries.
 
