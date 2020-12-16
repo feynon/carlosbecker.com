@@ -14,13 +14,11 @@ This is post if for future me.
 
 ---
 
-You always forget how to install XCode Command Line Tools when a new macOS release comes out... specially because it always complain about things when you're in a hurry and you always think "oh maybe this time they'll do this automatically...".
+You always forget how to install XCode Command Line Tools when a new macOS release comes out... specially because this always happens when you're in a hurry, and obviously you forgot to run this earlier.
 
-So, I made this post for you.
+{{< figure caption="Installing..." src="/public/images/xcode-select/63cdce04-0861-416e-9ed9-aeb0f409df17.png" >}}
 
-{{< figure caption="" src="/public/images/xcode-select/63cdce04-0861-416e-9ed9-aeb0f409df17.png" >}}
-
-As you know, its a simple command you just can't remember when you need it:
+As you know, its a simple command that you just can't remember when you need:
 
 ```sh
 $ xcode-select --install
@@ -33,6 +31,3 @@ $ sudo xcode-select --reset
 ```
 
 Last but not least, on betas, sometimes, you might need to download it directly from [Apple developers downloads](https://developer.apple.com/download/more/) page, which is a page you always take a couple of minutes to find on Google, for whatever reason. So, saved you a Google search.
-
-Best,
-Carlos
