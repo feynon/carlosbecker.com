@@ -32,7 +32,7 @@ import (
 var version = "dev"
 
 func main() {
-	fmt.Println("example", version, runtime.GOOS)
+	fmt.Println("example", version, runtime.GOOS, runtime.GOARCH)
 }
 ```
 
@@ -40,26 +40,25 @@ func main() {
 
 GoReleaser builds Docker images by copying the previously built binaries to the images (instead of building the binary inside Docker itself). This guarantees that the binary inside the image and the one you download from the releases page is the same.
 
-To account for multiple platforms, we either create several `dockerfiles`, or, when possible, make the platform a parameter in a single one. We'll use the second approach.
-
 Our very basic `Dockerfile` looks like this:
 
 ```dockerfile
 # Dockerfile
-ARG ARCH
-FROM ${ARCH}/alpine
+FROM alpine
 COPY example /usr/bin/example
 ENTRYPOINT ["/usr/bin/example"]
 ```
+
+To account for multiple platforms, we either create several `dockerfiles`, or use the `--platform` build flag. We'll use the second approach in our example.
 
 We can test it without GoReleaser by running:
 
 ```bash
 GOOS=linux GOARCH=amd64 go build -o example .
-docker build -t testimage:amd64 . --build-arg ARCH=amd64
+docker build -t testimage:amd64 . --platform=linux/amd64
 
 GOOS=linux GOARCH=arm64 go build -o example .
-docker build -t testimage:arm64v8 . --build-arg ARCH=arm64v8
+docker build -t testimage:arm64v8 . --platform=linux/arm64/v8
 ```
 
 With that in place, let's check our GoReleaser config file.
@@ -91,7 +90,7 @@ dockers:
   binaries: [example]
   dockerfile: Dockerfile
   build_flag_templates:
-  - --build-arg=ARCH=amd64
+  - --platform=linux/amd64
   - --label=org.opencontainers.image.title={{ .ProjectName }}
   - --label=org.opencontainers.image.description={{ .ProjectName }}
   - --label=org.opencontainers.image.url=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
@@ -105,7 +104,7 @@ dockers:
   goarch: arm64
   dockerfile: Dockerfile
   build_flag_templates:
-  - --build-arg=ARCH=arm64v8
+  - --platform=linux/arm64/v8
   - --label=org.opencontainers.image.title={{ .ProjectName }}
   - --label=org.opencontainers.image.description={{ .ProjectName }}
   - --label=org.opencontainers.image.url=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
@@ -210,8 +209,17 @@ You should also be able to see that the image is in fact multi-platform in the c
 We can now run our image:
 
 ```bash
-$ docker run --rm ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:1.0.0
-example 1.0.0 linux
+$ docker run --rm --platform linux/amd64 \
+	ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:1.0.2
+example 1.0.2 linux amd64
+```
+
+We can also test the arm64 image:
+
+```bash
+$ docker run --rm --platform linux/arm64/v8 \
+	ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:1.0.2
+example 1.0.2 linux arm64
 ```
 
 It works! 🎉
@@ -225,3 +233,7 @@ Don't forget to check out [GoReleaser's documentation](https://goreleaser.com) f
 ## Special Thanks
 
 - [@CrazyMax](https://crazymax.dev) for the review;
+
+## Updates
+
+- Dec 29, 2020: using `--platform` instead of `ARCH` build arg, added more `docker run` examples.
