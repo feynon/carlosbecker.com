@@ -12,6 +12,8 @@ tags: [docker, golang, goreleaser, ci-cd]
 
 In this guide we'll explore how to use it with [GitHub Actions](https://github.com/features/actions), and how GoReleaser releases itself in this way.
 
+PS: You will need GoReleaser version 0.152.0 or later for this guide to work properly.
+
 ## An example project
 
 I created an example project showing with all the code needed for everything to work. You can check it out [here](https://github.com/caarlos0/goreleaser-docker-manifest-actions-example).
@@ -55,10 +57,10 @@ We can test it without GoReleaser by running:
 
 ```bash
 GOOS=linux GOARCH=amd64 go build -o example .
-docker build -t testimage:amd64 . --platform=linux/amd64
+docker buildx build -t testimage:amd64 . --platform=linux/amd64
 
 GOOS=linux GOARCH=arm64 go build -o example .
-docker build -t testimage:arm64v8 . --platform=linux/arm64/v8
+docker buildx build -t testimage:arm64v8 . --platform=linux/arm64/v8
 ```
 
 With that in place, let's check our GoReleaser config file.
@@ -89,6 +91,7 @@ dockers:
 - image_templates: ["ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-amd64"]
   binaries: [example]
   dockerfile: Dockerfile
+  use_buildx: true
   build_flag_templates:
   - --platform=linux/amd64
   - --label=org.opencontainers.image.title={{ .ProjectName }}
@@ -103,6 +106,7 @@ dockers:
   binaries: [example]
   goarch: arm64
   dockerfile: Dockerfile
+  use_buildx: true
   build_flag_templates:
   - --platform=linux/arm64/v8
   - --label=org.opencontainers.image.title={{ .ProjectName }}
@@ -156,8 +160,11 @@ jobs:
         with:
           fetch-depth: 0
       -
-        name: Allow arm Docker builds # https://github.com/linuxkit/linuxkit/tree/master/pkg/binfmt
-        run: sudo docker run --privileged linuxkit/binfmt:v0.8
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
       -
         name: Docker Login
         uses: docker/login-action@v1
@@ -189,7 +196,7 @@ jobs:
 ### Important things to notice
 
 - We need to set `DOCKER_CLI_EXPERIMENTAL=enabled` for the `docker manifest` command to work;
-- We need to use `linuxkit/binfmt` to allow the GitHub Actions worker to create Docker images other than `linux/amd64`. More info [here](https://github.com/linuxkit/linuxkit/tree/master/pkg/binfmt);
+- We need to setup `qemu` and `buildx` in order to build Docker images in platforms other than `linux/amd64` using `docker buildx build`;
 - We need to login into the GitHub Container Registry with a Personal Access Token (PAT), since the default `GITHUB_TOKEN` does not have enough permissions.
 
 And that's pretty much it!
@@ -236,4 +243,5 @@ Don't forget to check out [GoReleaser's documentation](https://goreleaser.com) f
 
 ## Updates
 
-- Dec 29, 2020: using `--platform` instead of `ARCH` build arg, added more `docker run` examples.
+- Jan 04, 2021: using `buildx` and setting `use_buildx` on the Docker config and using `docker/setup-qemu-action`;
+- Dec 29, 2020: using `--platform` instead of `ARCH` build arg, added more `docker run` examples;
