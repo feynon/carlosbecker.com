@@ -5,6 +5,18 @@ type: page
 
 Some talks I gave over the years, just in case you want to see the slides.
 
+## 2021
+
+### GoTime #173 - Releasing with (and without) GoReleaser
+
+> Apr 1, 2021
+
+I was live with Mat, Natalie & Johnny and we talked a bit about releases, with and without GoReleaser.
+
+{{< rawhtml >}}
+<audio data-theme="night" data-src="https://changelog.com/gotime/173/embed" src="https://cdn.changelog.com/uploads/gotime/173/go-time-173.mp3" preload="none" class="changelog-episode" controls></audio><p><a href="https://changelog.com/gotime/173">Go Time 173: Releasing with (and without) GoReleaser</a> – Listen on <a href="https://changelog.com/">Changelog.com</a></p><script async src="//cdn.changelog.com/embed.js"></script>
+{{< /rawhtml >}}
+
 ## 2019
 
 ### 1º Open Source Joinville Meetup
