@@ -254,6 +254,13 @@ func renderPage(
 			converter.RenderHeaderLevel(block, 4)
 			return true
 		case notion.BlockCode:
+			// hack: create an html block that starts with !!!EMBED!!! and it gets actually really embedded for realz in real life
+			if strings.HasPrefix(block.Code, "!!!EMBED!!!") {
+				converter.Printf("{{< rawhtml >}}\n")
+				converter.Printf(strings.Replace(block.Code, "!!!EMBED!!!", "", 1) + "\n")
+				converter.Printf("{{< /rawhtml >}}\n")
+				return true
+			}
 			converter.Printf("```" + toLang(block.CodeLanguage) + "\n")
 			converter.Printf(block.Code + "\n")
 			converter.Printf("```\n")
