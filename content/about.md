@@ -9,6 +9,14 @@ While not working on his daily job, he may be hacking on [open source](https://g
 
 Carlos is interested in programming languages, containers, distributed systems, monitoring and software in general. Feel free to shoot him an [email](mailto:root@carlosbecker.dev?subject=Consultancy) if you need help with any of that. 🙂
 
-He lives with Carine (his wife), and Zakk (a chinchilla), in [Cascavel - PR, Brazil](https://www.google.com.br/maps/place/Cascavel,+State+of+Paraná).
+He lives with *Carine* (his wife), *Zakk* (a chinchilla) and *Bash* (a Golden Retriever), in [Cascavel - PR, Brazil](https://www.google.com.br/maps/place/Cascavel,+State+of+Paraná).
 
-{{< figure caption="Me, Carine and Zakk" src="/public/images/about/e4991c03-742f-440c-ab12-a9e965f2685c.png" >}}
+{{< figure caption="Family ❤️" src="/public/images/about/43a68192-4e2c-49aa-95db-9b194a2d53cc.png" >}}
+
+## If you like my work...
+
+... or find it useful, consider sponsoring me on GitHub:
+
+{{< rawhtml >}}
+<iframe src="https://github.com/sponsors/caarlos0/card" title="Sponsor caarlos0" height="225" width="600" style="border: 0;"></iframe>
+{{< /rawhtml >}}

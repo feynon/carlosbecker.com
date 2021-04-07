@@ -189,8 +189,7 @@ jobs:
       -
         name: Clear
         if: always()
-        run: |
-          rm -f ${HOME}/.docker/config.json
+        run: rm -f ${HOME}/.docker/config.json
 ```
 
 ### Important things to notice
