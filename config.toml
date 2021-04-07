@@ -43,6 +43,8 @@ disableAliases = true
 	avatar = "avatar.jpg"
 	twitter = "https://twitter.com/caarlos0"
 	github = "https://github.com/caarlos0"
+	sponsors = "https://github.com/sponsors/caarlos0"
+	telegram = "https://t.me/caarlos0"
 	email = "mailto:carlos@carlosbecker.dev?subject=Hi!"
 	linkedin = "https://www.linkedin.com/in/caarlos0/"
 
