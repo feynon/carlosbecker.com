@@ -49,9 +49,7 @@ $.Site.Title | safeHTML }}
   {{ block "links" . }} {{ end }}
   {{ partial "seo-schema.html" .}}
 
-  {{- if not .Site.IsServer -}}
-  {{ template "_internal/google_analytics_async.html" . }}
-  {{- end -}}
+  <script async defer data-domain="carlosbecker.com" src="https://plausible.io/js/plausible.js"></script>
 </head>
 
 <body>
