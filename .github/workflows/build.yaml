@@ -18,7 +18,6 @@ jobs:
           go-version: 1.15
       - uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.74.3'
           extended: true
       - run: make setup ci
         env:
