@@ -345,7 +345,7 @@ func toLang(s string) string {
 	).Replace(strings.ToLower(s))
 }
 
-var postURLRegex = regexp.MustCompile(`\(https://carlosbecker.com/posts/(.+)/\)`)
+var postURLRegex = regexp.MustCompile(`\(https://carlosbecker.com/posts/(.+?)/\)`)
 
 func buildMarkdown(header string, content []byte) []byte {
 	var ss = strings.NewReplacer(
