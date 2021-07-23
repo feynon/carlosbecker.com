@@ -13,7 +13,9 @@ Some talks I gave over the years, just in case you want to see the slides.
 
 A hands on talk on how to create and setup a project with [GoReleaser](https://goreleaser.com).
 
-[See slides](https://speakerdeck.com/caarlos0/intro-to-goreleaser).
+{{< rawhtml >}}
+<script async class="speakerdeck-embed" data-id="da51dc4dcc6045dda1d9ea52b1f92cb4" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+{{< /rawhtml >}}
 
 ### GoTime #173 - Releasing with (and without) GoReleaser
 
@@ -34,7 +36,9 @@ I was live with Mat, Natalie & Johnny and we talked a bit about releases, with a
 Shared some tips about managing medium-sized OpenSource projects. The slides
 are in portuguese.
 
-[See slides](https://speakerdeck.com/caarlos0/gerenciando-projetos-opensource).
+{{< rawhtml >}}
+<script async class="speakerdeck-embed" data-id="a088943ef7e64eb28325c1efb84d55b5" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+{{< /rawhtml >}}
 
 ## 2018
 
@@ -44,7 +48,9 @@ are in portuguese.
 
 I shared again my experiences coding GoReleaser, this time, more about community and less about Go itself. Slides are more or less the same, but here they are anyway:
 
-[See slides](https://speakerdeck.com/caarlos0/goreleaser-lessons-learned-hacktoberfest).
+{{< rawhtml >}}
+<script async class="speakerdeck-embed" data-id="faab113c39754ad093be902e21f799bd" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+{{< /rawhtml >}}
 
 ### GopherCon Brazil
 
@@ -52,7 +58,9 @@ I shared again my experiences coding GoReleaser, this time, more about community
 
 My first ever talk at a GopherCon. I shared my experiences coding GoReleaser, more or less related to [this post]({{< ref "goreleaser-lessons-learned.md" >}}).
 
-[See slides](https://speakerdeck.com/caarlos0/goreleaser-lessons-learned).
+{{< rawhtml >}}
+<script async class="speakerdeck-embed" data-id="962142857c0c46c9bd8fa516611cd90e" data-ratio="1.33333333333333" src="//speakerdeck.com/assets/embed.js"></script>
+{{< /rawhtml >}}
 
 ### 2º Joinville Go Meetup
 
@@ -60,7 +68,9 @@ My first ever talk at a GopherCon. I shared my experiences coding GoReleaser, mo
 
 It was the Go 1.10 Release party - my talk was about what changed in Go 1.10.
 
-[See slides](https://speakerdeck.com/caarlos0/go-1-dot-10-release-party-at-joinville-go-meetup).
+{{< rawhtml >}}
+<script async class="speakerdeck-embed" data-id="44038e2880354ede8e1148deb974f247" data-ratio="1.41436464088398" src="//speakerdeck.com/assets/embed.js"></script>
+{{< /rawhtml >}}
 
 ## 2017
 
@@ -70,7 +80,9 @@ It was the Go 1.10 Release party - my talk was about what changed in Go 1.10.
 
 I spoke about how we migrate our monitoring infrastructure to Prometheus & Friends, what we got out of it and how it is working for us right now.
 
-[See slides](https://speakerdeck.com/caarlos0/monitoring-at-contaazul).
+{{< rawhtml >}}
+<script async class="speakerdeck-embed" data-id="9446e109d6864391b5db444c70669da9" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+{{< /rawhtml >}}
 
 ### 1º Changelog Meetup
 
@@ -78,7 +90,9 @@ I spoke about how we migrate our monitoring infrastructure to Prometheus & Frien
 
 I showed how to build and release binaries in Go, including cross-compiling, Docker images, linux packages and homebrew, featuring GoReleaser on the end.
 
-[See slides](https://speakerdeck.com/caarlos0/building-and-releasing-golang-binaries).
+{{< rawhtml >}}
+<script async class="speakerdeck-embed" data-id="f90af713e7354f3faf357fa959e9c3ed" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+{{< /rawhtml >}}
 
 ## 2015
 
@@ -90,7 +104,7 @@ I gave a little intro on Docker and talked about when to use it or not.
 
 [See slides](https://slides.com/caarlos0/why-docker#/).
 
-## 2014
+## [https://slides.com/caarlos0/why-docker](https://slides.com/caarlos0/why-docker)2014
 
 ### 2º Joinville Software Meetup
 
@@ -98,4 +112,6 @@ I gave a little intro on Docker and talked about when to use it or not.
 
 I encouraged people to start using git, showing some of its features.
 
-[See slides](https://speakerdeck.com/caarlos0/comecando-com-git).
+{{< rawhtml >}}
+<script async class="speakerdeck-embed" data-id="872b9fe087d40131cd6b3688b74f7104" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+{{< /rawhtml >}}
