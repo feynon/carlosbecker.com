@@ -7,6 +7,14 @@ Some talks I gave over the years, just in case you want to see the slides.
 
 ## 2021
 
+### Sri Lanka Golang meetup
+
+> Jul 23, 2021
+
+A hands on talk on how to create and setup a project with [GoReleaser](https://goreleaser.com).
+
+[See slides](https://speakerdeck.com/caarlos0/intro-to-goreleaser).
+
 ### GoTime #173 - Releasing with (and without) GoReleaser
 
 > Apr 1, 2021
