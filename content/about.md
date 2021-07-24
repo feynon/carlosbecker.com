@@ -18,5 +18,7 @@ He lives with *Carine* (his wife), *Zakk* (a chinchilla) and *Bash* (a Golden Re
 ... or find it useful, consider sponsoring me on GitHub:
 
 {{< rawhtml >}}
-<iframe src="https://github.com/sponsors/caarlos0/card" title="Sponsor caarlos0" height="225" width="600" style="border: 0;"></iframe>
+<p>
+	<iframe src="https://github.com/sponsors/caarlos0/card" title="Sponsor caarlos0" height="225" width="600" style="border: 0;"></iframe>
+</p>
 {{< /rawhtml >}}
