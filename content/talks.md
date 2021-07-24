@@ -102,8 +102,6 @@ I showed how to build and release binaries in Go, including cross-compiling, Doc
 
 I gave a little intro on Docker and talked about when to use it or not.
 
-## [https://slides.com/caarlos0/why-docker](https://slides.com/caarlos0/why-docker)2014
-
 ### 2º Joinville Software Meetup
 
 > Mar 06, 2014
