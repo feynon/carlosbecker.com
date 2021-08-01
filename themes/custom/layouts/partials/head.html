@@ -1,4 +1,4 @@
-<head itemscope itemtype="{{ .Site.BaseURL }}">
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Title tags -->
@@ -12,7 +12,6 @@
   <meta name="application-name" content="{{ .Site.Title }}" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <!-- Link tags -->
-  <base href="{{ .Permalink }}">
   <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
   <meta name="url" content="{{ .Permalink }}" />
   <meta name="twitter:url" content="{{ .Permalink }}" />
@@ -92,7 +91,7 @@
   <link rel="stylesheet" href="{{ $style.RelPermalink }}">
   {{ else }}
   {{ $style := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
   {{ end }}
 
   {{ if .Site.Params.RelPermalink}}
