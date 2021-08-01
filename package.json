@@ -1,0 +1,27 @@
+{
+	"name": "carlosbecker.com",
+	"version": "0.0.1",
+	"description": "carlosbecker.com",
+	"repository": "https://carlosbecker.com",
+	"author": "Carlos A Becker",
+	"license": "MIT",
+	"scripts": {
+		"dev": "hugo server --disableFastRender",
+		"build": "NODE_ENV=production hugo --verbose --gc --minify"
+	},
+	"devDependencies": {
+		"@tailwindcss/typography": "^0.4.0",
+		"@tailwindcss/ui": "^0.7.2",
+		"autoprefixer": "^10.2.1",
+		"postcss": "^8.2.4",
+		"postcss-cli": "^8.3.1",
+		"postcss-import": "^14.0.0",
+		"tailwindcss": "^2.0.2"
+	},
+	"browserslist": [
+		"last 1 version",
+		"> 1%",
+		"maintained node versions",
+		"not dead"
+	]
+}

@@ -1,18 +1,18 @@
 baseurl = "https://carlosbecker.com/"
 languageCode = "en-us"
 title = "Carlos Alexandro Becker"
-theme = "codex"
+theme = "custom"
 copyright = "Carlos Alexandro Becker - 2012 - {year}"
 
 disableAliases = true
 
 [markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    style = "dracula"
-    noClasses = true
-    tabWidth = 2
+	[markup.highlight]
+	codeFences = true
+	guessSyntax = true
+	style = "github"
+	noClasses = true
+	tabWidth = 2
 
 [related]
 	threshold = 80
@@ -23,14 +23,14 @@ disableAliases = true
 		name = "keywords"
 		weight = 10
 
+[taxonomies]
+category = "categories"
+tag = "tags"
+
 [permalinks]
 	post = "/posts/:slug"
 
 [privacy]
-	[privacy.googleAnalytics]
-		anonymizeIP = true
-		respectDoNotTrack = true
-		useSessionStorage = true
 	[privacy.twitter]
 		enableDNT = true
 	[privacy.youtube]
@@ -38,15 +38,23 @@ disableAliases = true
 
 [params]
 	author = "Carlos Alexandro Becker"
+	authorBio = "Carlos is a Site Reliability Engineer who enjoys working on OpenSource."
+	headline = "This is a headline"
 	description = "Thoughts, rants and discoveries on software development and related stuff."
-	keywords = "software development, software, golang, devops, go, sre, site reliability engineering"
+	keywords = "software development, software, golang, devops, go, sre, site reliability engineering, software engineering"
 	avatar = "avatar.jpg"
-	twitter = "https://twitter.com/caarlos0"
-	github = "https://github.com/caarlos0"
-	sponsors = "https://github.com/sponsors/caarlos0"
-	telegram = "https://t.me/caarlos0"
+	twitter = "caarlos0"
+	github = "caarlos0"
+	sponsors = "caarlos0"
+	telegram = "caarlos0"
 	email = "mailto:carlos@carlosbecker.dev?subject=Hi!"
 	linkedin = "https://www.linkedin.com/in/caarlos0/"
+	cover = "/cascavel.png"
+	ogImage = "/og-image.png"
+	hideComments = true
+
+[params.plausible]
+	domain = "carlosbecker.com"
 
 [menu]
 	[[menu.main]]
@@ -55,9 +63,8 @@ disableAliases = true
 		url = "/"
 		weight = 10
 	[[menu.main]]
-		identifier = "posts"
-		name = "Posts"
-		url = "/posts/"
+		name = "Archives"
+		url = "/archives"
 		weight = 20
 	[[menu.main]]
 		identifier = "talks"
