@@ -37,11 +37,11 @@ variables:
   description: Task Timer (tt) is a dead simple TUI task timer
 includes:
   - from_url:
-      url: https://raw.githubusercontent.com/caarlos0/goreleaserfiles/main/build.yml
+      url: caarlos0/goreleaserfiles/main/build.yml
   - from_url:
-      url: https://raw.githubusercontent.com/caarlos0/goreleaserfiles/main/package_with_completions.yml
+      url: caarlos0/goreleaserfiles/main/package_with_completions.yml
   - from_url:
-      url: https://raw.githubusercontent.com/caarlos0/goreleaserfiles/main/release.yml
+      url: caarlos0/goreleaserfiles/main/release.yml
 ```
 
 Here we:

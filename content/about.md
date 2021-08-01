@@ -19,10 +19,4 @@ He lives with *Carine* (his wife), *Zakk* (a chinchilla) and *Bash* (a Golden Re
 
 ## If you like my work...
 
-or find it useful, consider sponsoring me on GitHub. Any value helps!
-
-{{< rawhtml >}}
-<p>
-	<iframe src="https://github.com/sponsors/caarlos0/button" title="Sponsor caarlos0" height="35" width="116" style="border: 0;"></iframe>
-</p>
-{{< /rawhtml >}}
+or find it useful, consider [sponsoring me on GitHub](https://github.com/sponsors/caarlos0). Any value helps keep everything running!
