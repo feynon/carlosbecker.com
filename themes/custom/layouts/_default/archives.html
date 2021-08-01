@@ -13,6 +13,16 @@
           </a>
         </h1>
 
+        <p class="intro">
+          {{range $name, $taxonomy := .Site.Taxonomies.tags}} {{ $cnt := .Count }}
+          {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+          <a href="{{ .RelPermalink }}" title="All post with tag {{$name}} ({{$cnt}} posts)" class=" inline-flex items-center px-4 py-1 rounded-full no-underline bg-orange-100 text-orange-800
+            hover:bg-orange-300 ml-4 mt-1">{{$name}}</a>
+          </a>
+          {{end}}
+          {{end}}
+        </p>
+
         {{ range site.RegularPages.GroupByDate "2006" -}}
         {{ partial "post-summary.html" . }}
         {{ end }}

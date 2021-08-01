@@ -2,7 +2,7 @@ baseurl = "https://carlosbecker.com/"
 languageCode = "en-us"
 title = "Carlos Becker"
 theme = "custom"
-copyright = "Carlos Alexandro Becker - 2012 - {year}"
+copyright = "© Carlos Alexandro Becker - 2012 - {year}"
 
 disableAliases = true
 
@@ -39,7 +39,6 @@ tag = "tags"
 [params]
 	author = "Carlos Alexandro Becker"
 	authorBio = "Carlos is a Site Reliability Engineer who enjoys working on OpenSource."
-	headline = "This is a headline"
 	description = "Thoughts, rants and discoveries on software development and related stuff."
 	keywords = "software development, software, golang, devops, go, sre, site reliability engineering, software engineering"
 	avatar = "avatar.jpg"

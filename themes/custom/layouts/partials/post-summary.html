@@ -1,3 +1,4 @@
+{{ if gt .Key 2000 }}
 <div class="flex flex-col md:flex-row border-b border-gray-400">
   <h2 class="text-3xl font-bold mb-2 md:w-32 flex-shrink-0 flex-grow-0">{{ .Key }}</h2>
 
@@ -16,7 +17,7 @@
 
         {{ range (.GetTerms "tags") }}
         <a href="{{ .Permalink }}"
-          class="inline-flex items-center px-4 py-1 rounded-full no-underline bg-orange-100 text-orange-800 hover:bg-orange-300 ml-4">
+          class="inline-flex items-center px-4 py-1 rounded-full no-underline bg-orange-100 text-orange-800 hover:bg-orange-300 ml-4 mt-1">
           {{ .LinkTitle }}
         </a>
         {{ end }}
@@ -25,3 +26,4 @@
     {{- end }}
   </ol>
 </div>
+{{ end }}

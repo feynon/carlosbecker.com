@@ -9,9 +9,7 @@
         {{ partial "intro.html" . }}
 
         {{ range site.RegularPages.GroupByDate "2006" -}}
-        {{ if gt .Key 2000 }}
         {{ partial "post-summary.html" . }}
-        {{ end }}
         {{ end }}
       </article>
     </main>
