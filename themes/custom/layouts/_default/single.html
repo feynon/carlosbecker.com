@@ -22,6 +22,7 @@
     {{ .Content }}
   </div>
 
+  {{if not .Params.hideMetadata }}
   <small class="text-center text-sm">
     {{ range (.GetTerms "tags") }}
     <a href="{{ .Permalink }}"
@@ -30,6 +31,7 @@
     </a>
     {{ end }}
   </small>
+  {{ end }}
 
   {{if not .Params.hideAuthorBio }}
   <section class="my-5 pt-10 pb-5 border-t border-gray-400 flex items-center">
