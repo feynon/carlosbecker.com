@@ -1,7 +1,9 @@
 ---
-date: 2019-05-28
-type: section
-layout: "archives"
+layout: archives
 title: Archives
-type: "page"
+type: page
+hideMetadata: true
+hideAuthorBio: true
+hideComments: true
+hideSuggestions: true
 ---
