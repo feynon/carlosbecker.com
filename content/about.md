@@ -1,11 +1,6 @@
 ---
 title: "About"
 type: page
-date: "2012-01-01"
-hideMetadata: true
-hideAuthorBio: true
-hideComments: true
-hideSuggestions: true
 ---
 
 Carlos is a software developer based in Cascavel, Brazil, currently working remotely as a Principal Site Reliability Engineer at [TOTVS Labs](https://totvslabs.com/).

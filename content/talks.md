@@ -1,11 +1,6 @@
 ---
 title: "Talks"
 type: page
-date: "2012-01-01"
-hideMetadata: true
-hideAuthorBio: true
-hideComments: true
-hideSuggestions: true
 ---
 
 Some talks I gave over the years, just in case you want to see the slides.
