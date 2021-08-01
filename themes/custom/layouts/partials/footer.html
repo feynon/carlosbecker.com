@@ -32,49 +32,8 @@
   initMenu();
 </script>
 
-{{if and (.Site.Params.cover) (.IsHome)}}
-<script>
-  window.onscroll = function () {
-    var speed = -3;
-    var header = document.querySelector('#header');
-    header.style.backgroundPosition = (-window.pageXOffset / speed) + "px " + (-window.pageYOffset / speed) + "px";
-  }
-</script>
-{{else}}
-  <script>
-    var initHeader = () => {
-      let scrollPos = window.scrollY;
-      var header = document.querySelector('#header');
-      var headerContainer = document.querySelector("#header-container");
-      var readingProgressBar = document.querySelector("#reading-progress-bar");
-      let scrollTop = 0;
-      let scrollBottom = 0;
-      let scrollPercent = 0;
-
-      var addClassOnScroll = () => {
-        header.classList.add("shadow");
-        header.classList.add("bg-white-90");
-      }
-      var removeClassOnScroll = () => {
-        header.classList.remove("shadow");
-        header.classList.remove("bg-white-90");
-      }
-
-      window.onscroll = function () {
-        scrollPos = window.scrollY;
-        scrollTop = document.documentElement["scrollTop"] || document.body["scrollTop"];
-        scrollBottom = (document.documentElement["scrollHeight"] || document.body["scrollHeight"]) - document.documentElement.clientHeight;
-        scrollPercent = scrollTop / scrollBottom * 100;
-        readingProgressBar.style.width = (scrollTop / scrollBottom * 100) + '%';
-
-        if (scrollPos > 0) { addClassOnScroll() }
-        else { removeClassOnScroll() }
-      }
-    }
-  </script>
-  {{end}}
-  {{ if not .Site.IsServer }}
-  {{ if and .Site.Params.plausible .Site.Params.plausible.domain }}
-  {{- partial "plausible" . -}}
-  {{ end }}
-  {{ end }}
+{{ if not .Site.IsServer }}
+{{ if and .Site.Params.plausible .Site.Params.plausible.domain }}
+{{- partial "plausible" . -}}
+{{ end }}
+{{ end }}
