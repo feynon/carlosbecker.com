@@ -10,7 +10,7 @@ disableAliases = true
 	[markup.highlight]
 	codeFences = true
 	guessSyntax = true
-	style = "github"
+	style = "dracula"
 	noClasses = true
 	tabWidth = 2
 
