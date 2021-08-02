@@ -49,7 +49,6 @@ spec:
       labels:
         app: speedtest-exporter
     spec:
-      automountServiceAccountToken: true
       containers:
       - name: exporter
         image: ghcr.io/caarlos0/speedtest-exporter:v1.0.0
@@ -64,9 +63,11 @@ spec:
           httpGet:
             path: /
             port: 9876
+```
 
----
+And
 
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
