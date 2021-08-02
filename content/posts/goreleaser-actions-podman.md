@@ -1,5 +1,5 @@
 ---
-title: "Using Podman on GitHub Action with GoReleaser"
+title: "Multi-platform Docker images with GoReleaser, Podman and GitHub Actions"
 date: 2021-08-01
 draft: false
 slug: goreleaser-actions-podman
