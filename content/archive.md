@@ -1,6 +1,6 @@
 ---
 layout: archives
-title: Archives
+title: Archive
 type: page
 hideMetadata: true
 hideAuthorBio: true
