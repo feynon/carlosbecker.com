@@ -5,7 +5,7 @@ draft: false
 slug: multi-platform-docker-images-goreleaser-gh-actions
 city: Cascavel
 toc: true
-tags: [docker, golang, goreleaser, ci-cd]
+tags: [docker, golang, goreleaser, ci-cd, github]
 ---
 
 [GoReleaser v0.148.0 is out](https://github.com/goreleaser/goreleaser/releases/tag/v0.148.0), and with it, the ability to release multi-platform Docker images, a.k.a. *[Docker Manifests](https://docs.docker.com/engine/reference/commandline/manifest/)*.
@@ -47,8 +47,9 @@ Our very basic `Dockerfile` looks like this:
 ```dockerfile
 # Dockerfile
 FROM alpine
-COPY example /usr/bin/example
-ENTRYPOINT ["/usr/bin/example"]
+COPY goreleaser-docker-manifest-actions-example \
+	/usr/bin/goreleaser-docker-manifest-actions-example
+ENTRYPOINT ["/usr/bin/goreleaser-docker-manifest-actions-example"]
 ```
 
 To account for multiple platforms, we either create several `dockerfiles`, or use the `--platform` build flag. We'll use the second approach in our example.
@@ -77,55 +78,56 @@ It looks like this:
 
 ```yaml
 # .goreleaser.yml
-project_name: example
 builds:
-  - env: [CGO_ENABLED=0]
-    goos:
-      - linux
-      - windows
-      - darwin
-    goarch:
-      - amd64
-      - arm64
+- env: [CGO_ENABLED=0]
+  goos:
+  - linux
+  - windows
+  - darwin
+  goarch:
+  - amd64
+  - arm64
 dockers:
-- image_templates: ["ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-amd64"]
-  binaries: [example]
+- image_templates: ["ghcr.io/caarlos0/{{ .ProjectName }}:{{ .Version }}-amd64"]
   dockerfile: Dockerfile
-  use_buildx: true
+  use: buildx
   build_flag_templates:
   - --platform=linux/amd64
   - --label=org.opencontainers.image.title={{ .ProjectName }}
   - --label=org.opencontainers.image.description={{ .ProjectName }}
-  - --label=org.opencontainers.image.url=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
-  - --label=org.opencontainers.image.source=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
+  - --label=org.opencontainers.image.url=https://github.com/caarlos0/{{ .ProjectName }}
+  - --label=org.opencontainers.image.source=https://github.com/caarlos0/{{ .ProjectName }}
   - --label=org.opencontainers.image.version={{ .Version }}
   - --label=org.opencontainers.image.created={{ time "2006-01-02T15:04:05Z07:00" }}
   - --label=org.opencontainers.image.revision={{ .FullCommit }}
   - --label=org.opencontainers.image.licenses=MIT
-- image_templates: ["ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-arm64v8"]
-  binaries: [example]
+- image_templates: ["ghcr.io/caarlos0/{{ .ProjectName }}:{{ .Version }}-arm64v8"]
   goarch: arm64
   dockerfile: Dockerfile
-  use_buildx: true
+  use: buildx
   build_flag_templates:
   - --platform=linux/arm64/v8
   - --label=org.opencontainers.image.title={{ .ProjectName }}
   - --label=org.opencontainers.image.description={{ .ProjectName }}
-  - --label=org.opencontainers.image.url=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
-  - --label=org.opencontainers.image.source=https://github.com/caarlos0/goreleaser-docker-manifest-actions-example
+  - --label=org.opencontainers.image.url=https://github.com/caarlos0/{{ .ProjectName }}
+  - --label=org.opencontainers.image.source=https://github.com/caarlos0/{{ .ProjectName }}
   - --label=org.opencontainers.image.version={{ .Version }}
   - --label=org.opencontainers.image.created={{ time "2006-01-02T15:04:05Z07:00" }}
   - --label=org.opencontainers.image.revision={{ .FullCommit }}
   - --label=org.opencontainers.image.licenses=MIT
 docker_manifests:
-- name_template: ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}
+- name_template: ghcr.io/caarlos0/{{ .ProjectName }}:{{ .Version }}
   image_templates:
-  - ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-amd64
-  - ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:{{ .Version }}-arm64v8
+  - ghcr.io/caarlos0/{{ .ProjectName }}:{{ .Version }}-amd64
+  - ghcr.io/caarlos0/{{ .ProjectName }}:{{ .Version }}-arm64v8
+- name_template: ghcr.io/caarlos0/{{ .ProjectName }}:latest
+  image_templates:
+  - ghcr.io/caarlos0/{{ .ProjectName }}:{{ .Version }}-amd64
+  - ghcr.io/caarlos0/{{ .ProjectName }}:{{ .Version }}-arm64v8
 ```
 
-> You can check more options for [builds](https://goreleaser.com/customization/build), [docker](https://goreleaser.com/customization/docker) and [docker manifests](https://goreleaser.com/customization/docker_manifest) on [GoReleaser's website](https://goreleaser.com).
-> 
+You can check more options for [builds](https://goreleaser.com/customization/build), [docker](https://goreleaser.com/customization/docker) and [docker manifests](https://goreleaser.com/customization/docker_manifest) on [GoReleaser's website](https://goreleaser.com).
+
 > The labels added to the images are optional, but in the specific case of `ghcr.io`, they allows GitHub to know which image is built from which repository and other metadata.
 
 We can now verify this locally with:
@@ -145,8 +147,12 @@ Here we pretty much copy what's already in [GitHub Actions](https://goreleaser.c
 name: goreleaser
 
 on:
-  pull_request:
   push:
+    tags:
+      - '*'
+
+permissions:
+  contents: write
 
 jobs:
   goreleaser:
@@ -154,42 +160,29 @@ jobs:
     env:
       DOCKER_CLI_EXPERIMENTAL: "enabled"
     steps:
-      -
-        name: Checkout
+      - name: Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      -
-        name: Set up QEMU
+      - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
-      -
-        name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-      -
-        name: Docker Login
+      - name: Docker Login
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GH_PAT }}
-      -
-        name: Set up Go
+      - name: Set up Go
         uses: actions/setup-go@v2
         with:
-          go-version: 1.15
-      -
-        name: Run GoReleaser
+          go-version: 1.16
+      - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
-        if: startsWith(github.ref, 'refs/tags/')
         with:
           version: latest
           args: release --rm-dist
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
-      -
-        name: Clear
-        if: always()
-        run: rm -f ${HOME}/.docker/config.json
 ```
 
 ### Important things to notice
@@ -216,7 +209,7 @@ We can now run our image:
 
 ```bash
 $ docker run --rm --platform linux/amd64 \
-	ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:1.0.2
+	ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example
 example 1.0.2 linux amd64
 ```
 
@@ -224,7 +217,7 @@ We can also test the arm64 image:
 
 ```bash
 $ docker run --rm --platform linux/arm64/v8 \
-	ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example:1.0.2
+	ghcr.io/caarlos0/goreleaser-docker-manifest-actions-example
 example 1.0.2 linux arm64
 ```
 
@@ -242,5 +235,6 @@ Don't forget to check out [GoReleaser's documentation](https://goreleaser.com) f
 
 ## Updates
 
+- Aug 1, 2021: overall update on code to use newer syntax/techniques;
 - Jan 04, 2021: using `buildx` and setting `use_buildx` on the Docker config and using `docker/setup-qemu-action`;
 - Dec 29, 2020: using `--platform` instead of `ARCH` build arg, added more `docker run` examples;
