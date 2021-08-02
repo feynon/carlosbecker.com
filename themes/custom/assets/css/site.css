@@ -172,7 +172,7 @@ html {
 .article ol:not(.list-none),
 .article ul:not(.list-none) {
   @apply ml-1;
-  @apply list-inside;
+  @apply list-outside;
 }
 
 .article ul:not(.list-none) {
@@ -188,6 +188,7 @@ html {
   @apply border-l-4;
   @apply border-gray-600;
 }
+
 
 /* TODO: port to Tailwind CSS */
 
