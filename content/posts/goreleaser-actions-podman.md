@@ -192,7 +192,7 @@ jobs:
 
 And that's pretty much it!
 
-### **Releasing**
+## **Releasing**
 
 Now, we just need to push a tag, sit back, relax and watch the [GoReleaser Action](https://github.com/marketplace/actions/goreleaser-action) do everything.
 
@@ -230,7 +230,7 @@ example 0.0.1 linux arm64
 
 It works! 🎉
 
-### **That's it!**
+## **That's it!**
 
 That's it! I hope this is useful somehow.
 
