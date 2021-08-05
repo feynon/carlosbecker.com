@@ -3,7 +3,6 @@ title: "Talks"
 type: page
 hideMetadata: true
 hideAuthorBio: true
-hideComments: true
 hideSuggestions: true
 ---
 

@@ -48,9 +48,7 @@ tag = "tags"
 	telegram = "caarlos0"
 	email = "carlos@carlosbecker.dev"
 	linkedin = "https://www.linkedin.com/in/caarlos0/"
-	cover = "/cascavel.png"
 	ogImage = "/og-image.png"
-	hideComments = true
 
 [params.plausible]
 	domain = "carlosbecker.com"
