@@ -5,10 +5,10 @@
   <meta property="og:locale" content="{{ .Language.Lang }}">
   <meta name="language" content="{{ .Language.Lang }}">
   <!-- Title tags -->
-  <title itemprop="name">{{ if ne .Permalink "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}</title>
-  <meta property="og:title" content="{{ if ne .Permalink "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}" />
-  <meta name="twitter:title" content="{{ if ne .Permalink "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}" />
-  <meta itemprop="name" content="{{ if ne .Permalink "/" }}{{ .Title }} &middot; {{ end }}{{ .Site.Title }}" />
+  <title itemprop="name">{{ with .Title}}{{ . }} &middot; {{ end }}{{ .Site.Title }}</title>
+  <meta property="og:title" content="{{ with .Title}}{{ . }} &middot; {{ end }}{{ .Site.Title }}" />
+  <meta name="twitter:title" content="{{ with .Title}}{{ . }} &middot; {{ end }}{{ .Site.Title }}" />
+  <meta itemprop="name" content="{{ with .Title}}{{ . }} &middot; {{ end }}{{ .Site.Title }}" />
   <meta name="application-name" content="{{ .Site.Title }}" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <!-- Link tags -->
