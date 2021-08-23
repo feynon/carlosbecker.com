@@ -13,9 +13,11 @@
     </h1>
   </header>
 
-  {{ range (.Paginate (.Data.Pages.GroupByDate "2006")).PageGroups -}}
-  {{ partial "post-summary.html" . }}
-  {{ end }}
+  <div class="divide-y divide-gray-200">
+    {{ range (.Paginate (.Data.Pages.GroupByDate "2006")).PageGroups -}}
+    {{ partial "post-summary.html" . }}
+    {{ end }}
+  </div>
 </article>
 
 {{ if gt .Paginator.TotalPages 1 }}

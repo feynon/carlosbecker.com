@@ -16,7 +16,7 @@
       </header>
 
       <div class="article__content">
-        <div class="flex flex-col md:flex-row border-b border-gray-400">
+        <div class="flex flex-col md:flex-row border-b border-gray-200">
           <h2 class="text-3xl font-bold mb-2 md:w-32 flex-shrink-0 flex-grow-0">Tags</h2>
 
           <div class="mb-4 w-full">
@@ -33,9 +33,11 @@
         </div>
       </div>
 
-      {{ range site.RegularPages.GroupByDate "2006" -}}
-      {{ partial "post-summary.html" . }}
-      {{ end }}
+      <div class="divide-y divide-gray-200">
+        {{ range site.RegularPages.GroupByDate "2006" -}}
+        {{ partial "post-summary.html" . }}
+        {{ end }}
+      </div>
     </article>
   </main>
   {{- partial "footer.html" . -}}
