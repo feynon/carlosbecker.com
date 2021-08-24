@@ -132,3 +132,5 @@ $ go version -m svu
 ```
 
 So, while it prevents the attacker from changing the target code, they could still change de dependencies, which **renders the idea of this post pretty much useless**.
+
+I also opened an [issue](https://github.com/golang/go/issues/47935) to the Go team, as I'm not really sure wether this is expected behavior or not.
