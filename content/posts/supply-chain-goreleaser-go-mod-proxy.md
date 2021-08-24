@@ -118,3 +118,17 @@ Another side effect of using the `gomod.proxy` feature: your module gets hashed 
 Hope this is somewhat helpful/informative to you. 
 
 I'll see you in the next one!
+
+## Edit
+
+After some more discussion in [this issue](https://github.com/goreleaser/goreleaser/issues/2391), Marcos Nils pointed out a way to hack this using `go mod vendor`:
+
+```sh
+$ go mod vendor
+# change some dependency code
+$ go build -mod vendor github.com/caarlos0/svu
+$ go version -m svu
+# same output as before
+```
+
+So, while it prevents the attacker from changing the target binary itself, they could still change de dependencies, rendering the idea of this post pretty much useless.
