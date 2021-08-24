@@ -8,7 +8,7 @@ toc: true
 tags: [goreleaser, goreleaser-pro, golang, security]
 ---
 
-Since the infamous [SolarWinds attack](https://www.csoonline.com/article/3191947/supply-chain-attacks-show-why-you-should-be-wary-of-third-party-providers.html), supply chain integrity is something a lot of people are discussing and working on. 
+Since the infamous [SolarWinds attack](https://www.csoonline.com/article/3191947/supply-chain-attacks-show-why-you-should-be-wary-of-third-party-providers.html), supply chain integrity is something a lot of people are discussing and working on.
 
 In this post we'll see how we can verify a binary built with Go is indeed what it says it is.
 
@@ -103,19 +103,19 @@ Assuming your tool is OpenSource, it doesn't matter where it is built, as long a
 
 You can take this further by signing the binaries and making the result binary more reproducible by trimming the path and using a fixed timestamp (see an [example](https://github.com/caarlos0/goreleaserfiles/blob/main/build.yml)).
 
-GoReleaser OSS itself is verifiable this way, you can try it with: 
+GoReleaser OSS itself is verifiable this way, you can try it with:
 
 ```sh
 go version -m $(which goreleaser)
 ```
 
-GoReleaser Pro in the other hand is not, as it is not OpenSource. 
+GoReleaser Pro in the other hand is not, as it is not OpenSource.
 
 Still, since GoReleaser uses `go build` underneath, as long as you have `gomod.proxy` set to true, it shouldn't matter much - your builds are still verifiable. If GoReleaser Pro gets somehow corrupted and starts doing *"something funny"* with your builds, you can easily verify them using this technique.
 
 Another side effect of using the `gomod.proxy` feature: your module gets hashed right away, so if someone deletes the tag and recreates it, the previous tag would still be used to compile.
 
-Hope this is somewhat helpful/informative to you. 
+Hope this is somewhat helpful/informative to you.
 
 I'll see you in the next one!
 
@@ -131,4 +131,4 @@ $ go version -m svu
 # same output as before
 ```
 
-So, while it prevents the attacker from changing the target binary itself, they could still change de dependencies, rendering the idea of this post pretty much useless.
+So, while it prevents the attacker from changing the target code, they could still change de dependencies, which **renders the idea of this post pretty much useless**.
