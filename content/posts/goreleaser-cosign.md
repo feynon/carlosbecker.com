@@ -1,11 +1,11 @@
 ---
-title: "Signing artifacts with cosign and GoReleaser"
+title: "Signing releases with cosign and GoReleaser"
 date: 2021-08-24
 draft: false
 slug: goreleaser-cosign
 city: Cascavel
 toc: true
-tags: [goreleaser, goreleaser-pro, security, golang]
+tags: [goreleaser, goreleaser-pro, golang, security]
 ---
 
 In GoReleaser v0.176.0 (both OSS and Pro), we released the ability to sign Docker images - with [cosign](https://github.com/sigstore/cosign) in mind, and also did small quality-of-life improvements in the artifact signing feature.

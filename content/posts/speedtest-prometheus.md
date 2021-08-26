@@ -16,7 +16,7 @@ But, I'm not used to trust telecom companies, so I measure my internet speed eve
 
 ## Tales of an overengineered home
 
-Because *reasons*, I have a [k3s](https://k3s.io) clusters running with 2 [Raspberry Pies (or Pis? I don't know)](https://www.raspberrypi.org) at home, both connected with cables instead of wifi:
+Because *reasons*, I have a [k3s](https://k3s.io) clusters running with 2 [Raspberry Pis](https://www.raspberrypi.org) at home, both connected with cables instead of wifi:
 
 {{< figure caption="Relevant part of the network." src="/public/images/speedtest-prometheus/4e45965d-e99b-4ffb-a4be-f1fc7519ebcd.png" >}}
 
