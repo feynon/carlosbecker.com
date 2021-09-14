@@ -50,6 +50,8 @@ This will make GoReleaser try to import into its release cycle the following bin
 
 The only check GoReleaser will do is if these files are readable. If so, it will proceed as if they were built by GoReleaser itself.
 
+PS: it is important that the folder in which your pre-built binaries are is either outside the repository or in your `.gitignore`.
+
 ## 2. Split builds in several machines
 
 You might want to this to speed up/parallelize the build process, or maybe because of CGO.
@@ -93,6 +95,8 @@ builds:
 ```
 
 And GoReleaser will proceed as usual.
+
+PS: it is important that the folder in which your pre-built binaries are is either outside the repository or in your `.gitignore`.
 
 ## This is a new feature
 
