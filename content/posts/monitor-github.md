@@ -97,5 +97,3 @@ improving them during this weekend (because both had a very... let's say...
 primitive design).
 
 I hope at least some of these tools can be useful for you!
-
-Feel free to ping me on the comments bellow if you have any questions.

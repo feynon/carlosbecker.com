@@ -168,7 +168,7 @@ clone the repo build from source.
 ## That's all folks
 
 Hope you like it and find it useful somewhere. Feel free to give any feedback
-on the comments section bellow!
+on the comments section below!
 
 I would also like to thank the folks from the [Golang subreddit](https://www.reddit.com/r/golang) for their
 great feedback!

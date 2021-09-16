@@ -126,5 +126,3 @@ You can learn more about Dockerfile and the Docker CLI [here](https://docs.docke
 ### That's all folks!
 
 I think this enough information for now. You can basically Google and learn more about all those fancy names I cited as well those in the images if you feel like needing more info.
-
-Also, feel free to ask questions and/or share your thoughts in the comments box bellow. 🍻

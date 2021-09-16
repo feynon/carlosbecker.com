@@ -40,7 +40,7 @@ This will fix browsing, apt and most of the things (everything that reads `http_
 
 For email setup, you will probably need to call the network admin/support to ask the addresses and ports, then, setup it in Thunderbird (my preferred email client). After that, the setup will be easy.
 
-The only trick I could give you here is about new message composing: Outlook create replies putting the *new content* above the previous emails, while Thunderbird put it bellow.
+The only trick I could give you here is about new message composing: Outlook create replies putting the *new content* above the previous emails, while Thunderbird put it below.
 
 To change it, go to your account settings, and change the "Automatically quote the original message when replaying Then," to *"start my reply above the quote"* in the "Compositing & Addressing" tab:
 

@@ -8,7 +8,7 @@ toc: true
 tags: [goreleaser, golang, ci-cd]
 ---
 
-[GoReleaser](https://goreleaser.com/) was able to build [snap](https://snapcraft.io/goreleaser) packages for a long time, but it wasn't able to push them until today. Let's see how to wrap to your [TravisCI](https://travis-ci.org/goreleaser/goreleaser) build!
+[GoReleaser](https://goreleaser.com/) was able to build [Snapcraft](https://snapcraft.io/goreleaser) packages for a long time, but it wasn't able to push them until today. Let's see how to wrap to your [TravisCI](https://travis-ci.org/goreleaser/goreleaser) build!
 
 ---
 
@@ -20,8 +20,8 @@ On this post I'll show how to wrap that with you [TravisCI](https://travis-ci.or
 
 ## GoReleaser part
 
-Let's assume you have a snapcraft section more or less like the bellow
-on you `.goreleaser.yml` file::
+Let's assume you have a Snapcraft section more or less like the below
+on you `.goreleaser.yml` file:
 
 ```yaml
 # .goreleaser.yaml
@@ -88,7 +88,7 @@ deploy:
     tags: true
 ```
 
-Now, we need to do an export login on snapcraft:
+Now, we need to do an export login on Snapcraft:
 
 ```sh
 snapcraft export-login snap.login

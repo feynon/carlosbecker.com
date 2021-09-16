@@ -42,6 +42,4 @@ $ foreman start -f Procfile.dev
 
 To update your previous UP-baked blog, the easiest way is to backup your `_posts` folder and override everything else. If you don't want to do that, you will have to hack around the changes and do it by hand.
 
-If you have any issues or suggestions, ping me at the [up project](http://github.com/caarlos0/up) or at the comments box bellow.
-
 Have fun!

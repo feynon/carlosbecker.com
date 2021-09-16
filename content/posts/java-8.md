@@ -109,6 +109,4 @@ You can take a look at the source code [here](https://github.com/caarlos0/java-k
 
 I have also ran a small Ruby Sinatra service with the last version of jRuby under JDK8 and it worked gracefully. You can take a look at it [here](https://github.com/caarlos0/danfe-server).
 
-Well, this is all for now. Feel free to ask anything you want in the comments box bellow!
-
-Cheers!
+Well, this is all for now! Cheers!

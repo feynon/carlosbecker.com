@@ -16,7 +16,7 @@ Paraphrasing Uncle Bob:
 
 > "The first rule about tests is that they should be fast. The second rule about tests is that they should be faster than that."
 
-** Actually he said that about method sizing, but, I think this fits just fine.
+Actually he said that about method sizing, but, I think this fits just fine.
 
 To help with that, I created a [project](https://github.com/caarlos0/junit-slowest-tests) with scripts that can generate a list of the slowest JUnit tests in a project. It should give you some insight in where to attack.
 
@@ -24,7 +24,6 @@ The [project's README](https://github.com/caarlos0/junit-slowest-tests) is prett
 
 Besides that, you can use [maven-profiler](https://github.com/takari/maven-profiler) to find other slow parts of your build and fix them.
 
-One last tip: if you have problems with low test coverage in your project, try [coverage-maven-plugin]({{< ref "mvn-pr-coverage-blammer.md" >}}),
-a maven plugin that will blame pull request with coverage bellow a specified amount.
+One last tip: if you have problems with low test coverage in your project, try [coverage-maven-plugin]({{< ref "mvn-pr-coverage-blammer.md" >}}), a maven plugin that will blame pull request with coverage below a specified amount.
 
 That's it for today, happy hacking!

@@ -201,6 +201,4 @@ public class BlahServerTest {
 
 ## Going Further
 
-That's the basics that will save you tons of abstract classes and ugly code. I would also recommend you to take a good read at the [junit wiki](https://github.com/junit-team/junit/wiki/Rules). 
-
-If you have any question, don't exitate to comment bellow, I will surely try to answer them. 🍺
+That's the basics that will save you tons of abstract classes and ugly code. I would also recommend you to take a good read at the [junit wiki](https://github.com/junit-team/junit/wiki/Rules).

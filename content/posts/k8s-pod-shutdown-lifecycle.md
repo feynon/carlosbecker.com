@@ -28,7 +28,7 @@ During this entire process, `readiness` and `liveness` probes will still be prob
 
 Let's setup a playground so we can explore this.
 
-The sources I used are bellow:
+The sources I used are below:
 
 ```yaml
 # deploy.yaml
