@@ -1,7 +1,12 @@
 {
   "build": {
     "env": {
-      "HUGO_VERSION": "0.82.0"
+      "HUGO_VERSION": "0.88.1"
     }
-  }
+  },
+	"trailingSlash": true,
+	"github": {
+		"silent": true,
+		"autoJobCancelation": true
+	}
 }
