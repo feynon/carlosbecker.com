@@ -11,14 +11,14 @@ import (
 	"regexp"
 	"strings"
 	"sync/atomic"
+	"time"
 
 	"github.com/apex/log"
 	"github.com/apex/log/handlers/cli"
+	"github.com/caarlos0/env/v6"
 	"github.com/fatih/color"
 	_ "github.com/joho/godotenv/autoload" // load .env
-
-	"github.com/caarlos0/env/v6"
-	notion "github.com/kjk/notionapi"
+	"github.com/kjk/notionapi"
 	"github.com/kjk/notionapi/tomarkdown"
 	"golang.org/x/sync/errgroup"
 )
@@ -42,8 +42,9 @@ func main() {
 		log.WithError(err).Fatal("invalid config")
 	}
 
-	client := &notion.Client{}
+	client := &notionapi.Client{}
 	client.AuthToken = config.Token
+	// client.Logger = os.Stderr
 
 	index, err := queryCollection(client, config.BlogColID, config.BlogColViewID)
 	if err != nil {
@@ -65,14 +66,14 @@ func main() {
 				client,
 				k,
 				progressFn,
-				func(page *notion.Page) string {
+				func(page *notionapi.Page) string {
 					return toString(page.Root().Prop("properties.S6_\""))
 				},
-				func(page *notion.Page) string {
+				func(page *notionapi.Page) string {
 					slug := toString(page.Root().Prop("properties.S6_\""))
 					return fmt.Sprintf("content/posts/%s.md", strings.ReplaceAll(slug, "/", ""))
 				},
-				func(page *notion.Page) string {
+				func(page *notionapi.Page) string {
 					slug := toString(page.Root().Prop("properties.S6_\""))
 					date := toDateString(page.Root().Prop("properties.a`af"))
 					draft := !toBool(page.Root().Prop("properties.la`A"))
@@ -81,10 +82,10 @@ func main() {
 					title := page.Root().Title
 					return blogHeader(title, date, draft, slug, city, tags)
 				},
-				func(page *notion.Page) bool {
+				func(page *notionapi.Page) bool {
 					return !toBool(page.Root().Prop("properties.la`A"))
 				},
-				func(page *notion.Page) error {
+				func(page *notionapi.Page) error {
 					if toString(page.Root().Prop("properties.S6_\"")) == "" {
 						return errors.New("missing slug")
 					}
@@ -119,20 +120,20 @@ func main() {
 				client,
 				k,
 				progressFn,
-				func(page *notion.Page) string {
+				func(page *notionapi.Page) string {
 					return toString(page.Root().Prop("properties.7F2|"))
 				},
-				func(page *notion.Page) string {
+				func(page *notionapi.Page) string {
 					slug := toString(page.Root().Prop("properties.7F2|"))
 					return fmt.Sprintf("content/%s.md", strings.ReplaceAll(slug, "/", ""))
 				},
-				func(page *notion.Page) string {
+				func(page *notionapi.Page) string {
 					return pageHeader(page.Root().Title)
 				},
-				func(page *notion.Page) bool {
+				func(page *notionapi.Page) bool {
 					return false
 				},
-				func(page *notion.Page) error {
+				func(page *notionapi.Page) error {
 					if toString(page.Root().Prop("properties.7F2|")) == "" {
 						return errors.New("missing slug")
 					}
@@ -151,10 +152,13 @@ func main() {
 	}
 }
 
-func queryCollection(client *notion.Client, colID, colViewID string) ([]string, error) {
+func queryCollection(client *notionapi.Client, colID, colViewID string) ([]string, error) {
 	log.WithField("collection", colID).Info("querying")
-	resp, err := client.QueryCollection(colID, colViewID, &notion.Query{
-		Aggregate: []*notion.AggregateQuery{
+	req := notionapi.QueryCollectionRequest{}
+	req.Collection.ID = colID
+	req.CollectionView.ID = colViewID
+	query := &notionapi.Query{
+		Aggregate: []notionapi.QueryAggregate{
 			{
 				AggregationType: "count",
 				ID:              "count",
@@ -163,21 +167,29 @@ func queryCollection(client *notion.Client, colID, colViewID string) ([]string, 
 				ViewType:        "table",
 			},
 		},
-		FilterOperator: "and",
-		Sort: []*notion.QuerySort{
+		Filter: map[string]interface{}{
+			"operator": "and",
+		},
+		Sort: []notionapi.QuerySort{
 			{
 				Direction: "descending",
 				Property:  "a`af",
 			},
 		},
-	}, &notion.User{
-		Locale:   "en-US",
-		TimeZone: "America/Sao_Paulo",
-	})
+	}
+	loader := notionapi.MakeLoaderReducer(query)
+	loader.Reducers[notionapi.ReducerCollectionGroupResultsName].(*notionapi.ReducerCollectionGroupResults).Limit = 5000
+	req.Loader = loader
+	resp, err := client.QueryCollection(req, query)
 	if err != nil {
+		if strings.Contains(err.Error(), "429") {
+			log.Info("got a 429, sleeping 1m")
+			time.Sleep(time.Minute)
+			return queryCollection(client, colID, colViewID)
+		}
 		return []string{}, err
 	}
-	if resp.Result.Total == 0 {
+	if len(resp.RecordMap.Blocks) == 0 {
 		return []string{}, fmt.Errorf("no results querying collection")
 	}
 
@@ -207,19 +219,24 @@ var youtubeExp = regexp.MustCompile(`https://www.youtube.com/watch?v=(.+)&.*`)
 var youtubeShortExp = regexp.MustCompile(`https://youtu.be/(.+)`)
 
 func renderPage(
-	client *notion.Client,
+	client *notionapi.Client,
 	k string,
 	progressProvider func() string,
-	slugProvider func(p *notion.Page) string,
-	filenameProvider func(p *notion.Page) string,
-	headerProvider func(p *notion.Page) string,
-	pageSkipper func(p *notion.Page) bool,
-	pageValidator func(p *notion.Page) error,
+	slugProvider func(p *notionapi.Page) string,
+	filenameProvider func(p *notionapi.Page) string,
+	headerProvider func(p *notionapi.Page) string,
+	pageSkipper func(p *notionapi.Page) bool,
+	pageValidator func(p *notionapi.Page) error,
 ) error {
 	var ctx = log.WithField("page", progressProvider())
 
 	page, err := client.DownloadPage(k)
 	if err != nil {
+		if strings.Contains(err.Error(), "429") {
+			log.Info("got a 429, sleeping 1m")
+			time.Sleep(time.Minute)
+			return renderPage(client, k, progressProvider, slugProvider, filenameProvider, headerProvider, pageSkipper, pageValidator)
+		}
 		return fmt.Errorf("failed to download page %s: %w", k, err)
 	}
 
@@ -239,21 +256,21 @@ func renderPage(
 	ctx.Info("rendering")
 
 	converter := tomarkdown.NewConverter(page)
-	converter.RenderBlockOverride = func(block *notion.Block) bool {
+	converter.RenderBlockOverride = func(block *notionapi.Block) bool {
 		switch block.Type {
-		case notion.BlockHeader:
+		case notionapi.BlockHeader:
 			converter.Newline()
 			converter.RenderHeaderLevel(block, 2)
 			return true
-		case notion.BlockSubHeader:
+		case notionapi.BlockSubHeader:
 			converter.Newline()
 			converter.RenderHeaderLevel(block, 3)
 			return true
-		case notion.BlockSubSubHeader:
+		case notionapi.BlockSubSubHeader:
 			converter.Newline()
 			converter.RenderHeaderLevel(block, 4)
 			return true
-		case notion.BlockCode:
+		case notionapi.BlockCode:
 			// hack: create an html block that starts with !!!EMBED!!! and it gets actually really embedded for realz in real life
 			if strings.HasPrefix(block.Code, "!!!EMBED!!!") {
 				converter.Printf("{{< rawhtml >}}\n<p>\n\t")
@@ -265,7 +282,7 @@ func renderPage(
 			converter.Printf(block.Code + "\n")
 			converter.Printf("```\n")
 			return true
-		case notion.BlockEmbed:
+		case notionapi.BlockEmbed:
 			if strings.HasPrefix(block.Source, "https://speakerdeck.com/") || strings.HasPrefix(block.Source, "https://slides.com") {
 				converter.Newline()
 				converter.Printf("[See slides](%s).", block.Source)
@@ -273,13 +290,13 @@ func renderPage(
 				return true
 			}
 			ctx.WithField("src", block.Source).Warn("unhandled embed")
-		case notion.BlockTweet:
+		case notionapi.BlockTweet:
 			converter.Newline()
 			converter.Printf("{{< tweet %s >}}", tweetExp.FindStringSubmatch(block.Source)[1])
 			converter.Newline()
 			ctx.Warn("Tweets might be deleted anytime, consider using something else instead")
 			return true
-		case notion.BlockVideo:
+		case notionapi.BlockVideo:
 			if strings.HasPrefix(block.Source, "https://youtube.com") {
 				converter.Newline()
 				converter.Printf("{{< youtube %s >}}", youtubeExp.FindStringSubmatch(block.Source)[1])
@@ -292,9 +309,14 @@ func renderPage(
 				return true
 			}
 			ctx.WithField("src", block.Source).Warn("unhandled video")
-		case notion.BlockImage:
-			file, err := client.DownloadFile(block.Source, block.ID)
+		case notionapi.BlockImage:
+			file, err := client.DownloadFile(block.Source, block)
 			if err != nil {
+				if strings.Contains(err.Error(), "429") {
+					log.Info("got a 429, sleeping 1m")
+					time.Sleep(time.Minute)
+					return converter.RenderBlockOverride(block)
+				}
 				ctx.WithError(err).WithField("src", block.Source).Fatal("couldn't download file")
 			}
 			imgPath := fmt.Sprintf("static/public/images/%s/%s%s", slug, block.ID, path.Ext(block.Source))
@@ -323,7 +345,7 @@ func renderPage(
 	)
 }
 
-func toCaption(block *notion.Block) string {
+func toCaption(block *notionapi.Block) string {
 	if block.GetCaption() == nil {
 		return ""
 	}

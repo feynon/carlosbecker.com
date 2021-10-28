@@ -69,10 +69,16 @@ tag = "tags"
 		url = "/talks/"
 		weight = 30
 	[[menu.main]]
+		identifier = "donate"
+		name = "Donate"
+		url = "/donate/"
+		weight = 35
+	[[menu.main]]
 		identifier = "about"
 		name = "About"
 		url = "/about/"
 		weight = 40
+
 
 [outputs]
 home = [ "HTML", "RSS" ]

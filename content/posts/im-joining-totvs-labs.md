@@ -16,7 +16,7 @@ After 4 years and a lot of work, I'm leaving [ContaAzul](https://contaazul.com/)
 
 I have met and work with awesome people there, and I can say with 100% confidence that I have never learned so many things in my life as in there.
 
-I worked in a lot of interesting projects (I talked about some of them [here](https://carlosbecker.com/tags/contaazul/)): Eletronic Invoicing (NFe), Kubernetes Clusters, Prometheus monitoring, CI/CD pipelines improvements, availability improvements and etc. I leave, but my work remains.
+I worked in a lot of interesting projects: Eletronic Invoicing (NF-e), Kubernetes Clusters, Prometheus monitoring, CI/CD pipelines improvements, availability improvements and etc. I leave, but my work remains.
 
 My last day at ContaAzul will be this Friday (Apr 20th).
 
