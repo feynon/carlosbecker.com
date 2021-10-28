@@ -2,6 +2,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .backdrop-filter-blur {
   backdrop-filter: blur(5px);
 }
@@ -22,7 +26,8 @@ html {
   height: 50vh;
 }
 
-.header:before, .header:after {
+.header:before,
+.header:after {
   box-sizing: border-box;
   content: " ";
   position: absolute;
@@ -56,21 +61,21 @@ html {
   @apply pb-5;
 }
 
-.article__content > figure > figcaption {
+.article__content>figure>figcaption {
   text-align: center;
   margin-top: -1.7rem;
   @apply text-gray-500;
 }
 
-.article__content > figure > figcaption > p {
-	font-size: .8rem;
+.article__content>figure>figcaption>p {
+  font-size: .8rem;
 }
 
 /* Make images/videos wider than post width, like Medium */
-.article__content > p > img,
-.article__content > figure > img,
-.article__content > video,
-.article__content > .wide {
+.article__content>p>img,
+.article__content>figure>img,
+.article__content>video,
+.article__content>.wide {
   max-width: 100vw;
   position: relative;
   left: 50%;
@@ -78,10 +83,11 @@ html {
 }
 
 @screen lg {
-  .article__content > p > img,
-  .article__content > figure > img,
-  .article__content > video,
-  .article__content > .wide {
+
+  .article__content>p>img,
+  .article__content>figure>img,
+  .article__content>video,
+  .article__content>.wide {
     @apply max-w-4xl;
   }
 }
@@ -214,7 +220,8 @@ html {
   @apply font-normal;
 }
 
-.article code, tt {
+.article code,
+tt {
   padding: 1px 3px;
   @apply font-mono;
   @apply text-lg;
@@ -236,7 +243,11 @@ html {
 }
 
 .article .highlight {
-  background-color: #282a36;
+  background-color: #2e3440;
+}
+
+.article .highlight pre {
+  overflow-x: hidden;
 }
 
 .article pre {
@@ -274,8 +285,8 @@ html {
   background: #F4F4F4;
   border-radius: 4px;
   box-shadow:
-      0 1px 0 rgba(0, 0, 0, 0.2),
-      0 1px 0 0 #fff inset;
+    0 1px 0 rgba(0, 0, 0, 0.2),
+    0 1px 0 0 #fff inset;
 }
 
 .article table {
@@ -296,22 +307,22 @@ html {
   @apply text-black;
 }
 
-.article table caption + thead tr:first-child th,
-.article table caption + thead tr:first-child td,
-.article table colgroup + thead tr:first-child th,
-.article table colgroup + thead tr:first-child td,
+.article table caption+thead tr:first-child th,
+.article table caption+thead tr:first-child td,
+.article table colgroup+thead tr:first-child th,
+.article table colgroup+thead tr:first-child td,
 .article table thead:first-child tr:first-child th,
 .article table thead:first-child tr:first-child td {
   @apply border-t-0;
 }
 
-.article table tbody > tr:nth-child(odd) > td,
-.article table tbody > tr:nth-child(odd) > th {
+.article table tbody>tr:nth-child(odd)>td,
+.article table tbody>tr:nth-child(odd)>th {
   @apply bg-gray-100;
 }
 
-.article table.plain tbody > tr:nth-child(odd) > td,
-.article table.plain tbody > tr:nth-child(odd) > th {
+.article table.plain tbody>tr:nth-child(odd)>td,
+.article table.plain tbody>tr:nth-child(odd)>th {
   @apply bg-transparent;
 }
 
@@ -334,7 +345,7 @@ html {
 }
 
 .intro p,
-.article__content > p:first-of-type {
+.article__content>p:first-of-type {
   @apply tracking-tight;
   @apply text-xl;
   @apply text-gray-800;
