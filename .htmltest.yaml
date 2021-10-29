@@ -2,6 +2,11 @@ DirectoryPath: "site"
 IgnoreURLs:
   - m.carlosbecker.com
   - amzn.to
+  - linkedin.com
+  - fonts.gstatic.com
+  - https://medium.com/production-ready
+  - http://fgnass.github.com
+  - hacktoberfest.joinville.br
 IgnoreDirs: []
 IgnoreDirectoryMissingTrailingSlash: true
 IgnoreAltMissing: true

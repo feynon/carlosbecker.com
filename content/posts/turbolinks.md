@@ -16,7 +16,7 @@ I think that [turbolinks](https://github.com/rails/turbolinks) is great: it made
 
 - This site is [OpenSource](https://github.com/caarlos0/caarlos0.github.com.git).
 - I'm using Jekyll alongside with less, bower, grunt and of course, node and npm.
-- You can take a look at [these commits](https://github.com/caarlos0/caarlos0.github.com/commit/cb17b421e57aec67f3d7a582696e62d863c3689f) to see what I did.
+- You can take a look at these commits to see what I did.
 
 With that said, let's do the thing.
 

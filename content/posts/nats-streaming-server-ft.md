@@ -142,4 +142,4 @@ Cheers!
 
 ---
 
-Thanks to [Bruno](https://github.com/brunocvcunha), [Alex](https://github.com/amalucelli) and the NATS Slack Community for helping figuring all this out.
+Thanks to [Bruno](https://github.com/bvolpato), [Alex](https://github.com/amalucelli) and the NATS Slack Community for helping figuring all this out.

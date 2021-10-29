@@ -12,7 +12,7 @@ A quick review of my second ever GopherCon - the first one as a speaker, and my 
 
 ---
 
-At [this year's GopherCon](https://2018.gopherconbr.org/) we had **a lot** of great talks, some even from international speakers from Google and Cloudflare!
+At this year's GopherCon we had **a lot** of great talks, some even from international speakers from Google and Cloudflare!
 
 {{< figure caption="A Gopher" src="/public/images/gobr-18/208a8430-47a9-461a-b6f7-d603bdcbdbcf.png" >}}
 

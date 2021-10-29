@@ -321,4 +321,4 @@ I could probably write about more things, for sure. Some topics were still reall
 
 Anyway, I hope that the reading of my many screw ups was interesting and that you enjoyed it. If not, please feel free to comment/complain below or contact me in any way (except maybe phone calls haha)! I'll be glad to discuss about it and maybe learn that I was wrong about one more thing.
 
-> **Spoiler**: I'll talk more or less about those topics at [GopherCon Brazil](https://2018.gopherconbr.org/), so your feedback is greatly appreciated! Hope to see you there!
+> **Spoiler**: I'll talk more or less about those topics at GopherCon Brazil 2018, so your feedback is greatly appreciated! Hope to see you there!
