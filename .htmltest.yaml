@@ -7,6 +7,11 @@ IgnoreURLs:
   - https://medium.com/production-ready
   - http://fgnass.github.com
   - hacktoberfest.joinville.br
+  - gwtbootstrap.github.com
+  - lg.com
+  - www.paypal.com
+  - https://github.com/kubernetes/enhancements/blob/master/keps/sig-apps/sidecarcontainers.md#proposal
+  - rdio.com
 IgnoreDirs: []
 IgnoreDirectoryMissingTrailingSlash: true
 IgnoreAltMissing: true
