@@ -73,6 +73,7 @@ body {
 
 /* Make images/videos wider than post width, like Medium */
 .article__content>p>img,
+.article__content>figure>a>img,
 .article__content>figure>img,
 .article__content>video,
 .article__content>.wide {
@@ -86,6 +87,7 @@ body {
 
   .article__content>p>img,
   .article__content>figure>img,
+  .article__content>figure>a>img,
   .article__content>video,
   .article__content>.wide {
     @apply max-w-4xl;

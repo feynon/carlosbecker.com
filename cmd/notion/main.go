@@ -71,7 +71,7 @@ func main() {
 				},
 				func(page *notionapi.Page) string {
 					slug := toString(page.Root().Prop("properties.S6_\""))
-					return fmt.Sprintf("content/posts/%s.md", strings.ReplaceAll(slug, "/", ""))
+					return fmt.Sprintf("content/posts/%s/index.md", strings.ReplaceAll(slug, "/", ""))
 				},
 				func(page *notionapi.Page) string {
 					slug := toString(page.Root().Prop("properties.S6_\""))
@@ -125,7 +125,7 @@ func main() {
 				},
 				func(page *notionapi.Page) string {
 					slug := toString(page.Root().Prop("properties.7F2|"))
-					return fmt.Sprintf("content/%s.md", strings.ReplaceAll(slug, "/", ""))
+					return fmt.Sprintf("content/%s/index.md", strings.ReplaceAll(slug, "/", ""))
 				},
 				func(page *notionapi.Page) string {
 					return pageHeader(page.Root().Title)
@@ -251,8 +251,6 @@ func renderPage(
 		return fmt.Errorf("invalid page %s ('%s'): %w", k, page.Root().Title, err)
 	}
 
-	slug := slugProvider(page)
-
 	ctx.Info("rendering")
 
 	converter := tomarkdown.NewConverter(page)
@@ -319,7 +317,9 @@ func renderPage(
 				}
 				ctx.WithError(err).WithField("src", block.Source).Fatal("couldn't download file")
 			}
-			imgPath := fmt.Sprintf("static/public/images/%s/%s%s", slug, block.ID, path.Ext(block.Source))
+
+			imgName := block.ID + path.Ext(block.Source)
+			imgPath := filepath.Join(strings.TrimSuffix(filenameProvider(page), "index.md"), imgName)
 			imgCtx := ctx.WithField("path", imgPath).WithField("src", block.Source)
 			imgCtx.Debug("downloading image")
 			if err := os.MkdirAll(filepath.Dir(imgPath), 0750); err != nil {
@@ -329,15 +329,18 @@ func renderPage(
 				imgCtx.WithError(err).Fatal("couldn't write file")
 			}
 			converter.Printf(
-				`{{< figure caption="%s" src="%s" >}}`,
+				`{{< img caption="%s" src="%s" >}}`,
 				html.EscapeString(toCaption(block)),
-				strings.Replace(imgPath, "static/", "/", 1),
+				imgName,
 			)
 			return true
 		}
 		return false
 	}
 
+	if err := os.MkdirAll(filepath.Dir(filenameProvider(page)), 0750); err != nil {
+		return err
+	}
 	return ioutil.WriteFile(
 		filenameProvider(page),
 		buildMarkdown(headerProvider(page), converter.ToMarkdown()),
@@ -378,7 +381,7 @@ func buildMarkdown(header string, content []byte) []byte {
 		"…", "...",
 	).Replace(string(content))
 
-	ss = postURLRegex.ReplaceAllString(ss, `({{< ref "$1.md" >}})`)
+	ss = postURLRegex.ReplaceAllString(ss, `({{< ref "/posts/$1/index.md" >}})`)
 
 	return []byte(strings.Join(append([]string{header}, strings.Split(ss, "\n")[1:]...), "\n") + "\n")
 }
