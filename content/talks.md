@@ -10,6 +10,18 @@ Some talks I gave over the years, just in case you want to see the slides.
 
 ## 2021
 
+### Hacktoberfest Brasil Golang Meetup
+
+> Oct 28, 2021
+
+A hands on talk on how to create and setup a project with [GoReleaser](https://goreleaser.com) (in Português-Brasil).
+
+{{< rawhtml >}}
+<p>
+	<script async class="speakerdeck-embed" data-id="99f1eebe4e68480792d120f0f5c7b4e7" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+</p>
+{{< /rawhtml >}}
+
 ### Schwarz Golang Montly Meetup
 
 > Oct 22, 2021

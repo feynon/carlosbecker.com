@@ -122,7 +122,7 @@ docker_manifests:
   use: podman
   image_templates:
   - ghcr.io/caarlos0/{{ .ProjectName }}:{{ .Version }}-amd64
-  - ghcr.io/caarlos0/{{ .ProjectName }}:{{ .Version }}-arm64v8name: goreleaser
+  - ghcr.io/caarlos0/{{ .ProjectName }}:{{ .Version }}-arm64v8
 ```
 
 *You can check more options for **[builds](https://goreleaser.com/customization/build)**, **[docker](https://goreleaser.com/customization/docker)** and **[docker manifests](https://goreleaser.com/customization/docker_manifest)** on **[GoReleaser's website](https://goreleaser.com/)**.*
