@@ -10,9 +10,9 @@ tags: [goreleaser, goreleaser-pro, golang, kubernetes, security, linux, github]
 
 Hello everyone!
 
-I've been holding on the "v1" release for, checks notes, years now. That's why I wanted v1 to have a "stable enough API", i.e. something unlikely to change.
+I've been holding on the "v1" release for, __checks notes__, years now. That's because I wanted v1 to have a "stable enough API", i.e. something unlikely to change.
 
-I some months ago that we'll probably never reach that, as things keep changing: we add more features, change old ones (sometimes on our own, sometimes due to changes on other tools), and so on.
+A couple of months ago I realized that we'll probably never reach that, as things keep changing: we add more features, change old ones (sometimes on our own, sometimes due to changes on other tools), and so on. That way, v1 would never happen.
 
 Therefore, after 184 feature releases (and many patches, summing 467 releases) and 3299 commits, **v1.0.0 is finally here**!
 
@@ -34,9 +34,11 @@ This is a special release, since it marks GoReleaser departing from the school o
 - [Renamed master to main](https://medium.com/idealo-tech-blog/inclusive-language-in-tech-82b19b34b7cf) on both GoReleaser and nFPM
 - Some bug fixing (as always)
 
+If it feel like a regular GoReleaser v0.x release, it's because it is. The biggest change here is that we're leaving v0! 😅
+
 ## Thanks
 
-And a big thank you to everyone that helps with code, issues, money, support and whatnot. 
+And a big __thank you__ to everyone that helps with code, issues, money, support and whatnot.
 
 I really appreciate it! You all make OpenSource and Indie development a bit easier! 💙
 
