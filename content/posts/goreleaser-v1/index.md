@@ -38,7 +38,7 @@ If it feel like a regular GoReleaser v0.x release, it's because it is. The bigge
 
 ## Thanks
 
-And a big *thank you* to everyone that helps with code, issues, money, support and whatnot. 
+And a big *thank you* to everyone that helps with code, issues, money, support and whatnot.
 
 I really appreciate it! You all make OpenSource and Indie development a bit easier! 💙
 
@@ -48,3 +48,7 @@ Without further ado, you can get it here:
 
 - [GoReleaser v1.0.0](https://github.com/goreleaser/goreleaser/releases/tag/v1.0.0)
 - [GoReleaser Pro v1.0.0](https://github.com/goreleaser/goreleaser-pro/releases/tag/v1.0.0-pro)
+
+---
+
+Discuss on [Reddit](https://www.reddit.com/r/golang/comments/qtuqpk/goreleaser_v100_is_out/), [HackerNews](https://news.ycombinator.com/item?id=29218801) or [Twitter](https://twitter.com/caarlos0/status/1459933083789058054).
