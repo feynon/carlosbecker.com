@@ -38,7 +38,7 @@ If it feel like a regular GoReleaser v0.x release, it's because it is. The bigge
 
 ## Thanks
 
-And a big *thank you* to everyone that helps with code, issues, money, support and whatnot.
+And a big **thank you** to everyone that helps with code, issues, money, support and whatnot. 
 
 I really appreciate it! You all make OpenSource and Indie development a bit easier! 💙
 
