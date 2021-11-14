@@ -61,6 +61,11 @@ body {
   @apply pb-5;
 }
 
+.article__content>figure {
+  @apply pb-5;
+  @apply pt-5;
+}
+
 .article__content>figure>figcaption {
   text-align: center;
   margin-top: -1.7rem;
