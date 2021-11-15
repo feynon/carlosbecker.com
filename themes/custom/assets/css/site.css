@@ -186,6 +186,7 @@ body {
 .article ul:not(.list-none) {
   @apply ml-1;
   @apply list-outside;
+  @apply md:list-inside;
 }
 
 .article ul:not(.list-none) {

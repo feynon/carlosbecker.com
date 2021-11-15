@@ -10,7 +10,7 @@
     "build": "NODE_ENV=production hugo --verbose --gc --minify"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.4.0",
+    "@tailwindcss/typography": "^0.4.1",
     "@tailwindcss/ui": "^0.7.2",
     "autoprefixer": "^10.3.1",
     "postcss": "^8.3.6",
