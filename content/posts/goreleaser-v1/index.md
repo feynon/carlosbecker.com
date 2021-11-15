@@ -14,7 +14,7 @@ I've been holding on the "v1" release for, *checks notes*, years now. That's bec
 
 A couple of months ago I realized that we'll probably never reach that, as things keep changing: we add more features, change old ones (sometimes on our own, sometimes due to changes on other tools), and so on. That way, v1 would never happen.
 
-Therefore, after 184 feature releases (and many patches, summing 467 releases) and 3299 commits, **v1.0.0 is finally here**!
+Therefore, after **467 releases**, **3299 commits**, and almost **5 years** of hard work, I'm glad to announce that **v1.0.0 is finally here**!
 
 {{< img caption="" src="51e877d4-5114-45e7-8cda-4aa9189701bd.gif" >}}
 
@@ -35,7 +35,7 @@ If it feel like a regular GoReleaser v0.x release, it's because it is. The bigge
 
 ## Thanks
 
-And a big **thank you** to everyone that helps with code, issues, money, support and whatnot. 
+And a big **thank you** to everyone that helps with code, issues, money, support and whatnot.
 
 I really appreciate it! You all make OpenSource and Indie development a bit easier! 💙
 
