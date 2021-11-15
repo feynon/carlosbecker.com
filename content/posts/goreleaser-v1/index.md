@@ -1,5 +1,5 @@
 ---
-title: "GoReleaser v1.0.0"
+title: "GoReleaser v1.0.0 is out"
 date: 2021-11-14
 draft: false
 slug: goreleaser-v1
@@ -27,10 +27,7 @@ This is a special release, since it marks GoReleaser departing from the school o
 - [Announce releases to Linkedin](https://goreleaser.com/customization/announce/linkedin/)
 - Support [GitHub-generated release notes](https://goreleaser.com/customization/changelog/)
 - Better support for [keyless signing](https://goreleaser.com/customization/sign/) (with `cosign` for example)
-- Several [nFPM-related improvements](https://goreleaser.com/customization/nfpm/)
-    - "conventional file naming" per target
-    - better arch handling
-    - `dir` content type
+- Several [nFPM-related improvements](https://goreleaser.com/customization/nfpm/): "conventional file naming" per target, better arch handling, `dir` content type and others
 - [Renamed master to main](https://medium.com/idealo-tech-blog/inclusive-language-in-tech-82b19b34b7cf) on both GoReleaser and nFPM
 - Some bug fixing (as always)
 
@@ -51,4 +48,4 @@ Without further ado, you can get it here:
 
 ---
 
-Discuss on [Reddit](https://www.reddit.com/r/golang/comments/qtuqpk/goreleaser_v100_is_out/), [HackerNews](https://news.ycombinator.com/item?id=29218801) or [Twitter](https://twitter.com/caarlos0/status/1459933083789058054).
+Discuss on [Reddit](https://www.reddit.com/r/golang/comments/qtuqpk/goreleaser_v100_is_out/) or [Twitter](https://twitter.com/caarlos0/status/1459933083789058054).
