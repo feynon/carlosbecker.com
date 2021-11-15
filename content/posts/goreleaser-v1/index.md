@@ -5,7 +5,7 @@ draft: false
 slug: goreleaser-v1
 city: Cascavel
 toc: true
-tags: [goreleaser, goreleaser-pro, golang, kubernetes, security, linux, github]
+tags: [goreleaser, goreleaser-pro, golang, security, linux, github]
 ---
 
 Hello everyone!
