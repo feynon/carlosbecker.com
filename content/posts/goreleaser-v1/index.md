@@ -18,7 +18,7 @@ Therefore, after **467 releases**, **3299 commits**, and almost **5 years** of h
 
 {{< img caption="" src="51e877d4-5114-45e7-8cda-4aa9189701bd.gif" >}}
 
-This is a special release, since it marks GoReleaser departing from the school of [ZeroVer](https://0ver.org), so I decided to post this compiling the most notable changes.
+This is a special release, as it marks GoReleaser departing from the school of [ZeroVer](https://0ver.org), so I decided to write this quick bit compiling the most notable changes and some special thanks.
 
 ## Most notable changes
 
@@ -35,7 +35,7 @@ If it feel like a regular GoReleaser v0.x release, it's because it is. The bigge
 
 ## Thanks
 
-And a big **thank you** to everyone that helps with code, issues, money, support and whatnot.
+And a big **thank you** to everyone that helps with code, issues, money, support and whatnot. 
 
 I really appreciate it! You all make OpenSource and Indie development a bit easier! 💙
 
