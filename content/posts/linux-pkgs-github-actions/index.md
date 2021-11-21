@@ -120,7 +120,7 @@ Note that different formats tests against different platforms.
 
 {{< img caption="How it looks like on GitHub Actions" src="f45b161c-a91e-441e-bdf6-a45434c251f0.png" >}}
 
-That's mostly because not all Linux distributions have all platforms available on Docker Hub - e.g. no Fedora arm/6 nor Ubuntu 386.
+That's mostly because not all Linux distributions have all platforms available on Docker Hub - e.g. no Ubuntu 386.
 
 Still, testing against those should cover most of the use cases, and I think other projects that worry about this might benefit for something like this themselves.
 
