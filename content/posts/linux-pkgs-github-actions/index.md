@@ -195,7 +195,6 @@ Still, testing against those should cover most of the use cases, and I think oth
 
 - [https://github.com/goreleaser/nfpm/pull/398](https://github.com/goreleaser/nfpm/pull/398)
 - [https://github.com/goreleaser/goreleaser/pull/2640](https://github.com/goreleaser/goreleaser/pull/2640)
-- [https://github.com/goreleaser/goreleaser/blob/35eb844f937d3c18f308b3eff85e1c5abf092f4d/Taskfile.yml#L128-L153](https://github.com/goreleaser/goreleaser/blob/35eb844f937d3c18f308b3eff85e1c5abf092f4d/Taskfile.yml#L128-L153)
-- 
-- [https://github.com/goreleaser/goreleaser/blob/35eb844f937d3c18f308b3eff85e1c5abf092f4d/.github/workflows/build.yml#L12-L38](https://github.com/goreleaser/goreleaser/blob/35eb844f937d3c18f308b3eff85e1c5abf092f4d/.github/workflows/build.yml#L12-L38)
-- [https://github.com/goreleaser/goreleaser/actions/runs/1487207845](https://github.com/goreleaser/goreleaser/actions/runs/1487207845)
+- [GoReleaser's Taskfile](https://github.com/goreleaser/goreleaser/blob/12066dd8d9179ef19dde061d67354f5ebc081685/Taskfile.yml#L128-L226)
+- [GoReleaser Build Workflow](https://github.com/goreleaser/goreleaser/blob/35eb844f937d3c18f308b3eff85e1c5abf092f4d/.github/workflows/build.yml#L12-L38)
+- [Example Actions Run](https://github.com/goreleaser/goreleaser/actions/runs/1487207845)
