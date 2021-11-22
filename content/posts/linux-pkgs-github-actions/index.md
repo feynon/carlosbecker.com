@@ -25,7 +25,7 @@ The idea consists in 2 steps:
 1. Run the release and cache its outputs
 2. Spawn another job for each format
 
-### 1. Cache the ouput
+### 1. Cache the output
 
 This was easily done using GitHub Actions Cache:
 
