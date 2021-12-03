@@ -39,7 +39,7 @@ changelog:
       order: 999
 ```
 
-GoReleaser uses it on its [own releases](https://github.com/goreleaser/goreleaser/releases), so you can always poke around its `[.goreleaser.yaml](https://github.com/goreleaser/goreleaser/blob/main/.goreleaser.yaml)` [config file](https://github.com/goreleaser/goreleaser/blob/main/.goreleaser.yaml). Also make sure to give the [documentation](https://goreleaser.com/customization/changelog/?h=groups) a read!
+GoReleaser uses it on its [own releases](https://github.com/goreleaser/goreleaser/releases), so you can always poke around its [.goreleaser.yaml config file](https://github.com/goreleaser/goreleaser/blob/main/.goreleaser.yaml). Also make sure to give the [documentation](https://goreleaser.com/customization/changelog/?h=groups) a read!
 
 ---
 
