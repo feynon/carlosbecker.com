@@ -1,5 +1,5 @@
 ---
-title: "GoReleaser v1.0.0 is out"
+title: "GoReleaser v1.0.0 is out!"
 date: 2021-11-14
 draft: false
 slug: goreleaser-v1
