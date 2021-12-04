@@ -14,7 +14,7 @@ This feature allows you to "organize" your changelog in categories by using regu
 
 Using it with `use: github` and some exclusion filters yields pretty good looking release notes:
 
-{{< img caption="" src="cfcb5a8b-6fd9-408c-90e7-251b9c93d8aa.png" >}}
+{{< img caption="An example release changelog." src="cfcb5a8b-6fd9-408c-90e7-251b9c93d8aa.png" >}}
 
 Here's a quick usage example:
 
