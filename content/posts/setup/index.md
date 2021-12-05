@@ -23,17 +23,17 @@ multiple screens and my screen is already big enough. 😌
 
 It's a [MacBook Pro 14", from 2021](https://amzn.to/3G9mvLh).
 
-It has a M1 Pro processor, **16 GB** of memory and a **512GB** SSD disk.
+It has a **8-Core M1 Pro** processor, **16 GB** of memory and a **512 GB** SSD disk.
 
 ### Desktop
 
-A AMD Ryzen 5 3600 6-Core Processor, with 64GB of memory, 1TB NVME and a GeForce GT 1030.
+A **AMD Ryzen 5 3600** 6-Core Processor, with **64 GB** of memory, **1 TB** NVME and a **GeForce GT 1030**.
 
 I use it mostly as a "remote workstation". I run Docker et al in there, as well as do most of my development on it using the VSCode remotes feature.
 
 ### Others
 
-A 2 node Raspberry Pi cluster. 🤷‍♂️
+A 2 node Raspberry Pi cluster running k3s and a whole lot of random stuff. 🤷‍♂️
 
 ## Keyboard / Mouse
 
